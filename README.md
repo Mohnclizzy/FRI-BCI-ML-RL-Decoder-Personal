@@ -18,10 +18,12 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m eeg_decoder run
 ```
 
-The run command downloads 15 EDF recordings: subjects 1-5, runs 4, 8, 12,
-with up to three downloads at a time.
-Data stays under `data/physionet/`. Re-running reuses cached recordings.
-Dependencies and data downloads require internet access. Model training does not.
+The 15 baseline EDF recordings (subjects 1-5, runs 4, 8, 12) are included under
+`data/physionet/`. The loader reuses these recordings and downloads missing ones
+with up to three downloads at a time. Installing dependencies or fetching missing
+recordings requires internet access; processing the included subset does not.
+See the [shared dataset guide](data/physionet/README.md) for source attribution,
+checksums, recording labels, and an example of opening the EEG waveforms.
 The tested environment is Python 3.14.3 on Windows; `requirements-lock.txt`
 records its exact package versions. Install that file instead of `requirements.txt`
 to reproduce this environment. Point VS Code's Python interpreter at

@@ -1,0 +1,138 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[numbers,sort&compress]{natbib}
+\setlist{nosep,leftmargin=*}
+\setlength{\parskip}{0.32em}
+\setlength{\parindent}{0pt}
+\title{Simulation-First EEG Intent Decoding for\Robotic Hand Control}
+\author{Angel Lemus \\ \small Department of Computer Science \quad \textbar\quad \small Faculty Advisor: [Professor Name]}
+\date{Project Proposal --- 12-Week Development Plan}
+
+\begin{document}
+\maketitle
+\vspace{-1.1em}
+
+\begin{abstract}
+Non-invasive electroencephalography (EEG) brain--computer interfaces (BCIs) can translate motor-related neural activity into device commands, but reliable real-time control remains difficult because EEG is noisy, nonstationary, and strongly variable across people. This proposal develops a simulation-first research prototype that connects decoded motor intent from public EEG data to a simulated robotic hand. Rather than claiming a clinical or hardware-ready BCI, the project will evaluate a reproducible chain: public motor-imagery EEG, subject-aware preprocessing and classification, real-time replay of recorded signals, a command-stabilization layer, and a reinforcement-learning (RL) hand policy in NVIDIA Isaac Lab. The central question is whether a hierarchical, low-bandwidth intent interface---\emph{rest} versus \emph{arm/hand movement}, followed by a movement subtype---can reliably drive meaningful simulated hand behaviors under replayed streaming conditions. The intended outcome is a measurable, demonstrable software system and an evidence-based assessment of the barriers to future physical EEG and Tesollo-hand integration.
+\end{abstract}
+
+\section{Introduction and Objective}
+EEG-based BCIs acquire, analyze, and translate brain signals into commands in real time \citep{mcfarland2017}. Motor imagery (the mental rehearsal of movement without overt movement) is particularly relevant to assistive control because changes in sensorimotor rhythms can be decoded without requiring the user to move. However, translating a laboratory classifier into a dependable robot interface is still an open systems problem. Decoding accuracy often falls across subjects, sessions, and datasets; an offline score also does not establish stable online behavior \citep{lotte2018,jeuneet2018}. Meanwhile, dexterous hands require coordinated, contact-sensitive behavior that is poorly matched to a noisy, high-frequency stream of raw classifier labels.
+
+The project objective is to build and evaluate a \textbf{simulation-first EEG-to-hand-control pipeline} in twelve weeks. The proposed system will interpret EEG as a small set of high-level intents, then let a robot policy execute the low-level motion. Its primary deliverable is a live-replay demonstration in Isaac Lab: replayed public EEG produces stable commands for a simulated hand or an initially simpler proxy gripper. A secondary deliverable is a benchmark report that quantifies decoding, command stability, and simulated task completion.
+
+\textbf{Research question.} Can a hierarchical classifier plus temporal command filter produce sufficiently stable high-level commands from replayed public motor EEG to improve simulated hand-task completion relative to an unfiltered classifier stream?
+
+\section{Research Gap, Insight, and Evidence}
+The limiting gap is not simply ``train a neural network on EEG.'' Public datasets are heterogeneous in montage, sampling rate, task design, cue timing, and participants. As a result, an algorithm can look successful on one dataset yet fail to generalize; MOABB was created specifically to enable trustworthy, standardized BCI benchmarking and reports substantial dataset-dependent differences in pipeline performance \citep{jayaram2018}. EEG is also low signal-to-noise and changes over time, so even a correct label can flicker from one short window to the next. Finally, an RL controller should not be asked to infer a user's neural state from raw EEG while simultaneously discovering dexterous mechanics; this would compound two difficult learning problems and remove interpretability.
+
+The enabling insight is to separate the problem into two interfaces with compatible responsibilities:
+
+\begin{center}
+\fbox{\parbox{0.94\linewidth}{\centering
+\textbf{EEG} $\rightarrow$ \textbf{high-level intent} $\rightarrow$ \textbf{command filter} $\rightarrow$ \textbf{RL hand policy} $\rightarrow$ \textbf{simulated action}}}
+\end{center}
+
+The EEG module answers ``is the user at rest or intending an arm/hand movement?'' and, when movement is present, selects a subtype such as hand imagery, wrist flexion, twist, or grasp. The controller answers ``how should the hand move safely and effectively to carry out that command in this simulated state?'' This decomposition reduces the required EEG information rate, preserves a clear failure boundary, and mirrors the practical use of high-level user commands with autonomous low-level control.
+
+There is strong evidence that this staged approach is technically reasonable. Common spatial patterns (CSP) remain a well-established method for discriminating motor-imagery EEG through class-specific spatial variance \citep{blankertz2008}, while modern reviews identify Riemannian methods, shrinkage LDA, adaptive approaches, and transfer learning as strong candidates for small-sample BCI settings \citep{lotte2018}. Compact neural models such as EEGNet are appropriate comparison models because they learn temporal and spatial filters with far fewer parameters than generic convolutional architectures \citep{lawhern2018}. The PhysioNet EEG Motor Movement/Imagery Database provides openly available recordings for rest and hand/foot movement or imagery tasks \citep{schalk2009}; datasets exposed through MOABB expand the later benchmark to more specific upper-limb actions \citep{jayaram2018}. Isaac Lab is an open, GPU-accelerated framework built for parallel robot learning, including dexterous manipulation environments and multiple RL back ends \citep{isaaclab}. These resources make a rigorous software prototype feasible without purchasing EEG hardware in this project phase.
+
+\section{Proposed Approach}
+\subsection{Scope and Intent Taxonomy}
+The first model will be a conservative binary classifier: \textbf{Rest} versus \textbf{Arm/Hand Movement}. Rest contains the subclass \emph{no movement}, which maps to no action. The movement class contains the candidate subclasses \emph{hand imagery}, \emph{wrist flexion}, \emph{twist} (pronation/supination), and \emph{grasp}. The initial public-data milestone will use only labels that are valid and sufficiently represented in the chosen dataset; unsupported classes will not be fabricated by relabeling unrelated trials. A second-stage benchmark will add movement-specific datasets through MOABB when their licensing and labels support the taxonomy.
+
+The project deliberately excludes human-subject data collection, medical claims, physical human use, and autonomous actuation of a real robot. A Tesollo hand is a future compatibility target, not a promised twelve-week hardware deployment. This scope controls cost and safety while producing artifacts that can later be connected to live EEG and a ROS~2 robot interface.
+
+\subsection{EEG Data, Preprocessing, and Models}
+EEG data will be accessed through MNE-Python and MOABB, beginning with PhysioNet's EEG Motor Movement/Imagery Database \citep{gramfort2013,schalk2009}. Each trial will be band-pass filtered in a motor-rhythm range selected during validation (initially approximately 8--30 Hz), re-referenced as appropriate to the dataset, segmented relative to task cues, and normalized using training folds only. Artifact handling and every preprocessing choice will be logged to prevent test-set leakage.
+
+Three model families will be compared under the same splits: (1) CSP plus shrinkage LDA, the interpretable baseline; (2) covariance/Riemannian features plus a linear classifier; and (3) EEGNet through Braindecode/PyTorch \citep{lawhern2018,schirrmeister2017}. This sequence is intentional: a deep network is an experimental comparison, not an assumption that complexity improves decoding. Evaluation will include balanced accuracy, macro-F1, confusion matrices, per-subject results, and subject-independent or leave-one-subject-out tests whenever the dataset permits. The baseline to beat is a majority-class predictor and the relevant comparator is an unfiltered command stream, not only an offline accuracy number.
+
+\subsection{Replay, Command Filtering, and Robot Simulation}
+Recorded EEG will be treated as a simulated acquisition device. A replay service reads samples and timestamps from an EEG recording, releases short chunks at the original sampling rate, maintains a rolling analysis window, and forwards each window to the trained decoder. This makes it possible to measure end-to-end delay and command behavior before any hardware is purchased.
+
+The command filter converts noisy predictions into deliberate robot requests. It will require a confidence threshold, a majority vote or persistence interval across consecutive windows, and a minimum dwell time before changing commands. Rest has priority and issues a hold/stop command. The filter will log raw predictions, accepted commands, confidence, and latency. Ablations will compare no filter, confidence-only filtering, and temporal filtering.
+
+In Isaac Lab, an RL policy (initially PPO through RSL-RL) will learn low-level joint actions for a small set of task-conditioned behaviors: neutral/hold, wrist flexion, pronation/supination, and closing or maintaining a grasp \citep{isaaclab,rslrl}. The initial environment will use an existing dexterous hand or a proxy gripper to reduce asset-integration risk. If a valid Tesollo URDF/ROS~2 description can be imported within the schedule, the policy interface will be tested with that embodiment; otherwise the abstraction boundary and logged command protocol remain identical. Reward functions will prioritize target pose, contact or grasp success where applicable, motion smoothness, and joint-limit penalties.
+
+\subsection{Experimental Evidence and Success Criteria}
+The proposal tests the system at three levels:
+
+\begin{enumerate}
+    \item \textbf{Decoder validity:} held-out, class-balanced EEG performance must exceed the majority baseline; results will be reported per subject rather than hidden in a pooled average.
+    \item \textbf{Interaction validity:} filtered replay must reduce command-switch rate and maintain acceptable end-to-end latency relative to unfiltered replay.
+    \item \textbf{Control validity:} in repeated simulated episodes, filtered intent commands must improve task completion or reduce unsafe/unintended transitions compared with the unfiltered stream and a random-command control.
+\end{enumerate}
+
+The project will report negative results directly. For example, failure to generalize between people or datasets is a meaningful finding that identifies the need for calibration, adaptation, better labels, or future data collection. It will not be interpreted as evidence of real-world BCI readiness.
+
+\section{Work Plan}
+\begin{center}
+\small
+\begin{tabular}{p{0.15\linewidth}p{0.75\linewidth}}
+\toprule
+\textbf{Weeks} & \textbf{Milestone and evidence} \\
+\midrule
+1--2 & Establish Python/Isaac Lab environment; inspect dataset labels and licensing; implement reproducible MNE/MOABB loader; document the final supported intent taxonomy. \\
+3--4 & Build preprocessing and CSP+LDA baseline; use leakage-safe cross-validation; publish metrics, confusion matrices, and per-subject plots. \\
+5--6 & Add Riemannian and EEGNet comparison; select the simplest model that meets the evidence criteria; write model card and error analysis. \\
+7--8 & Implement real-time EEG replay, rolling windows, and command-filter ablation; record latency and command-switch metrics. \\
+9--10 & Configure Isaac Lab task and PPO/RSL-RL policy for proxy hand or available hand asset; evaluate scripted high-level commands first. \\
+11 & Connect filtered replay commands to the policy; run repeated end-to-end episodes and baseline comparisons. \\
+12 & Produce final demonstration, reproducibility guide, results report, limitations, and hardware/ROS~2 integration roadmap. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Risks are managed by staged fallbacks. If multiclass labels are insufficient, the demonstration remains valid as binary rest-versus-movement control. If deep learning underperforms, CSP/Riemannian baselines remain the main result. If Tesollo assets cannot be integrated, an Isaac Lab proxy hand preserves the research question. If GPU access is limited, model training and simulation scale down to fewer parallel environments and fewer policy iterations, with the scope restricted to discrete gestures rather than object reorientation.
+
+\section{Resource Overview}
+\textbf{Software.} Python, MNE-Python, MOABB, scikit-learn, pyRiemann, Braindecode/PyTorch, Isaac Lab, RSL-RL, and TensorBoard will be used. These tools support data handling, transparent baselines, optional deep learning, simulation, policy training, and experiment logging. Version-pinned environments, fixed random seeds where practical, configuration files, and saved splits will support reproducibility.
+
+\textbf{Data and compute.} The project begins with free public EEG datasets and does not require EEG hardware. A CUDA-capable NVIDIA GPU is strongly preferred for Isaac Lab and neural-policy training; CPU execution remains suitable for initial EEG preprocessing and classical baselines. Storage needs are modest for a selected subset of public recordings, trained checkpoints, logs, and rendered demonstrations.
+
+\textbf{People and hardware.} The student implements the prototype with faculty guidance on experimental design and interpretation. No participant recruitment is planned. A physical Tesollo hand, live EEG device, and ROS~2 deployment are deferred follow-on resources. Before a physical phase, the team would need a compatible acquisition system, safety review, user calibration protocol, robot communication validation, and a separate sim-to-real evaluation plan.
+
+\textbf{Expected contribution.} The contribution is a reproducible evaluation harness that measures the often-missing bridge between offline public-EEG decoding and stable simulated robotic action. It clarifies what can be demonstrated now, what fails under realistic replay, and which technical improvements are justified before investing in physical BCI hardware.
+
+\begin{thebibliography}{99}\small
+\bibitem[Blankertz et~al.(2008)]{blankertz2008}
+B. Blankertz et al. ``Optimizing Spatial Filters for Robust EEG Single-Trial Analysis.'' \emph{IEEE Signal Processing Magazine}, 25(1):41--56, 2008. doi: 10.1109/MSP.2008.4408441.
+
+\bibitem[Gramfort et~al.(2013)]{gramfort2013}
+A. Gramfort et al. ``MEG and EEG Data Analysis with MNE-Python.'' \emph{Frontiers in Neuroscience}, 7:267, 2013. doi: 10.3389/fnins.2013.00267.
+
+\bibitem[Isaac Lab(2026)]{isaaclab}
+NVIDIA. ``Isaac Lab Documentation: A Unified Framework for Robot Learning.'' \url{https://isaac-sim.github.io/IsaacLab/}. Accessed September 2026.
+
+\bibitem[Jayaram and Barachant(2018)]{jayaram2018}
+V. Jayaram and A. Barachant. ``MOABB: Trustworthy Algorithm Benchmarking for BCIs.'' \emph{Journal of Neural Engineering}, 15(6):066011, 2018. doi: 10.1088/1741-2552/aae5d3.
+
+\bibitem[Lotte and Jeunet(2018)]{jeuneet2018}
+F. Lotte and C. Jeunet. ``Defining and Quantifying Users' Mental Imagery-Based BCI Skills: A First Step.'' \emph{Journal of Neural Engineering}, 15(4):046030, 2018. doi: 10.1088/1741-2552/aac577.
+
+\bibitem[Lawhern et~al.(2018)]{lawhern2018}
+V. J. Lawhern et al. ``EEGNet: A Compact Convolutional Neural Network for EEG-Based Brain--Computer Interfaces.'' \emph{Journal of Neural Engineering}, 15(5):056013, 2018. doi: 10.1088/1741-2552/aace8c.
+
+\bibitem[Lotte et~al.(2018)]{lotte2018}
+F. Lotte et al. ``A Review of Classification Algorithms for EEG-Based Brain--Computer Interfaces: A 10 Year Update.'' \emph{Journal of Neural Engineering}, 15(3):031005, 2018. doi: 10.1088/1741-2552/aab2f2.
+
+\bibitem[McFarland and Wolpaw(2017)]{mcfarland2017}
+D. J. McFarland and J. R. Wolpaw. ``EEG-Based Brain--Computer Interfaces.'' \emph{Current Opinion in Biomedical Engineering}, 4:194--200, 2017. doi: 10.1016/j.cobme.2017.11.004.
+
+\bibitem[Schalk et~al.(2009)]{schalk2009}
+G. Schalk et al. ``EEG Motor Movement/Imagery Dataset.'' \emph{PhysioNet}, v1.0.0, 2009. doi: 10.13026/C28G6P.
+
+\bibitem[Schirrmeister et~al.(2017)]{schirrmeister2017}
+R. T. Schirrmeister et al. ``Deep Learning with Convolutional Neural Networks for EEG Decoding and Visualization.'' \emph{Human Brain Mapping}, 38(11):5391--5420, 2017. doi: 10.1002/hbm.23730.
+
+\bibitem[Schwarke et~al.(2025)]{rslrl}
+C. Schwarke et al. ``RSL-RL: A Learning Library for Robotics Research.'' arXiv:2509.10771, 2025. \url{https://github.com/leggedrobotics/rsl_rl}.
+\end{thebibliography}
+\end{document}

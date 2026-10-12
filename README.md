@@ -1,4 +1,8 @@
-# EEG intent decoder: your section of the project
+# FRI-BCI-ML-RL-Decoder
+
+Public EEG motor-imagery decoding research for simulated robotic-hand control using machine learning and reinforcement learning.
+
+## EEG intent decoder
 
 First milestone: load real public EEG, train a rest-versus-hand-imagery decoder,
 and explain its errors on a recording it has not seen. Everything runs on CPU.

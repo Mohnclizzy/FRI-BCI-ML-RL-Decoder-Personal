@@ -1,0 +1,5 @@
+# CPU prototype only. Isaac Lab/RSL-RL remain a separate, later integration.
+gymnasium==1.2.3
+stable-baselines3==2.9.2
+pybullet>=3.2.7,<4
+pillow>=11,<13

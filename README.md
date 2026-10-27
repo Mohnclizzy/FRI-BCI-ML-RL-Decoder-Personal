@@ -2,6 +2,13 @@
 
 Public EEG motor-imagery decoding research for simulated robotic-hand control using machine learning and reinforcement learning.
 
+## Robot-learning prototype
+
+The CPU-runnable [grasp/hold policy prototype](rl_policy/README.md) trains a PPO
+controller for a small PyBullet gripper. It can evaluate the existing decoder's
+saved predictions one trial at a time. This is an early task and interface
+benchmark; the proposed Isaac Lab hand and continuous EEG replay are later work.
+
 ## EEG intent decoder
 
 First milestone: load real public EEG, train a rest-versus-hand-imagery decoder,

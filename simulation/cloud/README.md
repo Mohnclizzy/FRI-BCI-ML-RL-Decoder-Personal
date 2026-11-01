@@ -7,10 +7,14 @@ matches this project.
 
 ## Existing Brev Ubuntu machine
 
-1. Check `nvidia-smi`, disk capacity and `uv --version`. Use the current upstream
-   [requirements](https://docs.nvidia.com/isaaclab/isaac-lab/installation).
-   This project targets Newton without RTX rendering. The GPU model, driver,
-   CUDA stack and renderer must all support the selected workload.
+1. If creating a machine in Brev, choose an Ubuntu 22.04+ x86_64 image and a
+   CUDA-capable NVIDIA GPU supported by Isaac Lab 3.0 / PyTorch. Current Isaac Lab
+   3.0 requirements specify Python 3.12 and Linux driver 580.65.06 or newer.
+   Newton headless does not need RTX rendering. Check the displayed hourly cost
+   and available disk before creating it; stop the instance from Brev when done.
+   On the connected machine, check `nvidia-smi`, disk capacity and `uv --version`.
+   See the versioned [Isaac Lab 3.0 requirements](https://docs.nvidia.com/isaaclab/3.0/isaac-lab/installation)
+   and [Brev quickstart](https://docs.nvidia.com/brev/getting-started/quickstart).
 2. Clone this project's branch and set absolute paths. Use fresh destination
    folders; preserve existing checkouts.
 
@@ -23,6 +27,7 @@ git -C "$ISAACLAB_ROOT" rev-parse HEAD
 # Expected e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4
 cd "$ISAACLAB_ROOT"
 uv run isaaclab --help
+uv run isaaclab train --help
 uv pip install --python "$ISAACLAB_ROOT/.venv/bin/python" -e "$FRI_REPO/simulation" --no-deps
 ```
 
@@ -31,18 +36,25 @@ large dependencies. It is a cloud installation step, not a CPU-local check.
 Pin the upstream checkout rather than installing an unrelated PyPI package by
 version number. Run project commands with that same `.venv` interpreter.
 
-3. Ask the installed CLI to show its task-list/help commands; verify
-   `FRI-Franka-Lift` discovery before training. Confirm `train --help` exposes
-   `--max_iterations`, `--num_envs`, `--seed`, and `--rl_library`.
-4. Print a plan, then explicitly run a two-iteration smoke into a NEW output
-   directory. Logs remain in that directory; never use a busy login node for GPU work.
+3. Confirm `train --help` exposes `--max_iterations`, `--num_envs`, `--seed`,
+   and `--rl_library`. The actual smoke in the next step is the task discovery
+   check: it must successfully load `FRI-Franka-Lift` and initialize Newton.
+4. First print the plan (this does not start the simulator):
 
 ```bash
 cd "$FRI_REPO"
 "$ISAACLAB_ROOT/.venv/bin/python" -m fri_bci_sim.cli train \
   --isaaclab-root "$ISAACLAB_ROOT" --num-envs 16 --iterations 2 \
   --run-dir "$FRI_REPO/outputs/isaac/smoke-001"
-# After reviewing the printed plan, rerun with --execute.
+```
+
+After confirming the plan points to the pinned Isaac Lab checkout and a new
+`smoke-001` directory, run it once with `--execute`:
+
+```bash
+"$ISAACLAB_ROOT/.venv/bin/python" -m fri_bci_sim.cli train \
+  --isaaclab-root "$ISAACLAB_ROOT" --num-envs 16 --iterations 2 \
+  --run-dir "$FRI_REPO/outputs/isaac/smoke-001" --execute
 ```
 
 The launcher checks exact upstream source revision, tracked modifications,

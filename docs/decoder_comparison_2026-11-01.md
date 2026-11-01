@@ -79,4 +79,3 @@ Outputs: `protocol.json`, `frozen_selection.json`, `confirmation_metrics.json`,
 `confirmation_config.json`, and per-person model/prediction artifacts under
 `outputs/decoder_validation_001/`. The streaming adapter rejects a per-person
 model paired with a different EEGBCI subject filename.
-

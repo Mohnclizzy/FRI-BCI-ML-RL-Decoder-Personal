@@ -185,5 +185,3 @@ def test_person_specific_streaming_model_rejects_other_recording_subject(tmp_pat
     with pytest.raises(ValueError, match="calibration subject"):
         streaming.decode_recording(artifact_path, edf_path, output_path)
     assert not output_path.exists()
-
-

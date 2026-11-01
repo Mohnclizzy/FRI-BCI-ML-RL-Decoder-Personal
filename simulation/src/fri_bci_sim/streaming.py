@@ -8,6 +8,7 @@ This is logical-time recorded replay, not live acquisition or user feedback.
 from dataclasses import asdict
 import hashlib
 import json
+import re
 from pathlib import Path
 import time
 
@@ -82,6 +83,11 @@ def decode_recording(artifact_path: Path, edf_path: Path, output: Path,
         raise ValueError("Unsupported artifact class meanings")
     config = artifact["config"]
     source = edf_path.stem
+    calibration_subject = artifact.get("calibration_subject")
+    if calibration_subject is not None:
+        match = re.fullmatch(r"S(\d{3})R\d{2}", source)
+        if match is None or int(match.group(1)) != calibration_subject:
+            raise ValueError("Per-person model requires an EEGBCI recording from its calibration subject")
     raw = mne.io.read_raw_edf(edf_path, preload=False, verbose="ERROR")
     try:
         eegbci.standardize(raw)
@@ -102,6 +108,7 @@ def decode_recording(artifact_path: Path, edf_path: Path, output: Path,
         raw.close()
     manifest = {"recording": str(edf_path.resolve()), "recording_sha256": file_hash(edf_path),
                 "artifact_sha256": file_hash(artifact_path), "source": source, "config": config,
+                "calibration_subject": calibration_subject,
                 "events": count, "chunk_samples": chunk_samples, "hop_s": hop_s,
                 "injected_decode_delay_s": decode_delay_s, "real_time": False,
                 "annotations_used_by_decoder": False,

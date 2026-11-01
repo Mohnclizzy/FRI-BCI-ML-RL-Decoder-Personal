@@ -132,6 +132,34 @@ plus computation delay. Never give the model annotation labels as input.
 
 ## Your next milestone
 
+Run the fixed development/confirmation protocol with the optional covariance
+baseline installed:
+
+```powershell
+python -m pip install -r requirements-riemannian.txt
+python -m eeg_decoder.validate_decoder --output outputs/decoder_validation_001
+```
+
+Use a new output directory for each independent run. Model family is selected
+on subjects 1–5 (fit run 4, validate run 8), then frozen before subjects 6–10
+are evaluated on run 12 after individual calibration on runs 4/8. Once inspected,
+that confirmation cohort cannot be reused as fresh evidence after tuning.
+The current result is recorded in [decoder findings](docs/decoder_comparison_2026-11-01.md).
+
+Compare pooled CSP/LDA with a separately calibrated model for each person using
+the same held-out run and unchanged preprocessing:
+
+```powershell
+python -m eeg_decoder prepare --config configs/baseline.json
+python -m eeg_decoder.compare_subjects --config configs/baseline.json --output outputs/subject_comparison
+```
+
+The output directory must be new. This exports per-person models compatible
+with the replay adapter and metrics for both approaches on identical windows.
+Use each model only with its calibration subject. This is an exploratory
+diagnostic on the previously inspected test run, not independent confirmation
+or proof of improvement. It does not select hyperparameters using test scores.
+
 Read `results.md` and identify which errors dominate. Inspect a few original
 windows and annotations using their metadata. Then compare the same fixed
 protocol with a Riemannian baseline, followed by a separate subject-holdout

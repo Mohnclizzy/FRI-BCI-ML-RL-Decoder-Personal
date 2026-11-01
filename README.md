@@ -2,6 +2,13 @@
 
 Public EEG motor-imagery decoding research for simulated robotic-hand control using machine learning and reinforcement learning.
 
+## Simulation scaffold
+
+The [Isaac Lab project scaffold](simulation/README.md) provides an external
+Franka lift task, training/playback launch plans, EEG command contracts and
+evaluation interfaces. Local command tests are separate from pending GPU/physics
+validation. See the [Brev/TACC runbook](simulation/cloud/README.md) for cloud bring-up.
+
 ## EEG intent decoder
 
 First milestone: load real public EEG, train a rest-versus-hand-imagery decoder,

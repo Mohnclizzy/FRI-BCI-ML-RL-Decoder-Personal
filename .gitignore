@@ -4,4 +4,7 @@ __pycache__/
 data/
 outputs/
 *.egg-info/
+logs/
+simulation/build/
+simulation/dist/
 EEG-Decoder-Project*.zip

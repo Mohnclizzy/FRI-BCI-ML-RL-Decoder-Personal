@@ -28,6 +28,8 @@ robot movements. No dataset or synthetic EEG generator is silently assumed.
 | Component | Status |
 |---|---|
 | Offline decoder-export adapter | Implemented; each trial stays a separate episode |
+| Causal full-recording decoder replay | Implemented for current model/PhysioNet EDF; logical time, no annotation input |
+| Raw/confidence/temporal trace comparison | Implemented on equal continuous estimates; command metrics only |
 | Confidence/persistence command filter | Implemented; simulator-independent tests |
 | Measured episode-outcome summary | Implemented; requires actual telemetry input |
 | Cloud command planner and runtime checks | Implemented; default prints plan only |
@@ -63,10 +65,39 @@ python -m fri_bci_sim.cli replay --predictions outputs/baseline/test_predictions
 This is isolated-trial replay with confidence-only acceptance. It cannot measure
 command-switch rates, continuous latency or temporal persistence. Each current
 prediction has a unique trial ID; never smooth across unrelated trials to invent
-a continuous command stream. A future causal rolling-window adapter must emit
-repeated estimates for the same episode before persistence can be evaluated.
+a continuous command stream. Use the full-recording adapter below for repeated
+estimates within the same recording.
 The example threshold0.7 is a configurable baseline, not a calibrated probability
 guarantee. Select thresholds and persistence on training/validation data.
+
+## Continuous replay and command comparisons
+
+Install the existing EEG requirements in the same CPU environment (for example,
+the root `requirements-lock.txt`), then install this package with `--no-deps`.
+Use a trusted, locally trained `model.joblib` from the existing decoder.
+
+```powershell
+python -m fri_bci_sim.cli decode-replay --artifact outputs/baseline/model.joblib --edf PATH_TO_S001R12.edf --output outputs/isaac/continuous.jsonl
+python -m fri_bci_sim.cli compare-commands --trace outputs/isaac/continuous.jsonl --output outputs/isaac/decisions.jsonl
+```
+
+This processes the full recording, including transitions, with the trained
+reference/filter and carried SOS state. No annotations or cue boundaries enter
+the decoder. Each window is available only after its containing input chunk;
+the manifest records model/recording hashes and timing settings. Replay runs in
+logical recording time, not paced wall-clock time. Measured classifier runtime
+is reported separately; it is not automatically added to simulated delay. Use
+`--decode-delay-s` for a declared delay experiment.
+
+The command comparison applies all three filters to exactly the same estimates.
+Its switch/active-decision counts are not grasp success, false-activation rates,
+or latency relative to actual intentions. The physical executor and annotated
+timeline evaluator remain pending. The filter watchdog must be called by the
+executor's own clock if samples stop arriving.
+
+See the [research protocol and readiness gates](../docs/research_protocol.md).
+The current operating parameters are illustrative, not selected from held-out
+data. Tests of streaming require the existing NumPy/SciPy EEG dependencies.
 
 ## Robot-learning task
 

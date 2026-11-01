@@ -46,18 +46,26 @@ class CommandGate:
     by indiscriminately opening the gripper or setting joint targets to zero.
     """
 
-    def __init__(self, threshold=0.7, persistence_s=0.25, max_age_s=1.0):
+    def __init__(self, threshold=0.7, persistence_s=0.25, max_age_s=1.0, mode="temporal"):
         if not all(math.isfinite(v) for v in (threshold, persistence_s, max_age_s)):
             raise ValueError("Gate parameters must be finite")
         if not 0.5 < threshold <= 1 or persistence_s < 0 or max_age_s <= 0:
             raise ValueError("Invalid gate parameters")
+        if mode not in ("raw", "confidence", "temporal"):
+            raise ValueError("Unknown comparison mode")
+        self.mode = mode
         self.threshold, self.persistence_s, self.max_age_s = threshold, persistence_s, max_age_s
         self._key = None
         self._last_time = None
         self._last_window_end = None
         self._candidate_since = None
+        self._last_request = None
 
     def update(self, estimate: Estimate, now_s: float) -> Request:
+        self._last_request = self._update(estimate, now_s)
+        return self._last_request
+
+    def _update(self, estimate: Estimate, now_s: float) -> Request:
         if not math.isfinite(now_s):
             raise ValueError("Clock must be finite")
         key = (estimate.source, estimate.episode)
@@ -71,17 +79,37 @@ class CommandGate:
         if now_s - estimate.window_end_s > self.max_age_s:
             return hold("stale")
         if self._last_time is not None:
-            if estimate.available_at_s <= self._last_time or estimate.window_end_s <= self._last_window_end:
+            if estimate.available_at_s < self._last_time or estimate.window_end_s <= self._last_window_end:
                 return hold("duplicate_or_out_of_order")
             if estimate.available_at_s - self._last_time > self.max_age_s:
                 self._candidate_since = None
         self._last_time, self._last_window_end = estimate.available_at_s, estimate.window_end_s
         if estimate.p_rest >= 0.5:
             return hold("rest")
+        if self.mode == "raw":
+            return Request(Skill.GRASP_LIFT, "argmax", now_s)
         if estimate.p_hand < self.threshold:
             return hold("low_confidence")
+        if self.mode == "confidence":
+            return Request(Skill.GRASP_LIFT, "accepted", now_s)
         if self._candidate_since is None:
             self._candidate_since = estimate.available_at_s
         if estimate.available_at_s - self._candidate_since < self.persistence_s:
             return Request(Skill.HOLD, "collecting_evidence", now_s)
         return Request(Skill.GRASP_LIFT, "accepted", now_s)
+
+    def tick(self, now_s: float) -> Request:
+        """Watchdog: a command cannot remain active indefinitely without fresh input.
+
+        The executor must call this on its own control clock when no estimate
+        arrives. This helper only returns a request; it does not move a robot.
+        """
+        if not math.isfinite(now_s):
+            raise ValueError("Clock must be finite")
+        if self._last_window_end is None or now_s - self._last_window_end > self.max_age_s:
+            self._candidate_since = None
+            self._last_request = Request(Skill.HOLD, "no_fresh_input", now_s)
+            return self._last_request
+        if self._last_time is None or now_s < self._last_time or self._last_request is None:
+            return Request(Skill.HOLD, "awaiting_estimate", now_s)
+        return Request(self._last_request.skill, "maintaining_fresh_command", now_s)

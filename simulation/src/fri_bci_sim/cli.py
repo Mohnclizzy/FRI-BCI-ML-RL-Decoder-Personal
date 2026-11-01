@@ -21,6 +21,18 @@ def main():
     replay.add_argument("--predictions", type=Path, required=True)
     replay.add_argument("--output", type=Path, required=True)
     replay.add_argument("--threshold", type=float, default=0.7)
+    decode = sub.add_parser("decode-replay", help="Causal logical-time replay of a full EEG recording")
+    decode.add_argument("--artifact", type=Path, required=True)
+    decode.add_argument("--edf", type=Path, required=True)
+    decode.add_argument("--output", type=Path, required=True)
+    decode.add_argument("--chunk-samples", type=int, default=16)
+    decode.add_argument("--hop-s", type=float, default=0.25)
+    decode.add_argument("--decode-delay-s", type=float, default=0)
+    compare = sub.add_parser("compare-commands", help="Compare three gates on the same estimate trace")
+    compare.add_argument("--trace", type=Path, required=True)
+    compare.add_argument("--output", type=Path, required=True)
+    compare.add_argument("--threshold", type=float, default=0.7)
+    compare.add_argument("--persistence-s", type=float, default=0.5)
     score = sub.add_parser("score", help="Summarize measured episode telemetry JSONL")
     score.add_argument("--outcomes", type=Path, required=True)
     for mode in ("train", "play"):
@@ -44,6 +56,14 @@ def main():
                 stream.write(json.dumps({"estimate": asdict(estimate), "request": asdict(request),
                                          "mode": "isolated_trial"}) + "\n")
         print(f"Wrote {len(estimates)} trial requests; no robot executed")
+    elif args.operation == "decode-replay":
+        from .streaming import decode_recording
+        count = decode_recording(args.artifact, args.edf, args.output, args.chunk_samples,
+                                 args.hop_s, args.decode_delay_s)
+        print(f"Wrote {count} continuous estimates; logical-time replay, no robot executed")
+    elif args.operation == "compare-commands":
+        from .comparison import compare_trace
+        print(json.dumps(compare_trace(args.trace, args.output, args.threshold, args.persistence_s), indent=2))
     elif args.operation == "score":
         outcomes = [Outcome(**json.loads(line)) for line in args.outcomes.read_text(encoding="utf-8").splitlines() if line.strip()]
         print(json.dumps(summarize(outcomes), indent=2))

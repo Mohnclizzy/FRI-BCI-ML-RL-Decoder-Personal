@@ -6,8 +6,10 @@ Public EEG motor-imagery decoding research for simulated robotic-hand control us
 
 The [Isaac Lab project scaffold](simulation/README.md) provides an external
 Franka lift task, training/playback launch plans, EEG command contracts and
-evaluation interfaces. Local command tests are separate from pending GPU/physics
-validation. See the [Brev/TACC runbook](simulation/cloud/README.md) for cloud bring-up.
+evaluation interfaces. The external task and short PPO training now run on a
+Brev L4, but the initial pilots did not learn a useful lift policy. See the
+[first GPU run record](simulation/cloud/brev_2026-11-01.md) and
+[Brev/TACC runbook](simulation/cloud/README.md).
 
 ## EEG intent decoder
 

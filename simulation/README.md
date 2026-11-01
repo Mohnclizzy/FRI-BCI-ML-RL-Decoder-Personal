@@ -3,7 +3,8 @@
 This is Mario's simulation architecture, on a separate branch from the earlier
 PyBullet prototype. It provides an external Isaac Lab task, reproducible launch
 plans, a tested EEG command contract, and measured-outcome aggregation. It is
-**scaffolding, not a trained or cloud-validated BCI controller**.
+**scaffolding, not a trained BCI controller**. Its task launches and trains on a
+Brev GPU; successful manipulation remains unvalidated.
 
 ## Architecture
 
@@ -33,8 +34,8 @@ robot movements. No dataset or synthetic EEG generator is silently assumed.
 | Confidence/persistence command filter | Implemented; simulator-independent tests |
 | Measured episode-outcome summary | Implemented; requires actual telemetry input |
 | Cloud command planner and runtime checks | Implemented; default prints plan only |
-| Isaac Lab external Franka lift configuration | Implemented against inspected v3.0.0 source; GPU validation pending |
-| Training/checkpoint playback | Delegated to upstream RSL-RL runner; cloud smoke pending |
+| Isaac Lab external Franka lift configuration | L4/Newton task startup and short training verified on Brev; lift behavior remains unvalidated |
+| Training/checkpoint playback | Two-iteration smoke and 100-iteration pilot completed; bounded checkpoint load verified; no useful trained policy yet |
 | EEG commands affecting the simulated robot | **Pending**: the skill executor must implement hold/resume and restart semantics |
 | Automatic simulator-to-Outcome recorder | **Pending**: implement after inspecting the pinned task's measured termination/reward outputs |
 | Research experiment / multi-seed results | Pending; stock task training is the baseline infrastructure |
@@ -153,8 +154,9 @@ scripted requests, raw predictions, confidence-only and temporal acceptance
 
 ## Next cloud milestones
 
-1. Follow [cloud runbook](cloud/README.md); confirm external task discovery and a
-   short table-only physics/training smoke before a long job.
+1. Read the [first Brev run record](cloud/brev_2026-11-01.md). The task launches,
+   but the initial table-only pilot produced no successful lifts. Diagnose the
+   task and establish a learnable grasp curriculum before longer training.
 2. Inspect contact, joint ranges, reset placement and upstream reward telemetry;
    record a short scene demo and implement the measured-outcome recorder.
 3. Run initial clean-command skill training, then verify hold/resume behavior
@@ -172,5 +174,5 @@ scripted requests, raw predictions, confidence-only and temporal acceptance
 - [Installation](https://docs.nvidia.com/isaaclab/isaac-lab/installation)
 - [Brev Isaac launchable](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/installation/install_advanced_cloud_setup_launchable.html)
 
-Upstream source inspection and local unit tests do not substitute for running
-the selected Newton backend and task on the target GPU.
+The selected Newton backend and task have run on the target GPU. Those short
+pilots do not establish a successful grasp or validated EEG control.

@@ -115,6 +115,50 @@ configs with results, since upstream curricula and material randomization remain
 active during training. Evaluate matched scene seeds and separate seeds for
 training/evaluation; different seeds alone are not cross-dataset generalization.
 
+### Opt-in physical lift curriculum
+
+`FRI-Franka-Lift-Pregrasp` is an easier first stage. It uses the same 5 cm free
+cube, Franka scene, relative joint actions, observation groups, rewards, and
+RSL-RL PPO configuration as `FRI-Franka-Lift`. The pinned upstream
+`reset_to_grasp` event places the cube between opened fingers at every pre-grasp
+reset, with a fixed 0.75 m world-height goal. Collision-clearance checks still
+reject invalid starts. The cube has full gravity and contact physics; there is
+no grasp attachment. These are privileged in-hand training starts, **not**
+table-pickup episodes. The second stage loads the resulting checkpoint into
+`FRI-Franka-Lift` with table-only resets and its lower pickup goal. The first
+stage does not establish an ability to approach or acquire an object from the
+table, and a checkpoint load alone does not establish transfer.
+
+The curriculum launcher prints plans by default. Use a new run directory for
+every launch. On the pinned Isaac Lab runtime, first inspect task startup,
+single-cube spawn, finger/object clearance, contacts, full gravity, target
+height, reset-bank fill, reward terms, and a saved/reloaded checkpoint with a
+two-iteration smoke. Only then decide whether a longer pre-grasp pilot is
+justified. Keep the stage 1 checkpoint's exact path for the table transfer:
+
+```bash
+"$ISAACLAB_ROOT/.venv/bin/python" -m fri_bci_sim.curriculum \
+  --isaaclab-root "$ISAACLAB_ROOT" --stage pregrasp --num-envs 16 \
+  --seed 7 --iterations 2 --run-dir "$FRI_REPO/outputs/isaac/pregrasp-smoke-001"
+# Inspect the plan, then repeat with --execute after startup checks.
+
+"$ISAACLAB_ROOT/.venv/bin/python" -m fri_bci_sim.curriculum \
+  --isaaclab-root "$ISAACLAB_ROOT" --stage table --num-envs 16 \
+  --seed 8 --iterations 2 --checkpoint /absolute/path/to/pregrasp/model_1.pt \
+  --run-dir "$FRI_REPO/outputs/isaac/table-transfer-smoke-001"
+```
+
+The table stage requires an explicit file path; the launcher passes it to the
+Isaac Lab 3.0 unified trainer's `--checkpoint` argument. Inspect the new run's
+resolved environment and agent configs and verify that model loading succeeded.
+The pregrasp task and checkpoint transfer have not yet been run on the GPU.
+The current trainer also restores optimizer state by default; decide whether to
+disable optimizer restoration and verify the behavior before a transfer run.
+Use a short held-out table-start playback and measured, sustained cube-height
+and contact traces before increasing iterations. Upstream training success is
+only a diagnostic. Do not use pre-grasp starts in the physical table-pickup
+numerator or the eventual EEG-filter comparison.
+
 ## Command and telemetry contracts
 
 `Estimate` contains only source, episode, window-end/availability timestamps,

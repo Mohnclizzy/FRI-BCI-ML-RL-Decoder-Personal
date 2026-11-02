@@ -7,14 +7,18 @@ from . import ISAACLAB_COMMIT
 
 
 def build_command(root: Path, mode: str, num_envs: int, seed: int, iterations: int,
-                  checkpoint: Path | None = None) -> list[str]:
+                  checkpoint: Path | None = None, task: str = "FRI-Franka-Lift") -> list[str]:
     if mode not in ("train", "play") or num_envs < 1 or iterations < 1 or seed < 0:
         raise ValueError("Invalid launch configuration")
+    if task not in ("FRI-Franka-Lift", "FRI-Franka-Lift-Pregrasp"):
+        raise ValueError("Unknown task")
     executable = root / ".venv" / ("Scripts/isaaclab.exe" if os.name == "nt" else "bin/isaaclab")
-    cmd = [str(executable), mode, "--task", "FRI-Franka-Lift", "--rl_library", "rsl_rl",
+    cmd = [str(executable), mode, "--task", task, "--rl_library", "rsl_rl",
            "--num_envs", str(num_envs), "--seed", str(seed)]
     if mode == "train":
         cmd.extend(["--max_iterations", str(iterations)])
+        if checkpoint is not None:
+            cmd.extend(["--checkpoint", str(checkpoint.resolve())])
     else:
         if checkpoint is None:
             raise ValueError("Playback requires an explicit checkpoint")

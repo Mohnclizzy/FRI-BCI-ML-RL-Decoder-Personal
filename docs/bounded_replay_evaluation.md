@@ -64,3 +64,25 @@ human adaptation, live acquisition, wall-clock latency, or real-time operation.
 It is not a substitute for the planned simulator-state recorder or matched
 physical-task evaluation. Do not describe its outputs as physical or real-time
 results.
+
+## EEGBCI EDF adapter
+
+`python -m eeg_decoder.evaluate_replay --decisions decisions.jsonl --edf S001R04.edf --output report.json`
+loads annotations from the named EDF and scores an already-generated decision
+trace. It accepts only filenames of the form `S###R04.edf`, `S###R08.edf`, or
+`S###R12.edf`; the decision trace's source and episode must both match the EDF
+stem. The output path is opened exclusively and an existing report is never
+overwritten. `--horizon-s` optionally sets an earlier recording-time upper
+bound; without it, the effective horizon is the EDF recording duration.
+
+The adapter maps PhysioNet EEGBCI `T0` to rest and `T1`/`T2` to imagery for
+these runs only. Unknown annotation descriptions, non-finite or negative
+durations, and unordered/duplicate event onsets are errors. Positive annotation
+duration ends at the earlier of onset plus duration and the next event onset.
+A zero duration is interpreted as continuing through the next event onset, or
+to recording end for the final event. Interval ends are clipped to the earlier
+of recording end and effective horizon; annotations beginning at or beyond
+that bound are omitted and counted. Adjacent same-label intervals are merged,
+so adjacent T1/T2 periods count as one imagery bout. Unannotated gaps remain
+unlabeled. EDF samples are not read, and the adapter does not alter decoding,
+fit or tune a model, or evaluate confirmation outcomes.

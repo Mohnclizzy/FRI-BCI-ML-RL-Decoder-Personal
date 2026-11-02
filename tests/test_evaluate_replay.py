@@ -9,10 +9,68 @@ from eeg_decoder.evaluate_replay import (
     evaluate_files,
     parse_eegbci_recording_name,
 )
+from eeg_decoder.evaluate_robot_replay import _executed_request_events
 from fri_bci_sim.replay_evaluation import AnnotatedTrial, LabelInterval, evaluate_decision_trace
 
 
 class EvaluateReplayTest(unittest.TestCase):
+    def test_command_alignment_keeps_unrounded_decision_boundary(self):
+        rows = [
+            {"row_kind": "post_step", "requested_skill": "hold", "interval_start_s": 1.0},
+            {"row_kind": "post_step", "requested_skill": "grasp_lift", "interval_start_s": 1.00004},
+        ]
+        trace_row = {"estimate": {"source": "S006", "episode": "R12", "window_end_s": 1.0,
+                                  "available_at_s": 1.0, "p_rest": 0.1, "p_hand": 0.9},
+                     "decisions": {"raw": {"issued_at_s": 1.00004, "skill": "grasp_lift"}}}
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "decisions.jsonl"
+            path.write_text(json.dumps(trace_row) + "\n", encoding="utf-8")
+            self.assertEqual(_executed_request_events(rows, path, "raw"), [
+                {"time_s": 1.0, "skill": "hold"}, {"time_s": 1.00004, "skill": "grasp_lift"}
+            ])
+
+    def test_command_alignment_keeps_unrounded_decision_boundary(self):
+        rows = [
+            {"row_kind": "post_step", "requested_skill": "hold", "interval_start_s": 1.0},
+            {"row_kind": "post_step", "requested_skill": "grasp_lift", "interval_start_s": 1.00004},
+        ]
+        trace_row = {"estimate": {"source": "S006", "episode": "R12", "window_end_s": 1.0,
+                                  "available_at_s": 1.0, "p_rest": 0.1, "p_hand": 0.9},
+                     "decisions": {"raw": {"issued_at_s": 1.00004, "skill": "grasp_lift"}}}
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "decisions.jsonl"
+            path.write_text(json.dumps(trace_row) + "\n", encoding="utf-8")
+            self.assertEqual(_executed_request_events(rows, path, "raw"), [
+                {"time_s": 1.0, "skill": "hold"}, {"time_s": 1.00004, "skill": "grasp_lift"}
+            ])
+
+    def test_executed_telemetry_must_match_trace_and_events_are_collapsed(self):
+        rows = [
+            {"row_kind": "initial", "requested_skill": "hold", "interval_start_s": 0},
+            {"row_kind": "post_step", "requested_skill": "hold", "interval_start_s": 0.0},
+            {"row_kind": "post_step", "requested_skill": "grasp_lift", "interval_start_s": 1.0},
+            {"row_kind": "post_step", "requested_skill": "grasp_lift", "interval_start_s": 1.1},
+            {"row_kind": "post_step", "requested_skill": "hold", "interval_start_s": 1.6},
+        ]
+        trace = [
+            {"estimate": {"source": "S006", "episode": "R12", "window_end_s": 1.0,
+                          "available_at_s": 1.0, "p_rest": 0.1, "p_hand": 0.9},
+             "decisions": {"raw": {"issued_at_s": 1.0, "skill": "grasp_lift"}}},
+            {"estimate": {"source": "S006", "episode": "R12", "window_end_s": 1.5,
+                          "available_at_s": 1.5, "p_rest": 0.9, "p_hand": 0.1},
+             "decisions": {"raw": {"issued_at_s": 1.5, "skill": "hold"}}},
+        ]
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "decisions.jsonl"
+            path.write_text("".join(json.dumps(item) + "\n" for item in trace), encoding="utf-8")
+            self.assertEqual(_executed_request_events(rows, path, "raw"), [
+                {"time_s": 0.0, "skill": "hold"}, {"time_s": 1.0, "skill": "grasp_lift"},
+                {"time_s": 1.6, "skill": "hold"},
+            ])
+            rows[2]["requested_skill"] = "hold"
+            with self.assertRaisesRegex(ValueError, "does not match"):
+                _executed_request_events(rows, path, "raw")
+
     def test_only_eegbci_run_4_8_12_filenames_are_accepted(self):
         for run in (4, 8, 12):
             self.assertEqual(parse_eegbci_recording_name(Path(f"S007R{run:02d}.edf")),

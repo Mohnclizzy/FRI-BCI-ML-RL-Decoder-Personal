@@ -24,9 +24,16 @@ class CurriculumPlanTest(unittest.TestCase):
         self.assertEqual(table["argv"][table["argv"].index("--checkpoint") + 1], str(checkpoint.resolve()))
         self.assertFalse(table["measured_table_pickup_evaluation"])
 
+        approach = build_stage_plan(root, "table-approach", 16, 8, 2, checkpoint)
+        self.assertEqual(approach["task"], "FRI-Franka-Lift-Approach")
+        self.assertEqual(approach["reward_variant"], "approach_contact_shaped_v1")
+        self.assertIn("--checkpoint", approach["argv"])
+
     def test_invalid_stage_transitions(self):
         with self.assertRaises(ValueError):
             build_stage_plan(Path("root"), "table", 16, 0, 2, None)
+        with self.assertRaises(ValueError):
+            build_stage_plan(Path("root"), "table-approach", 16, 0, 2, None)
         with self.assertRaises(ValueError):
             build_stage_plan(Path("root"), "pregrasp", 16, 0, 2, Path("model.pt"))
         with self.assertRaises(ValueError):

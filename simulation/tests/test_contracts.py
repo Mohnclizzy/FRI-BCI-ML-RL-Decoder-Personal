@@ -3,7 +3,8 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from fri_bci_sim.commands import CommandGate, Estimate, Skill
+from fri_bci_sim.commands import CommandGate, Estimate, Request, Skill
+from fri_bci_sim.executor import ExecutorState, SkillExecutor
 from fri_bci_sim.launch import build_command
 from fri_bci_sim.metrics import Outcome, summarize
 from fri_bci_sim.replay import load_trial_estimates
@@ -14,6 +15,26 @@ def estimate(t=2.0, episode="a", hand=0.9):
 
 
 class ContractsTest(unittest.TestCase):
+    def test_executor_starts_once_holds_and_resumes_without_restart(self):
+        executor = SkillExecutor()
+        hold = Request(Skill.HOLD, "rest", 0.0)
+        grasp = Request(Skill.GRASP_LIFT, "accepted", 1.0)
+        self.assertTrue(executor.update(hold).hold_position)
+        first = executor.update(grasp)
+        self.assertTrue(first.start_skill)
+        self.assertEqual(first.state, ExecutorState.RUNNING)
+        self.assertFalse(executor.update(grasp).start_skill)
+        paused = executor.update(hold)
+        self.assertTrue(paused.hold_position)
+        self.assertEqual(paused.state, ExecutorState.PAUSED)
+        resumed = executor.update(grasp)
+        self.assertFalse(resumed.start_skill)
+        self.assertEqual(resumed.state, ExecutorState.RUNNING)
+        completed = executor.update(grasp, skill_complete=True)
+        self.assertEqual(completed.state, ExecutorState.COMPLETE)
+        self.assertTrue(completed.hold_position)
+        self.assertFalse(executor.update(grasp).start_skill)
+
     def test_temporal_gate_needs_new_evidence(self):
         gate = CommandGate()
         self.assertEqual(gate.update(estimate(), 2).reason, "collecting_evidence")

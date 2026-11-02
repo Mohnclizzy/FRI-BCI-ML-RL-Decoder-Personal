@@ -18,6 +18,7 @@ from .launch import build_command, verify_runtime
 STAGES = {
     "pregrasp": ("FRI-Franka-Lift-Pregrasp", "in_hand_pregrasp"),
     "table": ("FRI-Franka-Lift", "table_only"),
+    "table-approach": ("FRI-Franka-Lift-Approach", "table_only_approach_shaped"),
 }
 
 
@@ -28,7 +29,7 @@ def build_stage_plan(root: Path, stage: str, num_envs: int, seed: int,
         raise ValueError(f"Unknown curriculum stage: {stage}")
     if stage == "pregrasp" and checkpoint is not None:
         raise ValueError("Pregrasp must start without a checkpoint")
-    if stage == "table" and checkpoint is None:
+    if stage in ("table", "table-approach") and checkpoint is None:
         raise ValueError("Table transfer requires an explicit pregrasp checkpoint")
     task, reset_protocol = STAGES[stage]
     command = build_command(root.resolve(), "train", num_envs, seed, iterations, checkpoint, task=task)
@@ -43,6 +44,7 @@ def build_stage_plan(root: Path, stage: str, num_envs: int, seed: int,
         "isaaclab_commit": ISAACLAB_COMMIT,
         "eeg_connected": False,
         "measured_table_pickup_evaluation": False,
+        "reward_variant": "approach_contact_shaped_v1" if stage == "table-approach" else "upstream_baseline",
     }
 
 
@@ -54,7 +56,7 @@ def main(argv: list[str] | None = None):
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--iterations", type=int, default=2)
     parser.add_argument("--checkpoint", type=Path,
-                        help="Absolute or relative pregrasp model_*.pt path, required for table transfer")
+                        help="Absolute or relative pregrasp model_*.pt path, required for table stages")
     parser.add_argument("--run-dir", required=True, type=Path)
     parser.add_argument("--execute", action="store_true", help="Default is dry-run only")
     args = parser.parse_args(argv)

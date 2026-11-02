@@ -1,22 +1,22 @@
 # Isaac Lab project scaffold
 
-This is Mario's simulation architecture, on a separate branch from the earlier
-PyBullet prototype. It provides an external Isaac Lab task, reproducible launch
-plans, a tested EEG command contract, and measured-outcome aggregation. It is
-**scaffolding, not a trained BCI controller**. Its task launches and trains on a
-Brev GPU; successful manipulation remains unvalidated.
+This is Mario's Isaac Lab simulation architecture, separate from the earlier
+PyBullet prototype. It now includes a measured recorded-EEG-to-scripted-Franka
+pilot and a separately evaluated PPO policy. It is **not a live or physical BCI
+controller**; all robot execution described here is simulated.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-  A[Recorded EEG / future live EEG] --> B[Angel's decoder]
+  A[Recorded EEG] --> B[Existing decoder]
   B --> C[Timestamped probabilities]
-  C --> D[Command acceptance filter]
-  D --> E[Robot skill executor: pending integration]
-  E --> F[Learned manipulation policy]
+  C --> D[Raw / confidence / temporal gate]
+  D --> E[HOLD / GRASP_LIFT executor]
+  E --> F[Scripted Franka skill]
   F --> G[Isaac Lab physics]
   G --> H[Episode telemetry and evaluation]
+  P[PPO policy evaluation] --> G
 ```
 
 Ground-truth EEG labels belong to the evaluator, not the actor or command
@@ -34,15 +34,38 @@ robot movements. No dataset or synthetic EEG generator is silently assumed.
 | Confidence/persistence command filter | Implemented; simulator-independent tests |
 | Measured episode-outcome summary | Implemented; requires actual telemetry input |
 | Cloud command planner and runtime checks | Implemented; default prints plan only |
-| Isaac Lab external Franka lift configuration | L4/Newton task startup and short training verified on Brev; lift behavior remains unvalidated |
-| Training/checkpoint playback | Two-iteration smoke and 100-iteration pilot completed; bounded checkpoint load verified; no useful trained policy yet |
-| EEG commands affecting the simulated robot | **Pending**: the skill executor must implement hold/resume and restart semantics |
-| Automatic simulator-to-Outcome recorder | **Pending**: implement after inspecting the pinned task's measured termination/reward outputs |
-| Research experiment / multi-seed results | Pending; stock task training is the baseline infrastructure |
+| Isaac Lab external Franka lift configuration | L4/Newton task startup and bounded simulation evaluations verified on Brev |
+| PPO pre-grasp checkpoint | Measured free-cube lift in 5/5 12 s episodes from in-hand resets; not a table pickup |
+| PPO table transfer | 64-env, 100-iteration transfer and checkpoint playback completed; 0/5 table lifts, no finger contact; hand moved away from cube |
+| Recorded EEG gate commands affecting the scripted Franka lift | First S001R12 replay pilot complete for raw, confidence, and temporal gates; see [pilot results](../docs/end_to_end_pilot_2026-11-02.md) |
+| Scripted-skill HOLD/resume and simulator telemetry | Repaired locally in `scripts/controlled_lift.py`: HOLD preserves the last commanded arm and finger targets across pauses; completion is absorbing; per-step telemetry is tested. All three corrected physical controls passed after the documented 2 s initialization; see ../docs/stopping_point_2026-11-02.md |
+| PPO behavior under EEG commands | Not connected; the end-to-end filtering pilot uses the scripted skill because table-transfer PPO has no measured lift |
+| Five-person EEG command replay preflight | Complete for S006â€“S010 over the same 24 s horizon; filters reduce rest activation but miss more imagery bouts; exploratory only, see [cohort replay](../docs/multi_person_replay_2026-11-02.md) |
+| Historical 24 s matched five-person Franka run | Preserved as exploratory debugging evidence only. Its physical HOLD control was invalid, so its lift counts do not support comparison claims. Corrected controls passed; one 120 s EEG case was validated, and the expanded matched rerun remains incomplete after user-requested stop; see the [completion protocol](../docs/completion_protocol_2026-11-02.md) |
 
 The boundaries above are deliberate: a command trace is not robot execution,
-playback is not a quantitative evaluation, and a successful process exit is not
-evidence of a successful grasp.
+and a successful process exit is not evidence of a successful grasp. A playback
+counts as a physical evaluation only when simulator state and contacts are logged.
+
+### Recorded EEG to Franka scripted-skill pilot
+
+The first bounded end-to-end pilot has been run and its telemetry preserved.
+After creating a causal estimate trace and a three-gate decision trace locally,
+copy the decisions JSONL to the pinned Brev runtime and call
+`simulation/scripts/controlled_lift.py` with `--decisions PATH` and
+`--condition raw|confidence|temporal`. With `--joint-waypoints`, simulated
+skill time advances only while the selected gate requests `GRASP_LIFT`; during
+`HOLD`, the last commanded arm and finger targets remain latched, including
+through pauses. This is the scripted Franka baseline; it does
+not execute the PPO policy. Use a fresh output path for each condition. The
+pilot and its interpretation limits are in
+[`docs/end_to_end_pilot_2026-11-02.md`](../docs/end_to_end_pilot_2026-11-02.md).
+Matched controls use `--condition always-hold` (24 s; no decision trace; must
+not lift and must meet fixed motion/target tolerances), `--condition
+scripted-positive` (24 s; must lift and complete), and `--condition
+scripted-pause` (34 s; must lift and complete across a pause). Both positive
+controls must pass before EEG condition outcomes can be interpreted. Local
+executor/evaluator tests pass; all three corrected GPU controls passed; see the stopping-point record.
 
 ## Local checks (no Isaac, CUDA, or EEG download required)
 
@@ -92,8 +115,9 @@ is reported separately; it is not automatically added to simulated delay. Use
 
 The command comparison applies all three filters to exactly the same estimates.
 Its switch/active-decision counts are not grasp success, false-activation rates,
-or latency relative to actual intentions. The physical executor and annotated
-timeline evaluator remain pending. The filter watchdog must be called by the
+or latency relative to actual intentions. The executor and an annotation-based
+timeline evaluator are implemented, but the current end-to-end evidence covers
+one exploratory recording. The filter watchdog must be called by the
 executor's own clock if samples stop arriving.
 
 See the [research protocol and readiness gates](../docs/research_protocol.md).
@@ -151,13 +175,25 @@ justified. Keep the stage 1 checkpoint's exact path for the table transfer:
 The table stage requires an explicit file path; the launcher passes it to the
 Isaac Lab 3.0 unified trainer's `--checkpoint` argument. Inspect the new run's
 resolved environment and agent configs and verify that model loading succeeded.
-The pregrasp task and checkpoint transfer have not yet been run on the GPU.
-The current trainer also restores optimizer state by default; decide whether to
-disable optimizer restoration and verify the behavior before a transfer run.
-Use a short held-out table-start playback and measured, sustained cube-height
-and contact traces before increasing iterations. Upstream training success is
-only a diagnostic. Do not use pre-grasp starts in the physical table-pickup
-numerator or the eventual EEG-filter comparison.
+The measured five-episode pre-grasp result and table-transfer failure are in
+[`docs/ppo_lift_evaluation_2026-11-02.md`](../docs/ppo_lift_evaluation_2026-11-02.md).
+The current trainer restores optimizer state by default. The first table
+checkpoint did not lift; its resolved config and playback support a targeted
+approach/contact reward experiment. `FRI-Franka-Lift-Approach` keeps the table
+baseline's action and observation dimensions, but changes reach/contact reward
+weights. Use the same pre-grasp checkpoint to preserve initialization:
+
+```bash
+"$ISAACLAB_ROOT/.venv/bin/python" -m fri_bci_sim.curriculum \
+  --isaaclab-root "$ISAACLAB_ROOT" --stage table-approach --num-envs 16 \
+  --seed 8 --iterations 2 --checkpoint /absolute/path/to/pregrasp/model_99.pt \
+  --run-dir "$FRI_REPO/outputs/isaac/table-approach-smoke-001"
+```
+
+Inspect the resolved reward weights, checkpoint load, cube/hand distance,
+finger contact and physical lift telemetry before increasing the run. A changed
+reward is a hypothesis to test, not evidence of success. Never use pre-grasp
+starts in the table-pickup numerator or EEG-filter comparison.
 
 ## Command and telemetry contracts
 
@@ -167,12 +203,11 @@ and REST/HAND_IMAGERY probabilities. `Request` maps accepted hand imagery to
 dataset contains a distinct grasp-imagery label. The filter rejects future,
 stale, duplicate and out-of-order evidence and resets at episode/source changes.
 
-The pending executor must treat HOLD as maintaining appropriate arm/gripper
-targets, including an existing grasp. Sending zero joint positions, repeatedly
-applying a previous relative action, or opening the fingers is not a validated
-hold implementation. It must keep simulator state and decoder time separate,
-and log command switches and response times. The current task runs the standalone
-manipulation skill without this executor; `launch.json` says `eeg_connected:false`.
+The executor treats HOLD as maintaining the last commanded arm/finger targets,
+including an existing grasp; measured physical drift does not recapture a new
+target. It keeps simulator time separate from decoder timestamps and logs
+requests, transitions, targets, and state. This integration is simulator replay,
+not live EEG; `launch.json` says `eeg_connected:false`.
 
 The future simulator recorder must produce one JSON object per completed episode:
 
@@ -198,16 +233,21 @@ scripted requests, raw predictions, confidence-only and temporal acceptance
 
 ## Next cloud milestones
 
-1. Read the [first Brev run record](cloud/brev_2026-11-01.md). The task launches,
-   but the initial table-only pilot produced no successful lifts. Diagnose the
-   task and establish a learnable grasp curriculum before longer training.
-2. Inspect contact, joint ranges, reset placement and upstream reward telemetry;
-   record a short scene demo and implement the measured-outcome recorder.
-3. Run initial clean-command skill training, then verify hold/resume behavior
-   through a robot executor. Extend observation/reward conditioning if one policy
-   is expected to learn both modes. Current task trains the active skill only.
-4. Connect actual EEG requests only after those checks. Keep the original command
-   filtering question and any newer transfer/generation study separately specified.
+1. Run corrected always-HOLD, scripted-positive, and scripted-pause controls on
+   the pinned GPU runtime. Stop if any fixed physical/target tolerance or
+   completion check fails. Then validate one EEG replay and run the frozen
+   120 s matched S006â€“S010 comparison on the same dataset/traces/scenes. The
+   historical 24 s physical run is invalid for HOLD comparison because its
+   HOLD implementation was flawed; preserve it as historical exploratory
+   evidence only. Do not add a second dataset.
+2. If PPO remains in the comparison, inspect its table goal/object coordinate
+   observations and approach/contact reward shaping before spending more GPU time.
+   The current table-transfer failure is a measured result, not evidence that the
+   reset scene itself is unreachable.
+3. Finish the study report and Isaac Lab demonstration. Keep the EEG input as
+   recorded replay, score annotations only after decoding, and state clearly that
+   the command vocabulary maps hand imagery to a grasp primitive rather than
+   decoding a specific grasp intention.
 
 ## Sources and runtime pin
 

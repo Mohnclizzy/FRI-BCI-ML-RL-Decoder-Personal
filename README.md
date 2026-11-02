@@ -2,13 +2,23 @@
 
 Public EEG motor-imagery decoding research for simulated robotic-hand control using machine learning and reinforcement learning.
 
+For the full project timeline and present limits, read [project history](docs/PROJECT_HISTORY.md).
+For cross-account repository access and reproduction, read [sharing and reproduction](docs/SHARING_AND_REPRODUCTION.md).
+
 ## Simulation scaffold
 
-The [Isaac Lab project scaffold](simulation/README.md) provides an external
-Franka lift task, training/playback launch plans, EEG command contracts and
-evaluation interfaces. The external task and short PPO training now run on a
-Brev L4, but the initial pilots did not learn a useful lift policy. See the
-[first GPU run record](simulation/cloud/brev_2026-11-01.md) and
+The [Isaac Lab project scaffold](simulation/README.md) connects causal recorded
+EEG replay, three command gates, a HOLD-preserving executor, a scripted Franka
+lift skill, measured cube/contact telemetry, and a separate PPO evaluation.
+The first matched five-person table-pickup pilot recorded 1/5 raw EEG
+episodes lifted; confidence and temporal filtering each achieved 0/5 in the
+24-second budget. Filtering did reduce annotated rest activation, while also
+reducing command coverage. Subsequent audit found arm drift during HOLD and an
+insufficient negative-control check, so the physical comparison requires a
+corrected rerun. The recorded command scores are separate from physical motion.
+Read the
+[measured cohort results](docs/multi_person_replay_2026-11-02.md),
+[PPO playback results](docs/ppo_lift_evaluation_2026-11-02.md), and
 [Brev/TACC runbook](simulation/cloud/README.md).
 
 ## EEG intent decoder

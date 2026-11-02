@@ -23,7 +23,8 @@ Outputs were copied locally under ignored
 under the corresponding project output path. Brev stop was requested after the
 run; check `brev ls` for STOPPED before assuming compute billing ended.
 
-Next: inspect reset geometry and out-of-bounds episodes, make a short measured
-pre-grasp checkpoint evaluation, then test the table stage only if it achieves
-repeated sustained free-object lifts with bilateral contact. Keep each stage's
-success counts separate.
+Follow-up: the saved checkpoint produced measured pre-grasp lifts in 5/5
+single-environment episodes, then a 100-iteration table transfer produced
+0/5 measured table lifts. See
+[`docs/ppo_lift_evaluation_2026-11-02.md`](../../docs/ppo_lift_evaluation_2026-11-02.md).
+The two stages have separate reset geometry and separate success counts.

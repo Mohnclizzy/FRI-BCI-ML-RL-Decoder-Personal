@@ -27,6 +27,7 @@ specific grasp motion.
 | Recorded EEG → scripted robot | A historical 24-s five-person run reported raw 1/5 lifts and filtered 0/5, but its always-HOLD control drifted about 0.141 m, invalidating the physical comparison. One corrected 120-s S006 temporal case had complete trace alignment, only **0.692 s** of enable time, and no motion/lift. The corrected five-person, three-gate 120-s batch was stopped incomplete. | No valid paired physical effect of EEG filtering has been established. The incomplete batch must not be treated as a result. |
 | Project PPO | The original pre-grasp checkpoint lifted **5/5** from privileged in-hand starts but **0/5** from table starts. A bounded Approach fine-tune from that checkpoint completed **100 additional PPO updates**, 64 environments × 32 steps × 100 = **204,800 transitions**, with optimizer and normalizer restoration verified. Five measured 12-s table episodes with the final checkpoint yielded **0/5** pickups; bilateral contact appeared in one. | Pre-grasp lifting, reward, update count, and exit code do not prove table pickup. The PPO physics-step recorder used eager Newton actuation; parity with the earlier fused path is unproven, so this is not a clean scripted-versus-PPO comparison. |
 | NVIDIA pretrained candidate | An official `model_399.pt` Franka Cube policy was integrated separately without replacing project code or training weights. The first in-process five-episode screen had four invalid starts: reset writes disappeared on the first physics step. Five **independent fresh-process** starts passed the continuity check; **1/5** met the sampled sustained two-finger lift criterion. Three episodes ended early under the native task's termination flag. | It is a different scene, reset distribution, assistance logic, and up-to-3-s horizon. It does not transfer directly into project PPO, demonstrate reliability, or justify comparison with the project's 12-s 0/5. Finger forces exceeded 100 N and native joint clamps fired often. |
+| Near-table learning rung | An isolated Isaac Lab/RSL-RL task now starts with an open gripper 0.0166 m above a table cube. A reset/first-step physical geometry screen passed; 4-, 64-, 128-, and 256-environment two-update startup/throughput runs completed. A bounded 256-environment, 250-update learning run was launched in a new directory. | A valid reset and training startup are not learned pickup. The learning run and its physical evaluation must finish before adding an outcome to the robot chart. The fixed near-grasp start does not establish full approach or spatial generalization. |
 
 ## Graphs from saved results
 
@@ -54,6 +55,11 @@ validated EEG-to-learned-policy outcome to graph yet. Training reward curves
 would show optimization behavior, not physical pickup; they are not substituted
 for these sampled position/contact outcomes.
 
+The near-table reset screen and the public Panda PPO reuse review were added
+after these three figures were frozen. See
+[`NEAR_TABLE_CURRICULUM_2026-11-02.md`](NEAR_TABLE_CURRICULUM_2026-11-02.md)
+and [`PANDA_PPO_REUSE_REVIEW_2026-11-02.md`](PANDA_PPO_REUSE_REVIEW_2026-11-02.md).
+
 ## What has changed in the engineering workflow
 
 - Source of record is `Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal`, branch
@@ -73,11 +79,11 @@ for these sampled position/contact outcomes.
   it does **not** contain every later PPO/candidate run. New NVIDIA candidate
   raw runs have verified local/remote compressed copies. Backup of all
   historical Brev outputs remains unverified.
-- The Brev CLI worker was left idle after the bounded candidate work. A read-only
-  check on 2026-11-02 found the L4 at 0% utilization with no compute process.
-  A separate account
-  should read this report and the cited run records from Git rather than rely
-  on chat history or a Jupyter terminal view.
+- A later 2026-11-02 session launched the near-table first-rung run in the
+  Personal checkout's new `outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z`
+  directory. The run's final status belongs in its `exit.json`, not an earlier
+  idle check. A separate account should read the run records from Git and this
+  directory rather than rely on chat history or a Jupyter terminal view.
 
 ## Current decision and next gates
 
@@ -91,13 +97,15 @@ for these sampled position/contact outcomes.
    protocol, with valid HOLD/positive controls and all 15 paired episodes.
    Preserve the interrupted run as incomplete. Report physical completion,
    rest motion, command coverage and delays separately.
-3. **Choose and freeze the next learned table-pickup experiment** after the
-   port audit: either validate a faithful pretrained condition or implement
-   the near-table approach curriculum/demonstration-assisted PPO path in
-   `docs/ROBOT_LEARNING_DESIGN_2026-11-02.md`. Specify reset ranges, compute
-   budget, independent seeds, and physical stop criteria before launch. A
-   five-episode screen is diagnostic; the design's proposed readiness gate is
-   at least 18/20 fixed-scene pickups plus separate perturbation and seed tests.
+3. **Complete the bounded near-table experiment.** The frozen first phase is
+   256 environments × 32 rollout steps × 250 updates = 2,048,000 transitions,
+   seed 8, from scratch, with its own output directory. Preserve the final
+   checkpoint and run a five-start 12-s physical screen with independent fresh
+   processes and the corrected recorder. Report complete/incomplete episodes,
+   cube rise and both finger forces; do not call reward a pickup. A five-episode
+   screen is diagnostic; the design's proposed readiness gate is at least
+   18/20 fixed-scene pickups plus separate perturbation and seed tests. The
+   next farther-start rung remains unlaunched.
 4. **Only after a learned policy qualifies**, implement its continuous
    enable/HOLD/resume adapter. Test always-HOLD and pauses during approach,
    closure and loaded lift before connecting recorded EEG. Then compare EEG

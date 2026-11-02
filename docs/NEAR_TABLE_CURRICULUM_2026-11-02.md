@@ -88,9 +88,17 @@ first near-table task: the cube and joint reset values matched, and the four
 specified reward weights changed as intended in both training and play mode.
 Its 4-environment, seed-8, 2-update startup run completed with exit 0 under
 `outputs/isaac/near-table-progress-startup-20261102T2310Z`. A separate
-256-environment, seed-8, 250-update run was then launched under
-`outputs/isaac/near-table-progress-256x250-seed8-20261102T2305Z`. Inspect its
-`exit.json` and measured physical screen before interpreting it.
+256-environment, seed-8, 250-update run then completed under
+`outputs/isaac/near-table-progress-256x250-seed8-20261102T2305Z` with exit 0.
+The final `model_249.pt` SHA256 is
+`46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6`.
+At update 249 the **training task metric** reported success rate 0.1102, mean
+reward 2.52, and object-out-of-bounds termination rate 0.6498. These values
+are optimization diagnostics, not a measured physical pickup outcome. No
+playback was launched for this checkpoint in this session. The next bounded
+action is a five-start physical screen with separate processes and complete
+termination/contact traces; the high out-of-bounds fraction is a specific
+failure risk to inspect.
 
 ## Why this rung exists
 

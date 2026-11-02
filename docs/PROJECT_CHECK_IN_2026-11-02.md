@@ -105,8 +105,10 @@ and [`PANDA_PPO_REUSE_REVIEW_2026-11-02.md`](PANDA_PPO_REUSE_REVIEW_2026-11-02.m
    completed at 0/5 physical pickups despite strong contact and rising reward.
    A separate `FRI-Franka-Lift-NearTable-Progress` task keeps its physical
    problem fixed while reducing stationary contact payment and increasing
-   credited cube-to-goal progress. Run a bounded new-directory experiment and
-   the same five-start 12-s physical screen. Stop for redesign if measured cube
+   credited cube-to-goal progress. Its bounded 2.048M-transition run completed;
+   the last training success metric was 0.1102, but 0.6498 of terminations were
+   object out of bounds. Run the same five-start 12-s physical screen before
+   interpreting the checkpoint. Stop for redesign if measured cube
    rise does not improve. A five-episode screen is diagnostic; the design's
    proposed readiness gate is at least 18/20 fixed-scene pickups plus separate
    perturbation and seed tests. The next farther-start rung remains unlaunched.

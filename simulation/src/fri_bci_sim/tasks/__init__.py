@@ -34,3 +34,14 @@ gym.register(
         "default_agent": "rsl_rl",
     },
 )
+
+gym.register(
+    id="FRI-Franka-Lift-NearTable",
+    entry_point="isaaclab.envs:ManagerBasedRLEnv",
+    disable_env_checker=True,
+    kwargs={
+        "env_cfg_entry_point": "fri_bci_sim.tasks.near_table:NearTableLiftEnvCfg",
+        "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.lift.config.franka.agents.rsl_rl_ppo_cfg:FrankaPPORunnerCfg",
+        "default_agent": "rsl_rl",
+    },
+)

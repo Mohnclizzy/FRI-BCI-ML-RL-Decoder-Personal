@@ -134,10 +134,17 @@ observations, not predictions inferred from EEG.
 
 The upstream task proposes aligned pre-grasps with probability0.75. We override
 that to0 for both training and play, so the baseline is table-only. This makes
-learning harder; no performance is promised. Keep the full resolved upstream
-configs with results, since upstream curricula and material randomization remain
-active during training. Evaluate matched scene seeds and separate seeds for
-training/evaluation; different seeds alone are not cross-dataset generalization.
+learning harder; no performance is promised. The fixed table task also disables
+the listed material/dynamics randomization and curriculum; inspect the resolved
+config for each run. Different seeds alone do not create cube-position
+generalization when the reset geometry is fixed.
+
+`FRI-Franka-Lift-NearTable` is an additive first curriculum rung: the cube stays
+on the table and the open gripper starts near the validated scripted grasp
+waypoint. It keeps the Approach observation/action/reward interface. This is
+only a proposed training reset until its exact pose, clearance, physics-step
+continuity and contact are checked in the pinned simulator. See the
+[near-table protocol](../docs/NEAR_TABLE_CURRICULUM_2026-11-02.md).
 
 ### Opt-in physical lift curriculum
 

@@ -1,5 +1,7 @@
 # Start here: current project state
 
+> **Find the data:** [Results index](results/README.md) · [Storage, backups and latest completion status](docs/DATA_AND_STATUS_MAP_2026-11-02.md).
+
 > **Current check-in:** [Project status as of 2026-11-02](docs/PROJECT_CHECK_IN_2026-11-02.md).
 > That report reconciles the older results and supersedes historical next steps.
 

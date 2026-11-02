@@ -1,0 +1,253 @@
+{
+  "record_date": "2026-11-02",
+  "repository": "Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal",
+  "branch": "codex/robot-learning-design",
+  "reviewed_base_commit": "d8e6b22221bf99c2bb0c31a2383906dc8e64f5f4",
+  "reviewed_base_tree": "de42c80eed8a20b2e0455c03202d52ddb8701a94",
+  "experiment_status": "training_and_five_episode_evaluation_completed; further_experimentation_stopped_by_user",
+  "task": "FRI-Franka-Lift-Approach",
+  "seed": 8,
+  "eeg_connected": false,
+  "training": {
+    "command": "/home/ubuntu/IsaacLab-fri/.venv/bin/isaaclab train --task FRI-Franka-Lift-Approach --rl_library rsl_rl --num_envs 64 --seed 8 --max_iterations 100 --checkpoint /home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/logs/rsl_rl/lift_franka/2026-11-02_00-39-11/model_99.pt --resume_optimizer_state physics=newton_mjwarp --viz none",
+    "environments": 64,
+    "updates_requested": 100,
+    "updates_completed": 100,
+    "rollout_steps_per_environment": 32,
+    "transitions": 204800,
+    "process_exit_code": 0,
+    "source_checkpoint": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/logs/rsl_rl/lift_franka/2026-11-02_00-39-11/model_99.pt",
+    "source_checkpoint_sha256": "6a9c5ff66ff813c5b3a72596b620f9729953f91febeb564a88421c59c564ee9b",
+    "source_iteration": 99,
+    "final_iteration": 198,
+    "resume_optimizer_state": true,
+    "optimizer_parameter_step_before": 2000,
+    "optimizer_parameter_step_after": 4000,
+    "normalizer_count_before": 204800,
+    "normalizer_count_after": 409600,
+    "configured_learning_rate": 0.001,
+    "restored_optimizer_learning_rate": 1e-05,
+    "final_adaptive_learning_rate": 0.00011390625000000005,
+    "agent_config_sha256": "76f18b1d5e211cbf38a6de83aef657d69380f5a38b76b71aa2ab214954fb0fad",
+    "environment_config_sha256": "87f66af1f3ac48488df46c577aaff7168b205e234c51fde18397814be25703c5",
+    "final_checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-64env-100-updates-seed8-20261102T201810Z/logs/rsl_rl/lift_franka/2026-11-02_20-18-31/model_198.pt",
+    "final_checkpoint_sha256": "4ca3e23b639bda131ec55df8d8ac16551d547b0ae03cae0f5685d91f2597bde7"
+  },
+  "evaluation": {
+    "command": "/home/ubuntu/IsaacLab-fri/.venv/bin/isaaclab play --rl_library rsl_rl --task FRI-Franka-Lift-Approach --num_envs 1 --seed 8 --checkpoint /home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/checkpoint/model_198.pt --external_callback fri_bci_sim.ppo_telemetry.register physics=newton_mjwarp --viz none",
+    "episodes_requested": 5,
+    "episodes_completed": 5,
+    "episodes_replaced": 0,
+    "seconds_per_episode": 12,
+    "environments": 1,
+    "total_simulated_seconds": 60.0,
+    "physics_steps": 7200,
+    "policy_steps": 1800,
+    "contact_coverage": 1.0,
+    "frozen_thresholds": {
+      "cube_rise_m": 0.08,
+      "each_finger_contact_n": 0.1,
+      "sustained_contact_seconds": 0.5,
+      "drop_below_baseline_plus_m": 0.04,
+      "sustained_drop_seconds": 0.25
+    },
+    "physical_lift_successes": 0,
+    "incomplete_episodes": 0,
+    "error": null,
+    "episodes": [
+      {
+        "episode": 1,
+        "status": "completed",
+        "termination": {
+          "terminated": false,
+          "time_out": true
+        },
+        "duration_s": 12.0,
+        "physics_samples": 1440,
+        "contact_samples": 1440,
+        "contact_coverage": 1.0,
+        "physics_step_gaps": 0,
+        "baseline_cube_height_m": 0.2800000011920929,
+        "max_cube_lift_m": 9.751319885253906e-05,
+        "max_finger_contact_n": [
+          0.0,
+          5.386036396026611
+        ],
+        "first_bilateral_contact_time_s": null,
+        "acquisition_time_s": null,
+        "drop_count": 0,
+        "physical_lift_pass": false,
+        "error": null
+      },
+      {
+        "episode": 2,
+        "status": "completed",
+        "termination": {
+          "terminated": false,
+          "time_out": true
+        },
+        "duration_s": 12.0,
+        "physics_samples": 1440,
+        "contact_samples": 1440,
+        "contact_coverage": 1.0,
+        "physics_step_gaps": 0,
+        "baseline_cube_height_m": 0.2800000011920929,
+        "max_cube_lift_m": 0.00015288591384887695,
+        "max_finger_contact_n": [
+          0.0,
+          6.086518287658691
+        ],
+        "first_bilateral_contact_time_s": null,
+        "acquisition_time_s": null,
+        "drop_count": 0,
+        "physical_lift_pass": false,
+        "error": null
+      },
+      {
+        "episode": 3,
+        "status": "completed",
+        "termination": {
+          "terminated": false,
+          "time_out": true
+        },
+        "duration_s": 12.0,
+        "physics_samples": 1440,
+        "contact_samples": 1440,
+        "contact_coverage": 1.0,
+        "physics_step_gaps": 0,
+        "baseline_cube_height_m": 0.2800000011920929,
+        "max_cube_lift_m": 0.00017070770263671875,
+        "max_finger_contact_n": [
+          0.0,
+          5.326315402984619
+        ],
+        "first_bilateral_contact_time_s": null,
+        "acquisition_time_s": null,
+        "drop_count": 0,
+        "physical_lift_pass": false,
+        "error": null
+      },
+      {
+        "episode": 4,
+        "status": "completed",
+        "termination": {
+          "terminated": false,
+          "time_out": true
+        },
+        "duration_s": 12.0,
+        "physics_samples": 1440,
+        "contact_samples": 1440,
+        "contact_coverage": 1.0,
+        "physics_step_gaps": 0,
+        "baseline_cube_height_m": 0.2800000011920929,
+        "max_cube_lift_m": 0.00023043155670166016,
+        "max_finger_contact_n": [
+          1.5799510478973389,
+          6.567994117736816
+        ],
+        "first_bilateral_contact_time_s": 2.275,
+        "acquisition_time_s": null,
+        "drop_count": 0,
+        "physical_lift_pass": false,
+        "error": null
+      },
+      {
+        "episode": 5,
+        "status": "completed",
+        "termination": {
+          "terminated": false,
+          "time_out": true
+        },
+        "duration_s": 12.0,
+        "physics_samples": 1440,
+        "contact_samples": 1440,
+        "contact_coverage": 1.0,
+        "physics_step_gaps": 0,
+        "baseline_cube_height_m": 0.2800000011920929,
+        "max_cube_lift_m": 0.0001646280288696289,
+        "max_finger_contact_n": [
+          0.0,
+          8.668375015258789
+        ],
+        "first_bilateral_contact_time_s": null,
+        "acquisition_time_s": null,
+        "drop_count": 0,
+        "physical_lift_pass": false,
+        "error": null
+      }
+    ]
+  },
+  "recorder_validation": {
+    "directory": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201627Z",
+    "process_exit_code": 0,
+    "policy_steps": 360,
+    "duration_seconds": 12.0,
+    "physics_samples": 1440,
+    "contact_samples": 1440,
+    "contact_coverage": 1.0,
+    "gaps": 0,
+    "episode_result": "timeout; no lift/contact success"
+  },
+  "tests": {
+    "focused_telemetry": "7 passed",
+    "simulation_unittest_discovery": "32 passed; one module import error: pytest unavailable for test_physical_evaluation.py",
+    "git_diff_check": "passed"
+  },
+  "runtime": {
+    "gpu": "NVIDIA L4",
+    "torch": "2.11.0+cu130",
+    "cuda_available": true,
+    "isaac_lab_commit": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4",
+    "rsl_rl": "5.5.1",
+    "physics": "newton_mjwarp",
+    "imported_module_root": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/simulation/src/fri_bci_sim/"
+  },
+  "limitations_and_errors": [
+    "Initial telemetry validation at outputs/isaac/ppo-telemetry-validation-20261102T201500Z had accumulated timestamp rounding resulting in 12.000959 s; it was preserved and a corrected passing validation was run at the path above.",
+    "Full simulation test discovery could not import test_physical_evaluation.py because pytest is not installed."
+  ],
+  "artifact_manifest": "results/ppo_approach_sha256_2026-11-02.json",
+  "large_artifact_location": "ignored local outputs/ directories listed in the handoff; not uploaded to GitHub and backup status unverified",
+  "preserved_prior_smoke_directories": [
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-20261102",
+      "status": "interrupted during setup; no exit.json; log ends with KeyboardInterrupt during Warp array cleanup",
+      "num_envs": 4,
+      "seed": 8,
+      "requested_updates": 2
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-ready-20261102",
+      "status": "failed before training, exit code 1; RuntimeError: No CUDA GPUs are available",
+      "num_envs": 4,
+      "seed": 8,
+      "requested_updates": 2
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-l4-20261102T1954Z",
+      "status": "completed, exit code 0; two updates from iteration 99 to 101; total 256 transitions",
+      "num_envs": 4,
+      "seed": 8,
+      "requested_updates": 2
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8",
+      "status": "original pregrasp checkpoint source preserved; model_99.pt hash verified"
+    }
+  ],
+  "source_sha256": {
+    "simulation/src/fri_bci_sim/ppo_telemetry.py": "0148706238cb7173a4e24add1e806f93a35ec32d78d5037e53547cc2655677b2",
+    "simulation/src/fri_bci_sim/curriculum.py": "ef27cac3413c2ccb1acb3ef56c559baa09f9f23ac2aaaf51a52117d28ce74e84",
+    "simulation/src/fri_bci_sim/tasks/approach.py": "b5e93ce61f79830f2d59391206d2aaeee7f1d927e269299715f6834bbaa2acc6",
+    "simulation/src/fri_bci_sim/tasks/lift.py": "19187b0b45539a45a0364c70db1b1fca485dfce854fe3886c66bcc7f124318eb",
+    "simulation/tests/test_ppo_telemetry.py": "302c6e2f18dac04342bfc19bbe6260a58a3c9f0fbab9f1fa6b68157a67886416"
+  },
+  "runtime_source_sha256": {
+    "isaaclab/envs/manager_based_rl_env.py": "d9679559c73eb8ef426b09ee6371edeaf248764da40451d4fae3bf4430eec78a",
+    "isaaclab_rl/entrypoints/backends/train_rsl_rl.py": "043cd5091e2bcca988d217e6b70f809bf67e004a6929ce1ee78efe9488a40ee8",
+    "isaaclab_rl/entrypoints/backends/play_rsl_rl.py": "446828e336d302f517a90d82b92b4ef79385f08398e5de07b87127e659dc5535",
+    "isaaclab_rl/entrypoints/backends/cli_args_rsl_rl.py": "3326bbb78b6fc15cf796eff4b3546f2f5f6ab7d2d36838acf4354ecbaf4d6678",
+    "rsl_rl/runners/on_policy_runner.py": "c2dbe47974b047e6992e37ff39ac0a236c8fa5cb595cb9e1715e1344e81dc852",
+    "rsl_rl/algorithms/ppo.py": "01a82cea45fa9d8ccb161bd75e07d8623d25450ff92982e9c9d59ca8a9b78393"
+  }
+}

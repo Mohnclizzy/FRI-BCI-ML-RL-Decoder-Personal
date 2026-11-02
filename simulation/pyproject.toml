@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fri-bci-sim"
+version = "0.1.0"
+description = "EEG command contracts and external Isaac Lab manipulation tasks"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+fri-bci-sim = "fri_bci_sim.cli:main"
+
+[project.entry-points."isaaclab.tasks"]
+fri_bci_sim = "fri_bci_sim.tasks"
+
+[tool.setuptools.packages.find]
+where = ["src"]

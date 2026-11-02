@@ -26,7 +26,33 @@ specific grasp motion.
 | Scripted robot reference | A fixed-scene waypoint controller lifted a free cube about **0.179 m** with sustained bilateral contact. After HOLD repair and a common 2-s pre-roll, always-HOLD, uninterrupted lift, and paused/resumed lift controls passed their frozen checks. | Scripted motion is not robot learning or a multiple-scene reliability result. |
 | Recorded EEG → scripted robot | A historical 24-s five-person run reported raw 1/5 lifts and filtered 0/5, but its always-HOLD control drifted about 0.141 m, invalidating the physical comparison. One corrected 120-s S006 temporal case had complete trace alignment, only **0.692 s** of enable time, and no motion/lift. The corrected five-person, three-gate 120-s batch was stopped incomplete. | No valid paired physical effect of EEG filtering has been established. The incomplete batch must not be treated as a result. |
 | Project PPO | The original pre-grasp checkpoint lifted **5/5** from privileged in-hand starts but **0/5** from table starts. A bounded Approach fine-tune from that checkpoint completed **100 additional PPO updates**, 64 environments × 32 steps × 100 = **204,800 transitions**, with optimizer and normalizer restoration verified. Five measured 12-s table episodes with the final checkpoint yielded **0/5** pickups; bilateral contact appeared in one. | Pre-grasp lifting, reward, update count, and exit code do not prove table pickup. The PPO physics-step recorder used eager Newton actuation; parity with the earlier fused path is unproven, so this is not a clean scripted-versus-PPO comparison. |
-| NVIDIA pretrained candidate | An official `model_399.pt` Franka Cube policy was integrated separately without replacing project code or training weights. The first in-process five-episode screen had four invalid starts: reset writes disappeared on the first physics step. Five **independent fresh-process** starts passed the continuity check; **1/5** met the sampled sustained two-finger lift criterion. | It is a different scene, reset distribution, assistance logic, and ~3-s horizon. It does not transfer directly into project PPO, demonstrate reliability, or justify comparison with the project's 12-s 0/5. Finger forces exceeded 100 N and native joint clamps fired often. |
+| NVIDIA pretrained candidate | An official `model_399.pt` Franka Cube policy was integrated separately without replacing project code or training weights. The first in-process five-episode screen had four invalid starts: reset writes disappeared on the first physics step. Five **independent fresh-process** starts passed the continuity check; **1/5** met the sampled sustained two-finger lift criterion. Three episodes ended early under the native task's termination flag. | It is a different scene, reset distribution, assistance logic, and up-to-3-s horizon. It does not transfer directly into project PPO, demonstrate reliability, or justify comparison with the project's 12-s 0/5. Finger forces exceeded 100 N and native joint clamps fired often. |
+
+## Graphs from saved results
+
+The charts are descriptive. Dots in the EEG command chart are individual
+participants, so its mean bars do not hide the variation. The robot panels
+have different scenes, controllers, resets and horizons; their pass counts
+must not be read as a controlled comparison.
+
+![Confirmation EEG decoder results for five calibrated people](../results/figures/eeg_decoder_confirmation_2026-11-02.png)
+
+![Recorded EEG command tradeoff over the first 24 seconds](../results/figures/eeg_command_tradeoff_2026-11-02.png)
+
+![Separate robot physical screening outcomes](../results/figures/robot_physical_screens_2026-11-02.png)
+
+Figure data, exact input SHA256 hashes and physical validity flags are tracked
+in `results/project_checkin_plot_data_2026-11-02.json`. Regenerate PNG
+figures from that compact file with `python analysis/plot_project_checkin.py`.
+Use `--collect` only when the ignored raw outputs have been restored locally;
+it checks that the corrected EEG physical batch is still marked incomplete.
+
+These figures show where the pipeline stops: the decoder and request stream
+have offline measurements, the scripted robot has valid controls, and the
+learned table-pickup skill has only small robot-only screens. There is no
+validated EEG-to-learned-policy outcome to graph yet. Training reward curves
+would show optimization behavior, not physical pickup; they are not substituted
+for these sampled position/contact outcomes.
 
 ## What has changed in the engineering workflow
 

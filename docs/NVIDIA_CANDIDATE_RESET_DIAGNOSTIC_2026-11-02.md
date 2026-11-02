@@ -46,16 +46,17 @@ audits existing raw telemetry without editing it. The old audit is saved as
 
 The original policy checkpoint and prepared source were reused unchanged in
 five new one-episode processes. Each process had a fresh simulator, distinct
-seed, complete 358-sample contact coverage, and a valid first physics update.
+seed, complete contact coverage over its observed episode, and a valid first
+physics update. Three episodes terminated before the configured ~3-s horizon.
 The same >=0.08-m rise and >=0.1-N force on each finger for >=0.5 s was used.
 
-| Seed | Valid | Max post-action rise (m) | Best qualifying span (s) | Pass |
-|---:|:---:|---:|---:|:---:|
-| 9 | Yes | 0.561 | 2.042 | Yes |
-| 10 | Yes | 0.021 | 0 | No |
-| 11 | Yes | 0.106 | 0.033 | No |
-| 12 | Yes | 0.040 | 0 | No |
-| 13 | Yes | 0.034 | 0 | No |
+| Seed | Valid | Duration (s) | Native ending | Max rise (m) | Best qualifying span (s) | Pass |
+|---:|:---:|---:|---|---:|---:|:---:|
+| 9 | Yes | 2.983 | Timeout | 0.561 | 2.042 | Yes |
+| 10 | Yes | 0.567 | Terminated | 0.021 | 0 | No |
+| 11 | Yes | 1.333 | Terminated | 0.106 | 0.033 | No |
+| 12 | Yes | 2.983 | Timeout | 0.040 | 0 | No |
+| 13 | Yes | 0.800 | Terminated | 0.034 | 0 | No |
 
 Seeds 9–13 were specified before these outcomes were inspected; no failures
 were replaced. This is a small screen, with one successful instance, not a

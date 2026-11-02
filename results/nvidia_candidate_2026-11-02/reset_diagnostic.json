@@ -29,7 +29,13 @@
       "arm_velocity_clamps": 123,
       "finger_clamps": 14,
       "max_velocity_correction_rad_s": 5.683842658996582,
-      "max_finger_correction_m": 0.00819738581776619
+      "max_finger_correction_m": 0.00819738581776619,
+      "samples": 358,
+      "duration_s": 2.9833333333333254,
+      "termination": {
+        "terminated": false,
+        "timeout": true
+      }
     },
     {
       "seed": 10,
@@ -52,7 +58,13 @@
       "arm_velocity_clamps": 65,
       "finger_clamps": 0,
       "max_velocity_correction_rad_s": 5.673445701599121,
-      "max_finger_correction_m": 0.0
+      "max_finger_correction_m": 0.0,
+      "samples": 68,
+      "duration_s": 0.5666666666666671,
+      "termination": {
+        "terminated": true,
+        "timeout": false
+      }
     },
     {
       "seed": 11,
@@ -75,7 +87,13 @@
       "arm_velocity_clamps": 101,
       "finger_clamps": 33,
       "max_velocity_correction_rad_s": 4.085631370544434,
-      "max_finger_correction_m": 0.02183472365140915
+      "max_finger_correction_m": 0.02183472365140915,
+      "samples": 160,
+      "duration_s": 1.333333333333331,
+      "termination": {
+        "terminated": true,
+        "timeout": false
+      }
     },
     {
       "seed": 12,
@@ -98,7 +116,13 @@
       "arm_velocity_clamps": 177,
       "finger_clamps": 20,
       "max_velocity_correction_rad_s": 5.549104690551758,
-      "max_finger_correction_m": 0.0077928826212882996
+      "max_finger_correction_m": 0.0077928826212882996,
+      "samples": 358,
+      "duration_s": 2.9833333333333254,
+      "termination": {
+        "terminated": false,
+        "timeout": true
+      }
     },
     {
       "seed": 13,
@@ -121,7 +145,13 @@
       "arm_velocity_clamps": 81,
       "finger_clamps": 17,
       "max_velocity_correction_rad_s": 7.798876762390137,
-      "max_finger_correction_m": 0.010815158486366272
+      "max_finger_correction_m": 0.010815158486366272,
+      "samples": 96,
+      "duration_s": 0.7999999999999996,
+      "termination": {
+        "terminated": true,
+        "timeout": false
+      }
     }
   ],
   "interpretation": "screen only; high forces and state clamps remain; not a robust or hardware-ready policy"

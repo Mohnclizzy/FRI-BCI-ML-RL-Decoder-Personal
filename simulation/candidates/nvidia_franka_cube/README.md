@@ -45,9 +45,12 @@ An unsuccessful physical outcome is retained. Do not replace episodes or expand
 training. Each invocation is finite; there is no optimization call. Native timeout
 logic ends episodes at about 2.9833 s (179 steps at 60 Hz), despite a configured
 3 s horizon. Preserve this fact when reporting the native condition.
-`--episodes 5` remains a diagnostic mode, but rejects the run if any first
-physics sample disagrees with its reset state. The original five-episode run
-failed that check for episodes 2–5; see the reset diagnostic report.
+`--episodes 5` is now rejected. Until the reset defect is resolved, each process
+is limited to one episode. A reset-continuity failure stops at its first recorded
+physics sample; the offending sample and incomplete/error summary are retained.
+The original five-episode run failed continuity for episodes 2–5; see the reset
+diagnostic report. The process restriction contains the defect; its backend cause
+has not been repaired or physically revalidated.
 
 ## Compatibility and measurement
 
@@ -72,6 +75,14 @@ failed that check for episodes 2–5; see the reset diagnostic report.
   corrections. This is a learned policy with engineered assistance, not an
   unconstrained learned controller. Counts are cumulative, with each episode's
   start/end values saved; maxima are cumulative as well.
+- Write each native clamp event with its before/after values and record joint/cube
+  velocities plus applied position targets. Report peak finger forces and a
+  `finger_force_at_or_above_100N` review flag. This is a diagnostic marker based
+  on the observed problem, not a hardware safety limit or a change to native
+  actuation. A sampled lift can require review; it does not qualify the controller.
+- Missing/non-finite contacts stop playback. Incomplete, invalid-reset, or
+  timestamp-gap measurements cannot return a valid physical pass. Raw observed
+  lift remains separately labeled `sampled_lift_observed` for error diagnosis.
 - Sampled lift: >=0.08 m rise and each finger force >=0.1 N over a timestamp span
   >=0.5 s. Drop: after acquisition, below baseline +0.04 m over >=0.25 s. Sampling
   cannot prove uninterrupted contact between samples. Missing contact data makes

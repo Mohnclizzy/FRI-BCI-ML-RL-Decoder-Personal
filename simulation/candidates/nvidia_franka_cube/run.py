@@ -11,7 +11,7 @@ import sys
 import traceback
 
 from prepare import CHECKPOINT_SHA256, ISAAC_COMMIT, sha256
-from scoring import score, reset_continuity
+from scoring import score, reset_continuity, require_valid_reset
 
 
 def tensor(value):
@@ -44,6 +44,11 @@ class Recorder:
                     self.active["reset_continuity"] = reset_continuity(self.active["initial"], row)
                 self.active["samples"].append(row)
                 self.write(row)
+                # Preserve the offending sample, then stop before another action.
+                if len(self.active["samples"]) == 1:
+                    require_valid_reset(self.active["initial"], row)
+                if any(f is None or not math.isfinite(f) for f in row["finger_contact_n"]):
+                    raise RuntimeError("Missing or non-finite finger contact measurement")
             return result
 
         # Observe existing updates. Do not change decimation, graph, or actuator flags.
@@ -64,23 +69,32 @@ class Recorder:
         return {"episode": len(self.results) + 1, "cube_pose_w": cube, "cube_height_m": cube[2],
                 "hand_pose_w": hand, "finger_contact_n": forces,
                 "joint_pos": values(e.robot.data.joint_pos)[0],
+                "joint_vel_rad_s": values(e.robot.data.joint_vel)[0],
+                "cube_velocity_w": values(e.cube.data.root_vel_w)[0],
                 "joint_names": list(e.robot.joint_names), "joint_targets": values(e.robot_dof_targets)[0],
+                "applied_joint_position_targets": values(e.robot.data.joint_pos_target)[0],
                 "gripper_close_enabled": bool(e.gripper_close_enabled[0].item()),
                 "interventions": dict(self.interventions)}
 
     def begin(self):
         initial = self.snapshot()
+        self.elapsed = 0.0
+        self.active = {"baseline": initial["cube_height_m"], "initial": initial,
+                       "reset_continuity": {"reset_continuity_pass": False}, "samples": [],
+                       "interventions_at_start": dict(self.interventions)}
+        self.write({"record_type": "initial_pre_action", "time_s": 0.0, **initial})
         local_height = initial["cube_height_m"] - float(self.env.scene.env_origins[0, 2].item())
         fingers = [q for name, q in zip(initial["joint_names"], initial["joint_pos"])
                    if "finger_joint" in name]
         distance = math.dist(initial["cube_pose_w"][:3], initial["hand_pose_w"][:3])
         if abs(local_height - self.env.cfg.cube_size / 2) > 0.005 or not fingers or min(fingers) < 0.03 or distance < 0.05:
             raise RuntimeError("Invalid native table/open-gripper initial state")
-        self.elapsed = 0.0
-        self.active = {"baseline": initial["cube_height_m"], "initial": initial,
-                       "reset_continuity": {"reset_continuity_pass": False}, "samples": [],
-                       "interventions_at_start": dict(self.interventions)}
-        self.write({"record_type": "initial_pre_action", "time_s": 0.0, **initial})
+
+    def record_correction(self, kind, before, after):
+        if self.active is not None:
+            self.write({"record_type": "native_state_correction", "episode": len(self.results) + 1,
+                        "time_s": self.elapsed, "kind": kind,
+                        "before": values(before)[0], "after": values(after)[0]})
 
     def finish(self, complete, termination=None):
         if self.active is None:
@@ -94,6 +108,17 @@ class Recorder:
                       interventions_at_end=dict(self.interventions),
                       observed_update_intervals_s=sorted(set(r["sample_interval_s"] for r in self.active["samples"])))
         result.update(self.active["reset_continuity"])
+        result["measurement_valid"] = result["measurement_valid"] and result["reset_continuity_pass"]
+        if not result["measurement_valid"]:
+            result["physical_lift_pass"] = None
+        result["interventions_in_episode"] = {
+            key: self.interventions[key] - self.active["interventions_at_start"][key]
+            for key in ("finger_clamps", "arm_velocity_clamps")}
+        if any(result["interventions_in_episode"].values()):
+            result["review_flags"].append("native_joint_state_corrections")
+        result["qualification_status"] = (
+            "invalid_measurement" if not result["measurement_valid"] else
+            "review_required" if result["review_flags"] else "not_assessed")
         self.results.append(result)
         self.active = None
 
@@ -103,7 +128,8 @@ def main():
     parser.add_argument("--candidate-root", required=True, type=Path)
     parser.add_argument("--isaaclab-root", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--episodes", type=int, choices=(1, 5), default=1)
+    parser.add_argument("--episodes", type=int, choices=(1,), default=1,
+                        help="One episode per process until the Newton reset-state loss is resolved")
     parser.add_argument("--seed", type=int, default=8)
     parser.add_argument("--probe", action="store_true", help="CPU checkpoint/config validation; no simulation")
     from isaaclab.app import add_launcher_args, launch_simulation
@@ -133,6 +159,10 @@ def main():
         from franka_cube.tasks.direct.franka_cube.franka_cube_env_cfg import FrankaCubeEnvCfg
         from franka_cube.tasks.direct.franka_cube.franka_cube_env import FrankaCubeEnv
         from franka_cube.tasks.direct.franka_cube.agents.rsl_rl_ppo_cfg import PPORunnerCfg
+        manifest["imported_candidate_sources"] = {
+            cls.__name__: {"path": sys.modules[cls.__module__].__file__,
+                           "sha256": sha256(sys.modules[cls.__module__].__file__)}
+            for cls in (FrankaCubeEnvCfg, FrankaCubeEnv, PPORunnerCfg)}
         cfg = FrankaCubeEnvCfg()
         cfg.scene.num_envs = 1
         cfg.seed = args.seed
@@ -193,6 +223,8 @@ def main():
                         r = self.recorder.interventions
                         r["finger_clamps"] += 1
                         r["max_finger_correction_m"] = max(r["max_finger_correction_m"], correction)
+                        self.recorder.record_correction("finger_position_m", q,
+                            q.clamp(self.finger_dof_lower_limits, self.finger_dof_upper_limits))
                 super()._enforce_finger_joint_limits()
 
             def _enforce_arm_joint_velocity_limits(self):
@@ -203,6 +235,8 @@ def main():
                         r = self.recorder.interventions
                         r["arm_velocity_clamps"] += 1
                         r["max_velocity_correction_rad_s"] = max(r["max_velocity_correction_rad_s"], correction)
+                        self.recorder.record_correction("arm_velocity_rad_s", v,
+                            v.clamp(-self.arm_dof_velocity_limits, self.arm_dof_velocity_limits))
                 super()._enforce_arm_joint_velocity_limits()
 
         # Sensor reporting is an explicit candidate instrumentation addition.
@@ -239,7 +273,7 @@ def main():
                 rec.finish(False, {"reason": "step_budget_exhausted"})
                 if len(rec.results) != args.episodes or any(
                     r["status"] != "completed" or r["contact_coverage"] != 1.0
-                    or not r["reset_continuity_pass"] for r in rec.results
+                    or not r["measurement_valid"] for r in rec.results
                 ):
                     raise RuntimeError("Incomplete evaluation, missing contact coverage, or invalid reset continuity")
             finally:

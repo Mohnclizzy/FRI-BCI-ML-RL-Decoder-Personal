@@ -3,6 +3,13 @@ from __future__ import annotations
 import math
 
 
+def require_valid_reset(initial, first_sample):
+    result = reset_continuity(initial, first_sample)
+    if not result["reset_continuity_pass"]:
+        raise RuntimeError(f"Reset state lost at first physics sample: {result}")
+    return result
+
+
 def reset_continuity(initial, first_sample):
     """Flag state writes that disappear on the first physics update.
 
@@ -22,16 +29,24 @@ def score(samples, baseline, *, max_gap_s, complete):
     best = 0.0
     previous = None
     contacts_observed = 0
+    sample_gaps = 0
+    peak_forces = [None, None]
     for row in samples:
         t = row["time_s"]
+        if not math.isfinite(t) or not math.isfinite(row["cube_height_m"]):
+            raise ValueError("Non-finite physics timestamp or cube height")
         if previous is not None and t <= previous:
             raise ValueError("Samples must have strictly increasing timestamps")
+        if previous is not None and t - previous > max_gap_s:
+            sample_gaps += 1
         if previous is None or t - previous > max_gap_s:
             good_since = below_since = None
         previous = t
         forces = row["finger_contact_n"]
-        valid = len(forces) == 2 and all(f is not None for f in forces)
+        valid = len(forces) == 2 and all(f is not None and math.isfinite(f) and f >= 0 for f in forces)
         contacts_observed += int(valid)
+        if valid:
+            peak_forces = [f if p is None else max(p, f) for p, f in zip(peak_forces, forces)]
         good = valid and min(forces) >= 0.1 and row["cube_height_m"] - baseline >= 0.08
         if good:
             good_since = t if good_since is None else good_since
@@ -51,12 +66,19 @@ def score(samples, baseline, *, max_gap_s, complete):
         else:
             below_since = None
     coverage = contacts_observed / len(samples) if samples else 0.0
+    valid_measurement = complete and coverage == 1.0 and sample_gaps == 0
     return {
         "status": "completed" if complete else "incomplete",
         "samples": len(samples), "contact_coverage": coverage,
         "max_cube_rise_m": max((r["cube_height_m"] - baseline for r in samples), default=None),
         "best_sampled_sustain_s": best, "first_sampled_success_s": success_time,
-        "physical_lift_pass": success_time is not None if coverage == 1.0 else None,
+        "sampled_lift_observed": success_time is not None,
+        "measurement_valid": valid_measurement,
+        "physical_lift_pass": success_time is not None if valid_measurement else None,
+        "sample_gaps": sample_gaps,
+        "max_finger_contact_n": peak_forces,
+        "review_flags": ["finger_force_at_or_above_100N"] if any(
+            f is not None and f >= 100.0 for f in peak_forces) else [],
         "drop_detection_times_s": drops,
         "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
         "limitation": "Sampled contact only; no claim about contact between observations.",

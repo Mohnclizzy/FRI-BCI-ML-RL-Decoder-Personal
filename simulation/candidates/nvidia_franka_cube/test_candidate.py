@@ -4,8 +4,12 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 import zipfile
+import io
+import json
+from types import SimpleNamespace
 
 import prepare
+from run import Recorder
 from scoring import score, reset_continuity
 
 
@@ -14,6 +18,25 @@ def row(t, rise=0.1, forces=(1.0, 1.0)):
 
 
 class ScoringTests(unittest.TestCase):
+    def test_incomplete_lift_is_observed_but_not_a_valid_pass(self):
+        result = score([row(t / 10) for t in range(1, 8)], .025,
+                       max_gap_s=.11, complete=False)
+        self.assertTrue(result["sampled_lift_observed"])
+        self.assertIsNone(result["physical_lift_pass"])
+
+    def test_high_forces_flag_review_without_changing_lift_threshold(self):
+        result = score([row(t / 10, forces=(150, 2)) for t in range(1, 8)], .025,
+                       max_gap_s=.11, complete=True)
+        self.assertTrue(result["physical_lift_pass"])
+        self.assertIn("finger_force_at_or_above_100N", result["review_flags"])
+        self.assertEqual(result["max_finger_contact_n"], [150, 2])
+
+    def test_nonfinite_contacts_cannot_produce_success(self):
+        result = score([row(t / 10, forces=(float("nan"), 2)) for t in range(1, 8)],
+                       .025, max_gap_s=.11, complete=True)
+        self.assertIsNone(result["physical_lift_pass"])
+        self.assertEqual(result["contact_coverage"], 0)
+
     def test_elapsed_span_not_sample_count(self):
         short = [row(t / 10) for t in range(1, 6)]
         self.assertFalse(score(short, 0.025, max_gap_s=.11, complete=True)["physical_lift_pass"])
@@ -74,6 +97,40 @@ class PreservationTests(unittest.TestCase):
 
 
 class ResetContinuityTests(unittest.TestCase):
+    def test_recorder_stops_at_bad_first_update_and_preserves_error_evidence(self):
+        stream = io.StringIO()
+        env = SimpleNamespace(scene=SimpleNamespace(update=lambda **kwargs: None),
+                              physics_dt=1 / 120, step_dt=1 / 60)
+        recorder = Recorder(env, stream)
+        initial = {"cube_pose_w": [.4, 0, .025], "hand_pose_w": [.4, 0, .5]}
+        first = {"episode": 1, "cube_pose_w": [.82, 0, .022],
+                 "hand_pose_w": [.48, 0, .1], "cube_height_m": .022,
+                 "finger_contact_n": [0, 0]}
+        recorder.snapshot = lambda: first
+        recorder.active = {"initial": initial, "samples": [], "baseline": .025,
+                           "interventions_at_start": dict(recorder.interventions)}
+        recorder.stepping = True
+        with self.assertRaisesRegex(RuntimeError, "Reset state lost"):
+            env.scene.update(dt=1 / 120)
+        self.assertEqual(len(recorder.active["samples"]), 1)
+        self.assertEqual(json.loads(stream.getvalue())["record_type"], "sample")
+        recorder.finish(False, {"reason": "reset_failure"})
+        self.assertIsNone(recorder.results[0]["physical_lift_pass"])
+        self.assertFalse(recorder.results[0]["measurement_valid"])
+
+    def test_missing_contact_stops_on_first_observed_update(self):
+        stream = io.StringIO()
+        env = SimpleNamespace(scene=SimpleNamespace(update=lambda **kwargs: None),
+                              physics_dt=1 / 120)
+        recorder = Recorder(env, stream)
+        initial = {"cube_pose_w": [.4, 0, .025], "hand_pose_w": [.4, 0, .5]}
+        recorder.snapshot = lambda: dict(initial, finger_contact_n=[None, None])
+        recorder.active = {"initial": initial, "samples": []}
+        recorder.stepping = True
+        with self.assertRaisesRegex(RuntimeError, "contact measurement"):
+            env.scene.update(dt=1 / 120)
+        self.assertEqual(len(recorder.active["samples"]), 1)
+
     def test_stale_physics_state_is_rejected(self):
         initial = {"cube_pose_w": [.4, 0, .025], "hand_pose_w": [.4, 0, .5]}
         first = {"cube_pose_w": [.82, 0, .022], "hand_pose_w": [.48, 0, .1]}

@@ -106,7 +106,8 @@ stopping-point and completion-protocol documents before resuming it.
 ## Where the history and files live
 
 - Git commits preserve dated implementation milestones and the source/doc
-  changes on branch `codex/isaaclab-project-scaffold` in Mario's personal fork.
+  changes on branch `codex/isaaclab-project-scaffold` in the independent
+  personal repository.
 - `origin` points to the independent personal repository
   `Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal`; `upstream` points to Angel's
   original `AL-DEV06/FRI-BCI-ML-RL-Decoder`. A GitHub fork was also created

@@ -29,7 +29,7 @@ outputs; these are ignored by `.gitignore` to keep the repository manageable.
    exact label may appear under **Access**).
 3. Invite the GitHub username or email tied to the other account's GitHub login.
    Accept the invitation while signed into that GitHub account.
-4. On the other computer or checkout, clone the personal fork and checkout
+4. On the other computer or checkout, clone the independent repository and checkout
    `codex/isaaclab-project-scaffold` to see the current project work.
 
 ChatGPT account access and GitHub account access are separate. Inviting a

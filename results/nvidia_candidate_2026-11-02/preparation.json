@@ -1,0 +1,36 @@
+{
+  "source_url": "https://developer.download.nvidia.com/Omniverse/learning/Courses/GettingStartedNewton/getting_started_with_newton_franka_cube.zip",
+  "archive_sha256": "d0fdef74d06752b224e78402437de2b8aaf5ee76145f13338bd81049a9f75f67",
+  "checkpoint_sha256": "832d8262ede665b5698c557e79ef0aa4167ec0fae1b5d5d8b222e829effc24a4",
+  "target_isaac_commit": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4",
+  "patches": [
+    {
+      "before": "from isaaclab_assets.robots.franka import FRANKA_PANDA_CFG",
+      "after": "from isaaclab_assets.robots.franka import FRANKA_PANDA_LEGACY_CFG as FRANKA_PANDA_CFG",
+      "count": 1
+    },
+    {
+      "before": ".velocity_limit_sim =",
+      "after": ".joint_velocity_limit =",
+      "count": 3
+    },
+    {
+      "before": ".effort_limit_sim =",
+      "after": ".joint_effort_limit =",
+      "count": 1
+    },
+    {
+      "before": "self.scene.clone_environments(copy_from_source=False)",
+      "after": "cloning owned by pinned DirectRLEnv",
+      "count": 1
+    }
+  ],
+  "config_before_sha256": "c5d48fe57f4ef3426e93573acd93c4927789ef0f160e039e3b20da3b208cdd0e",
+  "config_after_sha256": "e78b42de6eb31b9812778261cd56eada6f713e0d737e139dadafbd261f1e0023",
+  "root": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v3/franka_cube",
+  "env_before_sha256": "d077b84f3771d150d5397b657a64c453bac4415da9efb93105c9807b1d601d9d",
+  "env_after_sha256": "1e1bc55ad22534bf99f0ecb85b20971f5c6822d51737839514a2e0b47864cc1c",
+  "condition": "nvidia_pretrained_candidate_compat_v1",
+  "physics_validation": "not_yet_run",
+  "original_archive_preserved": true
+}

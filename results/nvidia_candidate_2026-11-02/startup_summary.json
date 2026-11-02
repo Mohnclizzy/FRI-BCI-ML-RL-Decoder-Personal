@@ -1,0 +1,41 @@
+{
+  "error": null,
+  "episodes_requested": 1,
+  "episodes": [
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": 0.6604857202619314,
+      "best_sampled_sustain_s": 1.8416666666666603,
+      "first_sampled_success_s": 1.6416666666666633,
+      "physical_lift_pass": true,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 1,
+      "duration_s": 2.9833333333333254,
+      "termination": {
+        "terminated": false,
+        "timeout": true
+      },
+      "interventions_at_start": {
+        "finger_clamps": 0,
+        "arm_velocity_clamps": 0,
+        "max_finger_correction_m": 0.0,
+        "max_velocity_correction_rad_s": 0.0
+      },
+      "interventions_at_end": {
+        "finger_clamps": 2,
+        "arm_velocity_clamps": 157,
+        "max_finger_correction_m": 0.000551268458366394,
+        "max_velocity_correction_rad_s": 8.608322143554688
+      },
+      "observed_update_intervals_s": [
+        0.008333333333333333
+      ]
+    }
+  ],
+  "probe_pass": false,
+  "training": false
+}

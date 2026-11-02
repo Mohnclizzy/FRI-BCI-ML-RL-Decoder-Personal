@@ -1,5 +1,7 @@
 # Start here: current project state
 
+Saved run artifacts and cached data are now available as a private GitHub release. See [artifact handoff](docs/ARTIFACT_HANDOFF.md) for the download, inventory, and restoration instructions.
+
 This is a simulation-first EEG-to-robot project. The current goal is to compare
 raw, confidence-filtered, and temporally filtered recorded EEG requests while
 measuring physical lift completion, movement during REST, missed imagery bouts,
@@ -38,8 +40,8 @@ Angel's original repository for reference only. Push ongoing project work to
 Resume from `docs/stopping_point_2026-11-02.md` and follow
 `docs/completion_protocol_2026-11-02.md` to finish the corrected matched batch.
 Do not present partial results as the final comparison. The local `outputs/`
-folder contains detailed artifacts and is ignored by Git; share it through
-OneDrive separately if the other account needs those raw logs/checkpoints.
+folder contains detailed artifacts and is ignored by Git source commits. The
+private release linked above supplies the saved logs and checkpoints.
 
 For the full history, see `docs/PROJECT_HISTORY.md`. For account sharing and
 checkout instructions, see `docs/SHARING_AND_REPRODUCTION.md`.

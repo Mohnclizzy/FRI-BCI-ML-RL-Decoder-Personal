@@ -40,6 +40,8 @@ project chats, uploaded files, and instructions.
 
 ## Share generated run artifacts
 
+The current artifact snapshot is now available directly from the private GitHub repository as a release. See [ARTIFACT_HANDOFF.md](ARTIFACT_HANDOFF.md). OneDrive sharing below is an optional way to share subsequent local updates; it is no longer required to obtain this snapshot.
+
 The detailed run artifacts remain in the local `outputs/` directory. This
 checkout lives beneath the Windows OneDrive `Documents/ChatGPT/New project 6`
 folder. To make those artifacts available to the other Microsoft account,

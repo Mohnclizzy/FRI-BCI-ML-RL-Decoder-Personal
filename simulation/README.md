@@ -37,6 +37,7 @@ robot movements. No dataset or synthetic EEG generator is silently assumed.
 | Isaac Lab external Franka lift configuration | L4/Newton task startup and bounded simulation evaluations verified on Brev |
 | PPO pre-grasp checkpoint | Measured free-cube lift in 5/5 12 s episodes from in-hand resets; not a table pickup |
 | PPO table transfer | 64-env, 100-iteration transfer and checkpoint playback completed; 0/5 table lifts, no finger contact; hand moved away from cube |
+| Near-table PPO first rung | 256-env, 250-update training from an open gripper near a table cube completed; five fresh-process 12 s physical screens gave 0/5 pickups despite bilateral contact. The isolated `near-table-progress` task changes the reward incentive for the next bounded test. |
 | Recorded EEG gate commands affecting the scripted Franka lift | First S001R12 replay pilot complete for raw, confidence, and temporal gates; see [pilot results](../docs/end_to_end_pilot_2026-11-02.md) |
 | Scripted-skill HOLD/resume and simulator telemetry | Repaired locally in `scripts/controlled_lift.py`: HOLD preserves the last commanded arm and finger targets across pauses; completion is absorbing; per-step telemetry is tested. All three corrected physical controls passed after the documented 2 s initialization; see ../docs/stopping_point_2026-11-02.md |
 | PPO behavior under EEG commands | Not connected; the end-to-end filtering pilot uses the scripted skill because table-transfer PPO has no measured lift |

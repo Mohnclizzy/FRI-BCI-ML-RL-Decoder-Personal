@@ -35,6 +35,12 @@ class CurriculumPlanTest(unittest.TestCase):
         self.assertEqual(near["reward_variant"], "approach_contact_shaped_v1")
         self.assertNotIn("--checkpoint", near["argv"])
 
+        progress = build_stage_plan(root, "near-table-progress", 256, 8, 250, None)
+        self.assertEqual(progress["task"], "FRI-Franka-Lift-NearTable-Progress")
+        self.assertEqual(progress["reset_protocol"], "table_near_grasp_open")
+        self.assertEqual(progress["reward_variant"], "near_table_progress_v2")
+        self.assertNotIn("--checkpoint", progress["argv"])
+
     def test_invalid_stage_transitions(self):
         with self.assertRaises(ValueError):
             build_stage_plan(Path("root"), "table", 16, 0, 2, None)

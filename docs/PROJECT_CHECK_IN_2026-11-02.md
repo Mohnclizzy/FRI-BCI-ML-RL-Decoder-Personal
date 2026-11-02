@@ -27,7 +27,7 @@ specific grasp motion.
 | Recorded EEG → scripted robot | A historical 24-s five-person run reported raw 1/5 lifts and filtered 0/5, but its always-HOLD control drifted about 0.141 m, invalidating the physical comparison. One corrected 120-s S006 temporal case had complete trace alignment, only **0.692 s** of enable time, and no motion/lift. The corrected five-person, three-gate 120-s batch was stopped incomplete. | No valid paired physical effect of EEG filtering has been established. The incomplete batch must not be treated as a result. |
 | Project PPO | The original pre-grasp checkpoint lifted **5/5** from privileged in-hand starts but **0/5** from table starts. A bounded Approach fine-tune from that checkpoint completed **100 additional PPO updates**, 64 environments × 32 steps × 100 = **204,800 transitions**, with optimizer and normalizer restoration verified. Five measured 12-s table episodes with the final checkpoint yielded **0/5** pickups; bilateral contact appeared in one. | Pre-grasp lifting, reward, update count, and exit code do not prove table pickup. The PPO physics-step recorder used eager Newton actuation; parity with the earlier fused path is unproven, so this is not a clean scripted-versus-PPO comparison. |
 | NVIDIA pretrained candidate | An official `model_399.pt` Franka Cube policy was integrated separately without replacing project code or training weights. The first in-process five-episode screen had four invalid starts: reset writes disappeared on the first physics step. Five **independent fresh-process** starts passed the continuity check; **1/5** met the sampled sustained two-finger lift criterion. Three episodes ended early under the native task's termination flag. | It is a different scene, reset distribution, assistance logic, and up-to-3-s horizon. It does not transfer directly into project PPO, demonstrate reliability, or justify comparison with the project's 12-s 0/5. Finger forces exceeded 100 N and native joint clamps fired often. |
-| Near-table learning rung | An isolated Isaac Lab/RSL-RL task now starts with an open gripper 0.0166 m above a table cube. A reset/first-step physical geometry screen passed; 4-, 64-, 128-, and 256-environment two-update startup/throughput runs completed. A bounded 256-environment, 250-update learning run was launched in a new directory. | A valid reset and training startup are not learned pickup. The learning run and its physical evaluation must finish before adding an outcome to the robot chart. The fixed near-grasp start does not establish full approach or spatial generalization. |
+| Near-table learning rung | An isolated Isaac Lab/RSL-RL task starts with an open gripper 0.0166 m above a table cube. A 256-environment, 250-update run completed 2.048 million transitions. In five complete 12-s fresh-process screens, the policy contacted the cube but lifted it at most 0.044 m: **0/5 pickups**. Reward rose from 0.01 to 33.66 as the training task success metric remained 0. | This is a measured contact-without-lift failure, not learned pickup. High finger forces and frequent raw actions above magnitude 1 need attention. The fixed near-grasp start also does not establish full approach or spatial generalization. |
 
 ## Graphs from saved results
 
@@ -41,6 +41,10 @@ must not be read as a controlled comparison.
 ![Recorded EEG command tradeoff over the first 24 seconds](../results/figures/eeg_command_tradeoff_2026-11-02.png)
 
 ![Separate robot physical screening outcomes](../results/figures/robot_physical_screens_2026-11-02.png)
+
+The later near-table training/screen result has its own plot:
+
+![Near-table training reward versus measured cube rise](../results/figures/near_table_stage1_2026-11-02.png)
 
 Figure data, exact input SHA256 hashes and physical validity flags are tracked
 in `results/project_checkin_plot_data_2026-11-02.json`. Regenerate PNG
@@ -97,15 +101,15 @@ and [`PANDA_PPO_REUSE_REVIEW_2026-11-02.md`](PANDA_PPO_REUSE_REVIEW_2026-11-02.m
    protocol, with valid HOLD/positive controls and all 15 paired episodes.
    Preserve the interrupted run as incomplete. Report physical completion,
    rest motion, command coverage and delays separately.
-3. **Complete the bounded near-table experiment.** The frozen first phase is
-   256 environments × 32 rollout steps × 250 updates = 2,048,000 transitions,
-   seed 8, from scratch, with its own output directory. Preserve the final
-   checkpoint and run a five-start 12-s physical screen with independent fresh
-   processes and the corrected recorder. Report complete/incomplete episodes,
-   cube rise and both finger forces; do not call reward a pickup. A five-episode
-   screen is diagnostic; the design's proposed readiness gate is at least
-   18/20 fixed-scene pickups plus separate perturbation and seed tests. The
-   next farther-start rung remains unlaunched.
+3. **Test the revised near-table incentive in isolation.** The first phase
+   completed at 0/5 physical pickups despite strong contact and rising reward.
+   A separate `FRI-Franka-Lift-NearTable-Progress` task keeps its physical
+   problem fixed while reducing stationary contact payment and increasing
+   credited cube-to-goal progress. Run a bounded new-directory experiment and
+   the same five-start 12-s physical screen. Stop for redesign if measured cube
+   rise does not improve. A five-episode screen is diagnostic; the design's
+   proposed readiness gate is at least 18/20 fixed-scene pickups plus separate
+   perturbation and seed tests. The next farther-start rung remains unlaunched.
 4. **Only after a learned policy qualifies**, implement its continuous
    enable/HOLD/resume adapter. Test always-HOLD and pauses during approach,
    closure and loaded lift before connecting recorded EEG. Then compare EEG

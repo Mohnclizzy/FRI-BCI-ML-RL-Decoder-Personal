@@ -19,6 +19,7 @@ STAGES = {
     "table": ("FRI-Franka-Lift", "table_only"),
     "table-approach": ("FRI-Franka-Lift-Approach", "table_only_approach_shaped"),
     "near-table": ("FRI-Franka-Lift-NearTable", "table_near_grasp_open"),
+    "near-table-progress": ("FRI-Franka-Lift-NearTable-Progress", "table_near_grasp_open"),
 }
 
 
@@ -44,7 +45,9 @@ def build_stage_plan(root: Path, stage: str, num_envs: int, seed: int,
         "isaaclab_commit": ISAACLAB_COMMIT,
         "eeg_connected": False,
         "measured_table_pickup_evaluation": False,
-        "reward_variant": "approach_contact_shaped_v1" if stage in ("table-approach", "near-table") else "upstream_baseline",
+        "reward_variant": ("near_table_progress_v2" if stage == "near-table-progress" else
+                           "approach_contact_shaped_v1" if stage in ("table-approach", "near-table") else
+                           "upstream_baseline"),
     }
 
 

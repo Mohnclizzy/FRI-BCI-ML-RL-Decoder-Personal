@@ -3,13 +3,19 @@
 ## Source of truth
 
 The canonical working copy is the nested `FRI-BCI-ML-RL-Decoder` folder. Its
-GitHub `origin` is Mario's personal fork:
-`https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder`. The original repository
-is retained as the `upstream` remote:
+GitHub `origin` is Mario's independent private repository:
+`https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal`. It contains the
+complete Git history and project branches but is not a GitHub fork. The
+original repository is retained as the `upstream` remote:
 `https://github.com/AL-DEV06/FRI-BCI-ML-RL-Decoder`. The active branch is
 `codex/isaaclab-project-scaffold`, and new project commits should go to `origin`
-(the personal fork). The parent `New project 6` folder is a local workspace
+(the independent repository). The parent `New project 6` folder is a local workspace
 wrapper, not the GitHub repository.
+
+An additional private fork named
+`https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder` was created earlier in
+the setup. GitHub private forks inherit upstream permission rules, so use the
+independent `-Personal` repository for sharing and ongoing work.
 
 The GitHub repository contains source, protocols, results summaries, and the
 curated project history. It does not contain downloaded EEG data, model
@@ -19,7 +25,7 @@ outputs; these are ignored by `.gitignore` to keep the repository manageable.
 ## Give the other account GitHub access
 
 1. Sign in to GitHub as `Mohnclizzy`.
-2. Open the personal fork URL above and go to **Settings → Collaborators** (the
+2. Open the independent private repository URL above and go to **Settings → Collaborators** (the
    exact label may appear under **Access**).
 3. Invite the GitHub username or email tied to the other account's GitHub login.
    Accept the invitation while signed into that GitHub account.
@@ -46,7 +52,7 @@ same Git branch; use Git commits/pulls to coordinate source changes.
 ## Recreate a working checkout
 
 ```powershell
-git clone https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder.git
+git clone https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal.git
 cd FRI-BCI-ML-RL-Decoder
 git switch codex/isaaclab-project-scaffold
 python -m venv .venv

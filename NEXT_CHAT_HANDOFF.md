@@ -1,5 +1,10 @@
 # Start the next project chat here
 
+> **Historical snapshot, superseded:** this handoff predates the Nov 2 executor
+> audit and corrected controls. Use `START_HERE.md` for current status and
+> `docs/stopping_point_2026-11-02.md` for the authoritative measured results
+> and next actions. Recheck any old status below before acting on it.
+
 We are building a simulation-first project: replay recorded EEG, turn it into a
 simple **HOLD / GRASP_LIFT** request, and test whether filtering noisy requests
 helps a simulated Franka lift a cube more reliably. The contribution is the

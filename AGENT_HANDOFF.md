@@ -1,5 +1,10 @@
 # EEG-to-robot project handoff
 
+> **Historical snapshot, superseded:** this handoff predates the Nov 2 executor
+> audit and corrected controls. Use `START_HERE.md` for current status and
+> `docs/stopping_point_2026-11-02.md` for the authoritative measured results
+> and next actions. Recheck any old status below before acting on it.
+
 ## Objective
 
 Evaluate whether temporal filtering of recorded EEG intent predictions improves

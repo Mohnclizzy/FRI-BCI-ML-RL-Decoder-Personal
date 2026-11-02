@@ -1,5 +1,18 @@
 """Timestamp-based scoring, independent of simulation and training reward."""
 from __future__ import annotations
+import math
+
+
+def reset_continuity(initial, first_sample):
+    """Flag state writes that disappear on the first physics update.
+
+    The native reset assigns zero cube velocity. These generous one-tick
+    displacement limits are a validity gate, not a pickup metric.
+    """
+    cube_jump = math.dist(initial["cube_pose_w"][:3], first_sample["cube_pose_w"][:3])
+    hand_jump = math.dist(initial["hand_pose_w"][:3], first_sample["hand_pose_w"][:3])
+    return {"cube_jump_m": cube_jump, "hand_jump_m": hand_jump,
+            "reset_continuity_pass": cube_jump <= 0.02 and hand_jump <= 0.05}
 
 
 def score(samples, baseline, *, max_gap_s, complete):

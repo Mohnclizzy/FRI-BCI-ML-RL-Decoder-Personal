@@ -11,7 +11,7 @@ import sys
 import traceback
 
 from prepare import CHECKPOINT_SHA256, ISAAC_COMMIT, sha256
-from scoring import score
+from scoring import score, reset_continuity
 
 
 def tensor(value):
@@ -40,6 +40,8 @@ class Recorder:
                 self.elapsed += dt
                 row = {"record_type": "sample", "time_s": self.elapsed, "sample_interval_s": dt,
                        **self.snapshot()}
+                if not self.active["samples"]:
+                    self.active["reset_continuity"] = reset_continuity(self.active["initial"], row)
                 self.active["samples"].append(row)
                 self.write(row)
             return result
@@ -75,7 +77,8 @@ class Recorder:
         if abs(local_height - self.env.cfg.cube_size / 2) > 0.005 or not fingers or min(fingers) < 0.03 or distance < 0.05:
             raise RuntimeError("Invalid native table/open-gripper initial state")
         self.elapsed = 0.0
-        self.active = {"baseline": initial["cube_height_m"], "samples": [],
+        self.active = {"baseline": initial["cube_height_m"], "initial": initial,
+                       "reset_continuity": {"reset_continuity_pass": False}, "samples": [],
                        "interventions_at_start": dict(self.interventions)}
         self.write({"record_type": "initial_pre_action", "time_s": 0.0, **initial})
 
@@ -90,6 +93,7 @@ class Recorder:
                       interventions_at_start=self.active["interventions_at_start"],
                       interventions_at_end=dict(self.interventions),
                       observed_update_intervals_s=sorted(set(r["sample_interval_s"] for r in self.active["samples"])))
+        result.update(self.active["reset_continuity"])
         self.results.append(result)
         self.active = None
 
@@ -233,8 +237,11 @@ def main():
                     if len(rec.results) >= args.episodes:
                         break
                 rec.finish(False, {"reason": "step_budget_exhausted"})
-                if len(rec.results) != args.episodes or any(r["status"] != "completed" or r["contact_coverage"] != 1.0 for r in rec.results):
-                    raise RuntimeError("Incomplete evaluation or missing contact coverage")
+                if len(rec.results) != args.episodes or any(
+                    r["status"] != "completed" or r["contact_coverage"] != 1.0
+                    or not r["reset_continuity_pass"] for r in rec.results
+                ):
+                    raise RuntimeError("Incomplete evaluation, missing contact coverage, or invalid reset continuity")
             finally:
                 if rec is not None:
                     rec.finish(False, {"reason": "shutdown_or_error"})

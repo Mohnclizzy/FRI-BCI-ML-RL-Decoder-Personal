@@ -3,11 +3,19 @@
 Status: additive integration implemented and bounded playback completed. No training,
 fine-tuning, EEG connection, runtime upgrade, or replacement of project tasks.
 
+**Correction after reset audit:** the five episodes below are raw saved outcomes,
+but episodes 2–5 did not start from their recorded reset states in physics. The
+first physics sample jumped back to the prior state. Only episode 1 is a valid
+start, so the original `1/5` must not be used as a five-start performance estimate.
+See [NVIDIA_CANDIDATE_RESET_DIAGNOSTIC_2026-11-02.md](NVIDIA_CANDIDATE_RESET_DIAGNOSTIC_2026-11-02.md)
+for the independent fresh-process screen: **1/5 valid starts lifted**.
+
 ## Measured outcome
 
 One startup episode passed the sampled physical predicate. The subsequent,
-separately recorded five-episode screen produced **1/5 passes**. These are not
-pooled into a six-episode success rate. Every screen episode was retained.
+separately recorded five-episode run produced **1/5 raw passes**, with the reset
+validity correction above. These are not pooled into a six-episode success rate.
+Every episode was retained.
 
 | Episode | Max post-action cube rise (m) | Best sampled sustained lift/contact (s) | Pass |
 |---:|---:|---:|---|
@@ -129,10 +137,11 @@ match, and no GPU experiment process remains after this work. Jupyter/VM remain 
 ## Interpretation and next gate
 
 This demonstrates that the checkpoint can execute and achieve a measured table
-lift in this compatibility condition. It does not establish reliability. The scene,
-reset distribution, controller assistance and short horizon differ from the
-project's prior 12-second table test, so **1/5 versus 0/5 is not a controlled
-improvement estimate**. No EEG or learned HOLD/resume result follows.
+lift in this compatibility condition. The corrected five fresh-process screen
+has one lift and does not establish reliability. The scene, reset distribution,
+controller assistance and short horizon differ from the project's prior 12-second
+table test, so **1/5 versus 0/5 is not a controlled improvement estimate**.
+No EEG or learned HOLD/resume result follows.
 
 Stop automatic expansion here. Review the high forces/corrections, reset-dependent
 failures and native-runtime/port equivalence before deciding whether to invest in

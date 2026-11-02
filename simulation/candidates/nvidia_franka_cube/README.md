@@ -31,16 +31,23 @@ $PY "$CANDIDATE/run.py" --episodes 1 --seed 8 --viz none \
   --candidate-root "$BASE/prepared/franka_cube" \
   --isaaclab-root /home/ubuntu/IsaacLab-fri --output "$BASE/startup"
 
-# Only after valid startup, reset and recorder coverage: five consecutive episodes.
-$PY "$CANDIDATE/run.py" --episodes 5 --seed 8 --viz none \
-  --candidate-root "$BASE/prepared/franka_cube" \
-  --isaaclab-root /home/ubuntu/IsaacLab-fri --output "$BASE/evaluation"
+# Until the in-process Newton reset mismatch is resolved, use five fresh
+# simulator processes. Each one-episode output is exclusive and checked offline.
+for seed in 9 10 11 12 13; do
+  $PY "$CANDIDATE/run.py" --episodes 1 --seed "$seed" --viz none \
+    --candidate-root "$BASE/prepared/franka_cube" \
+    --isaaclab-root /home/ubuntu/IsaacLab-fri --output "$BASE/seed-$seed"
+  python "$CANDIDATE/verify_saved.py" "$BASE/seed-$seed"
+done
 ```
 
 An unsuccessful physical outcome is retained. Do not replace episodes or expand
 training. Each invocation is finite; there is no optimization call. Native timeout
 logic ends episodes at about 2.9833 s (179 steps at 60 Hz), despite a configured
 3 s horizon. Preserve this fact when reporting the native condition.
+`--episodes 5` remains a diagnostic mode, but rejects the run if any first
+physics sample disagrees with its reset state. The original five-episode run
+failed that check for episodes 2–5; see the reset diagnostic report.
 
 ## Compatibility and measurement
 

@@ -4,7 +4,7 @@ import json
 import math
 from pathlib import Path
 
-from scoring import score
+from scoring import score, reset_continuity
 
 
 def verify(directory):
@@ -19,6 +19,8 @@ def verify(directory):
         if len(initial) != 1 or len(terminal) != 1 or subset[0] != initial[0] or subset[-1] != terminal[0]:
             raise ValueError(f"Invalid initial/terminal boundaries in episode {episode}")
         samples = [r for r in subset if r["record_type"] == "sample"]
+        if not samples:
+            raise ValueError(f"No physics samples in episode {episode}")
         intervals = [r["sample_interval_s"] for r in samples]
         result = score(samples, initial[0]["cube_height_m"], max_gap_s=max(intervals) * 1.01, complete=True)
         if result["physical_lift_pass"] != expected["physical_lift_pass"]:
@@ -28,11 +30,16 @@ def verify(directory):
         result.update(episode=episode, max_finger_contact_n=[max(r["finger_contact_n"][i] for r in samples) for i in (0, 1)],
                       first_bilateral_contact_s=next((r["time_s"] for r in samples if min(r["finger_contact_n"]) >= .1), None),
                       max_hand_displacement_m=max(math.dist(r["hand_pose_w"][:3], initial[0]["hand_pose_w"][:3]) for r in samples))
+        result.update(reset_continuity(initial[0], samples[0]))
+        result["valid_physical_lift_pass"] = result["physical_lift_pass"] if result["reset_continuity_pass"] else None
         results.append(result)
     if len(results) != saved["episodes_requested"] or saved["error"] is not None:
         raise ValueError("Saved evaluation incomplete or contains errors")
     return {"serialized_rescore_matches": True, "episodes": results,
-            "successes": sum(r["physical_lift_pass"] is True for r in results)}
+            "raw_successes": sum(r["physical_lift_pass"] is True for r in results),
+            "valid_episodes": sum(r["reset_continuity_pass"] for r in results),
+            "valid_successes": sum(r["valid_physical_lift_pass"] is True for r in results),
+            "full_screen_valid": all(r["reset_continuity_pass"] for r in results)}
 
 
 if __name__ == "__main__":

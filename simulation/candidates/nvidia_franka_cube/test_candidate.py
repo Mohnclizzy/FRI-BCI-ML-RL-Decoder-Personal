@@ -6,7 +6,7 @@ from unittest.mock import patch
 import zipfile
 
 import prepare
-from scoring import score
+from scoring import score, reset_continuity
 
 
 def row(t, rise=0.1, forces=(1.0, 1.0)):
@@ -71,6 +71,18 @@ class PreservationTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     prepare.prepare(archive, root / "work")
             self.assertFalse((root / "escape").exists())
+
+
+class ResetContinuityTests(unittest.TestCase):
+    def test_stale_physics_state_is_rejected(self):
+        initial = {"cube_pose_w": [.4, 0, .025], "hand_pose_w": [.4, 0, .5]}
+        first = {"cube_pose_w": [.82, 0, .022], "hand_pose_w": [.48, 0, .1]}
+        self.assertFalse(reset_continuity(initial, first)["reset_continuity_pass"])
+
+    def test_normal_first_physics_tick_is_accepted(self):
+        initial = {"cube_pose_w": [.4, 0, .025], "hand_pose_w": [.4, 0, .5]}
+        first = {"cube_pose_w": [.4, 0, .0246], "hand_pose_w": [.4, -.001, .498]}
+        self.assertTrue(reset_continuity(initial, first)["reset_continuity_pass"])
 
 
 if __name__ == "__main__":

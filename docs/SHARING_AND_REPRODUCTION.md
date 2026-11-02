@@ -2,11 +2,14 @@
 
 ## Source of truth
 
-The canonical code repository is the nested `FRI-BCI-ML-RL-Decoder` folder,
-which is already connected to GitHub at
-`https://github.com/AL-DEV06/FRI-BCI-ML-RL-Decoder`. Its working branch is
-`codex/isaaclab-project-scaffold`. The parent `New project 6` folder is a local
-workspace wrapper, not the GitHub repository.
+The canonical working copy is the nested `FRI-BCI-ML-RL-Decoder` folder. Its
+GitHub `origin` is Mario's personal fork:
+`https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder`. The original repository
+is retained as the `upstream` remote:
+`https://github.com/AL-DEV06/FRI-BCI-ML-RL-Decoder`. The active branch is
+`codex/isaaclab-project-scaffold`, and new project commits should go to `origin`
+(the personal fork). The parent `New project 6` folder is a local workspace
+wrapper, not the GitHub repository.
 
 The GitHub repository contains source, protocols, results summaries, and the
 curated project history. It does not contain downloaded EEG data, model
@@ -15,12 +18,12 @@ outputs; these are ignored by `.gitignore` to keep the repository manageable.
 
 ## Give the other account GitHub access
 
-1. Sign in to GitHub with the account that owns or administers the repository.
-2. Open the repository URL above and go to **Settings → Collaborators** (the
+1. Sign in to GitHub as `Mohnclizzy`.
+2. Open the personal fork URL above and go to **Settings → Collaborators** (the
    exact label may appear under **Access**).
 3. Invite the GitHub username or email tied to the other account's GitHub login.
    Accept the invitation while signed into that GitHub account.
-4. On the other computer or checkout, clone the repository and checkout
+4. On the other computer or checkout, clone the personal fork and checkout
    `codex/isaaclab-project-scaffold` to see the current project work.
 
 ChatGPT account access and GitHub account access are separate. Inviting a
@@ -43,7 +46,7 @@ same Git branch; use Git commits/pulls to coordinate source changes.
 ## Recreate a working checkout
 
 ```powershell
-git clone https://github.com/AL-DEV06/FRI-BCI-ML-RL-Decoder.git
+git clone https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder.git
 cd FRI-BCI-ML-RL-Decoder
 git switch codex/isaaclab-project-scaffold
 python -m venv .venv

@@ -106,7 +106,11 @@ stopping-point and completion-protocol documents before resuming it.
 ## Where the history and files live
 
 - Git commits preserve dated implementation milestones and the source/doc
-  changes on branch `codex/isaaclab-project-scaffold`.
+  changes on branch `codex/isaaclab-project-scaffold` in Mario's personal fork.
+- `origin` points to `Mohnclizzy/FRI-BCI-ML-RL-Decoder`; `upstream` points to
+  Angel's original `AL-DEV06/FRI-BCI-ML-RL-Decoder`. Push ongoing work to
+  `origin`. Fetch `upstream` only when intentionally checking for updates from
+  the original repository.
 - Current source and handoff documents are tracked in this repository.
 - `data/` and `outputs/` are intentionally ignored by Git. The public raw EEG
   dataset can be downloaded again using the documented commands. Local run

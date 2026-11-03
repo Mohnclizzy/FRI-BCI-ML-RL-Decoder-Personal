@@ -34,6 +34,8 @@ A subsequent fingertip-body diagnostic replayed the unchanged progress checkpoin
 
 A two-action, four-variant seed-8 arm ablation then reproduced the original first right contact at 0.05 s to within submicron hand/cube pose differences. Zeroing the first two saved joint-1 or joint-3 action components separately eliminated >=1 N right contact during the 0.0667-s window; zeroing both centered the hand at 0.05 s. This identifies contributors to the selected early lateral motion, not a safe permanent clamp or a pickup result. See [the arm action ablation](NEAR_TABLE_ARM_ACTION_ABLATION_2026-11-03.md).
 
+The ablation's follow-up inference-only filter zeroed the same two arm action components for the first two policy steps in one full seed-8 episode from the unchanged checkpoint. The first right >=1 N contact moved from 0.050 s to 0.125 s, but the cube still shifted 0.672 m horizontally, peak right sensor force reached 130.81 N, and the episode terminated at 0.967 s with only 0.00683 m maximum rise and no physical lift. The measured one-episode intervention failed its gate; no five-episode or training expansion followed. See [the full episode and provenance](NEAR_TABLE_EARLY_ARM_FILTER_2026-11-03.md).
+
 ## Frozen scripted comparison
 
 The scripted skill remains the reference: it has lifted a free table-supported
@@ -70,7 +72,7 @@ imagery; they do not identify grasp intent.
 
 ## Next bounded work
 
-For robot learning, the arm ablation identifies joint-1 and joint-3 early action components as contributors to the selected right-side contact. Freeze one versioned inference-only early-action intervention, then run one complete 12-s seed-8 physical episode with the unchanged checkpoint and recorder. Inspect contact forces and the original lift/drop thresholds before considering any five-episode screen or PPO budget. The short traces do not estimate pickup reliability.
+For robot learning, the one-episode early-arm intervention delayed contact but still failed through a later high-force sideways push. A next task/reward or action rule must address alignment and contact over the full approach, not only the first two policy steps. Freeze and isolate one change with a bounded budget and predefined physical screen. Do not expand this failed filter to five episodes or connect EEG to PPO.
 
 Next, use this tradeoff to choose a single EEG gate for a clearly labeled
 follow-up, with imagery misses and rest motion both as acceptance measures.

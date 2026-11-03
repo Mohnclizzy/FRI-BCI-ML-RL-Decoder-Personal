@@ -25,6 +25,7 @@ SUSTAINED_CONTACT_S = 0.5
 DROP_HEIGHT_M = 0.04
 SUSTAINED_DROP_S = 0.25
 MAX_SAMPLE_GAP_FACTOR = 1.5
+EARLY_ARM_FILTER = "joint1_joint3_first_two"
 
 
 def _tensor(value):
@@ -53,6 +54,17 @@ def _fingertip_body_indices(robot):
     if len(set(indices.values())) != len(FINGERTIP_BODIES):
         raise RuntimeError("left and right fingertips resolve to the same body")
     return indices
+
+
+def _early_arm_action(action: torch.Tensor, policy_step: int) -> torch.Tensor:
+    """Return an inference-only first-two-step ablation without mutating policy output."""
+    if action.ndim != 2 or action.shape[1] != 9:
+        raise ValueError("early arm filter requires a [num_envs,9] action tensor")
+    if policy_step not in (1, 2):
+        return action
+    applied = action.clone()
+    applied[:, (0, 2)] = 0.0
+    return applied
 
 
 class EpisodeAccumulator:
@@ -232,6 +244,9 @@ class _TelemetryWrapper(gym.Wrapper):
         if fingertip_option not in ("0", "1"):
             raise ValueError("FRI_PPO_RECORD_FINGERTIP_BODY_POSES must be 0 or 1")
         self.record_fingertip_body_poses = fingertip_option == "1"
+        self.early_arm_filter = os.environ.get("FRI_PPO_EARLY_ARM_FILTER", "")
+        if self.early_arm_filter not in ("", EARLY_ARM_FILTER):
+            raise ValueError(f"FRI_PPO_EARLY_ARM_FILTER must be empty or {EARLY_ARM_FILTER}")
         self._fingertip_body_indices = (
             _fingertip_body_indices(env.unwrapped.scene["robot"])
             if self.record_fingertip_body_poses else {}
@@ -388,6 +403,10 @@ class _TelemetryWrapper(gym.Wrapper):
         self.episode_policy_steps += 1
         self._physics_samples_this_policy_step = 0
         raw_action = _tolist(action[0])
+        applied_action = (
+            _early_arm_action(action, self.episode_policy_steps)
+            if self.early_arm_filter else action
+        )
         diagnostic = {}
         if self.episode_policy_steps == 1 or self.episode_policy_steps % 30 == 0:
             base = self.env.unwrapped
@@ -403,11 +422,15 @@ class _TelemetryWrapper(gym.Wrapper):
             "physics_time_s": self._physics_time_s(),
             "episode_time_s": round(self.accumulator.elapsed_s, 6),
             "policy_action": raw_action,
+            **({
+                "applied_action": _tolist(applied_action[0]),
+                "early_arm_filter": self.early_arm_filter,
+            } if self.early_arm_filter else {}),
             **diagnostic,
         })
         self._stepping = True
         try:
-            result = self.env.step(action)
+            result = self.env.step(applied_action)
         except Exception as exc:
             self._error = f"{type(exc).__name__}: {exc}"
             self._finish_incomplete("step_exception", self._error)
@@ -512,6 +535,7 @@ class _TelemetryWrapper(gym.Wrapper):
             "policy_dt_s": self.step_dt,
             "physics_sampling_mode": self.physics_sampling_mode,
             "record_fingertip_body_poses": self.record_fingertip_body_poses,
+            "early_arm_filter": self.early_arm_filter or None,
             "episodes_requested": episodes_requested,
             "max_policy_steps_per_episode": max_steps_per_episode,
             "episodes_started": self.episodes_started,

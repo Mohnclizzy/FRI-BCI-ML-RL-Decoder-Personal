@@ -89,14 +89,12 @@ The ablation runner's two focused `unittest` cases and the recorder's eight
 focused cases pass. All collection scripts compile. The pinned venv lacks
 `pytest`; no package was installed.
 
-## Next bounded decision
+## Completed follow-up
 
-An inference-only, versioned early-action intervention can now be tested
-against the unchanged progress policy in **one complete 12-s seed-8 episode**
-with the recorder and original physical thresholds. Freeze its exact rule
-before launch, retain all contacts and early failures, and compare to the
-saved unmodified seed-8 trajectory. Do not train on the 0.067-s observation
-alone or claim pickup from an exit code. A five-episode screen would follow
-only if the one-episode intervention passes telemetry, contact-force and
-physical-lift review. EEG remains disconnected; the scripted reference and
-enable/HOLD/resume protocol remain separate.
+A versioned inference-only filter zeroed the same two components for the
+first two policy steps in one complete seed-8 episode with the unchanged
+checkpoint and frozen physical thresholds. It delayed early right contact
+but ended without a lift after a later high-force sideways push. See the
+[full-episode result](NEAR_TABLE_EARLY_ARM_FILTER_2026-11-03.md). No
+five-episode screen or training expansion followed. EEG remains disconnected;
+the scripted reference and enable/HOLD/resume protocol remain separate.

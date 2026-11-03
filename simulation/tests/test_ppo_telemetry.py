@@ -1,9 +1,25 @@
 import unittest
 
-from fri_bci_sim.ppo_telemetry import EpisodeAccumulator, _fingertip_body_indices, _split_joint_targets
+import torch
+
+from fri_bci_sim.ppo_telemetry import (
+    EpisodeAccumulator, _early_arm_action, _fingertip_body_indices, _split_joint_targets,
+)
 
 
 class EpisodeAccumulatorTests(unittest.TestCase):
+    def test_early_arm_filter_changes_only_first_two_applied_actions(self):
+        original = torch.arange(9, dtype=torch.float32).reshape(1, 9) + 1
+        expected = original.clone()
+        expected[:, (0, 2)] = 0
+        for step in (1, 2):
+            applied = _early_arm_action(original, step)
+            self.assertTrue(torch.equal(applied, expected))
+            self.assertTrue(torch.equal(original, torch.arange(9).reshape(1, 9) + 1))
+        self.assertIs(_early_arm_action(original, 3), original)
+        with self.assertRaisesRegex(ValueError, r"\[num_envs,9\]"):
+            _early_arm_action(torch.zeros(8), 1)
+
     def _qualifying_samples(self, accumulator, count, *, start=0, z=0.36, contacts=(0.12, 0.11)):
         for index in range(start, start + count):
             accumulator.add_sample((index + 1) * 0.005, z, list(contacts))

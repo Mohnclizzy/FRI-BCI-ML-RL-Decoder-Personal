@@ -31,6 +31,8 @@ Later 2026-11-03 diagnostic: the [fingertip geometry record](FINGERTIP_GEOMETRY_
 
 A follow-up [two-action arm ablation](NEAR_TABLE_ARM_ACTION_ABLATION_2026-11-03.md) has four valid short runs under Personal `outputs/isaac/near-table-arm-action-ablation-20261103T0333Z/`, plus one prelaunch CLI parse failure log. The [compact result and SHA256 manifest](../results/near_table_arm_action_ablation_2026-11-03.json) are tracked. Off-host backup of these raw files has not been verified. These are diagnostic contact-window data, not complete physical episodes.
 
+The [one-episode early arm filter result](NEAR_TABLE_EARLY_ARM_FILTER_2026-11-03.md) is stored under Personal `outputs/isaac/near-table-early-arm-filter-seed8-20261103T0341Z/`; its [compact result and hashes](../results/near_table_early_arm_filter_seed8_2026-11-03.json) are tracked. The raw directory includes a byte-identical isolated checkpoint copy and exported inference files. It is ignored by Git; off-host backup of this new run is not verified. The one-episode gate failed and no expansion followed.
+
 ## Find and manage the evidence
 
 - [Results index](../results/README.md): links to authoritative summaries,

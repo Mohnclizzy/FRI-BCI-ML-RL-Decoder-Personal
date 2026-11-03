@@ -1,0 +1,10 @@
+{
+  "protocol": "corrected exploratory matched batch collector v1",
+  "run_dir": "C:\\Users\\mario\\OneDrive\\Documents\\ChatGPT\\New project 6\\FRI-BCI-ML-RL-Decoder\\outputs\\isaac\\eeg-matched-5p-continuation-20261103T0300Z-b120s",
+  "run_manifest_sha256": "6936ab4a1a6c9311e853972d647ee7caf1148e42537e976c6bb5b89cc08edf05",
+  "results_tsv_sha256": "ee9640363c4f78a3d395e0ef71e13fb9ac9c47e0a838f694e2cc2c542f82d09a",
+  "case_count": 18,
+  "edf_root": "C:\\Users\\mario\\OneDrive\\Documents\\ChatGPT\\New project 6\\FRI-BCI-ML-RL-Decoder\\data\\physionet\\MNE-eegbci-data\\files\\eegmmidb\\1.0.0",
+  "horizon_s": 120,
+  "scope": "No stale 24 s physical outcomes accepted; annotation metrics remain separate from simulator-state metrics."
+}

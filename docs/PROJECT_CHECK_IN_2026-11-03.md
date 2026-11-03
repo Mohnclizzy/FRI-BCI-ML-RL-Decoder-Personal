@@ -45,10 +45,17 @@ robot learning.
 
 The frozen per-person CSP/LDA selection scored 59.33% balanced accuracy over
 150 held-out-run windows for S006–S010; rest-window false activation was 29.33%.
-The first five-person 24-second exploratory command replay showed lower
-annotated-rest active time with temporal gating (44.9% raw to 22.1%) and lower
-imagery-bout detection (93.3% to 66.7%). These are offline, cue-based decoder
-and command-stream measures, not physical control results.
+The corrected 120-second physical scripted comparison is now complete for all
+five run-12 recordings and all three controls passed. Raw gates produced lifts
+in 5/5 cases, confidence gates in 3/5, and temporal gates in 2/5. Mean executed
+command activation during annotated rest fell from 38.7% (raw) to 25.7%
+(confidence) and 19.6% (temporal); measured physical motion during rest fell
+from 13.5% to 13.2% and 9.1%. Missed imagery bouts increased from 12 (raw) to
+30 and 38. This exposes the practical tradeoff in this exploratory replay:
+filtering reduced unwanted activation and motion, while reducing task
+completion and imagery response. These measures come from a fixed simulated
+scene and offline cue labels; they do not establish live EEG or hardware
+performance. See [the paired results and figure](../results/corrected_eeg_2026-11-03-complete/summary.md).
 
 The intended learned-policy interface remains continuous enable/HOLD/resume:
 REST or stale input retains HOLD priority, and the robot policy owns low-level
@@ -64,11 +71,11 @@ as the sole cause of the early right-only contact. Inspect the actual fingertip
 collision poses and arm path against the scripted reference before allocating
 another PPO run. The two one-second traces do not estimate pickup reliability.
 
-In parallel, complete the corrected five-person scripted EEG/HOLD comparison
-under its frozen protocol. That gives the project a measured EEG-to-physical
-reference while the learned pickup mechanism is investigated. Keep EEG and PPO
-results separate until the learned HOLD/resume adapter and pickup controller
-have their own physical evaluation.
+Next, use this tradeoff to choose a single EEG gate for a clearly labeled
+follow-up, with imagery misses and rest motion both as acceptance measures.
+For robot learning, inspect the arm path and contact geometry before another
+PPO budget. Keep these results separate until the learned HOLD/resume adapter
+and pickup controller have their own physical evaluation.
 
 ## Source and execution note
 

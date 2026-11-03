@@ -44,7 +44,7 @@ robot movements. No dataset or synthetic EEG generator is silently assumed.
 | Scripted-skill HOLD/resume and simulator telemetry | Repaired locally in `scripts/controlled_lift.py`: HOLD preserves the last commanded arm and finger targets across pauses; completion is absorbing; per-step telemetry is tested. All three corrected physical controls passed after the documented 2 s initialization; see ../docs/stopping_point_2026-11-02.md |
 | PPO behavior under EEG commands | Not connected; the end-to-end filtering pilot uses the scripted skill because table-transfer PPO has no measured lift |
 | Five-person EEG command replay preflight | Complete for S006â€“S010 over the same 24 s horizon; filters reduce rest activation but miss more imagery bouts; exploratory only, see [cohort replay](../docs/multi_person_replay_2026-11-02.md) |
-| Historical 24 s matched five-person Franka run | Preserved as exploratory debugging evidence only. Its physical HOLD control was invalid, so its lift counts do not support comparison claims. Corrected controls passed; one 120 s EEG case was validated, and the expanded matched rerun remains incomplete after user-requested stop; see the [completion protocol](../docs/completion_protocol_2026-11-02.md) |
+| Corrected 120 s matched five-person Franka run | Complete for S006–S010 across raw, confidence, and temporal gates; frozen controls passed. Raw lifted 5/5, confidence 3/5, temporal 2/5. Exploratory fixed-scene result; see the [paired summary](../results/corrected_eeg_2026-11-03-complete/summary.md). |
 
 The boundaries above are deliberate: a command trace is not robot execution,
 and a successful process exit is not evidence of a successful grasp. A playback

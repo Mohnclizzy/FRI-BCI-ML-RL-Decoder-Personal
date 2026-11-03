@@ -5,8 +5,8 @@
 The project has useful components and measured diagnostics, but reliable learned
 table pickup and EEG control of a qualified learned policy remain unproven.
 The EEG decoder has offline calibrated-person measurements. Scripted physical
-controls work in the fixed scene, while the corrected paired EEG batch remains
-incomplete. Approach PPO measured 0/5 table pickups. The NVIDIA candidate's valid
+controls work in the fixed scene, and the corrected paired EEG batch has now
+completed. Approach PPO measured 0/5 table pickups. The NVIDIA candidate's valid
 fresh-process screen measured 1/5 sampled lifts, with unresolved forces and
 reset behavior. Keep those different conditions separate.
 

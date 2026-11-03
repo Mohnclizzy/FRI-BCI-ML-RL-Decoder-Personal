@@ -31,7 +31,7 @@ coverage of older outputs is still unverified.
 
 - [Results index](../results/README.md): links to authoritative summaries,
   figures, validity corrections and compact machine-readable records.
-- [Project check-in](PROJECT_CHECK_IN_2026-11-02.md): cross-workstream narrative
+- [Project check-in](PROJECT_CHECK_IN_2026-11-03.md): latest cross-workstream narrative
   and existing plots. Read this map's completion note for the newer run status.
 - [Local artifact inventory](../results/artifact_inventory_2026-11-02.json):
   observation time, 36 run folders, sizes, exit records, 193 key artifact hashes,

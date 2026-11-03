@@ -449,8 +449,26 @@ class _TelemetryWrapper(gym.Wrapper):
     def _finish_incomplete(self, reason: str, error: str | None = None):
         if self.accumulator is None:
             return
+        state = self._capture_state()
+        base = self.env.unwrapped
+        termination = {
+            "terminated": bool(torch.as_tensor(base.termination_manager.terminated).reshape(-1)[0].item()),
+            "time_out": bool(torch.as_tensor(base.termination_manager.time_outs).reshape(-1)[0].item()),
+        }
+        self._write({
+            "record_type": "episode_incomplete_end",
+            "episode": self.accumulator.episode,
+            "policy_step": self.episode_policy_steps,
+            "physics_step": self.physics_step_index,
+            "physics_time_s": self._physics_time_s(),
+            "episode_time_s": round(self.accumulator.elapsed_s, 6),
+            "end_reason": reason,
+            "termination": termination,
+            **state,
+        })
         result = self.accumulator.finish(
-            status="incomplete", reason=reason, error=error, policy_steps=self.episode_policy_steps
+            status="incomplete", reason=reason, error=error, policy_steps=self.episode_policy_steps,
+            termination=termination,
         )
         self.episode_results.append(result)
         self.accumulator = None

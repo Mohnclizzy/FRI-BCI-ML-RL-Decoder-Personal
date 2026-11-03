@@ -3,7 +3,7 @@
 Public EEG motor-imagery decoding research for simulated robotic-hand control using machine learning and reinforcement learning.
 
 For the earlier project timeline, read [project history](docs/PROJECT_HISTORY.md).
-For the latest cross-workstream status, read the [project check-in](docs/PROJECT_CHECK_IN_2026-11-02.md).
+For the latest cross-workstream status, read the [project check-in](docs/PROJECT_CHECK_IN_2026-11-03.md).
 For cross-account repository access and reproduction, read [sharing and reproduction](docs/SHARING_AND_REPRODUCTION.md).
 
 ## Simulation scaffold

@@ -106,9 +106,11 @@ and [`PANDA_PPO_REUSE_REVIEW_2026-11-02.md`](PANDA_PPO_REUSE_REVIEW_2026-11-02.m
    and actuator behavior. A selected two-seed inference check clipped both
    finger targets to [0.02, 0.04] m; force remained high and the previously
    successful seed failed. That rules out the simple playback-only clamp as a
-   sufficient fix. Inspect one-sided contact and arm/cube geometry before
-   allocating another training budget. The farther-start rung remains
-   unlaunched.
+   sufficient fix. The verified traces place first right-finger contact at
+   0.05–0.083 s while the fingers were still near open. Next, hold both finger
+   targets open at 0.04 m for a one-second, two-seed actor playback to isolate
+   early arm-path contact before allocating another training budget. The
+   farther-start rung remains unlaunched.
 2. **Finish the corrected scripted EEG reference** from the frozen 120-s
    protocol, with valid HOLD/positive controls and all 15 paired episodes.
    Preserve the interrupted run as incomplete. Report physical completion,
@@ -134,7 +136,8 @@ and [`PANDA_PPO_REUSE_REVIEW_2026-11-02.md`](PANDA_PPO_REUSE_REVIEW_2026-11-02.m
 - Near-table PPO: `docs/NEAR_TABLE_CURRICULUM_2026-11-02.md`,
   `results/near_table_stage1_screen_2026-11-02.json`,
   `results/near_table_progress_screen_2026-11-02.json`,
-  `results/near_table_finger_guard_diagnostic_2026-11-02.json`.
+  `results/near_table_finger_guard_diagnostic_2026-11-02.json`,
+  `results/near_table_contact_trace_2026-11-02.json`.
 - Pretrained policy: `docs/POLICY_REUSE_AUDIT_2026-11-02.md`,
   `docs/NVIDIA_CANDIDATE_INTEGRATION_2026-11-02.md`,
   `docs/NVIDIA_CANDIDATE_RESET_DIAGNOSTIC_2026-11-02.md`,

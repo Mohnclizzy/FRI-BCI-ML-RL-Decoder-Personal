@@ -174,6 +174,28 @@ actuator/contact settings need a focused source-and-trace check before a new
 training budget. The edited action path and this diagnostic remain separate
 from both learned checkpoints and the frozen scripted reference.
 
+The [verified early-contact trace](../results/near_table_contact_trace_2026-11-02.json)
+narrows the next question. On seeds 8 and 11, the first right-finger force above
+1 N appeared within 0.05–0.083 s, with both actual finger joints still near
+their 0.04 m open position. It appeared in the bounded-target run as well.
+At that instant the cube center was about 5–6 mm to one side and 12–16 mm
+to the other side of the hand-body center, and about 92 mm below it. The
+hand-body pose is not a fingertip pose, so these coordinates do not prove a
+particular collision. Both force peaks occurred before 0.5 s.
+
+**Next bounded diagnostic:** run the unchanged progress actor from the same
+two fixed resets for at most 1 s with an opt-in task that commands both finger
+joints to stay at the 0.04 m open target while preserving the actor's seven arm
+actions, scene, physics, and telemetry. Use new output directories; verify
+the actual target on every physics sample. Compare first right contact time,
+peak force, hand/cube relative pose, and cube displacement against these
+traces. If right contact remains with open targets, inspect the arm path,
+fingertip collision geometry and actuator/contact configuration before more
+PPO. If it disappears, investigate gripper closing and contact timing with a
+task version trained under that action mapping. This is a contact mechanism
+check, not a pickup success screen; neither outcome alone licenses training
+or a reliable-pickup claim.
+
 ## Why this rung exists
 
 The project PPO checkpoint learned to lift a cube already between its fingers

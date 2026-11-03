@@ -141,6 +141,39 @@ behavior, with an explicit new task/version and measured screen before more
 training budget. Demonstration initialization is another candidate, but it
 has not been tested for this task.
 
+## Target-bound inference diagnostic
+
+The saved unguarded traces show finger position targets below zero during
+large one-sided force events. To test whether that command alone explained
+the force, the opt-in
+`FRI-Franka-Lift-NearTable-Progress-FingerGuard` task changed only the final
+two absolute finger joint targets to the interval [0.02, 0.04] m after the
+same nine relative actions. It reused the **existing progress checkpoint at
+inference only**; no policy was trained under the guard. A one-step GPU check
+with raw finger actions −1/−1 verified both commanded targets were 0.02 m.
+The robot/cube reset and reward weights matched the unguarded progress task.
+
+Two previously observed seeds were chosen deliberately: seed 8 had failed
+early, while seed 11 had acquired without a recorded drop. Both guarded
+episodes had pre-action baselines, full contact coverage and pre-reset
+terminal states. The [compact paired diagnostic](../results/near_table_finger_guard_diagnostic_2026-11-02.json)
+contains exact run/source hashes and the retained raw directories.
+
+| Seed | Unguarded max rise / right peak | Guarded max rise / right peak | Guarded result |
+|---:|---:|---:|---|
+| 8 | 0.019 m / 153.5 N | 0.017 m / 203.0 N | Early end at 0.93 s; no acquisition |
+| 11 | 0.302 m / 107.0 N | 0.008 m / 115.5 N | Early end at 5.57 s; no acquisition |
+
+The guard eliminated negative finger targets in both actual playbacks but did
+not reduce the selected force failures or preserve the successful behavior.
+Stop this guard as a candidate fix. This is a **two-case selected diagnostic**,
+not a five-start success estimate or evidence that bounded targets are useless
+when a policy is trained with them. Right-finger contact began even while the
+finger joints were near the open position; arm motion, collision geometry and
+actuator/contact settings need a focused source-and-trace check before a new
+training budget. The edited action path and this diagnostic remain separate
+from both learned checkpoints and the frozen scripted reference.
+
 ## Why this rung exists
 
 The project PPO checkpoint learned to lift a cube already between its fingers

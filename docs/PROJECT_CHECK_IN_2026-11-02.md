@@ -103,9 +103,12 @@ and [`PANDA_PPO_REUSE_REVIEW_2026-11-02.md`](PANDA_PPO_REUSE_REVIEW_2026-11-02.m
    two early cube-bound terminations and large asymmetric forces block
    qualification. At force peaks the saved gripper joint targets are negative,
    outside the intended closed position; verify action scaling, target limits
-   and actuator behavior, then test an explicitly versioned action-limited
-   condition. The trace supports this as a concrete mechanism to test, not a
-   proven single cause. The farther-start rung remains unlaunched.
+   and actuator behavior. A selected two-seed inference check clipped both
+   finger targets to [0.02, 0.04] m; force remained high and the previously
+   successful seed failed. That rules out the simple playback-only clamp as a
+   sufficient fix. Inspect one-sided contact and arm/cube geometry before
+   allocating another training budget. The farther-start rung remains
+   unlaunched.
 2. **Finish the corrected scripted EEG reference** from the frozen 120-s
    protocol, with valid HOLD/positive controls and all 15 paired episodes.
    Preserve the interrupted run as incomplete. Report physical completion,
@@ -130,7 +133,8 @@ and [`PANDA_PPO_REUSE_REVIEW_2026-11-02.md`](PANDA_PPO_REUSE_REVIEW_2026-11-02.m
   `docs/BREV_HANDOFF_2026-11-02.md`, `results/ppo_approach_*2026-11-02.*`.
 - Near-table PPO: `docs/NEAR_TABLE_CURRICULUM_2026-11-02.md`,
   `results/near_table_stage1_screen_2026-11-02.json`,
-  `results/near_table_progress_screen_2026-11-02.json`.
+  `results/near_table_progress_screen_2026-11-02.json`,
+  `results/near_table_finger_guard_diagnostic_2026-11-02.json`.
 - Pretrained policy: `docs/POLICY_REUSE_AUDIT_2026-11-02.md`,
   `docs/NVIDIA_CANDIDATE_INTEGRATION_2026-11-02.md`,
   `docs/NVIDIA_CANDIDATE_RESET_DIAGNOSTIC_2026-11-02.md`,

@@ -35,10 +35,10 @@ estimates. See [the fixed-open record](FIXED_OPEN_PLAYBACK_2026-11-03.md).
 The scripted skill remains the reference: it has lifted a free table-supported
 cube, and the corrected always-HOLD, uninterrupted, and pause/resume controls
 passed their frozen checks. The historical 24-second five-person physical
-comparison is invalid because its always-HOLD control drifted. A corrected
-120-second five-person batch was stopped incomplete; the available corrected
-S006 case did not move or lift the cube. No valid paired physical effect of EEG
-filtering has been established. The scripted comparison remains separate from
+comparison is invalid because its always-HOLD control drifted. An earlier
+corrected 120-second attempt stopped incomplete; a later batch completed all
+15 gate/person episodes and the three frozen controls. Its exploratory paired
+outcomes are reported below. The scripted comparison remains separate from
 robot learning.
 
 ## EEG and HOLD interface

@@ -27,6 +27,8 @@ directories. The progress training directory and all five raw evaluations
 have since been copied off Brev with matching key-file hashes. Full backup
 coverage of older outputs is still unverified.
 
+Later 2026-11-03 diagnostic: the [fingertip geometry record](FINGERTIP_GEOMETRY_DIAGNOSTIC_2026-11-03.md) adds two selected one-second policy replays and a same-reset zero-action control. Raw files remain under Personal `outputs/isaac/fingertip-geometry-progress-20261103T0314Z/` and `outputs/isaac/fingertip-zero-action-control-20261103T0323Z/`; the failed CLI parse log is retained at `outputs/isaac/fingertip-zero-action-control-20261103T0322Z/`. Their SHA256 manifest and concise metrics are tracked in [the compact result](../results/fingertip_geometry_progress_2026-11-03.json). Off-host backup of these new raw diagnostics has not been verified.
+
 ## Find and manage the evidence
 
 - [Results index](../results/README.md): links to authoritative summaries,

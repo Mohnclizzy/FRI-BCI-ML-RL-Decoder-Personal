@@ -30,6 +30,8 @@ and 0.5533 m, while maximum cube rise was only 0.0165 m and 0.0027 m. These
 selected one-second contact-mechanism diagnostics are not pickup-success
 estimates. See [the fixed-open record](FIXED_OPEN_PLAYBACK_2026-11-03.md).
 
+A subsequent fingertip-body diagnostic replayed the unchanged progress checkpoint for two selected seeds (8 and 11), one environment and at most one second each. It captured pre-action reset, every available physics sample and terminal or incomplete end states. The first right contact matched the previous screen; at that point the hand was 12–14 mm toward the cube's +y side, with actual finger joints still nearly open. A same-reset, one-second zero-action control had no finger contact and under 0.8 mm hand-y drift. This isolates an early policy-driven lateral shift in the selected setup, without identifying a single joint or proving collider-surface contact geometry. Both policy replays had no physical lift, high right forces and large sideways cube motion. They are contact-mechanism tests, not additional 12-second pickup trials. See [the fingertip geometry diagnostic](FINGERTIP_GEOMETRY_DIAGNOSTIC_2026-11-03.md).
+
 ## Frozen scripted comparison
 
 The scripted skill remains the reference: it has lifted a free table-supported
@@ -66,10 +68,7 @@ imagery; they do not identify grasp intent.
 
 ## Next bounded work
 
-For robot learning, the fixed-open result rules out finger closing commands
-as the sole cause of the early right-only contact. Inspect the actual fingertip
-collision poses and arm path against the scripted reference before allocating
-another PPO run. The two one-second traces do not estimate pickup reliability.
+For robot learning, the fixed-open and fingertip diagnostics show early right-only contact while the fingers remain near open, and the zero-action control rules out reset settling as the sole cause of the selected seed-8 lateral shift. Inspect the arm targets and contact geometry before freezing one targeted change and a bounded PPO budget. The short traces do not estimate pickup reliability.
 
 Next, use this tradeoff to choose a single EEG gate for a clearly labeled
 follow-up, with imagery misses and rest motion both as acceptance measures.

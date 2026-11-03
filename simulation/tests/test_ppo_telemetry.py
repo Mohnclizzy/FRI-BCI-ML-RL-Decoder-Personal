@@ -1,6 +1,6 @@
 import unittest
 
-from fri_bci_sim.ppo_telemetry import EpisodeAccumulator, _split_joint_targets
+from fri_bci_sim.ppo_telemetry import EpisodeAccumulator, _fingertip_body_indices, _split_joint_targets
 
 
 class EpisodeAccumulatorTests(unittest.TestCase):
@@ -84,6 +84,34 @@ class EpisodeAccumulatorTests(unittest.TestCase):
         self.assertEqual(len(arm), 7)
         self.assertEqual(len(fingers), 2)
         self.assertEqual(fingers["panda_finger_joint2"], 8.0)
+
+    def test_fingertip_body_indices_require_distinct_exact_links(self):
+        class Robot:
+            def __init__(self, matches):
+                self.matches = matches
+
+            def find_bodies(self, name):
+                return self.matches[name]
+
+        valid = Robot({
+            "panda_leftfinger": ([8], ["panda_leftfinger"]),
+            "panda_rightfinger": ([9], ["panda_rightfinger"]),
+        })
+        self.assertEqual(_fingertip_body_indices(valid), {"panda_leftfinger": 8, "panda_rightfinger": 9})
+
+        duplicate = Robot({
+            "panda_leftfinger": ([8], ["panda_leftfinger"]),
+            "panda_rightfinger": ([8], ["panda_rightfinger"]),
+        })
+        with self.assertRaisesRegex(RuntimeError, "same body"):
+            _fingertip_body_indices(duplicate)
+
+        ambiguous = Robot({
+            "panda_leftfinger": ([8, 10], ["panda_leftfinger", "panda_leftfinger_collision"]),
+            "panda_rightfinger": ([9], ["panda_rightfinger"]),
+        })
+        with self.assertRaisesRegex(RuntimeError, "exactly one"):
+            _fingertip_body_indices(ambiguous)
 
 
 if __name__ == "__main__":

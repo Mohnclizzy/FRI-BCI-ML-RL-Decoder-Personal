@@ -18,6 +18,7 @@ import torch
 
 
 CONTACT_SENSORS = ("panda_leftfinger_object_s", "panda_rightfinger_object_s")
+FINGERTIP_BODIES = ("panda_leftfinger", "panda_rightfinger")
 CONTACT_THRESHOLD_N = 0.1
 LIFT_THRESHOLD_M = 0.08
 SUSTAINED_CONTACT_S = 0.5
@@ -39,6 +40,19 @@ def _split_joint_targets(joint_names: list[str], target: list[float]):
     arm = {name: value for name, value in targets.items() if name.startswith("panda_joint")}
     fingers = {name: value for name, value in targets.items() if "finger" in name}
     return targets, arm, fingers
+
+
+def _fingertip_body_indices(robot):
+    """Resolve the two sensor-bearing links once, failing on an ambiguous match."""
+    indices = {}
+    for name in FINGERTIP_BODIES:
+        body_ids, body_names = robot.find_bodies(name)
+        if len(body_ids) != 1 or body_names != [name]:
+            raise RuntimeError(f"expected exactly one {name} body, got {body_names!r}")
+        indices[name] = body_ids[0]
+    if len(set(indices.values())) != len(FINGERTIP_BODIES):
+        raise RuntimeError("left and right fingertips resolve to the same body")
+    return indices
 
 
 class EpisodeAccumulator:
@@ -214,6 +228,14 @@ class _TelemetryWrapper(gym.Wrapper):
         self._original_scene_update = env.unwrapped.scene.update
         self._original_apply_action = env.unwrapped.action_manager.apply_action
         self._original_reset_idx = env.unwrapped._reset_idx
+        fingertip_option = os.environ.get("FRI_PPO_RECORD_FINGERTIP_BODY_POSES", "0")
+        if fingertip_option not in ("0", "1"):
+            raise ValueError("FRI_PPO_RECORD_FINGERTIP_BODY_POSES must be 0 or 1")
+        self.record_fingertip_body_poses = fingertip_option == "1"
+        self._fingertip_body_indices = (
+            _fingertip_body_indices(env.unwrapped.scene["robot"])
+            if self.record_fingertip_body_poses else {}
+        )
         self._install_physics_step_sampling()
         self._install_state_hooks()
 
@@ -305,7 +327,7 @@ class _TelemetryWrapper(gym.Wrapper):
                 processed = getattr(term, "processed_actions", None)
                 if processed is not None:
                     action_terms[name] = _tolist(processed[0])
-        return {
+        state = {
             "cube_pose_w": cube_pose,
             "cube_height_m": float(cube_pose[2]),
             "robot_joint_pos": joint_pos,
@@ -320,6 +342,12 @@ class _TelemetryWrapper(gym.Wrapper):
                 torch.as_tensor(cube_pose[:3]) - torch.as_tensor(hand_pose[:3])
             ).item()),
         }
+        if self.record_fingertip_body_poses:
+            state["fingertip_body_pose_w"] = {
+                name: _tolist(robot.data.body_pose_w[0, body_id])
+                for name, body_id in self._fingertip_body_indices.items()
+            }
+        return state
 
     def _begin_episode(self, reason: str):
         state = self._capture_state()
@@ -483,6 +511,7 @@ class _TelemetryWrapper(gym.Wrapper):
             "physics_dt_s": self.physics_dt,
             "policy_dt_s": self.step_dt,
             "physics_sampling_mode": self.physics_sampling_mode,
+            "record_fingertip_body_poses": self.record_fingertip_body_poses,
             "episodes_requested": episodes_requested,
             "max_policy_steps_per_episode": max_steps_per_episode,
             "episodes_started": self.episodes_started,

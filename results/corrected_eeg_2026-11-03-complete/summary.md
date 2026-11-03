@@ -1,6 +1,6 @@
 # Corrected matched batch summary
 
-Exploratory 120 s S006–S010/R12 comparison; the three controls use 24/24/34 s. 
+Exploratory 120 s S006–S010/R12 comparison; the three controls use 24/24/34 s.
 Command annotations and physical telemetry metrics are kept in separate columns and per-case JSON reports.
 
 | case | physical_lift_pass | first_sampled_physical_success_time_s | skill_complete | trajectory_complete_time_s | request_active_duration_s | request_switch_count | request_switches_per_minute | rest_command_activation_fraction | rest_moving_fraction | imagery_bouts_missed | mean_imagery_detection_delay_s | mean_target_dispatch_delay_s | mean_physical_action_latency_s | physical_action_latency_unavailable_after_completion | physical_action_latency_not_responding |

@@ -5,7 +5,7 @@ The first 2,048,000-transition learning run completed, and its five-start
 physical screen found contact without pickup (0/5). The original
 `FRI-Franka-Lift`, Approach, pre-grasp, scripted EEG comparison, checkpoints
 and outputs remain separate. A second task ID isolates the revised reward
-incentive; it has no learned result yet.
+incentive; its five-start physical screen is now recorded below.
 
 ## Completed startup and reset gates
 
@@ -74,14 +74,10 @@ updates on this reward setup are paused.
 robot, nine-action interface, observations, physics, and success definition.
 It separately lowers finger-to-object weight 1.0→0.2, continuous good-contact
 2.0→0.1, contact-count 0.25→0, and increases the existing contact-gated
-best-position-progress weight 5→25. This is an explicit incentive test, not a
-claim of better performance. Start from scratch in a new output directory,
-first verify the resolved reward config and two-update launch, then use a
-bounded 256×32×250 run and the same fresh-process physical screen. If the
-policy again fails to lift, inspect action magnitude and force, and consider
-demonstration initialization or action-limited control before allocating more
-PPO updates. The recorder's Newton mode and scripted/PPO parity caveat still
-apply.
+best-position-progress weight 5→25. This combined incentive test changes four
+weights, so it cannot identify a single causal reward term. Its startup,
+bounded training, and fresh-process physical screen were completed. The
+scripted/PPO measurement-parity caveat still applies.
 
 The progress task's resolved configuration was checked on Brev against the
 first near-table task: the cube and joint reset values matched, and the four
@@ -94,11 +90,56 @@ The final `model_249.pt` SHA256 is
 `46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6`.
 At update 249 the **training task metric** reported success rate 0.1102, mean
 reward 2.52, and object-out-of-bounds termination rate 0.6498. These values
-are optimization diagnostics, not a measured physical pickup outcome. No
-playback was launched for this checkpoint in this session. The next bounded
-action is a five-start physical screen with separate processes and complete
-termination/contact traces; the high out-of-bounds fraction is a specific
-failure risk to inspect.
+are optimization diagnostics. The separate physical screen follows.
+
+## Progress-reward physical screen
+
+The same saved `model_249.pt` ran in five **fresh processes**, seeds 8–12,
+one episode per process, with the first rung's 12-s maximum, Newton MJWarp,
+and frozen sampled lift predicate (cube rise >=0.08 m with >=0.1 N on both
+fingers for >=0.5 s). All five playback processes exited 0, all episodes have
+pre-action baselines and pre-reset terminal states, contact coverage was 100%,
+and there were no physics-sample gaps. The recorder reported
+`environment_physics_step` at 120 Hz. Raw telemetry is retained on Brev under
+`outputs/isaac/near-table-progress-eval-5x12s-seed8-12-20261102T2330Z` and
+in the local ignored output copy. The compact, source-hashed record is
+[`results/near_table_progress_screen_2026-11-02.json`](../results/near_table_progress_screen_2026-11-02.json).
+The progress training directory (46.2 MB) and all five evaluation directories
+were copied to local ignored `outputs/isaac/near_table_progress_eval_local/`;
+checkpoint, resolved configs, console and exit hashes match Brev. This is a
+verified second copy of these new runs, not a backup claim for historical
+Brev outputs.
+
+| Seed | Duration (s) | Max rise (m) | Max left/right force (N) | Acquisition | Drop | Terminal |
+|---:|---:|---:|---:|---|---:|---|
+| 8 | 0.93 | 0.019 | 7.0 / 153.5 | No | 0 | Early, cube z=0.2393 m |
+| 9 | 1.50 | 0.003 | 3.2 / 83.0 | No | 0 | Early, cube z=0.2381 m |
+| 10 | 12.00 | 0.304 | 4.9 / 105.0 | Yes, 1.775 s | 1, at 2.50 s | Timeout |
+| 11 | 12.00 | 0.302 | 14.0 / 107.0 | Yes, 1.533 s | 0 | Timeout |
+| 12 | 12.00 | 0.016 | 3.7 / 68.6 | No | 0 | Timeout |
+
+Result: **2/5 sampled physical acquisitions**, up from 0/5 in the first
+near-table screen under the same fixed scene and seeds. Only **1/5 had no
+recorded drop after acquisition**. Seeds 8 and 9 ended early with terminal
+cube heights below the task's 0.24-m z bound, consistent with the
+out-of-bounds training signal. The force maxima are highly asymmetric and
+reach 153.5 N on one finger. These five starts are a diagnostic improvement,
+not reliable or force-qualified pickup, full approach, or EEG-controlled
+learning. Do not continue this reward variant blindly or advance the start
+distance on this evidence.
+
+![Near-table physical comparison and force peaks](../results/figures/near_table_progress_screen_2026-11-02.png)
+
+Brev's Personal checkout was dirty and behind the published branch, so the
+result record includes the actual imported module paths, executed source
+SHA256 values, pinned Isaac Lab commit, and resolved training-config hashes.
+The task and recorder contents matched the published files after normalizing
+Windows CRLF to Linux LF; their raw byte hashes differ. No pull or reset was
+applied to the Brev checkout or the older archive. The next experiment should
+target action amplitude, gripper force asymmetry and cube-out-of-bounds
+behavior, with an explicit new task/version and measured screen before more
+training budget. Demonstration initialization is another candidate, but it
+has not been tested for this task.
 
 ## Why this rung exists
 

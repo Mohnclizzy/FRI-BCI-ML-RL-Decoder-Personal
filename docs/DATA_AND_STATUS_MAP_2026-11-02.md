@@ -17,6 +17,16 @@ exit 0, final logged iteration 249/250, total steps 2,048,000, and model_249.pt.
 A physical pickup screen was not verified by this review; training completion is
 not pickup success. The existing graphs remain frozen to their documented inputs.
 
+Later update: the first near-table checkpoint measured 0/5 physical pickups;
+the separately versioned progress-reward checkpoint measured 2/5 sampled
+acquisitions, with one drop, two early terminations and high finger forces.
+See the [current result index](../results/README.md) and
+[near-table protocol/result](NEAR_TABLE_CURRICULUM_2026-11-02.md). The inventory
+below is a snapshot from before those screens and does not enumerate the new
+directories. The progress training directory and all five raw evaluations
+have since been copied off Brev with matching key-file hashes. Full backup
+coverage of older outputs is still unverified.
+
 ## Find and manage the evidence
 
 - [Results index](../results/README.md): links to authoritative summaries,

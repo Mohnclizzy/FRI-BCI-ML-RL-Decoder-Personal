@@ -15,7 +15,11 @@
   "last_training_mean_reward": 2.52,
   "last_training_task_success_rate": 0.1102,
   "last_training_object_out_of_bounds_termination_rate": 0.6498,
-  "five_start_physical_screen_complete": false,
+  "five_start_physical_screen_complete": true,
+  "five_start_physical_screen_record": "results/near_table_progress_screen_2026-11-02.json",
+  "five_start_physical_acquisitions": 2,
+  "five_start_acquisitions_without_recorded_drop": 1,
+  "progress_run_and_five_evaluations_have_verified_local_second_copy": true,
   "learned_table_pickup_claim": false,
-  "note": "Training task metrics are not a physical pickup evaluation. The saved checkpoint awaits fresh-process measured playback."
+  "note": "Training task metrics are not physical pickup outcomes. The separate five-start physical screen found 2/5 sampled acquisitions with one drop, two early terminations and high asymmetric forces."
 }

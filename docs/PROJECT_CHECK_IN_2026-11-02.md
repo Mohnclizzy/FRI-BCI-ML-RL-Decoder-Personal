@@ -28,6 +28,7 @@ specific grasp motion.
 | Project PPO | The original pre-grasp checkpoint lifted **5/5** from privileged in-hand starts but **0/5** from table starts. A bounded Approach fine-tune from that checkpoint completed **100 additional PPO updates**, 64 environments × 32 steps × 100 = **204,800 transitions**, with optimizer and normalizer restoration verified. Five measured 12-s table episodes with the final checkpoint yielded **0/5** pickups; bilateral contact appeared in one. | Pre-grasp lifting, reward, update count, and exit code do not prove table pickup. The PPO physics-step recorder used eager Newton actuation; parity with the earlier fused path is unproven, so this is not a clean scripted-versus-PPO comparison. |
 | NVIDIA pretrained candidate | An official `model_399.pt` Franka Cube policy was integrated separately without replacing project code or training weights. The first in-process five-episode screen had four invalid starts: reset writes disappeared on the first physics step. Five **independent fresh-process** starts passed the continuity check; **1/5** met the sampled sustained two-finger lift criterion. Three episodes ended early under the native task's termination flag. | It is a different scene, reset distribution, assistance logic, and up-to-3-s horizon. It does not transfer directly into project PPO, demonstrate reliability, or justify comparison with the project's 12-s 0/5. Finger forces exceeded 100 N and native joint clamps fired often. |
 | Near-table learning rung | An isolated Isaac Lab/RSL-RL task starts with an open gripper 0.0166 m above a table cube. A 256-environment, 250-update run completed 2.048 million transitions. In five complete 12-s fresh-process screens, the policy contacted the cube but lifted it at most 0.044 m: **0/5 pickups**. Reward rose from 0.01 to 33.66 as the training task success metric remained 0. | This is a measured contact-without-lift failure, not learned pickup. High finger forces and frequent raw actions above magnitude 1 need attention. The fixed near-grasp start also does not establish full approach or spatial generalization. |
+| Near-table progress reward | A separately versioned reward task completed another 2.048 million transitions. Five fresh-process physical starts under the same fixed scene and 12-s maximum gave **2/5 sampled acquisitions**; one later dropped. One other acquisition had no recorded drop. | Two starts ended early below the cube z bound; right-finger peak forces reached 153.5 N. This is a diagnostic improvement, not a reliable or force-qualified pickup policy. Four reward weights changed together, so the test does not isolate one causal term. |
 
 ## Graphs from saved results
 
@@ -46,11 +47,14 @@ The later near-table training/screen result has its own plot:
 
 ![Near-table training reward versus measured cube rise](../results/figures/near_table_stage1_2026-11-02.png)
 
-Figure data, exact input SHA256 hashes and physical validity flags are tracked
-in `results/project_checkin_plot_data_2026-11-02.json`. Regenerate PNG
-figures from that compact file with `python analysis/plot_project_checkin.py`.
-Use `--collect` only when the ignored raw outputs have been restored locally;
-it checks that the corrected EEG physical batch is still marked incomplete.
+![Near-table progress physical rise and finger forces](../results/figures/near_table_progress_screen_2026-11-02.png)
+
+The original three check-in figures use
+`results/project_checkin_plot_data_2026-11-02.json` and
+`analysis/plot_project_checkin.py`. The two later near-table figures use their
+own compact records and plotting scripts in `results/` and `analysis/`.
+Their `--collect` modes require the ignored raw outputs and record input
+SHA256 hashes; default modes redraw from tracked compact data.
 
 These figures show where the pipeline stops: the decoder and request stream
 have offline measurements, the scripted robot has valid controls, and the
@@ -69,7 +73,8 @@ and [`PANDA_PPO_REUSE_REVIEW_2026-11-02.md`](PANDA_PPO_REUSE_REVIEW_2026-11-02.m
 - Source of record is `Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal`, branch
   `codex/robot-learning-design`. `origin` points there. Mario's older
   `personal-fork` is historical; `upstream` is Angel's repository and is not
-  modified. This check-in is based on the branch after commit `dcddf4a`.
+  modified. This check-in has since been updated through the near-table
+  progress physical screen; use the current branch revision for exact source.
 - Brev `compact-green-alligator` has an NVIDIA L4 and Isaac Lab at
   `/home/ubuntu/IsaacLab-fri`, commit
   `e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4`. The installed editable
@@ -83,35 +88,33 @@ and [`PANDA_PPO_REUSE_REVIEW_2026-11-02.md`](PANDA_PPO_REUSE_REVIEW_2026-11-02.m
   it does **not** contain every later PPO/candidate run. New NVIDIA candidate
   raw runs have verified local/remote compressed copies. Backup of all
   historical Brev outputs remains unverified.
-- A later 2026-11-02 session launched the near-table first-rung run in the
-  Personal checkout's new `outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z`
-  directory. The run's final status belongs in its `exit.json`, not an earlier
-  idle check. A separate account should read the run records from Git and this
-  directory rather than rely on chat history or a Jupyter terminal view.
+- The two near-table runs completed in separate new output directories, with
+  physical screens at 0/5 and 2/5 acquisitions respectively. The progress
+  run and its five raw evaluations now have a hash-verified local second copy;
+  the historical archive's backup remains unverified. Brev's Personal
+  checkout is dirty and behind the published branch, so recorded import
+  paths and source/config hashes identify the executed code more reliably
+  than its Git HEAD alone.
 
 ## Current decision and next gates
 
-1. **Audit the NVIDIA port before more GPU spending.** Compare exact native
-   checkpoint preprocessing, observation order/normalization, action scaling,
-   reset writes, asset transforms, actuator/contact settings and interventions
-   against the compatibility port and its saved traces. Explain the reset-state
-   loss and high forces. This is a bounded source-and-trace review, not another
-   training run. Keep the candidate isolated.
+1. **Resolve the progress policy's control failure before more PPO updates.**
+   Its 2/5 sampled acquisitions show an emerging learned lift, but one drop,
+   two early cube-bound terminations and large asymmetric forces block
+   qualification. At force peaks the saved gripper joint targets are negative,
+   outside the intended closed position; verify action scaling, target limits
+   and actuator behavior, then test an explicitly versioned action-limited
+   condition. The trace supports this as a concrete mechanism to test, not a
+   proven single cause. The farther-start rung remains unlaunched.
 2. **Finish the corrected scripted EEG reference** from the frozen 120-s
    protocol, with valid HOLD/positive controls and all 15 paired episodes.
    Preserve the interrupted run as incomplete. Report physical completion,
    rest motion, command coverage and delays separately.
-3. **Test the revised near-table incentive in isolation.** The first phase
-   completed at 0/5 physical pickups despite strong contact and rising reward.
-   A separate `FRI-Franka-Lift-NearTable-Progress` task keeps its physical
-   problem fixed while reducing stationary contact payment and increasing
-   credited cube-to-goal progress. Its bounded 2.048M-transition run completed;
-   the last training success metric was 0.1102, but 0.6498 of terminations were
-   object out of bounds. Run the same five-start 12-s physical screen before
-   interpreting the checkpoint. Stop for redesign if measured cube
-   rise does not improve. A five-episode screen is diagnostic; the design's
-   proposed readiness gate is at least 18/20 fixed-scene pickups plus separate
-   perturbation and seed tests. The next farther-start rung remains unlaunched.
+3. **Keep policy reuse as a separate measured lane.** Audit the NVIDIA port's
+   observation, action, asset and reset compatibility before further claims;
+   do not pool its 1/5 with the project policies' screens. The design's
+   proposed readiness gate for any fixed-scene learned policy remains at least
+   18/20 pickups, then perturbation and independent training-seed tests.
 4. **Only after a learned policy qualifies**, implement its continuous
    enable/HOLD/resume adapter. Test always-HOLD and pauses during approach,
    closure and loaded lift before connecting recorded EEG. Then compare EEG
@@ -125,6 +128,9 @@ and [`PANDA_PPO_REUSE_REVIEW_2026-11-02.md`](PANDA_PPO_REUSE_REVIEW_2026-11-02.m
   `docs/completion_protocol_2026-11-02.md`.
 - Project PPO: `docs/ppo_lift_evaluation_2026-11-02.md`,
   `docs/BREV_HANDOFF_2026-11-02.md`, `results/ppo_approach_*2026-11-02.*`.
+- Near-table PPO: `docs/NEAR_TABLE_CURRICULUM_2026-11-02.md`,
+  `results/near_table_stage1_screen_2026-11-02.json`,
+  `results/near_table_progress_screen_2026-11-02.json`.
 - Pretrained policy: `docs/POLICY_REUSE_AUDIT_2026-11-02.md`,
   `docs/NVIDIA_CANDIDATE_INTEGRATION_2026-11-02.md`,
   `docs/NVIDIA_CANDIDATE_RESET_DIAGNOSTIC_2026-11-02.md`,

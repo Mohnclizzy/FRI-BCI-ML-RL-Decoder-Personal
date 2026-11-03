@@ -12,11 +12,12 @@ backup limits, and the latest observed training completion.
 | NVIDIA candidate: valid screen | [Reset diagnostic](../docs/NVIDIA_CANDIDATE_RESET_DIAGNOSTIC_2026-11-02.md) | [Fresh-process results](nvidia_candidate_2026-11-02/reset_diagnostic.json) | 1/5 valid sampled lifts; high forces/corrections; early terminations retained |
 | NVIDIA candidate: superseded screen | [Correction](../docs/NVIDIA_CANDIDATE_INTEGRATION_2026-11-02.md) | [Reset audit](nvidia_candidate_2026-11-02/reset_audit.json) | `episodes.csv`, `evaluation_summary.json`, and `serialized_rescore.json` describe the original screen with four invalid starts. Do not treat them as a valid 1/5 estimate |
 | Candidate recorder guards | [Guard changes](../docs/NVIDIA_CANDIDATE_GUARDS_2026-11-02.md) | [Offline checks](nvidia_candidate_2026-11-02/guard_review.json) | CPU tests and saved-trace rescoring only; no new physical run |
-| Near-table learning | [Curriculum and reset gate](../docs/NEAR_TABLE_CURRICULUM_2026-11-02.md) | [Reset screen](near_table_reset_screen_2026-11-02.json), [artifact inventory](artifact_inventory_2026-11-02.json) | Training now observed complete: 250 updates / 2,048,000 transitions, exit 0, model_249.pt. Physical pickup screen not verified here |
+| Near-table learning | [Curriculum and physical screens](../docs/NEAR_TABLE_CURRICULUM_2026-11-02.md) | [Reset screen](near_table_reset_screen_2026-11-02.json), [first policy](near_table_stage1_screen_2026-11-02.json), [progress policy](near_table_progress_screen_2026-11-02.json), [figure](figures/near_table_progress_screen_2026-11-02.png) | Two 2.048M-transition variants in the same fixed near-grasp scene: 0/5 then 2/5 sampled acquisitions; one drop, two early ends, high asymmetric forces. Neither qualifies as reliable pickup |
 | Other policy reuse | [Panda PPO review](../docs/PANDA_PPO_REUSE_REVIEW_2026-11-02.md) | [Candidate manifest](policy_candidate_manifest_2026-11-02.json) | Source/compatibility review; not a measured pickup result |
 
 The [artifact inventory](artifact_inventory_2026-11-02.json) lists 36 local run
 folders, their sizes, available exit records, and hashes for 193 key files.
-It is a timestamped local inventory, not a backup or a performance scorecard.
+It is a timestamped snapshot before the progress physical screen, not a backup
+or a performance scorecard.
 Raw checkpoints and telemetry stay in ignored outputs; compact records belong here.
 Do not aggregate screens with different resets, horizons, controllers, or validity.

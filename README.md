@@ -11,12 +11,13 @@ For cross-account repository access and reproduction, read [sharing and reproduc
 The [Isaac Lab project scaffold](simulation/README.md) connects causal recorded
 EEG replay, three command gates, a HOLD-preserving executor, a scripted Franka
 lift skill, measured cube/contact telemetry, and a separate PPO evaluation.
-The first matched five-person table-pickup pilot recorded 1/5 raw EEG
-episodes lifted; confidence and temporal filtering each achieved 0/5 in the
-24-second budget. Filtering did reduce annotated rest activation, while also
-reducing command coverage. Subsequent audit found arm drift during HOLD and an
-insufficient negative-control check, so the physical comparison requires a
-corrected rerun. The recorded command scores are separate from physical motion.
+The historical first matched five-person EEG pilot had an invalid HOLD control,
+so its physical lift counts do not support a comparison. The corrected matched
+batch remains incomplete. Robot-only learning has progressed from an in-hand
+lift to a near-table policy with 2/5 sampled physical acquisitions in a fixed
+scene, but one acquisition dropped and the policy had early terminations and
+high finger forces. EEG is not connected to that learned policy. The recorded
+command scores are separate from physical motion.
 Read the
 [measured cohort results](docs/multi_person_replay_2026-11-02.md),
 [PPO playback results](docs/ppo_lift_evaluation_2026-11-02.md), and

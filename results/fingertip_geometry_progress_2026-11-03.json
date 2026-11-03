@@ -1,5 +1,5 @@
 {
-  "collector_sha256": "2c6187a303e0f668d0f088696342d211fe05ca9e407170b4b1bb7e00ef2786f2",
+  "collector_sha256": "5b7c0fbb6d97d55bd246364d8ce92d1937e8eb66a4c4fdfc9c51b5be096ec9c8",
   "cube_half_extent_m": 0.025,
   "episodes": [
     {
@@ -16,6 +16,15 @@
         0.03636140748858452,
         0.0369572751224041
       ],
+      "first_contact_arm_targets_rad": {
+        "panda_joint1": -0.16640087962150574,
+        "panda_joint2": 0.10281358659267426,
+        "panda_joint3": -0.24093769490718842,
+        "panda_joint4": -2.1636719703674316,
+        "panda_joint5": 0.04012073576450348,
+        "panda_joint6": 2.2531771659851074,
+        "panda_joint7": 0.6381359100341797
+      },
       "first_contact_finger_targets_m": {
         "panda_finger_joint1": -0.017326898872852325,
         "panda_finger_joint2": -0.02453945204615593
@@ -42,6 +51,17 @@
         9.878961563110352
       ],
       "first_contact_pose_max_abs_difference_from_prior_m": 0.0,
+      "first_policy_action": [
+        -0.8905551433563232,
+        0.24486571550369263,
+        -1.14421808719635,
+        -0.4873237609863281,
+        0.21198499202728271,
+        0.6018829941749573,
+        0.45374569296836853,
+        -0.5401740074157715,
+        -0.5819991230964661
+      ],
       "first_policy_action_matches_prior": true,
       "first_right_contact_ge_1n_s": 0.05,
       "max_cube_rise_m": 0.012163043022155762,
@@ -114,6 +134,15 @@
         0.035966306924819946,
         0.03631192445755005
       ],
+      "first_contact_arm_targets_rad": {
+        "panda_joint1": -0.1114804595708847,
+        "panda_joint2": 0.07802915573120117,
+        "panda_joint3": -0.2127280831336975,
+        "panda_joint4": -2.1524012088775635,
+        "panda_joint5": 0.03858109191060066,
+        "panda_joint6": 2.2691338062286377,
+        "panda_joint7": 0.6443166136741638
+      },
       "first_contact_finger_targets_m": {
         "panda_finger_joint1": 0.008763523772358894,
         "panda_finger_joint2": -0.010602124035358429
@@ -140,6 +169,17 @@
         4.843031883239746
       ],
       "first_contact_pose_max_abs_difference_from_prior_m": 1.5133991837501526e-08,
+      "first_policy_action": [
+        -0.3916870653629303,
+        -0.027977995574474335,
+        -0.7779887914657593,
+        -0.30006152391433716,
+        0.16437074542045593,
+        0.6543231010437012,
+        0.45829665660858154,
+        -0.2755318880081177,
+        -0.46876880526542664
+      ],
       "first_policy_action_matches_prior": true,
       "first_right_contact_ge_1n_s": 0.075,
       "max_cube_rise_m": 0.002607107162475586,

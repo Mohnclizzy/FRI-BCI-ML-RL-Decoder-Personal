@@ -32,6 +32,8 @@ estimates. See [the fixed-open record](FIXED_OPEN_PLAYBACK_2026-11-03.md).
 
 A subsequent fingertip-body diagnostic replayed the unchanged progress checkpoint for two selected seeds (8 and 11), one environment and at most one second each. It captured pre-action reset, every available physics sample and terminal or incomplete end states. The first right contact matched the previous screen; at that point the hand was 12–14 mm toward the cube's +y side, with actual finger joints still nearly open. A same-reset, one-second zero-action control had no finger contact and under 0.8 mm hand-y drift. This isolates an early policy-driven lateral shift in the selected setup, without identifying a single joint or proving collider-surface contact geometry. Both policy replays had no physical lift, high right forces and large sideways cube motion. They are contact-mechanism tests, not additional 12-second pickup trials. See [the fingertip geometry diagnostic](FINGERTIP_GEOMETRY_DIAGNOSTIC_2026-11-03.md).
 
+A two-action, four-variant seed-8 arm ablation then reproduced the original first right contact at 0.05 s to within submicron hand/cube pose differences. Zeroing the first two saved joint-1 or joint-3 action components separately eliminated >=1 N right contact during the 0.0667-s window; zeroing both centered the hand at 0.05 s. This identifies contributors to the selected early lateral motion, not a safe permanent clamp or a pickup result. See [the arm action ablation](NEAR_TABLE_ARM_ACTION_ABLATION_2026-11-03.md).
+
 ## Frozen scripted comparison
 
 The scripted skill remains the reference: it has lifted a free table-supported
@@ -68,7 +70,7 @@ imagery; they do not identify grasp intent.
 
 ## Next bounded work
 
-For robot learning, the fixed-open and fingertip diagnostics show early right-only contact while the fingers remain near open, and the zero-action control rules out reset settling as the sole cause of the selected seed-8 lateral shift. Inspect the arm targets and contact geometry before freezing one targeted change and a bounded PPO budget. The short traces do not estimate pickup reliability.
+For robot learning, the arm ablation identifies joint-1 and joint-3 early action components as contributors to the selected right-side contact. Freeze one versioned inference-only early-action intervention, then run one complete 12-s seed-8 physical episode with the unchanged checkpoint and recorder. Inspect contact forces and the original lift/drop thresholds before considering any five-episode screen or PPO budget. The short traces do not estimate pickup reliability.
 
 Next, use this tradeoff to choose a single EEG gate for a clearly labeled
 follow-up, with imagery misses and rest motion both as acceptance measures.

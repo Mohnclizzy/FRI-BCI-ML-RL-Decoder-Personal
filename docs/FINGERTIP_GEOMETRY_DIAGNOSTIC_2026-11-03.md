@@ -29,6 +29,13 @@ contact. Reset servo settling alone therefore does not explain the selected
 policy run's early lateral shift. The control does not identify the responsible
 arm joint or establish behavior across other seeds.
 
+The seed-8 policy's first action included −0.8906 on arm joint 1 and −1.1442
+on joint 3. By first contact, their processed position targets were −0.1664
+and −0.2409 rad versus reset positions −0.0744 and −0.1074 rad. The trace
+also records all seven arm targets and actual joints. Several joints move
+together, so these values do not attribute the lateral displacement to one
+joint without a controlled ablation.
+
 | Seed | End status | First right >=1 N (s) | Hand y minus cube y at contact (m) | Left/right body-frame y minus cube y (m) | Peak right force (N) | Max cube XY shift (m) | Max cube rise (m) |
 |---:|---|---:|---:|---:|---:|---:|---:|
 | 8 | Early terminal, 0.833 s | 0.050 | +0.0137 | +0.0496 / −0.0236 | 175.74 | 0.722 | 0.0122 |
@@ -84,6 +91,17 @@ policy launch records and the zero-action launch. Pinned Isaac Lab was clean at
 NVIDIA L4 with Python 3.12.16 and PyTorch `2.11.0+cu130`. The unchanged source checkpoint was `model_249.pt`, SHA256
 `46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6`.
 
+The executed checkout has synthetic local history and a dirty task registry.
+Its imported `tasks/__init__.py` SHA256 is
+`7243b89004790ae5c826934a4f9b5608ff2227dfd2397182ff0151e28605b372`.
+The published Personal registry is a different Git blob
+(`d668b38779247768b6b84b8b05e8127f331243de`) because it also registers
+the independent FixedOpen task. The selected Progress task registration and
+its `near_table.py` and `near_table_progress.py` contents match the published
+versions; the exact executed registry bytes remain recorded in the raw launch
+and import manifests. Do not represent the remote commit as a byte-identical
+snapshot of every imported module.
+
 Raw directories (ignored by Git, retained on Brev; off-host backup **not
 verified**):
 
@@ -122,7 +140,7 @@ PYTHONPATH=/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/simulation/src \
   FRI_PPO_RECORD_FINGERTIP_BODY_POSES=1 PYTHONDONTWRITEBYTECODE=1 \
   /home/ubuntu/IsaacLab-fri/.venv/bin/python \
   simulation/scripts/run_near_table_zero_action_geometry.py \
-  --seed 8 --device cuda:0 --headless \
+  --seed 8 --device cuda:0 \
   --output-dir outputs/isaac/fingertip-zero-action-control-20261103T0323Z/seed8
 ```
 

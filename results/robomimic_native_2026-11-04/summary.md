@@ -16,7 +16,7 @@ The unmodified official `run_trained_agent.py` for seed 0 stopped on native succ
 
 ## Aligned five-start diagnostic
 
-Each start used the same saved policy and native 400-step horizon, with seed set after environment construction. Cube center began at z≈0.830–0.832 m on the 0.8 m table. The project diagnostic requires ≥0.08 m rise from that episode's baseline, bilateral sampled contact for ≥0.5 s, terminal retention, and no post-acquisition drop. Native success and this stronger criterion are separate.
+Each start used the same saved policy and native 400-step horizon, with NumPy and torch seeded after environment construction. The official playback reset sequence was followed: `env.reset()`, save simulator state, then `env.reset_to(saved_state)` before the first action. The native Lift sampler places the cube with x/y ranges of ±0.03 m around the table offset, random rotation, and a 0.01 m z offset; robot initialization noise remained at its checkpoint/default setting. Cube center began at z≈0.830–0.832 m on the 0.8 m table. The project diagnostic requires ≥0.08 m rise from that episode's baseline, bilateral sampled contact for ≥0.5 s, terminal retention, and no post-acquisition drop. Native success and this stronger criterion are separate.
 
 | Seed | Cube start x,y (m) | First native success step | Max rise (m) | Longest bilateral contact (steps) | Terminal cube z (m) | Terminal retained |
 |---:|---:|---:|---:|---:|---:|---:|

@@ -1,8 +1,8 @@
-# Current execution status — 2026-11-04 04:04 UTC
+# Current execution status — 2026-11-04 04:25 UTC
 
 ## Phase and result
 
-Phase 1 continuity and preservation is in progress. No new robot experiment was run. The last verified learned result remains the unilateral-contact PPO checkpoint `model_347.pt`: 3/5 fixed near-table acquisitions retained at episode end in the five-seed diagnostic. The half-arm rule failed 0/5 and is rejected. There is no learned HOLD/resume or EEG integration, no farther-start pickup qualification, and no completed learned demonstration. See `docs/PROJECT_EXECUTION_HANDOFF_2026-11-03.md` on the published branch for the execution plan and `docs/HANDOFF_2026-11-03_AFTER_RETENTION.md` for the preceding evidence index. These two files are not in this local checkout.
+Phase 1 relevant artifact recovery is complete; CLI model-account execution and connector publication are verified. Phase 2 bounded native robomimic reproduction is complete. The official Lift PH low-dimensional BC-RNN reached native lift success at least once in 5/5 aligned 400-step starts, but all five dropped the cube before the 20-second terminal state; terminal retention was 0/5. Every start had at least 0.5 seconds of sampled bilateral contact and at least 8 cm rise. This is a retention failure, not a working learned pickup. See `results/robomimic_native_2026-11-04/summary.md`. The earlier Isaac unilateral PPO result remains 3/5 retained in its separate fixed near-table diagnostic; the half-arm rule remains rejected at 0/5. Learned HOLD/resume and EEG integration are still untested.
 
 ## Execution and preservation
 
@@ -30,8 +30,8 @@ Recovery is verified for these four files only. Other historical checkpoints, ge
 
 ## Active job and connectivity
 
-No active job. Network access is now enabled in this executor: DNS resolution of both `chatgpt.com` and `github.com` succeeded on 2026-11-04. The earlier DNS/network blocker is stale. Shell GitHub HTTPS still has no credentials; use the connected GitHub tools for repository reads and publication. The existing Brev `codex-cli 0.166.0` reports ChatGPT login, but CLI model execution has not been reverified; do not treat login status as proof of model-account continuity. The mounted `/home/ubuntu/.codex` is read only here; `/home/ubuntu/.codex-cli-runtime` is the existing writable runtime.
+No active job. Network/model execution and private Drive recovery work. Shell GitHub HTTPS has no credentials; the connected GitHub connector is the publication path. The Brev `codex-cli 0.166.0` completed a bounded model-account execution request under the continuing account. The mounted `/home/ubuntu/.codex` is read only; `/home/ubuntu/.codex-cli-runtime` is the writable runtime.
 
-## Exact next action
+## Phase 2 artifacts and exact next action
 
-Phase 1 off-host recovery for the best checkpoint and newest raw telemetry is complete. Next, verify continuing CLI model-account execution and publication access independently, then proceed to the Phase 2 native robomimic reproduction in a fresh isolated environment. Do not start training in this turn.
+Fresh isolated work area: `/home/ubuntu/robomimic-native-phase2-20261104`; no Isaac or Angel repo changes. robomimic `2804dd97dd1625ec861298a35cb677129d3bfacc`, robosuite `d9baa17d5328d7b0ec15ecda54c76c61bb983124`; official checkpoint SHA256 `3ee222cab41f78ba27afca7ef6f70f9f21bd3cc0a37bd79c0b2351dbede51605`. Raw all-attempt archive SHA256 `bbf92cc1d59d2bfe6c19d4c22235d67326e3c0cd84707f68b7f28c6e3cd04f5f`. Both are uploaded to the private [Phase 2 Drive folder](https://drive.google.com/drive/folders/1mCICv4tEWmoD1x2AGUZ7_FEiz55A-OrA); connector readback verified sizes and owner-only access, while download-hash verification is outstanding. The installed `mujoco-py 2.1.2.14` differs from the old robosuite source requirements; record and investigate this compatibility limitation before attributing retention failures to the checkpoint alone. Next: inspect the contact/action/drop traces and confirm dependency parity, then run one targeted retention intervention if justified. Do not claim a learned demonstration or advance to EEG qualification from native success alone.

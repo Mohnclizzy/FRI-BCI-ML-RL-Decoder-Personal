@@ -1,54 +1,41 @@
-# Start here: current project state
+# Start here: EEG-to-Franka project
 
-> **Find the data:** [Results index](results/README.md) · [Storage, backups and latest completion status](docs/DATA_AND_STATUS_MAP_2026-11-02.md).
+The current roadmap is the [execution handoff](docs/PROJECT_EXECUTION_HANDOFF_2026-11-03.md). It is self-contained for the continuing CLI/account and supersedes older next-step recommendations. The [latest evidence handoff](docs/HANDOFF_2026-11-03_AFTER_RETENTION.md) links the underlying runs. These documents describe the last verified state; writing the plan did not run new experiments.
 
-> **Current check-in:** [Project status as of 2026-11-02](docs/PROJECT_CHECK_IN_2026-11-02.md).
-> That report reconciles the older results and supersedes historical next steps.
+## Objective and working repository
 
-An earlier snapshot of run artifacts and cached data is available as a private
-GitHub release. See [artifact handoff](docs/ARTIFACT_HANDOFF.md). Later PPO and
-pretrained-candidate runs are documented separately in the check-in.
+Build a reproducible simulation demonstration in which recorded EEG enables, pauses and resumes a learned Franka table-pickup skill. PhysioNet labels instructed rest and fist imagery, not grasp-specific intent. The required first interface is continuous enable/HOLD/resume. Pretrained policies, imitation learning and an isolated simulator change are authorized; preserve existing Isaac work and the frozen scripted reference.
 
-This is a simulation-first EEG-to-robot project. Two required workstreams are
-learning reliable table pickup and comparing raw, confidence-filtered, and
-temporally filtered recorded EEG requests. REST maps to HOLD; fist imagery maps
-to GRASP_LIFT. PhysioNet labels fist imagery, not a specific grasp.
+Source of record: [Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal](https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal), branch `codex/robot-learning-design`. Inspect actual remotes/history before modifying a checkout. Angel's repository is reference-only; do not modify it.
 
-## Where to work and push
+## Last verified results
 
-The independent private GitHub repository is
-[`Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal`](https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal).
-The active design branch is `codex/robot-learning-design`. In this checkout,
-`origin` points to the independent repository. `upstream` points to Angel's
-original repository for reference only; do not modify it.
+- Individually calibrated CSP/LDA achieved 59.33% balanced accuracy on S006-S010 confirmation recordings. These recordings are now inspected; subsequent analysis is exploratory.
+- The corrected five-person, three-gate 120-second EEG-to-scripted-robot batch is **complete**: raw 5/5 lifts, confidence 3/5, temporal 2/5. Read unintended motion, missed imagery and delay alongside completion. [Summary and plots](results/corrected_eeg_2026-11-03-complete/summary.md)
+- The frozen scripted always-HOLD, uninterrupted-lift and pause/resume controls passed.
+- Original PPO lifted in 5/5 in-hand starts; the farther Approach table evaluation was 0/5. Different starts prevent treating those as a paired comparison.
+- The strongest later learned checkpoint acquired and retained the cube in 3/5 fixed near-table diagnostic episodes. This is not a qualified farther-ready-pose pickup controller. The half-arm inference ablation failed 0/5 and was rejected.
+- The previously tested NVIDIA native candidate produced 1/5 sustained lifts in fresh-process evaluations. The newly proposed robomimic candidate has **not** been reproduced here.
+- EEG has not yet controlled a learned robot policy; learned HOLD/resume remains untested.
 
-## What is measured
+## Next actions
 
-- Five-person calibrated CSP confirmation reached 59.33% balanced accuracy.
-  This cohort is now inspected; later analysis on it is exploratory.
-- A fixed-scene scripted Franka controller lifted a free cube about 0.179 m
-  with sustained bilateral contact. This was not learned-policy success.
-- Corrected always-HOLD, uninterrupted-lift, and paused/resumed-lift physical
-  controls passed in the fixed scene.
-- A 120-second S006R12 temporal replay passed request/trace alignment and
-  telemetry-coverage checks, but supplied only 0.692 active seconds, caused no
-  motion or lift, and detected 1 of 15 imagery bouts.
-- The corrected five-person, three-gate matched batch was interrupted and is
-  unfinished. Earlier 1/5 raw and 0/5 filtered lifts are debugging history,
-  not valid evidence of a filter benefit.
-- The bounded 100-update Approach PPO follow-up completed and yielded 0/5
-  measured table pickups. A separate NVIDIA pretrained candidate achieved
-  1/5 in five valid fresh-process table starts, with high forces and controller
-  corrections; it is not a qualified controller or a comparable condition.
-- EEG has not controlled a learned robot policy.
+Follow the [execution handoff](docs/PROJECT_EXECUTION_HANDOFF_2026-11-03.md):
 
-## Immediate next step
+1. Preserve source/artifacts, verify recoverable off-host copies, and verify continuing model-account and GitHub access.
+2. Reproduce the official robomimic low-dimensional Lift policy in its matching isolated native environment.
+3. Test physical HOLD/resume early, then connect the frozen recorded-EEG pipeline.
+4. Qualify the complete demonstration and package commands, video, plots and reproducible artifacts.
 
-Follow the [current check-in](docs/PROJECT_CHECK_IN_2026-11-02.md): first audit
-the pretrained port and saved traces, then choose a bounded learned table-pickup
-experiment. The corrected scripted EEG matched batch remains incomplete and is
-a separate reference experiment. Do not present its partial results as a final
-comparison. Detailed artifacts under `outputs/` are ignored by Git.
+Do not reset/clean/force-push the dirty Brev checkout or overwrite old outputs. Latest off-host raw-artifact recovery and independent CLI publication are unverified. Keep one current STATUS.md as execution proceeds.
 
-For earlier history, see `docs/PROJECT_HISTORY.md`. For account sharing and
-checkout instructions, see `docs/SHARING_AND_REPRODUCTION.md`.
+## Evidence and historical records
+
+- [Results index](results/README.md)
+- [Latest detailed evidence and artifact paths](docs/HANDOFF_2026-11-03_AFTER_RETENTION.md)
+- [Research protocol](docs/research_protocol.md)
+- [Sharing and reproduction](docs/SHARING_AND_REPRODUCTION.md)
+- [Older artifact release](docs/ARTIFACT_HANDOFF.md) — does not establish backup of later runs
+- [Project history](docs/PROJECT_HISTORY.md)
+
+Older check-ins and startup instructions may describe then-incomplete work. Preserve them as history; use the current handoffs for status and execution order.

@@ -1,0 +1,154 @@
+{
+  "collector_sha256": "aa5280efe800786b9e4c96af8236e6acbfd66c2a9effc182688a35517e5e3388",
+  "full_control_max_abs_difference_from_saved": {
+    "cube_pose_w": 5.490146577358246e-07,
+    "hand_pose_w": 5.960464477539063e-08,
+    "robot_joint_pos": 2.2351741790771484e-08
+  },
+  "input_sha256": {
+    "failed_cli_parse_log": "2f9f3370051fbbf46b59fe63b4817a64b584d3d7e3eb652ee0fbedb49e6b221f",
+    "full-v2_console": "9c292682c307cce3ea0eef40766dd16280f9b804c4f0120a8cf0ed9585953f2d",
+    "full-v2_exit": "296e27fead09d4a7790bea4d2d2764d10a72f1fc8d8ed069dc45576208ddef75",
+    "full-v2_launch": "2cfbe3cf63b8c45fd2f0f8d2033ea397f99ae296798be2b65c7716fc773bc112",
+    "full-v2_summary": "ae2c8394bf8d498cb9563c385c6077f0e0a1d57981a338927a9257e4177ac545",
+    "full-v2_telemetry": "263574482b7ae3ba4c6af0b05f335cf5e453d5e23e4f152ad52ad70bbd632d49",
+    "full-v2_validation": "e8140e8cb524955ae11a2e4bc458f1944a1520e9acf6c6801e5c3715de68f7fe",
+    "joint1_joint3_off_console": "47d76d9208ade7cc37f43566002bb9aec3a23207923cc4a9013db67cf57df8f5",
+    "joint1_joint3_off_exit": "296e27fead09d4a7790bea4d2d2764d10a72f1fc8d8ed069dc45576208ddef75",
+    "joint1_joint3_off_launch": "8137574a31a3e9bddeeb08feb076e6bb372b24aadc68cfe196000d962ce9ce34",
+    "joint1_joint3_off_summary": "154235fa5b333a6a57434839b5cced5b8df7e3efb132ec3e9f731f95a0e78315",
+    "joint1_joint3_off_telemetry": "12f72ac6e34566f28459452644ccfce1ba4be80d6a70185cf20d941b2f7e96ee",
+    "joint1_joint3_off_validation": "b72c1632db767c1dc61389e3e438722a9d0e5c42947f54eebb9178af2ff3a633",
+    "joint1_off_console": "95cf4faa982cf6c9968f7f9143065c37c91938cd7244fa3c93a00e42efce53ca",
+    "joint1_off_exit": "296e27fead09d4a7790bea4d2d2764d10a72f1fc8d8ed069dc45576208ddef75",
+    "joint1_off_launch": "54a43f57f5490cab21f54d909e36dbeb49f65de7c61cb74e544ee8aaa9c96151",
+    "joint1_off_summary": "d04e0b2480bc4c055fa100715b6c0bd228a7a7018e92b948d984ffc86aa5afb3",
+    "joint1_off_telemetry": "c22de8aebdd491d2653fcab7a1b3c75262a38d38a041236ff27038b35e9bfbf1",
+    "joint1_off_validation": "2f0ca66adcc012755e68f0607d0bd9619e722cff64d2ddb8b40e352b75a8ab23",
+    "joint3_off_console": "01b7790aadf860d6e06bb64f380c15f41bbcf38c6168d84b32333c4865c7d9ac",
+    "joint3_off_exit": "296e27fead09d4a7790bea4d2d2764d10a72f1fc8d8ed069dc45576208ddef75",
+    "joint3_off_launch": "0295d24a7ae20a5dfc2f1c6ec42fa6dc80524b7dbdcaef90ae49b3ec84053ccf",
+    "joint3_off_summary": "b21be05f11f8fee60bffc273517a566c1d8051371f9f10915cfd766417e95b6e",
+    "joint3_off_telemetry": "0b973fa3ff24f31a224a3721d560aaca5f9ac5d51d35b4399e0bad8f67e3aaa1",
+    "joint3_off_validation": "1ad667dca683e1d790f1dd3ebb0f15e730f4b693dfb70cdcb0845974a6b6117f",
+    "source_policy_telemetry": "0d2f8372fb803b2c32e17a83428562d9370a7d87c9a562e48efabebe30b470b0"
+  },
+  "kind": "two_action_near_table_arm_component_ablation",
+  "limits": [
+    "The two actions are saved policy outputs, but the ablations are open-loop and load no policy checkpoint.",
+    "Only the first 0.066667 s of one fixed reset is tested; absence of early contact is not pickup success.",
+    "Finger body frames are not collider surfaces or contact points.",
+    "Removing either action component also changes coupled downstream motion; this does not identify a unique reward defect."
+  ],
+  "scope": "one seed, one reset, two saved open-loop actions, four variants, no training or EEG",
+  "source_policy_checkpoint_sha256": "46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6",
+  "source_sha256_at_launch": {
+    "simulation/scripts/run_near_table_arm_action_ablation.py": "94b0b4f749df0e8ee9385c14b08888ae008a5417e88598587026dd929a1e182d",
+    "simulation/src/fri_bci_sim/ppo_telemetry.py": "ecec8da11e25fc4bbb05c60a23f8022020916996b59927960655a1852a4b94ea",
+    "simulation/src/fri_bci_sim/tasks/__init__.py": "7243b89004790ae5c826934a4f9b5608ff2227dfd2397182ff0151e28605b372",
+    "simulation/src/fri_bci_sim/tasks/near_table.py": "a4fbdf45eb36a004d5769d15b20f623900f3802cb897882469351189a762d632",
+    "simulation/src/fri_bci_sim/tasks/near_table_progress.py": "6184906be8444f90ebab5057bc8aae782c68407d0d61a24876e3d798e2bf2e22"
+  },
+  "source_telemetry_sha256": "0d2f8372fb803b2c32e17a83428562d9370a7d87c9a562e48efabebe30b470b0",
+  "variants": [
+    {
+      "contact_coverage": 1.0,
+      "cube_y_shift_at_0_05s_m": 0.002867668867111206,
+      "duration_s": 0.066667,
+      "end_status": "incomplete_at_two_action_cap",
+      "first_left_right_contact_ge_1n_s": [
+        null,
+        0.05
+      ],
+      "hand_y_minus_cube_y_at_0_05s_m": 0.013716928660869598,
+      "left_right_finger_frame_y_minus_cube_y_at_0_05s_m": [
+        0.0496382936835289,
+        -0.023609526455402374
+      ],
+      "left_right_sensor_force_at_0_05s_n": [
+        0.0,
+        9.87894058227539
+      ],
+      "modified_action_indices": [],
+      "name": "full-v2",
+      "physics_samples": 8,
+      "run_dir": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-arm-action-ablation-20261103T0333Z/full-v2"
+    },
+    {
+      "contact_coverage": 1.0,
+      "cube_y_shift_at_0_05s_m": 0.0014725103974342346,
+      "duration_s": 0.066667,
+      "end_status": "incomplete_at_two_action_cap",
+      "first_left_right_contact_ge_1n_s": [
+        null,
+        null
+      ],
+      "hand_y_minus_cube_y_at_0_05s_m": 0.008116863667964935,
+      "left_right_finger_frame_y_minus_cube_y_at_0_05s_m": [
+        0.044105395674705505,
+        -0.028305768966674805
+      ],
+      "left_right_sensor_force_at_0_05s_n": [
+        0.0,
+        0.0
+      ],
+      "modified_action_indices": [
+        0
+      ],
+      "name": "joint1_off",
+      "physics_samples": 8,
+      "run_dir": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-arm-action-ablation-20261103T0333Z/joint1_off"
+    },
+    {
+      "contact_coverage": 1.0,
+      "cube_y_shift_at_0_05s_m": 0.0009976029396057129,
+      "duration_s": 0.066667,
+      "end_status": "incomplete_at_two_action_cap",
+      "first_left_right_contact_ge_1n_s": [
+        null,
+        null
+      ],
+      "hand_y_minus_cube_y_at_0_05s_m": 0.005340375006198883,
+      "left_right_finger_frame_y_minus_cube_y_at_0_05s_m": [
+        0.04111134260892868,
+        -0.03131178766489029
+      ],
+      "left_right_sensor_force_at_0_05s_n": [
+        0.0,
+        0.0
+      ],
+      "modified_action_indices": [
+        2
+      ],
+      "name": "joint3_off",
+      "physics_samples": 8,
+      "run_dir": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-arm-action-ablation-20261103T0333Z/joint3_off"
+    },
+    {
+      "contact_coverage": 1.0,
+      "cube_y_shift_at_0_05s_m": -1.0065734386444092e-05,
+      "duration_s": 0.066667,
+      "end_status": "incomplete_at_two_action_cap",
+      "first_left_right_contact_ge_1n_s": [
+        null,
+        null
+      ],
+      "hand_y_minus_cube_y_at_0_05s_m": -0.0004104524850845337,
+      "left_right_finger_frame_y_minus_cube_y_at_0_05s_m": [
+        0.03553558886051178,
+        -0.03689960390329361
+      ],
+      "left_right_sensor_force_at_0_05s_n": [
+        0.0,
+        0.0
+      ],
+      "modified_action_indices": [
+        0,
+        2
+      ],
+      "name": "joint1_joint3_off",
+      "physics_samples": 8,
+      "run_dir": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-arm-action-ablation-20261103T0333Z/joint1_joint3_off"
+    }
+  ]
+}

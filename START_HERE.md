@@ -1,22 +1,24 @@
 # Start here: current project state
 
-Saved run artifacts and cached data are now available as a private GitHub release. See [artifact handoff](docs/ARTIFACT_HANDOFF.md) for the download, inventory, and restoration instructions.
+> **Current check-in:** [Project status as of 2026-11-02](docs/PROJECT_CHECK_IN_2026-11-02.md).
+> That report reconciles the older results and supersedes historical next steps.
 
-This is a simulation-first EEG-to-robot project. The current goal is to compare
-raw, confidence-filtered, and temporally filtered recorded EEG requests while
-measuring physical lift completion, movement during REST, missed imagery bouts,
-and delay. REST maps to HOLD; fist imagery maps to GRASP_LIFT. PhysioNet labels
-fist imagery, not a specific grasp.
+An earlier snapshot of run artifacts and cached data is available as a private
+GitHub release. See [artifact handoff](docs/ARTIFACT_HANDOFF.md). Later PPO and
+pretrained-candidate runs are documented separately in the check-in.
+
+This is a simulation-first EEG-to-robot project. Two required workstreams are
+learning reliable table pickup and comparing raw, confidence-filtered, and
+temporally filtered recorded EEG requests. REST maps to HOLD; fist imagery maps
+to GRASP_LIFT. PhysioNet labels fist imagery, not a specific grasp.
 
 ## Where to work and push
 
 The independent private GitHub repository is
 [`Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal`](https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal).
-The active branch is `codex/isaaclab-project-scaffold` and is the repository's
-default branch. In this local checkout, `origin` points to that independent
-repository and all project branches track `origin`. `upstream` points to
-Angel's original repository for reference only. Push ongoing project work to
-`origin`; do not push to `upstream` unless explicitly asked to contribute back.
+The active design branch is `codex/robot-learning-design`. In this checkout,
+`origin` points to the independent repository. `upstream` points to Angel's
+original repository for reference only; do not modify it.
 
 ## What is measured
 
@@ -32,16 +34,19 @@ Angel's original repository for reference only. Push ongoing project work to
 - The corrected five-person, three-gate matched batch was interrupted and is
   unfinished. Earlier 1/5 raw and 0/5 filtered lifts are debugging history,
   not valid evidence of a filter benefit.
-- Table-start PPO has not established a successful lift. EEG has not
-  successfully controlled a learned robot policy.
+- The bounded 100-update Approach PPO follow-up completed and yielded 0/5
+  measured table pickups. A separate NVIDIA pretrained candidate achieved
+  1/5 in five valid fresh-process table starts, with high forces and controller
+  corrections; it is not a qualified controller or a comparable condition.
+- EEG has not controlled a learned robot policy.
 
 ## Immediate next step
 
-Resume from `docs/stopping_point_2026-11-02.md` and follow
-`docs/completion_protocol_2026-11-02.md` to finish the corrected matched batch.
-Do not present partial results as the final comparison. The local `outputs/`
-folder contains detailed artifacts and is ignored by Git source commits. The
-private release linked above supplies the saved logs and checkpoints.
+Follow the [current check-in](docs/PROJECT_CHECK_IN_2026-11-02.md): first audit
+the pretrained port and saved traces, then choose a bounded learned table-pickup
+experiment. The corrected scripted EEG matched batch remains incomplete and is
+a separate reference experiment. Do not present its partial results as a final
+comparison. Detailed artifacts under `outputs/` are ignored by Git.
 
-For the full history, see `docs/PROJECT_HISTORY.md`. For account sharing and
+For earlier history, see `docs/PROJECT_HISTORY.md`. For account sharing and
 checkout instructions, see `docs/SHARING_AND_REPRODUCTION.md`.

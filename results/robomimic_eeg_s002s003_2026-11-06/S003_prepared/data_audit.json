@@ -1,0 +1,39 @@
+{
+  "dataset": "PhysioNet EEGMMIDB 1.0.0",
+  "sources": [
+    {
+      "subject": 3,
+      "run": 4,
+      "file": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/data/physionet/MNE-eegbci-data/files/eegmmidb/1.0.0/S003/S003R04.edf"
+    },
+    {
+      "subject": 3,
+      "run": 8,
+      "file": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/data/physionet/MNE-eegbci-data/files/eegmmidb/1.0.0/S003/S003R08.edf"
+    },
+    {
+      "subject": 3,
+      "run": 12,
+      "file": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/data/physionet/MNE-eegbci-data/files/eegmmidb/1.0.0/S003/S003R12.edf"
+    }
+  ],
+  "shape_trials_channels_samples": [
+    90,
+    9,
+    320
+  ],
+  "units": "volts",
+  "class_counts": {
+    "REST": 45,
+    "HAND_IMAGERY": 45
+  },
+  "annotation_mapping": {
+    "T0": "REST",
+    "T1": "HAND_IMAGERY",
+    "T2": "HAND_IMAGERY"
+  },
+  "skipped_windows": [],
+  "reference": "mean of the selected channels at each sample",
+  "filter": "causal Butterworth SOS; zero initial state separately for each run",
+  "artifact_handling": "finite-data validation only; no ICA or amplitude rejection yet"
+}

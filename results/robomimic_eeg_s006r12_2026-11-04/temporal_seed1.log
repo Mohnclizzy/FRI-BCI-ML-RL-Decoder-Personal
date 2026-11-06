@@ -1,0 +1,73 @@
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs type: low_dim with modalities: ['robot0_gripper_qpos', 'object', 'robot0_eef_pos', 'robot0_eef_quat']
+using obs type: image with modalities: []
+Created environment with name Lift
+Action size is 7
+{
+  "seed": 1,
+  "condition": "eeg",
+  "gate": "temporal",
+  "pause_start": null,
+  "pause_steps": null,
+  "resume_state": "freeze",
+  "latch_z_offset_m": 0.015,
+  "steps": 400,
+  "horizon": 400,
+  "control_hz": 20.0,
+  "physics_dt_s": 0.002,
+  "tolerances": {
+    "rise_m": 0.08,
+    "contact_steps": 10,
+    "goal_pos_m": 1e-09,
+    "goal_ori_matrix": 1e-09,
+    "gripper_command": 1e-09,
+    "eef_drift_m": 0.035,
+    "cube_drift_m": 0.025
+  },
+  "initial_cube_pos": [
+    0.022687046183456724,
+    -0.02835674440812443,
+    0.8300002287496347
+  ],
+  "terminal_cube_pos": [
+    0.022684461958251648,
+    -0.028359100745637966,
+    0.8197846891595904
+  ],
+  "terminal_rise_m": -0.010215539590044398,
+  "max_rise_m": 0.0,
+  "first_acquisition_step": null,
+  "longest_bilateral_contact_steps": 0,
+  "contact_proxy_validated": true,
+  "post_acquisition_loss": false,
+  "terminal_contact": false,
+  "terminal_retained": false,
+  "native_success_any": false,
+  "latch_step": null,
+  "latch_steps": 0,
+  "latch_goal_pos": null,
+  "latch_goal_ori": null,
+  "latch_policy_call_violations": 0,
+  "latch_rnn_counter_violations": 0,
+  "max_latch_goal_pos_error_m": 0.0,
+  "max_latch_goal_ori_error": 0.0,
+  "max_latch_gripper_close_error": 0.0,
+  "latch_invariants_pass": true,
+  "hold_steps": 386,
+  "hold_entries": 2,
+  "resumes": 1,
+  "policy_calls": 14,
+  "hold_policy_call_violations": 0,
+  "hold_rnn_counter_violations": 0,
+  "max_hold_goal_pos_error_m": 0.0,
+  "max_hold_goal_ori_error": 0.0,
+  "max_hold_gripper_command_error": 0.0,
+  "max_hold_eef_drift_m": 0.017105903582852036,
+  "max_hold_cube_drift_m": 0.012655939651240592,
+  "hold_invariants_pass": true,
+  "completion_state": "complete_unretained",
+  "checkpoint_sha256": "3ee222cab41f78ba27afca7ef6f70f9f21bd3cc0a37bd79c0b2351dbede51605",
+  "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62"
+}

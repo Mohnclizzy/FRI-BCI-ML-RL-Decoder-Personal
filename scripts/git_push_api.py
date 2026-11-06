@@ -49,15 +49,20 @@ def push_changes(commit_message):
         elif os.path.exists(file_path):
             files_to_add.append(file_path)
 
+    import base64
     tree_entries = []
     for file_path in files_to_add:
-        with open(file_path, "r", encoding="utf-8", errors="replace") as f:
-            content = f.read()
+        with open(file_path, "rb") as f:
+            raw_bytes = f.read()
+        blob = gh_api("git/blobs", method="POST", data={
+            "content": base64.b64encode(raw_bytes).decode("ascii"),
+            "encoding": "base64"
+        })
         tree_entries.append({
             "path": file_path.replace("\\", "/"),
             "mode": "100644",
             "type": "blob",
-            "content": content
+            "sha": blob["sha"]
         })
 
     if not tree_entries:

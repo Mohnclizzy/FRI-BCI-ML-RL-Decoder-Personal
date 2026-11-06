@@ -38,7 +38,10 @@ def push_changes(commit_message):
 
     files_to_add = []
     for line in status_output.splitlines():
-        file_path = line[3:].strip()
+        parts = line.strip().split(maxsplit=1)
+        if len(parts) < 2:
+            continue
+        file_path = parts[1]
         if os.path.isdir(file_path):
             for root, _, files in os.walk(file_path):
                 for f in files:
@@ -79,7 +82,8 @@ def push_changes(commit_message):
 
     gh_api(f"git/refs/heads/{BRANCH}", method="PATCH", data={"sha": new_commit["sha"]})
     print(f"Pushed to GitHub: {new_commit['sha']} - {commit_message}")
-    subprocess.run(["git", "pull", "origin", BRANCH], check=True)
+    subprocess.run(["git", "fetch", "origin", BRANCH], check=True)
+    subprocess.run(["git", "reset", "--hard", f"origin/{BRANCH}"], check=True)
 
 if __name__ == "__main__":
     msg = sys.argv[1] if len(sys.argv) > 1 else "Auto update from agent"

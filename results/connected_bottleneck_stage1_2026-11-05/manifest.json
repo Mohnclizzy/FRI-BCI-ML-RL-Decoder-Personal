@@ -1,0 +1,91 @@
+{
+  "generated": "2026-11-05",
+  "stage": "connected_bottleneck_stage1_freeze",
+  "phase": "A (inventory+freeze+duty-cycle table+dry-run)",
+  "note": "Prospective freeze; no S002/S003 run-12 decode yet. S001 opened anchor. S006-S010 opened dev.",
+  "hashes": {
+    "policy_checkpoint": {
+      "path": "/home/ubuntu/robomimic-native-phase2-20261104/artifacts/lift_ph_low_dim_epoch_1000_succ_100.pth",
+      "sha256": "3ee222cab41f78ba27afca7ef6f70f9f21bd3cc0a37bd79c0b2351dbede51605",
+      "bytes": 7959022
+    },
+    "s001_decision_trace": {
+      "path": "/home/ubuntu/S001R12-decisions.jsonl",
+      "sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+      "bytes": 198325
+    },
+    "decoder_src": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/eeg_decoder/baseline.py",
+      "sha256": "b65f3fe48c083daba6fb631af52a239954debc7e4bcad0c299fbe4a0300eca1d",
+      "bytes": 15745
+    },
+    "decoder_config": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/configs/baseline.json",
+      "sha256": "0a6dd4813942ed8bad9adaade04094e419e23556dba1a409cc8b94b0534ab6df",
+      "bytes": 417
+    },
+    "replay_harness": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/results/robomimic_latch6_zoffset_2026-11-04/latch6_rollout.py",
+      "sha256": "53b96476fa91d452817d7d5f82cc8430cf659ac16e5f15bc5c80f6776dc9dd5b",
+      "bytes": 13757
+    },
+    "s006_edf_r12": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/data/physionet/MNE-eegbci-data/files/eegmmidb/1.0.0/S006/S006R12.edf",
+      "sha256": "296b5cb14549098dc55ee047cc9ff63faccf480e432b94797ff73cc7209b7353",
+      "bytes": 2555616
+    },
+    "s006_trace": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/S006R12-decisions.jsonl",
+      "sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+      "bytes": 191732
+    },
+    "s007_edf_r12": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/data/physionet/MNE-eegbci-data/files/eegmmidb/1.0.0/S007/S007R12.edf",
+      "sha256": "70cd3287d6b4821661521954206f86dde9f5e62904edd76cc0cf1d03fe112df3",
+      "bytes": 2596896
+    },
+    "s007_trace": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/S007R12-decisions.jsonl",
+      "sha256": "d0f0c783f45df033151abdafb75f10267bf26d59cda313a26bf5fa811b83b3a0",
+      "bytes": 197171
+    },
+    "s008_edf_r12": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/data/physionet/MNE-eegbci-data/files/eegmmidb/1.0.0/S008/S008R12.edf",
+      "sha256": "ddced4ba4dc801313554039823fa1826d0dd52648f87a5ee5ada8e9cdd0678c8",
+      "bytes": 2555616
+    },
+    "s008_trace": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/S008R12-decisions.jsonl",
+      "sha256": "3661761f0f6e768a9ce849866c063e9e3f423d25d31bb44794598b4536e948da",
+      "bytes": 197946
+    },
+    "s009_edf_r12": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/data/physionet/MNE-eegbci-data/files/eegmmidb/1.0.0/S009/S009R12.edf",
+      "sha256": "0c3f9700d6bfd8a8dd797803d61b80852688709011e5863f4e13e9ec3948191f",
+      "bytes": 2555616
+    },
+    "s009_trace": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/S009R12-decisions.jsonl",
+      "sha256": "504854e750f4ae54bd01131a55ab3d63174a9968bf6091374025512a38dd861f",
+      "bytes": 196855
+    },
+    "s010_edf_r12": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/data/physionet/MNE-eegbci-data/files/eegmmidb/1.0.0/S010/S010R12.edf",
+      "sha256": "0983609a12e6fd9b3ae99fd6968938ec5a3b012948894602233a65b720ac3975",
+      "bytes": 2555616
+    },
+    "s010_trace": {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/S010R12-decisions.jsonl",
+      "sha256": "c824b72f889ded15d9a88cb5ec86701f31eba17e17f1e6344edc267f5a7725df",
+      "bytes": 192169
+    },
+    "s002_r12": {
+      "present": false,
+      "status": "BLOCKED: no local EDF, not in MNE cache, no PhysioNet cred"
+    },
+    "s003_r12": {
+      "present": false,
+      "status": "BLOCKED: no local EDF, not in MNE cache, no PhysioNet cred"
+    }
+  }
+}

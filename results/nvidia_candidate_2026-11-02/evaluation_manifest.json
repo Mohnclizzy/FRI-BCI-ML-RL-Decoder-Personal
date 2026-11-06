@@ -1,0 +1,43 @@
+{
+  "argv": [
+    "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/simulation/candidates/nvidia_franka_cube/run.py",
+    "--candidate-root",
+    "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v3/franka_cube",
+    "--isaaclab-root",
+    "/home/ubuntu/IsaacLab-fri",
+    "--output",
+    "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/eval-5ep",
+    "--episodes",
+    "5",
+    "--viz",
+    "none"
+  ],
+  "seed": 8,
+  "episodes": 5,
+  "candidate_checkpoint_sha256": "832d8262ede665b5698c557e79ef0aa4167ec0fae1b5d5d8b222e829effc24a4",
+  "training": false,
+  "integration_sha256": {
+    "run.py": "607852dd3eec049d143e623651c4f20ac1bc1ec79f2e23e035f926f98b49a4d5",
+    "test_candidate.py": "e86f709332643ea923536bc57c65443e0df4bbdfcd4f8267358247a07dd779c7",
+    "scoring.py": "838e8cc5809ce3ec500fc596d6dff6359f0e840929b9fd1d46a5dea5989dc649",
+    "prepare.py": "7485dd19df69a52cd5f726930cafa32ee518d3d2ccfb4a001a5d5d470ddd6c5a",
+    "harness.py": "4652d00c211396d578026a277c5cdbfd0f5c4e168ba991209293119aef4fa288"
+  },
+  "isaac_commit": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4",
+  "torch": "2.11.0+cu130",
+  "rsl_rl": "5.5.1",
+  "checkpoint_iteration": 399,
+  "actor_input": 41,
+  "actor_output": 8,
+  "horizon_s": 3.0,
+  "physics_dt": 0.008333333333333333,
+  "decimation": 2,
+  "actuators": [
+    "panda_shoulder",
+    "panda_forearm",
+    "panda_hand"
+  ],
+  "candidate_config_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v3/franka_cube/source/franka_cube/franka_cube/tasks/direct/franka_cube/franka_cube_env_cfg.py",
+  "native_physics_handles_decimation": false,
+  "policy_dt_s": 0.016666666666666666
+}

@@ -1,0 +1,25 @@
+# Unilateral-contact penalty: bounded physical screen — 2026-11-03
+
+This diagnostic produced 3/5 sustained bilateral acquisitions from the fixed table-supported near-grasp pose. All three still met the lift/contact predicate in the final 60 physics samples and had no detected post-acquisition drop. Seed 11 rose over 8 cm but had only 0.075 s best continuous bilateral lifted contact and never acquired under the 0.5 s criterion. Seed 9 did not lift. These are five fixed-pose screens of one training seed, not a reliability estimate or a pickup from the farther ready pose. The comparison with the historical 0/5 Approach screen is not paired; see [the trace review](UNILATERAL_TRACE_REVIEW_2026-11-03.md).
+
+| Seed | First right-only s | XY 2 cm while low s | First either finger <=20 mm s | First rise >=8 cm s | Acquisition s | Drop s | Final 60 samples satisfy lift/contact | Max rise m | Max XY shift m | Peak left/right sensor N |
+|---:|---:|---:|---:|---:|---:|---:|---|---:|---:|---:|
+| 8 | 0.058 | 0.125 | 0.392 | 0.508 | 1.317 | — | yes | 0.218 | 0.421 | 107.9 / 209.6 |
+| 9 | 0.208 | 0.317 | 0.758 | — | — | — | no | 0.008 | 0.272 | 0 / 99.5 |
+| 10 | 0.200 | 0.300 | — | 0.875 | 1.367 | — | yes | 0.218 | 0.446 | 8.1 / 78.6 |
+| 11 | 0.225 | 0.317 | 1.175 | 0.975 | — | — | no | 0.203 | 0.440 | 7.8 / 124.5 |
+| 12 | 0.342 | 0.542 | — | 1.158 | 1.650 | — | yes | 0.213 | 0.368 | 23.6 / 122.6 |
+
+The event definitions are frozen in the trace review. Closure is a descriptive actual-joint position marker, not evidence of grasp. Peak sensor magnitudes are filtered simulation sensor values, not physical safety guarantees. The maximum XY excursion includes the lifted portion. No post-acquisition drop for seeds 9 and 11 does not mean the cube stayed grasped; neither acquired. Large right-side forces and early unilateral contact persist. The final 60 samples span a nominal 0.5 s at 120 Hz; this is an uninterrupted-policy physical end-state observation, **not a HOLD target-invariance test**. There is no validated learned HOLD adapter in this playback path; no EEG coupling is claimed.
+
+Each episode reached the 12 s timeout, with one pre-action reset and a pre-reset terminal record, 1,440 physics samples, full sampled contact coverage, zero sample gaps and no incomplete records. Baseline cube height was 0.280000 m for all. Physics sampling was `environment_physics_step` at 1/120 s; policy actions were at 1/30 s. Metrics include complete terminal state, sample coverage, acquisition and drop times, and trace hashes. The published compact trace contains every fourth physics sample (30 Hz) for selected fields rounded to six decimals; it cannot reproduce every 120 Hz threshold event. The complete unrounded physics-rate traces remain in the local output paths and are identified by SHA256 in the metrics. Sampled force values cannot establish between-sample continuity.
+
+The single change, budget and stop rule were frozen in [the protocol](UNILATERAL_PROTOCOL_2026-11-03.md). Training used an isolated copy of anti-push `model_298.pt`, SHA256 `e80a46414db8482cf780c56f785154d93ac479b2e2a48ac3d7b1567e3d84729f`. It resumed actor, critic, optimizer and runner iteration with the pinned default, for 50 updates (iterations 298–347), 256 environments and 32 steps per environment: 409,600 additional environment transitions. Evaluation checkpoint `model_347.pt` SHA256 is `37eb85242539f7d2f0c36a916f3aa8e44d2fe6a70030a9da18963d2506e673f7`. Isaac Lab was pinned at `e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4`; execution used an idle NVIDIA L4, driver 580.178.04. Resolved configuration, commands and source hashes are in the raw training `launch.json` and run logs. Training and evaluation used a dirty Personal checkout; the published task registry retains the independent FixedOpen registration that was absent locally, and the executed sources' hashes are recorded.
+
+- [Per-episode metrics and pre-reset terminal states](../results/unilateral_2026-11-03/metrics_published.json); [compact 30 Hz traces](../results/unilateral_2026-11-03/trace_30hz.csv).
+- Raw training directory: `outputs/isaac/unilateral-50-seed8-20261103T2310Z/`.
+- Raw evaluation directory: `outputs/isaac/unilateral-eval-5x12s-20261103T2310Z/`.
+- Collector: `analysis/collect_unilateral_evaluation.py`; it refuses to reuse its result directory.
+- Recorder unit tests passed (9); a focused four-case XOR sensor check passed; the physical collector verified starts, terminal records, checkpoints, timestamp continuity, sample counts and contact coverage.
+
+**Next decision:** stop this phase without another training expansion. Inspect seed 11's loss of bilateral contact after the transient rise, together with the persistent early lateral push and high right-side forces, and freeze a separate grasp-retention diagnostic before selecting any further change. Do not evaluate EEG or claim ready-pose pickup until a validated learned fixed-target HOLD adapter and a separate farther-start physical evaluation exist. Off-host backup of the new raw runs and checkpoints is unverified.

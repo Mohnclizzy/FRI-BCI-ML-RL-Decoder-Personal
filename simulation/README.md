@@ -37,11 +37,14 @@ robot movements. No dataset or synthetic EEG generator is silently assumed.
 | Isaac Lab external Franka lift configuration | L4/Newton task startup and bounded simulation evaluations verified on Brev |
 | PPO pre-grasp checkpoint | Measured free-cube lift in 5/5 12 s episodes from in-hand resets; not a table pickup |
 | PPO table transfer | 64-env, 100-iteration transfer and checkpoint playback completed; 0/5 table lifts, no finger contact; hand moved away from cube |
+| Near-table PPO rungs | First 256-env, 250-update reward: 0/5 physical pickups despite contact. Separately versioned progress reward: 2/5 sampled acquisitions in fresh-process 12 s screens, with one drop, two early ends and high asymmetric force; not a qualified pickup policy. See [curriculum and screens](../docs/NEAR_TABLE_CURRICULUM_2026-11-02.md). |
+| Finger target guard | An opt-in playback-only task bounds the two finger targets to 0.02–0.04 m with the same nine-action checkpoint interface. Two selected paired cases retained high one-sided force and lost pickup; it is a diagnostic, not a safe or trained replacement. |
+| Fixed-open contact diagnostic | An opt-in task held both finger targets at 0.04 m while the same actor controlled the arm. Two selected one-second playbacks retained early right-only contact and large cube displacement; see [the measured record](../docs/FIXED_OPEN_PLAYBACK_2026-11-03.md). |
 | Recorded EEG gate commands affecting the scripted Franka lift | First S001R12 replay pilot complete for raw, confidence, and temporal gates; see [pilot results](../docs/end_to_end_pilot_2026-11-02.md) |
 | Scripted-skill HOLD/resume and simulator telemetry | Repaired locally in `scripts/controlled_lift.py`: HOLD preserves the last commanded arm and finger targets across pauses; completion is absorbing; per-step telemetry is tested. All three corrected physical controls passed after the documented 2 s initialization; see ../docs/stopping_point_2026-11-02.md |
 | PPO behavior under EEG commands | Not connected; the end-to-end filtering pilot uses the scripted skill because table-transfer PPO has no measured lift |
 | Five-person EEG command replay preflight | Complete for S006â€“S010 over the same 24 s horizon; filters reduce rest activation but miss more imagery bouts; exploratory only, see [cohort replay](../docs/multi_person_replay_2026-11-02.md) |
-| Historical 24 s matched five-person Franka run | Preserved as exploratory debugging evidence only. Its physical HOLD control was invalid, so its lift counts do not support comparison claims. Corrected controls passed; one 120 s EEG case was validated, and the expanded matched rerun remains incomplete after user-requested stop; see the [completion protocol](../docs/completion_protocol_2026-11-02.md) |
+| Corrected 120 s matched five-person Franka run | Complete for S006–S010 across raw, confidence, and temporal gates; frozen controls passed. Raw lifted 5/5, confidence 3/5, temporal 2/5. Exploratory fixed-scene result; see the [paired summary](../results/corrected_eeg_2026-11-03-complete/summary.md). |
 
 The boundaries above are deliberate: a command trace is not robot execution,
 and a successful process exit is not evidence of a successful grasp. A playback
@@ -134,10 +137,17 @@ observations, not predictions inferred from EEG.
 
 The upstream task proposes aligned pre-grasps with probability0.75. We override
 that to0 for both training and play, so the baseline is table-only. This makes
-learning harder; no performance is promised. Keep the full resolved upstream
-configs with results, since upstream curricula and material randomization remain
-active during training. Evaluate matched scene seeds and separate seeds for
-training/evaluation; different seeds alone are not cross-dataset generalization.
+learning harder; no performance is promised. The fixed table task also disables
+the listed material/dynamics randomization and curriculum; inspect the resolved
+config for each run. Different seeds alone do not create cube-position
+generalization when the reset geometry is fixed.
+
+`FRI-Franka-Lift-NearTable` is an additive first curriculum rung: the cube stays
+on the table and the open gripper starts near the validated scripted grasp
+waypoint. It keeps the Approach observation/action/reward interface. This is
+only a proposed training reset until its exact pose, clearance, physics-step
+continuity and contact are checked in the pinned simulator. See the
+[near-table protocol](../docs/NEAR_TABLE_CURRICULUM_2026-11-02.md).
 
 ### Opt-in physical lift curriculum
 

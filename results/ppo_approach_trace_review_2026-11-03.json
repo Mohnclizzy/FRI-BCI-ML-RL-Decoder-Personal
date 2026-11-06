@@ -1,0 +1,253 @@
+{
+  "contact_threshold_n": 0.1,
+  "episodes": [
+    {
+      "bilateral_contact_samples": 0,
+      "contact_coverage": 1.0,
+      "duration_s": 12.0,
+      "end_cube_xy_displacement_m": 0.04817063406525454,
+      "episode": 1,
+      "first_bilateral_contact_s": null,
+      "first_left_right_contact_s": [
+        null,
+        0.775
+      ],
+      "first_right_contact_actual_finger_positions_m": [
+        0.02570735476911068,
+        0.025719234719872475
+      ],
+      "first_right_contact_finger_targets_m": {
+        "panda_finger_joint1": 0.04272808879613876,
+        "panda_finger_joint2": 0.0007782056927680969
+      },
+      "left_right_contact_samples": [
+        0,
+        123
+      ],
+      "max_cube_rise_m": 9.751319885253906e-05,
+      "max_cube_xy_displacement_m": 0.04817582169931455,
+      "max_left_right_sensor_force_n": [
+        0.0,
+        5.386036396026611
+      ],
+      "min_cube_to_hand_body_center_m": 0.117521733045578,
+      "negative_left_right_finger_target_samples": [
+        635,
+        1260
+      ],
+      "physical_lift_pass": false,
+      "physics_samples": 1440,
+      "policy_action_components": 3240,
+      "policy_action_components_abs_gt_1": 0,
+      "status": "completed",
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      }
+    },
+    {
+      "bilateral_contact_samples": 0,
+      "contact_coverage": 1.0,
+      "duration_s": 12.0,
+      "end_cube_xy_displacement_m": 0.044698168985576416,
+      "episode": 2,
+      "first_bilateral_contact_s": null,
+      "first_left_right_contact_s": [
+        null,
+        0.683333
+      ],
+      "first_right_contact_actual_finger_positions_m": [
+        0.02197306975722313,
+        0.02196853794157505
+      ],
+      "first_right_contact_finger_targets_m": {
+        "panda_finger_joint1": 0.04712582379579544,
+        "panda_finger_joint2": -0.0041777025908231735
+      },
+      "left_right_contact_samples": [
+        0,
+        168
+      ],
+      "max_cube_rise_m": 0.00015288591384887695,
+      "max_cube_xy_displacement_m": 0.044700083626123155,
+      "max_left_right_sensor_force_n": [
+        0.0,
+        6.086518287658691
+      ],
+      "min_cube_to_hand_body_center_m": 0.12364468723535538,
+      "negative_left_right_finger_target_samples": [
+        79,
+        1358
+      ],
+      "physical_lift_pass": false,
+      "physics_samples": 1440,
+      "policy_action_components": 3240,
+      "policy_action_components_abs_gt_1": 0,
+      "status": "completed",
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      }
+    },
+    {
+      "bilateral_contact_samples": 0,
+      "contact_coverage": 1.0,
+      "duration_s": 12.0,
+      "end_cube_xy_displacement_m": 0.03673786073703649,
+      "episode": 3,
+      "first_bilateral_contact_s": null,
+      "first_left_right_contact_s": [
+        null,
+        0.925
+      ],
+      "first_right_contact_actual_finger_positions_m": [
+        0.022765040397644043,
+        0.02278512343764305
+      ],
+      "first_right_contact_finger_targets_m": {
+        "panda_finger_joint1": 0.029886603355407715,
+        "panda_finger_joint2": 0.0032959207892417908
+      },
+      "left_right_contact_samples": [
+        0,
+        226
+      ],
+      "max_cube_rise_m": 0.00017070770263671875,
+      "max_cube_xy_displacement_m": 0.03676815575788633,
+      "max_left_right_sensor_force_n": [
+        0.0,
+        5.326315402984619
+      ],
+      "min_cube_to_hand_body_center_m": 0.11824210733175278,
+      "negative_left_right_finger_target_samples": [
+        364,
+        1284
+      ],
+      "physical_lift_pass": false,
+      "physics_samples": 1440,
+      "policy_action_components": 3240,
+      "policy_action_components_abs_gt_1": 0,
+      "status": "completed",
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      }
+    },
+    {
+      "bilateral_contact_samples": 1,
+      "contact_coverage": 1.0,
+      "duration_s": 12.0,
+      "end_cube_xy_displacement_m": 0.06786245705407548,
+      "episode": 4,
+      "first_bilateral_contact_s": 2.275,
+      "first_left_right_contact_s": [
+        2.275,
+        0.558333
+      ],
+      "first_right_contact_actual_finger_positions_m": [
+        0.026615506038069725,
+        0.026684468612074852
+      ],
+      "first_right_contact_finger_targets_m": {
+        "panda_finger_joint1": 0.06470614671707153,
+        "panda_finger_joint2": -0.0023696254938840866
+      },
+      "left_right_contact_samples": [
+        3,
+        185
+      ],
+      "max_cube_rise_m": 0.00023043155670166016,
+      "max_cube_xy_displacement_m": 0.06788480729953711,
+      "max_left_right_sensor_force_n": [
+        1.5799510478973389,
+        6.567994117736816
+      ],
+      "min_cube_to_hand_body_center_m": 0.11990134418010712,
+      "negative_left_right_finger_target_samples": [
+        552,
+        1281
+      ],
+      "physical_lift_pass": false,
+      "physics_samples": 1440,
+      "policy_action_components": 3240,
+      "policy_action_components_abs_gt_1": 0,
+      "status": "completed",
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      }
+    },
+    {
+      "bilateral_contact_samples": 0,
+      "contact_coverage": 1.0,
+      "duration_s": 12.0,
+      "end_cube_xy_displacement_m": 0.04588340258495302,
+      "episode": 5,
+      "first_bilateral_contact_s": null,
+      "first_left_right_contact_s": [
+        null,
+        0.583333
+      ],
+      "first_right_contact_actual_finger_positions_m": [
+        0.024621495977044106,
+        0.024657735601067543
+      ],
+      "first_right_contact_finger_targets_m": {
+        "panda_finger_joint1": 0.06118818745017052,
+        "panda_finger_joint2": -0.0070124659687280655
+      },
+      "left_right_contact_samples": [
+        0,
+        397
+      ],
+      "max_cube_rise_m": 0.0001646280288696289,
+      "max_cube_xy_displacement_m": 0.04590556916909048,
+      "max_left_right_sensor_force_n": [
+        0.0,
+        8.668375015258789
+      ],
+      "min_cube_to_hand_body_center_m": 0.12539109587669373,
+      "negative_left_right_finger_target_samples": [
+        656,
+        1334
+      ],
+      "physical_lift_pass": false,
+      "physics_samples": 1440,
+      "policy_action_components": 3240,
+      "policy_action_components_abs_gt_1": 0,
+      "status": "completed",
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      }
+    }
+  ],
+  "input_paths": {
+    "checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/checkpoint/model_198.pt",
+    "recorder_summary": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/ppo-telemetry.summary.json",
+    "telemetry": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/ppo-telemetry.jsonl"
+  },
+  "input_sha256": {
+    "analysis_script": "ad7117ed6c33e57fe1eede7de4a5df4846683a4f973cb4b4dcef3a4a4b78169a",
+    "checkpoint": "4ca3e23b639bda131ec55df8d8ac16551d547b0ae03cae0f5685d91f2597bde7",
+    "recorder_summary": "dffc3b4522d40c738a38ef82b27058a88680aece83f0a2587a9574001c876ee2",
+    "telemetry": "5c3a8d72f6a3d4499e09e550d852d6bb5cbb2443118030ae56d8d0e1535f3d22"
+  },
+  "interpretation_limits": [
+    "Finger-force and contact durations are sampled at logged physics steps; no between-sample contact claim.",
+    "Hand-body center distance is not fingertip or collider clearance.",
+    "A negative commanded finger target is not proof of a force mechanism or an applied joint position.",
+    "This single-seed five-episode screen is not a reliability or cross-controller comparison."
+  ],
+  "kind": "offline_approach_table_trace_review",
+  "lift_threshold_m": 0.08,
+  "physical_lift_successes": 0,
+  "record_counts": {
+    "episode_start": 5,
+    "physics_step": 7200,
+    "policy_step_start": 1800,
+    "terminal_pre_reset": 5
+  },
+  "sampling_mode": "environment_physics_step",
+  "sustained_contact_threshold_s": 0.5
+}

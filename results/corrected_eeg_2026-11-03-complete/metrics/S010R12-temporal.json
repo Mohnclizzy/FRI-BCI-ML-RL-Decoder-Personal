@@ -1,0 +1,416 @@
+{
+  "protocol": "offline physical robot replay evaluation v1",
+  "time_alignment": "Simulator time zero equals recording time zero; no timestamp rescaling or label-dependent resets",
+  "condition": "temporal",
+  "inputs": {
+    "telemetry": {
+      "path": "C:\\Users\\mario\\OneDrive\\Documents\\ChatGPT\\New project 6\\FRI-BCI-ML-RL-Decoder\\outputs\\isaac\\eeg-matched-5p-continuation-20261103T0300Z-b120s\\S010R12-temporal\\telemetry.jsonl",
+      "sha256": "4c375a32a9342e012f8e925a167844e91603c157e08c98ce4aeca4c2558b021d"
+    },
+    "edf_annotations": {
+      "path": "C:\\Users\\mario\\OneDrive\\Documents\\ChatGPT\\New project 6\\FRI-BCI-ML-RL-Decoder\\data\\physionet\\MNE-eegbci-data\\files\\eegmmidb\\1.0.0\\S010\\S010R12.edf",
+      "sha256": "0983609a12e6fd9b3ae99fd6968938ec5a3b012948894602233a65b720ac3975"
+    },
+    "decisions": {
+      "path": "C:\\Users\\mario\\OneDrive\\Documents\\ChatGPT\\New project 6\\FRI-BCI-ML-RL-Decoder\\outputs\\isaac\\S010R12-decisions.jsonl",
+      "sha256": "c824b72f889ded15d9a88cb5ec86701f31eba17e17f1e6344edc267f5a7725df"
+    }
+  },
+  "annotation_source": {
+    "recording_duration_s": 123.0,
+    "requested_horizon_s": 120.0,
+    "effective_horizon_s": 120.0,
+    "clipped_away_events": 0,
+    "duration_semantics": "positive duration ends at the earlier of onset+duration and next onset; zero duration continues to next onset (or recording end for final event); ends are clipped to recording end/effective horizon; onsets at or after effective horizon are omitted",
+    "label_mapping": {
+      "T0": "rest",
+      "T1": "imagery",
+      "T2": "imagery"
+    },
+    "edf": "C:\\Users\\mario\\OneDrive\\Documents\\ChatGPT\\New project 6\\FRI-BCI-ML-RL-Decoder\\data\\physionet\\MNE-eegbci-data\\files\\eegmmidb\\1.0.0\\S010\\S010R12.edf",
+    "source": "S010R12",
+    "subject": 10,
+    "run": 12
+  },
+  "physical": {
+    "measurement_kind": "sampled_simulator_state",
+    "thresholds": {
+      "lift_m": 0.08,
+      "contact_n": 0.1,
+      "sustain_s": 0.5,
+      "joint_speed_rad_s": 0.02,
+      "hand_speed_m_s": 0.005,
+      "drop_height_m": 0.04,
+      "drop_sustain_s": 0.25,
+      "max_sample_gap_s": 0.25,
+      "target_change_rad": 1e-06,
+      "finger_target_change_m": 1e-06
+    },
+    "samples": 14401,
+    "first_sample_s": 0.0,
+    "last_sample_s": 120.0,
+    "observed_interval_duration_s": 120.0,
+    "unobserved_duration_s": 0.0,
+    "maximum_sample_interval_s": 0.008333333333339965,
+    "excluded_gaps": [],
+    "baseline_cube_height_m": 0.2798919379711151,
+    "baseline_source": "first_saved_sample",
+    "max_cube_lift_m": 0.0,
+    "max_finger_contact_n": [
+      0.0,
+      0.0
+    ],
+    "sampled_physical_lift_pass": false,
+    "first_sampled_success_time_s": null,
+    "best_sampled_lift_with_bilateral_contact_s": 0.0,
+    "drops_after_sampled_acquisition": 0,
+    "drop_detection_times_s": [],
+    "max_hand_displacement_from_start_m": 0.1820628510974423,
+    "max_joint_displacement_from_start_rad": 0.8797369003295898,
+    "max_hand_speed_m_s": 0.05771166515375805,
+    "max_joint_speed_rad_s": 0.21903991699215325,
+    "total_moving_duration_s": 7.733333333333352,
+    "max_hold_target_excursion_rad": 0.0,
+    "max_hold_finger_target_excursion_m": 0.0,
+    "rest_motion": {
+      "observed_rest_duration_s": 61.49999999999996,
+      "moving_duration_s": 4.6916666666666735,
+      "moving_fraction": 0.0762872628726289,
+      "hand_path_length_m": 0.13227880533502268
+    },
+    "limitations": [
+      "Samples cannot establish uninterrupted contact or exclude motion between samples.",
+      "Motion durations assume each finite-difference speed applies uniformly between samples.",
+      "Drop means falling below the drop-height threshold continuously for the configured duration after sustained lift acquisition; contact loss alone is not a drop.",
+      "Physical REST motion includes servo settling/drift and cannot be attributed solely to accepted EEG requests."
+    ]
+  },
+  "command_evaluation": {
+    "scope": "offline evaluator of saved decisions; no decoder labels, robot outcomes, or real-time claims",
+    "time_model": "decision state held until next decision; HOLD before first; no extrapolation after last event",
+    "interval_convention": "half-open [start_s, end_s); imagery bouts partially outside observed trace are censored",
+    "trials": 1,
+    "conditions": {
+      "temporal": {
+        "rest_duration_s": 61.49999999999996,
+        "false_activation_duration_s": 3.5000000000000036,
+        "imagery_duration_s": 58.49999999999996,
+        "observed_duration_s": 120.0,
+        "active_duration_s": 5.000000000000007,
+        "imagery_bouts": 15,
+        "detected_bouts": 4,
+        "missed_bouts": 11,
+        "censored_bouts": 0,
+        "state_switches": 22,
+        "truncated_trials": 0,
+        "truncated_duration_s": 0.0,
+        "false_activation_fraction_of_rest": 0.05691056910569115,
+        "active_coverage_fraction": 0.04166666666666673,
+        "observation_coverage_fraction": 1.0,
+        "detection_coverage_fraction": 0.26666666666666666,
+        "mean_detection_delay_s": 1.8749999999999982,
+        "per_trial": [
+          {
+            "rest_duration_s": 61.49999999999996,
+            "false_activation_duration_s": 3.5000000000000036,
+            "imagery_duration_s": 58.49999999999996,
+            "observed_duration_s": 120.0,
+            "active_duration_s": 5.000000000000007,
+            "imagery_bouts": 15,
+            "detected_bouts": 4,
+            "missed_bouts": 11,
+            "censored_bouts": 0,
+            "state_switches": 22,
+            "truncated_trials": 0,
+            "truncated_duration_s": 0.0,
+            "source": "S010R12",
+            "episode": "S010R12",
+            "declared_horizon_s": 120.0,
+            "observed_horizon_s": 120.0,
+            "truncated_s": 0.0,
+            "observation_coverage_fraction": 1.0,
+            "false_activation_fraction_of_rest": 0.05691056910569115,
+            "active_coverage_fraction": 0.04166666666666673,
+            "detection_coverage_fraction": 0.26666666666666666,
+            "mean_detection_delay_s": 1.8749999999999982,
+            "detection_delays_s": [
+              0.5,
+              3.6999999999999957,
+              2.0,
+              1.2999999999999972
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "request_to_action": {
+    "definition": "First saved arm/finger target change in each active request span; target-dispatch timing, not actual motion latency",
+    "timing": "interval_start_s where recorded; otherwise post-step sample time (upper-bound timestamp)",
+    "active_request_spans": 11,
+    "spans_with_target_change": 11,
+    "mean_target_change_delay_s": 0.09090909090909091,
+    "events": [
+      {
+        "request_time_s": 9.5,
+        "active_span_end_s": 11.3,
+        "target_change_time_s": 10.5,
+        "target_change_delay_s": 1.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 21.0,
+        "active_span_end_s": 21.3,
+        "target_change_time_s": 21.0,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 22.0,
+        "active_span_end_s": 22.5,
+        "target_change_time_s": 22.0,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 48.8,
+        "active_span_end_s": 49.0,
+        "target_change_time_s": 48.8,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 55.3,
+        "active_span_end_s": 55.5,
+        "target_change_time_s": 55.3,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 57.8,
+        "active_span_end_s": 58.0,
+        "target_change_time_s": 57.8,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 67.3,
+        "active_span_end_s": 67.8,
+        "target_change_time_s": 67.3,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 73.8,
+        "active_span_end_s": 74.3,
+        "target_change_time_s": 73.8,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 82.5,
+        "active_span_end_s": 82.8,
+        "target_change_time_s": 82.5,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 92.8,
+        "active_span_end_s": 93.0,
+        "target_change_time_s": 92.8,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 112.0,
+        "active_span_end_s": 112.3,
+        "target_change_time_s": 112.0,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      }
+    ]
+  },
+  "collector_metrics": {
+    "evaluation_horizon_s": 120.0,
+    "request_active_duration_s": 5.000000000000007,
+    "request_active_fraction_of_horizon": 0.04166666666666673,
+    "request_switch_count": 22,
+    "request_switches_per_minute": 11.0,
+    "rest_annotation_duration_s": 61.49999999999996,
+    "rest_command_active_duration_s": 3.5000000000000036,
+    "rest_command_activation_fraction": 0.05691056910569115,
+    "decision_trace_sha256": "c824b72f889ded15d9a88cb5ec86701f31eba17e17f1e6344edc267f5a7725df",
+    "first_sampled_physical_success_time_s": null,
+    "trajectory_complete_time_s": null,
+    "absorbing_executor_complete_time_s": null,
+    "physical_action_latency_definition": "first sampled interval exceeding the configured joint/hand speed threshold after an active request; sample time is an upper bound, and requests after absorbing completion are unavailable",
+    "physical_action_latency_events": [
+      {
+        "request_time_s": 9.5,
+        "request_end_s": 11.3,
+        "response_latency_s": 1.0250000000000004,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 21.0,
+        "request_end_s": 21.3,
+        "response_latency_s": 0.02499999999999858,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 22.0,
+        "request_end_s": 22.5,
+        "response_latency_s": 0.02499999999999858,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 48.8,
+        "request_end_s": 49.0,
+        "response_latency_s": 0.025000000000005684,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 55.3,
+        "request_end_s": 55.5,
+        "response_latency_s": 0.02499999999999858,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 57.8,
+        "request_end_s": 58.0,
+        "response_latency_s": 0.02499999999999858,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 67.3,
+        "request_end_s": 67.8,
+        "response_latency_s": 0.025000000000005684,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 73.8,
+        "request_end_s": 74.3,
+        "response_latency_s": 0.025000000000005684,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 82.5,
+        "request_end_s": 82.8,
+        "response_latency_s": 0.025000000000005684,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 92.8,
+        "request_end_s": 93.0,
+        "response_latency_s": 0.025000000000005684,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 112.0,
+        "request_end_s": 112.3,
+        "response_latency_s": 0.024999999999991473,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      }
+    ],
+    "mean_observed_physical_action_latency_s": 0.11590909090909224,
+    "unavailable_after_completion_count": 0,
+    "not_responding_count": 0,
+    "target_dispatch_metrics": {
+      "definition": "First saved arm/finger target change in each active request span; target-dispatch timing, not actual motion latency",
+      "timing": "interval_start_s where recorded; otherwise post-step sample time (upper-bound timestamp)",
+      "active_request_spans": 11,
+      "spans_with_target_change": 11,
+      "mean_target_change_delay_s": 0.09090909090909091,
+      "events": [
+        {
+          "request_time_s": 9.5,
+          "active_span_end_s": 11.3,
+          "target_change_time_s": 10.5,
+          "target_change_delay_s": 1.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 21.0,
+          "active_span_end_s": 21.3,
+          "target_change_time_s": 21.0,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 22.0,
+          "active_span_end_s": 22.5,
+          "target_change_time_s": 22.0,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 48.8,
+          "active_span_end_s": 49.0,
+          "target_change_time_s": 48.8,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 55.3,
+          "active_span_end_s": 55.5,
+          "target_change_time_s": 55.3,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 57.8,
+          "active_span_end_s": 58.0,
+          "target_change_time_s": 57.8,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 67.3,
+          "active_span_end_s": 67.8,
+          "target_change_time_s": 67.3,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 73.8,
+          "active_span_end_s": 74.3,
+          "target_change_time_s": 73.8,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 82.5,
+          "active_span_end_s": 82.8,
+          "target_change_time_s": 82.5,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 92.8,
+          "active_span_end_s": 93.0,
+          "target_change_time_s": 92.8,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 112.0,
+          "active_span_end_s": 112.3,
+          "target_change_time_s": 112.0,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        }
+      ]
+    }
+  }
+}

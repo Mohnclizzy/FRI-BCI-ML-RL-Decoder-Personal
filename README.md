@@ -3,7 +3,8 @@
 Public EEG motor-imagery decoding research for simulated robotic-hand control using machine learning and reinforcement learning.
 
 For the earlier project timeline, read [project history](docs/PROJECT_HISTORY.md).
-For the latest cross-workstream status, read the [project check-in](docs/PROJECT_CHECK_IN_2026-11-02.md).
+For the current execution plan and handoff, read [the autonomous project plan](docs/PROJECT_EXECUTION_HANDOFF_2026-11-03.md) and [START_HERE](START_HERE.md).
+Earlier cross-workstream findings are in the [project check-in](docs/PROJECT_CHECK_IN_2026-11-03.md).
 For cross-account repository access and reproduction, read [sharing and reproduction](docs/SHARING_AND_REPRODUCTION.md).
 
 ## Simulation scaffold
@@ -11,12 +12,17 @@ For cross-account repository access and reproduction, read [sharing and reproduc
 The [Isaac Lab project scaffold](simulation/README.md) connects causal recorded
 EEG replay, three command gates, a HOLD-preserving executor, a scripted Franka
 lift skill, measured cube/contact telemetry, and a separate PPO evaluation.
-The first matched five-person table-pickup pilot recorded 1/5 raw EEG
-episodes lifted; confidence and temporal filtering each achieved 0/5 in the
-24-second budget. Filtering did reduce annotated rest activation, while also
-reducing command coverage. Subsequent audit found arm drift during HOLD and an
-insufficient negative-control check, so the physical comparison requires a
-corrected rerun. The recorded command scores are separate from physical motion.
+The historical first matched five-person EEG pilot had an invalid HOLD control,
+so its physical lift counts do not support a comparison. The corrected matched
+120-second batch is complete: raw 5/5 lifts, confidence 3/5, temporal 2/5, using
+the frozen scripted skill. See the [corrected results](results/corrected_eeg_2026-11-03-complete/summary.md)
+for unintended motion, missed imagery and delay as well as completion.
+Robot-only learning reached 3/5 acquired and retained lifts in a fixed near-table
+diagnostic screen. This does not establish reliable farther-ready-pose pickup.
+EEG is not connected to that learned policy, and learned HOLD/resume is untested.
+See the [latest evidence handoff](docs/HANDOFF_2026-11-03_AFTER_RETENTION.md).
+The next route is native pretrained-policy reproduction, early HOLD/resume
+validation, and recorded-EEG integration, as specified in the execution handoff.
 Read the
 [measured cohort results](docs/multi_person_replay_2026-11-02.md),
 [PPO playback results](docs/ppo_lift_evaluation_2026-11-02.md), and
@@ -141,9 +147,12 @@ Carry SOS filter state across chunks; reset at each new recording, not each wind
 The timestamp when a prediction becomes available is at least its window end,
 plus computation delay. Never give the model annotation labels as input.
 
-## Your next milestone
+## Reproduce the completed decoder experiments
 
-Run the fixed development/confirmation protocol with the optional covariance
+These commands document the existing decoder workflow; they are not the current
+project's next phase. Use the execution handoff above for ongoing work.
+
+Reproduce the fixed development/confirmation protocol with the optional covariance
 baseline installed:
 
 ```powershell
@@ -171,10 +180,10 @@ Use each model only with its calibration subject. This is an exploratory
 diagnostic on the previously inspected test run, not independent confirmation
 or proof of improvement. It does not select hyperparameters using test scores.
 
-Read `results.md` and identify which errors dominate. Inspect a few original
-windows and annotations using their metadata. Then compare the same fixed
-protocol with a Riemannian baseline, followed by a separate subject-holdout
-experiment. Only after those checks add continuous replay and command filtering.
+When reproducing these experiments, use `results.md` and window metadata to
+inspect the errors. Continuous replay and command filtering are already
+implemented; learned-controller integration is the current gap. Further decoder
+comparisons need an explicit development protocol and unused confirmation data.
 Synthetic tests verify software behavior; they do not establish EEG performance.
 
 ## References

@@ -66,4 +66,3 @@ Never modify Angel's repository. Never overwrite evidence, publish secrets or co
 Use STATUS.md as the concise current phase/job/result/blocker/next-action record. Use existing per-phase protocols/metrics plus a compact run registry; avoid competing status documents. If docs/agents/AGENT_STATUS.md, ENGINEERING_BACKLOG.md, EXPERIMENT_REGISTRY.md or HANDOFF.md exist, make them consistent pointers or clearly scoped records. GitHub holds durable code/compact evidence; private storage holds large artifacts; local transcripts support recovery but are not shared conversational memory.
 
 After interruption, inspect processes and saved outputs before restarting. Report exact blockers, preserve portable results, and continue independent authorized work. Do not leave jobs untracked or claim completion because a budget ended.
-

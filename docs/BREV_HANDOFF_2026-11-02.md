@@ -113,3 +113,7 @@ The L4 smoke used the recorded command arguments:
 ```
 
 This smoke is distinct from and was not used as the source for the completed 100-update run, which resumed from the original checkpoint. All smoke artifacts remain in the archive. Their launch, exit, and log hashes (where present) are included in the SHA256 manifest.
+
+## Offline table-trace review — 2026-11-03
+
+A later source-hashed review of the same five saved table episodes adds contact and displacement detail without another launch. The cube rose at most 0.000230 m while moving 0.0367–0.0679 m horizontally at the end of each episode. The right object-contact sensor was active in every episode; the left was active for three physics samples in episode 4 and zero in the others. Only one physics sample had bilateral contact. The policy also sent markedly asymmetric finger position targets, but the available hand-body pose is not a fingertip/collider pose, so the mechanism remains unresolved. See [the trace review](APPROACH_TABLE_TRACE_REVIEW_2026-11-03.md) and [compact record](../results/ppo_approach_trace_review_2026-11-03.json). This does not change the original 0/5 result or justify more PPO updates on the same configuration.

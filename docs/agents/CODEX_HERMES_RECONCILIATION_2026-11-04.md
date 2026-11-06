@@ -67,4 +67,3 @@ Primary records:
 - [Audit script](reconciliation_2026-11-04/audit_saved_state.py)
 
 The original transcripts, historical reports, experiment source and outputs were preserved. This reconciliation adds a dated correction instead of silently rewriting earlier evidence.
-

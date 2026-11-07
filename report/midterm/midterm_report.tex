@@ -176,7 +176,7 @@ Non-invasive EEG offers an accessible assistive command channel, yet motor-image
 %===============================================================================
 \section{Updated work plan}
 
-To guarantee a rigorous end-of-semester contribution, we retire from-scratch Isaac Lab RL and focus our remaining compute (CPU MuJoCo plus Google Colab Pro \texttt{A100}/\texttt{H100} GPUs) on the brain-to-robot gating bottleneck. Alongside prospective evaluation on genuinely uninspected subjects, we introduce a \emph{conformal risk-controlling gate} calibrated strictly on runs 4/8 (with optional cross-subject Riemannian/EEGNet pretraining on Colab GPUs) to statistically bound rest false activation without starving recall-limited users.
+To guarantee a rigorous end-of-semester contribution, we retire from-scratch Isaac Lab RL and focus our remaining compute (CPU MuJoCo plus GPU acceleration) on the brain-to-robot gating bottleneck. Alongside prospective evaluation on genuinely uninspected subjects, we introduce a \emph{conformal risk-controlling gate} calibrated strictly on runs 4/8 (with optional cross-subject Riemannian/EEGNet pretraining using GPU acceleration) to statistically bound rest false activation without starving recall-limited users.
 
 \begin{table}[h]
 \centering
@@ -191,13 +191,13 @@ EEG baselines \& replay & Complete & Per-person/pooled CSP and Riemannian pipeli
 Isaac Lab PPO table pickup & Stopped & Peaked at 3/5 near-table lifts with asymmetric finger impacts; archive 198 checkpoints and use attributed \texttt{BC-RNN}. \\
 \texttt{HOLD} \& retention adapter & Complete & Progressed $0/5 \!\to\! 3/21 \!\to\! 17/21 \!\to\! 21/21$ via state-freezing \texttt{HOLD} and $+1.5$\,cm latch; patched \texttt{pause}-control inversion. \\
 Learned-policy EEG replay & 36 runs done & 24/36 retained lifts (\texttt{S001}--\texttt{S003}, \texttt{S006}) exposed the $(59,120]$ trigger threshold; test unopened \texttt{S011}--\texttt{S015}. \\
-Model \& gate scope & Refocused & Defer unsupported wrist/twist labels; use Colab GPU for Phase~C (CSP/Riemannian/EEGNet) and conformal risk gating. \\
+Model \& gate scope & Refocused & Defer unsupported wrist/twist labels; use GPU acceleration for Phase~C (CSP/Riemannian/EEGNet) and conformal risk gating. \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \textbf{Remaining schedule (Weeks of Nov.\ 9 -- Dec.\ 7).}
-\textbf{(1) Nov.\ 9:} Run the patched \texttt{pause}-matched control batch on \texttt{S001}--\texttt{S003} to separate duty-cycle sufficiency from fragmented EEG timing, run the Colab Phase~C decoder comparison, and freeze conformal calibration rules (fit on runs 4/8 only) plus unseen scene seeds.
+\textbf{(1) Nov.\ 9:} Run the patched \texttt{pause}-matched control batch on \texttt{S001}--\texttt{S003} to separate duty-cycle sufficiency from fragmented EEG timing, run the Phase~C decoder comparison, and freeze conformal calibration rules (fit on runs 4/8 only) plus unseen scene seeds.
 \textbf{(2) Nov.\ 16--23:} Execute one locked prospective evaluation on five completely uninspected participants (\texttt{S011}--\texttt{S015}, run 12) comparing raw, fixed-confidence, temporal, and conformal risk-bounded gates against \texttt{always-hold}, \texttt{always-enable}, and duration-matched \texttt{pause} controls.
 \textbf{(3) Nov.\ 30:} Join cue annotations to MuJoCo telemetry to jointly score retained lifts, robot motion during annotated rest, missed bouts, and latency---testing whether conformal gating suppresses \texttt{S003}-style rest firing while avoiding \texttt{S002}-style starvation.
 \textbf{(4) Dec.\ 7:} Package the final paper, synchronized EEG-and-MuJoCo replay video, and reproducible scripts, reporting any negative outcomes directly without relaxing thresholds or claiming live closed-loop BCI validation.

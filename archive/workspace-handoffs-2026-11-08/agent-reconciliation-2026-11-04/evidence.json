@@ -1,0 +1,587 @@
+{
+  "observed_at_utc": "2026-11-04T10:23:26.443723+00:00",
+  "scope": "Read-only saved-artifact consistency audit; not full protocol qualification.",
+  "runs": [
+    {
+      "run": "always-enable_seed0",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09947690364420803,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/always-enable_seed0/telemetry.jsonl",
+      "trace_sha256": "f755ad5cf70b93963682c0570ac414bcbace5d929f3d9a87245c33628869faa8"
+    },
+    {
+      "run": "always-enable_seed1",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.10029897673369614,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/always-enable_seed1/telemetry.jsonl",
+      "trace_sha256": "c37f369ef91411ee34808977e0c9017ba0cb5861346f496890f8486bc5cc1f02"
+    },
+    {
+      "run": "always-enable_seed2",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09921163277636569,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/always-enable_seed2/telemetry.jsonl",
+      "trace_sha256": "81d723b01ce5f150f7b2159d0f347462d149ed3366d1b9d0ab6d4afe9bf45796"
+    },
+    {
+      "run": "always-hold_seed0",
+      "acquired": false,
+      "retained": false,
+      "terminal_rise_m": -0.01021553759255256,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/always-hold_seed0/telemetry.jsonl",
+      "trace_sha256": "87c115219b1f38a5e19339de07078ba2fe7726a202ed4d0515f60154522ee9d8"
+    },
+    {
+      "run": "always-hold_seed1",
+      "acquired": false,
+      "retained": false,
+      "terminal_rise_m": -0.010215539590044398,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/always-hold_seed1/telemetry.jsonl",
+      "trace_sha256": "e819cd28273f11e464657b1b0a0fd5c9e40c68305caf826e28e305f7e120f9e2"
+    },
+    {
+      "run": "always-hold_seed2",
+      "acquired": false,
+      "retained": false,
+      "terminal_rise_m": -0.0102155357961915,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/always-hold_seed2/telemetry.jsonl",
+      "trace_sha256": "352a41f0804503c1fe16428db20eb1b77ae56cf3a4ae2ae0ba86c18a55273f45"
+    },
+    {
+      "run": "approach_10_seed0",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.0943834967196967,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/approach_10_seed0/telemetry.jsonl",
+      "trace_sha256": "cac4bd3ce4878d30e30f2448d78803df32bf7d8f67ba2e82004347fd26b165bf"
+    },
+    {
+      "run": "approach_10_seed1",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09641268080493426,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/approach_10_seed1/telemetry.jsonl",
+      "trace_sha256": "1462d7c462a6d4c097ddf9f03dedbc9d34b84007c2d4c1ee95d0cc4f1a4352f3"
+    },
+    {
+      "run": "approach_10_seed2",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.10065113157905259,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/approach_10_seed2/telemetry.jsonl",
+      "trace_sha256": "aacef4dfb8970c548c8fd8efb9404a9f163aef4decb92bb8113527764f9dcc58"
+    },
+    {
+      "run": "approach_60_seed0",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.0960432606113174,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/approach_60_seed0/telemetry.jsonl",
+      "trace_sha256": "975a326e9dea18ce28fe43240d54ce0fee80f4cc2e2944c4e24bc3fed20552c3"
+    },
+    {
+      "run": "approach_60_seed1",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.1025877202399822,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/approach_60_seed1/telemetry.jsonl",
+      "trace_sha256": "167271331b5340beee77853150712ba4147efdccd28699f607bca42a6f30b1df"
+    },
+    {
+      "run": "approach_60_seed2",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.1009453181515989,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/approach_60_seed2/telemetry.jsonl",
+      "trace_sha256": "9821d95b13386bd6387ec66001ed1140d6f2a431254ffc284049bbe4a8eff5ec"
+    },
+    {
+      "run": "carrying_10_seed0",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09947690364420803,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/carrying_10_seed0/telemetry.jsonl",
+      "trace_sha256": "295127aaf586194486a520918ebd9e9c0064e5b5dc2d1c469515fceeeeb496eb"
+    },
+    {
+      "run": "carrying_10_seed1",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.10029897673369614,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/carrying_10_seed1/telemetry.jsonl",
+      "trace_sha256": "474728f92238cfad4235ee27104ebef088ad543209a9dde5c6abb3eeb28dcab8"
+    },
+    {
+      "run": "carrying_10_seed2",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09921163277636569,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/carrying_10_seed2/telemetry.jsonl",
+      "trace_sha256": "2ad45d146345e28874f9d59fda168d7f71e7e3e4fd24ff0daac0ce9a2262ebf0"
+    },
+    {
+      "run": "carrying_60_seed0",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09947690364420803,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/carrying_60_seed0/telemetry.jsonl",
+      "trace_sha256": "bc46a5f1bf89ee845db07b3e94d30e14dcf8152212b75c25b66a1677e29df1bc"
+    },
+    {
+      "run": "carrying_60_seed1",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.10029897673369614,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/carrying_60_seed1/telemetry.jsonl",
+      "trace_sha256": "838344f2f16c35b433aa3c0d18f3992ce5b5483d1cd4876f7b0bcd43b1ca096f"
+    },
+    {
+      "run": "carrying_60_seed2",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09921163277636569,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/carrying_60_seed2/telemetry.jsonl",
+      "trace_sha256": "eb2534b26e8d13ad48f62a9b77d301a794d1aa8da8a0d67f148a4ba8e08e5d03"
+    },
+    {
+      "run": "closure_10_seed0",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09481944704661316,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/closure_10_seed0/telemetry.jsonl",
+      "trace_sha256": "f554a004cf2237c71ff77d2b330b22532fe739f88cdc40d72376ec9fc72fad7f"
+    },
+    {
+      "run": "closure_10_seed1",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09454363403199051,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/closure_10_seed1/telemetry.jsonl",
+      "trace_sha256": "c27cdd00a4f4c8dae1abfc6580b3f5829467d9fe53b2351335986b4be9d1a132"
+    },
+    {
+      "run": "closure_10_seed2",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.10211021391846997,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/closure_10_seed2/telemetry.jsonl",
+      "trace_sha256": "76c7941558b0566ff05daffd8d4f86b98d8da0eef582349103b0bab0a7110256"
+    },
+    {
+      "run": "closure_60_seed0",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09222001390166723,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/closure_60_seed0/telemetry.jsonl",
+      "trace_sha256": "c3e6ef56f82202fac7a2a998161e50b2934ff0f80521629a0c186285cc5c39c7"
+    },
+    {
+      "run": "closure_60_seed1",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.09517230488321715,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/closure_60_seed1/telemetry.jsonl",
+      "trace_sha256": "d1ad0a0ff288336f07b4ff8bd82c19bf00575e433c7c21bd5cb73564e389f850"
+    },
+    {
+      "run": "closure_60_seed2",
+      "acquired": true,
+      "retained": true,
+      "terminal_rise_m": 0.10197223886278917,
+      "checks": {
+        "401_sequential_states": true,
+        "20hz_clock": true,
+        "contact_agrees_with_builtin": true,
+        "retention_matches_trace": true,
+        "summary_hold_and_latch_invariants": true,
+        "no_policy_or_rnn_advance_when_locked": true,
+        "fixed_latch_pose_and_gripper": true,
+        "phase5_initial_cube_and_eef_match": true
+      },
+      "trace_path": "/home/ubuntu/robomimic-native-phase6-20261104/matched_batch/closure_60_seed2/telemetry.jsonl",
+      "trace_sha256": "a888465decbb572f45e49227e83600cc3298616ed105e2aa22e96d548e7f3ee4"
+    }
+  ],
+  "positive_retained": 21,
+  "negative_acquired": 0,
+  "all_listed_checks_pass": true,
+  "phase6_source_hashes": {
+    "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/results/robomimic_latch6_zoffset_2026-11-04/analyze6_batch.py": "ad167aeccf6b25ce7d852545bffa7c28942c111dd6d3778da66b0781d074ea88",
+    "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/results/robomimic_latch6_zoffset_2026-11-04/latch6_rollout.py": "53b96476fa91d452817d7d5f82cc8430cf659ac16e5f15bc5c80f6776dc9dd5b",
+    "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/results/robomimic_latch6_zoffset_2026-11-04/run_batch6.sh": "a12198f4104009611042a9053f439635ac1f21a47a6272589dc2d131d47dd35f"
+  },
+  "phase6_protocol_paths_observed": [],
+  "recent_codex_session_inventory": [
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/03/rollout-2026-11-03T01-45-47-01a19f15-7c1a-7552-b46d-2ff5e1b6d8c6.jsonl",
+      "sha256": "67c189573251c703746ef37ba118cc97c422de30cf758de30f0d29fe3ea8e7bf",
+      "metadata": {
+        "id": "01a19f15-7c1a-7552-b46d-2ff5e1b6d8c6",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/03/rollout-2026-11-03T22-47-56-01a1a399-04ff-7590-b586-cc55c86386df.jsonl",
+      "sha256": "7bfd92f649a74c69e3d432022d5cab4a3178f2442d7b41fda3960627b016e1a9",
+      "metadata": {
+        "id": "01a1a399-04ff-7590-b586-cc55c86386df",
+        "cwd": "/home/ubuntu",
+        "originator": "codex-tui",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/04/rollout-2026-11-04T03-28-46-01a1a49a-1df1-7b00-83c8-de4a2050f9aa.jsonl",
+      "sha256": "91d9bd942e4f942ad20807f1ed9b84fd4f72247eb8bf6cb37e90d49726d8a5bf",
+      "metadata": {
+        "id": "01a1a49a-1df1-7b00-83c8-de4a2050f9aa",
+        "cwd": "/home/ubuntu",
+        "originator": "codex-tui",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/04/rollout-2026-11-04T03-59-04-01a1a4b5-def9-73e1-93c1-52425c08a56a.jsonl",
+      "sha256": "0b008f0c80075b48e3e5e7c0ad87ce3ea8490098aabbba2add9c1b982c893f1c",
+      "metadata": {
+        "id": "01a1a4b5-def9-73e1-93c1-52425c08a56a",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/04/rollout-2026-11-04T03-59-24-01a1a4b6-2c78-7a72-9fb4-993f53eb946b.jsonl",
+      "sha256": "25c598dad1dc81e8f0ec5e1deee58079d540e349850604e5aa3ef431cd9d5561",
+      "metadata": {
+        "id": "01a1a4b6-2c78-7a72-9fb4-993f53eb946b",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/04/rollout-2026-11-04T04-00-05-01a1a4b6-cb93-7892-b841-264ca1457d93.jsonl",
+      "sha256": "1b5ab47f6cae8e20c1179b29c07f77d6b0dd969790938110c598259720cb5898",
+      "metadata": {
+        "id": "01a1a4b6-cb93-7892-b841-264ca1457d93",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/04/rollout-2026-11-04T04-00-28-01a1a4b7-2583-7bd3-ac12-513f96e17728.jsonl",
+      "sha256": "e8d4b4d76c7860925d173389b89a06c74345079a2eb5ea214f0fe53a66acb8ef",
+      "metadata": {
+        "id": "01a1a4b7-2583-7bd3-ac12-513f96e17728",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/04/rollout-2026-11-04T04-11-22-01a1a4c1-1e9c-7d93-9c53-86440048267b.jsonl",
+      "sha256": "d84cde03df115c5f90c63b12e4808099dab481eb6d4766b5138a2a8d60d89ef3",
+      "metadata": {
+        "id": "01a1a4c1-1e9c-7d93-9c53-86440048267b",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/04/rollout-2026-11-04T04-26-32-01a1a4cf-02ab-7ab3-b99f-90fc0234b887.jsonl",
+      "sha256": "216ca5ca56f96284b697264607486c2655e135f126f9adc247562e06e405dd37",
+      "metadata": {
+        "id": "01a1a4cf-02ab-7ab3-b99f-90fc0234b887",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/04/rollout-2026-11-04T04-44-15-01a1a4df-3a88-7691-aa2f-3caadb5d90ca.jsonl",
+      "sha256": "526913344e067a1a0dd0f6cb706df25da96768413b736087f7b4e9e883235bed",
+      "metadata": {
+        "id": "01a1a4df-3a88-7691-aa2f-3caadb5d90ca",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/04/rollout-2026-11-04T05-06-59-01a1a4f4-0bc3-7073-9651-b703de4e08a3.jsonl",
+      "sha256": "5b09a50bdd82b2b4bfcf3a3061381133c9da0385d02d860db89e3d2392280148",
+      "metadata": {
+        "id": "01a1a4f4-0bc3-7073-9651-b703de4e08a3",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex/sessions/2026/11/04/rollout-2026-11-04T05-19-07-01a1a4ff-2781-7d70-aa8b-ec220b3cd027.jsonl",
+      "sha256": "a1454514db7ad98f086600e377d69c4845c9e7546f8359afa0960ce05e48505d",
+      "metadata": {
+        "id": "01a1a4ff-2781-7d70-aa8b-ec220b3cd027",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    },
+    {
+      "path": "/home/ubuntu/.codex-cli-runtime/sessions/2026/11/04/rollout-2026-11-04T03-39-54-01a1a4a4-46b9-7fe1-b6d2-520ec0b91d77.jsonl",
+      "sha256": "1ffb8debc7d24a053ba8c61eab6f0ad1f6a601d481a3eaad5ec21430ddcec1e1",
+      "metadata": {
+        "id": "01a1a4a4-46b9-7fe1-b6d2-520ec0b91d77",
+        "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal",
+        "originator": "codex_exec",
+        "cli_version": "0.166.0"
+      }
+    }
+  ],
+  "limitations": [
+    "Contact sampled at 20 Hz, not every physics substep.",
+    "No independent held-out qualification.",
+    "HOLD drift values are checked via saved summary flags, not independently recomputed here.",
+    "Initial cube and end-effector equality is not proof of complete simulator-state equality.",
+    "No off-host recovery check for Phase 6 in this audit.",
+    "No raw chat messages or credentials exported."
+  ]
+}

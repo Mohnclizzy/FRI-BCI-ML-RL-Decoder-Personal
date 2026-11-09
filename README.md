@@ -7,6 +7,14 @@ For the current execution plan and handoff, read [the autonomous project plan](d
 Earlier cross-workstream findings are in the [project check-in](docs/PROJECT_CHECK_IN_2026-11-03.md).
 For cross-account repository access and reproduction, read [sharing and reproduction](docs/SHARING_AND_REPRODUCTION.md).
 
+## Project files and downloads
+
+- [Repository layout and recovery guide](docs/REPOSITORY_LAYOUT.md)
+- [Current execution status](STATUS.md)
+- [Midterm report and source](report/midterm/)
+- [Raw experiment archives and data](https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal/releases/tag/local-consolidation-2026-11-08)
+- [Historical local files](archive/)
+
 ## Simulation scaffold
 
 The [Isaac Lab project scaffold](simulation/README.md) connects causal recorded

@@ -2,35 +2,21 @@
 
 ## Source of truth
 
-The canonical working copy is the nested `FRI-BCI-ML-RL-Decoder` folder. Its
-GitHub `origin` is Mario's independent private repository:
-`https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal`. It contains the
-complete Git history and project branches but is not a GitHub fork. The
-original repository is retained as the `upstream` remote:
-`https://github.com/AL-DEV06/FRI-BCI-ML-RL-Decoder`. The active branch is
-`codex/isaaclab-project-scaffold`, and new project commits should go to `origin`
-(the independent repository). The parent `New project 6` folder is a local workspace
-wrapper, not the GitHub repository.
+Use [Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal](https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal), branch `codex/robot-learning-design`. GitHub is the source of record; a specific local folder is not required. The repository was public when checked on November 8, 2026. Read access requires no collaborator invitation; write access still requires authorization.
 
-An additional private fork named
-`https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder` was created earlier in
-the setup. GitHub private forks inherit upstream permission rules, so use the
-independent `-Personal` repository for sharing and ongoing work.
+Code, reports, curated policies, decision streams, and summaries are versioned in Git. Bulk raw outputs and cached public data are available as GitHub Release assets. See the [repository layout and recovery guide](REPOSITORY_LAYOUT.md) for exact locations, checksums, exclusions, and restoration commands.
 
-The GitHub repository contains source, protocols, results summaries, and the
-curated project history. It does not contain downloaded EEG data, model
-checkpoints, detailed simulation telemetry, virtual environments, or generated
-outputs; these are ignored by `.gitignore` to keep the repository manageable.
+The original AL-DEV06 repository and the earlier non-Personal fork remain separate historical references. Publish ongoing work to the independent `-Personal` repository.
 
 ## Give the other account GitHub access
 
 1. Sign in to GitHub as `Mohnclizzy`.
-2. Open the independent private repository URL above and go to **Settings → Collaborators** (the
+2. Open the independent repository URL above and go to **Settings → Collaborators** (the
    exact label may appear under **Access**).
 3. Invite the GitHub username or email tied to the other account's GitHub login.
    Accept the invitation while signed into that GitHub account.
 4. On the other computer or checkout, clone the independent repository and checkout
-   `codex/isaaclab-project-scaffold` to see the current project work.
+   `codex/robot-learning-design` to see the current project work.
 
 ChatGPT account access and GitHub account access are separate. Inviting a
 second ChatGPT login to a ChatGPT project does not automatically grant GitHub
@@ -42,21 +28,14 @@ project chats, uploaded files, and instructions.
 
 The current artifact snapshot is now available directly from the private GitHub repository as a release. See [ARTIFACT_HANDOFF.md](ARTIFACT_HANDOFF.md). OneDrive sharing below is an optional way to share subsequent local updates; it is no longer required to obtain this snapshot.
 
-The detailed run artifacts remain in the local `outputs/` directory. This
-checkout lives beneath the Windows OneDrive `Documents/ChatGPT/New project 6`
-folder. To make those artifacts available to the other Microsoft account,
-share the `FRI-BCI-ML-RL-Decoder` folder (or a narrower `outputs` subfolder)
-from the intended OneDrive account with that account's Microsoft email. Confirm
-that the other account can open the shared folder before relying on it. Do not
-use OneDrive-synced duplicate checkouts as simultaneous working copies of the
-same Git branch; use Git commits/pulls to coordinate source changes.
+Use the GitHub Release assets linked in [the recovery guide](REPOSITORY_LAYOUT.md). The November 8 consolidation preserves the known local outputs, public data cache, and historical workspace snapshots. OneDrive is no longer required for accessing those project files.
 
 ## Recreate a working checkout
 
 ```powershell
 git clone https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal.git
-cd FRI-BCI-ML-RL-Decoder
-git switch codex/isaaclab-project-scaffold
+cd FRI-BCI-ML-RL-Decoder-Personal
+git switch codex/robot-learning-design
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements-lock.txt
 ```

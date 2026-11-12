@@ -1,0 +1,855 @@
+[
+  {
+    "subject": 1,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.81,
+    "enable_threshold": 0.8600000000000001,
+    "max_score": 0.8672102689743042,
+    "max_rest_episode_score": 0.8060176968574524,
+    "scores_at_or_above_hold": 6,
+    "scores_at_or_above_enable": 1,
+    "longest_enable_streak_samples": 1,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 487,
+      "below_enable_threshold": 5,
+      "collecting_evidence": 1
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 62.999999999999986,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 2,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.8300000000000001,
+    "enable_threshold": 0.8800000000000001,
+    "max_score": 0.8292747139930725,
+    "max_rest_episode_score": 0.8292747139930725,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 3,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.6950000000000001,
+    "enable_threshold": 0.7450000000000001,
+    "max_score": 0.6906455755233765,
+    "max_rest_episode_score": 0.6906455755233765,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 493
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 62.999999999999986,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 4,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.765,
+    "enable_threshold": 0.8150000000000001,
+    "max_score": 0.7797420024871826,
+    "max_rest_episode_score": 0.7647817730903625,
+    "scores_at_or_above_hold": 2,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 483,
+      "below_enable_threshold": 2
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 5,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.77,
+    "enable_threshold": 0.8200000000000001,
+    "max_score": 0.8068315386772156,
+    "max_rest_episode_score": 0.7655323147773743,
+    "scores_at_or_above_hold": 1,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 484,
+      "below_enable_threshold": 1
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 6,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.7,
+    "enable_threshold": 0.75,
+    "max_score": 0.6962767839431763,
+    "max_rest_episode_score": 0.6962767839431763,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 7,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.81,
+    "enable_threshold": 0.8600000000000001,
+    "max_score": 0.8073475956916809,
+    "max_rest_episode_score": 0.8053171038627625,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 493
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 62.999999999999986,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 8,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.69,
+    "enable_threshold": 0.74,
+    "max_score": 0.7285927534103394,
+    "max_rest_episode_score": 0.6892083883285522,
+    "scores_at_or_above_hold": 5,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 480,
+      "below_enable_threshold": 5
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 9,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.755,
+    "enable_threshold": 0.805,
+    "max_score": 0.7641341090202332,
+    "max_rest_episode_score": 0.7547047138214111,
+    "scores_at_or_above_hold": 1,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 484,
+      "below_enable_threshold": 1
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 10,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.72,
+    "enable_threshold": 0.77,
+    "max_score": 0.7172433733940125,
+    "max_rest_episode_score": 0.7172433733940125,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 11,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.685,
+    "enable_threshold": 0.7350000000000001,
+    "max_score": 0.7007766962051392,
+    "max_rest_episode_score": 0.6803781390190125,
+    "scores_at_or_above_hold": 3,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 482,
+      "below_enable_threshold": 3
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 12,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.755,
+    "enable_threshold": 0.805,
+    "max_score": 0.75039142370224,
+    "max_rest_episode_score": 0.75039142370224,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 13,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.8500000000000001,
+    "enable_threshold": 0.9000000000000001,
+    "max_score": 0.8463844656944275,
+    "max_rest_episode_score": 0.8463844656944275,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 14,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.79,
+    "enable_threshold": 0.8400000000000001,
+    "max_score": 0.7939605116844177,
+    "max_rest_episode_score": 0.7858235239982605,
+    "scores_at_or_above_hold": 2,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 483,
+      "below_enable_threshold": 2
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 15,
+    "kind": "transfer",
+    "run": 8,
+    "threshold": 0.87,
+    "enable_threshold": 0.92,
+    "max_score": 0.8675302267074585,
+    "max_rest_episode_score": 0.8675302267074585,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 1,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.515,
+    "enable_threshold": 0.5650000000000001,
+    "max_score": 0.5142372846603394,
+    "max_rest_episode_score": 0.5142372846603394,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 493
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 62.999999999999986,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 2,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.53,
+    "enable_threshold": 0.5800000000000001,
+    "max_score": 0.5265120267868042,
+    "max_rest_episode_score": 0.5265120267868042,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 3,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.525,
+    "enable_threshold": 0.5750000000000001,
+    "max_score": 0.5228608250617981,
+    "max_rest_episode_score": 0.5228608250617981,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 493
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 62.999999999999986,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 4,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.54,
+    "enable_threshold": 0.5900000000000001,
+    "max_score": 0.551360547542572,
+    "max_rest_episode_score": 0.5386573672294617,
+    "scores_at_or_above_hold": 2,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 483,
+      "below_enable_threshold": 2
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 5,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.51,
+    "enable_threshold": 0.56,
+    "max_score": 0.5078229904174805,
+    "max_rest_episode_score": 0.5078229904174805,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 6,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.53,
+    "enable_threshold": 0.5800000000000001,
+    "max_score": 0.5322709083557129,
+    "max_rest_episode_score": 0.5270746350288391,
+    "scores_at_or_above_hold": 3,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 482,
+      "below_enable_threshold": 3
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 7,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.54,
+    "enable_threshold": 0.5900000000000001,
+    "max_score": 0.5451412796974182,
+    "max_rest_episode_score": 0.5369367599487305,
+    "scores_at_or_above_hold": 1,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 492,
+      "below_enable_threshold": 1
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 62.999999999999986,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 8,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.505,
+    "enable_threshold": 0.555,
+    "max_score": 0.5022301077842712,
+    "max_rest_episode_score": 0.5020433068275452,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 9,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.535,
+    "enable_threshold": 0.5850000000000001,
+    "max_score": 0.5341632962226868,
+    "max_rest_episode_score": 0.5341632962226868,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 10,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.52,
+    "enable_threshold": 0.5700000000000001,
+    "max_score": 0.5210778713226318,
+    "max_rest_episode_score": 0.5158589482307434,
+    "scores_at_or_above_hold": 1,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 484,
+      "below_enable_threshold": 1
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 11,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.535,
+    "enable_threshold": 0.5850000000000001,
+    "max_score": 0.536749541759491,
+    "max_rest_episode_score": 0.533689558506012,
+    "scores_at_or_above_hold": 1,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 484,
+      "below_enable_threshold": 1
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 12,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.535,
+    "enable_threshold": 0.5850000000000001,
+    "max_score": 0.5331604480743408,
+    "max_rest_episode_score": 0.5331604480743408,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 13,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.52,
+    "enable_threshold": 0.5700000000000001,
+    "max_score": 0.5188512206077576,
+    "max_rest_episode_score": 0.5188512206077576,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 14,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.54,
+    "enable_threshold": 0.5900000000000001,
+    "max_score": 0.5353715419769287,
+    "max_rest_episode_score": 0.5353715419769287,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  },
+  {
+    "subject": 15,
+    "kind": "scratch",
+    "run": 8,
+    "threshold": 0.54,
+    "enable_threshold": 0.5900000000000001,
+    "max_score": 0.5366490483283997,
+    "max_rest_episode_score": 0.5357871055603027,
+    "scores_at_or_above_hold": 0,
+    "scores_at_or_above_enable": 0,
+    "longest_enable_streak_samples": 0,
+    "longest_enable_streak_span_s": 0.0,
+    "reasons": {
+      "below_hold_threshold": 485
+    },
+    "command_metrics": {
+      "rest_command_seconds": 0.0,
+      "rest_seconds": 61.49999999999996,
+      "rest_command_fraction": 0.0,
+      "imagery_command_seconds": 0.0,
+      "imagery_seconds": 61.49999999999996,
+      "missed_imagery_fraction": 1.0,
+      "rest_episodes_with_any_command": 0,
+      "rest_episode_count": 15,
+      "rest_episode_activation_fraction": 0.0,
+      "physical_robot_metrics": "not measured; these are command-stream metrics only"
+    }
+  }
+]

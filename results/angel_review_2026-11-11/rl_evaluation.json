@@ -1,0 +1,4238 @@
+{
+  "policy_decoded": {
+    "episodes": 150,
+    "rest_compliance": 0.5733333333333334,
+    "grasp_success": 0.41333333333333333,
+    "balanced_success": 0.49333333333333335,
+    "unwanted_lifts_during_rest": 32,
+    "per_trial": [
+      {
+        "trial_id": "S001R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:1",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:3",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:5",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:7",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:9",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:11",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:13",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:15",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:17",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:19",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:21",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:23",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:25",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:29",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:1",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:3",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:5",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:6",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:7",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:9",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:11",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:13",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:15",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:17",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:19",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:21",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:23",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:25",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:27",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:29",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:0",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:1",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:2",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:3",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:4",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:5",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:7",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:9",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:11",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:13",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:15",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:17",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:19",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:21",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:23",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:24",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:25",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:27",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:29",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:0",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:2",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:4",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:6",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:8",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:10",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:12",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:14",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:16",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:20",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:22",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:24",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:26",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:28",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:0",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:2",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:4",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:6",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:8",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:10",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:12",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:14",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:18",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:20",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:22",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:24",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:26",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      }
+    ]
+  },
+  "policy_oracle": {
+    "episodes": 150,
+    "rest_compliance": 1.0,
+    "grasp_success": 1.0,
+    "balanced_success": 1.0,
+    "unwanted_lifts_during_rest": 0,
+    "per_trial": [
+      {
+        "trial_id": "S001R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      }
+    ]
+  },
+  "always_hold": {
+    "episodes": 150,
+    "rest_compliance": 1.0,
+    "grasp_success": 0.0,
+    "balanced_success": 0.5,
+    "unwanted_lifts_during_rest": 0,
+    "per_trial": [
+      {
+        "trial_id": "S001R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:1",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:3",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:5",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:7",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:9",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:11",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:13",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:15",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:17",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:19",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:21",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:23",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:25",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S001R12:29",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:1",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:3",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:5",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:6",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:7",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:9",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:11",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:13",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:15",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:17",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:19",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:21",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:23",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:25",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:27",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S002R12:29",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:0",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:1",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:2",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:3",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:4",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:5",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:7",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:9",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:11",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:13",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:15",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:17",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:19",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:21",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:23",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:24",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:25",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:27",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S003R12:29",
+        "true_intent": 1,
+        "command": 0,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:0",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:2",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:4",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:6",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:8",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:10",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:12",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:14",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:16",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:20",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:22",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:24",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:26",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:28",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S004R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:0",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:2",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:4",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:6",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:8",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:10",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:12",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:14",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:18",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:20",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:22",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:24",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:26",
+        "true_intent": 0,
+        "command": 1,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": true,
+        "lifted": false
+      },
+      {
+        "trial_id": "S005R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": false,
+        "lifted": false
+      }
+    ]
+  },
+  "always_grasp": {
+    "episodes": 150,
+    "rest_compliance": 0.0,
+    "grasp_success": 1.0,
+    "balanced_success": 0.5,
+    "unwanted_lifts_during_rest": 75,
+    "per_trial": [
+      {
+        "trial_id": "S001R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:1",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:3",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:5",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:7",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:9",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:11",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:13",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:15",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:17",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:19",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:21",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:23",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:25",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S001R12:29",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:0",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:1",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:2",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:3",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:4",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:5",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:6",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:7",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:9",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:11",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:13",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:15",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:17",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:19",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:21",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:23",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:24",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:25",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:27",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S002R12:29",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:0",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:1",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:2",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:3",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:4",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:5",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:6",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:7",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:8",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:9",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:10",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:11",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:12",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:13",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:14",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:15",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:17",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:19",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:20",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:21",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:22",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:23",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:24",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:25",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:26",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:27",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S003R12:29",
+        "true_intent": 1,
+        "command": 0,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:0",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:2",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:4",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:6",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:8",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:10",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:12",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:14",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:16",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:18",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:20",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:22",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:24",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:26",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:28",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S004R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:0",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:1",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:2",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:3",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:4",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:5",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:6",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:7",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:8",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:9",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:10",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:11",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:12",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:13",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:14",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:15",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:16",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:17",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:18",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:19",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:20",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:21",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:22",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:23",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:24",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:25",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:26",
+        "true_intent": 0,
+        "command": 1,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:27",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:28",
+        "true_intent": 0,
+        "command": 0,
+        "success": false,
+        "lifted": true
+      },
+      {
+        "trial_id": "S005R12:29",
+        "true_intent": 1,
+        "command": 1,
+        "success": true,
+        "lifted": true
+      }
+    ]
+  }
+}

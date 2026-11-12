@@ -1,5 +1,7 @@
 # FRI-BCI-ML-RL-Decoder
 
+> **Navigation & Reproducibility Update (2026-11-11):** For current project status, verified November 11 artifacts, and the forward execution plan, start at [STATUS.md](STATUS.md) and [docs/NEXT_STEPS_AUDIT_2026-11-11.md](docs/NEXT_STEPS_AUDIT_2026-11-11.md). See [results/eegnet_training_2026-11-11/evaluation_summary.md](results/eegnet_training_2026-11-11/evaluation_summary.md) for the 89-source / 15-target `EA-EEGNet` + `CRC-Hysteresis` evaluation (`S001–S015` `R12` are now inspected) and [results/project_audit_2026-11-11/horizon_aligned_telemetry_audit.md](results/project_audit_2026-11-11/horizon_aligned_telemetry_audit.md) for the 20-second horizon-aligned robot telemetry audit and `robomimic-latch6-v2.0.0` control harness. Sections below are preserved for historical context.
+
 Public EEG motor-imagery decoding research for simulated robotic-hand control using machine learning and reinforcement learning.
 
 For the earlier project timeline, read [project history](docs/PROJECT_HISTORY.md).

@@ -83,7 +83,7 @@ def main():
             if a.condition=='always-hold': requested,reason='hold','always_hold_control'
             elif a.condition=='always-enable': requested,reason='policy','always_enable_control'
             elif a.condition=='pause':
-                requested='policy' if a.pause_start<=step<a.pause_start+a.pause_steps else 'hold'; reason='scripted_'+requested
+                requested='hold' if a.pause_start<=step<a.pause_start+a.pause_steps else 'policy'; reason='scripted_'+requested
             else:
                 skill,reason=replay.at((step-1)/base.control_freq); requested='hold' if skill=='hold' else 'policy'
             mode='latch' if latched else requested

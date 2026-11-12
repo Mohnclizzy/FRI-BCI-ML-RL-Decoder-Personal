@@ -1,5 +1,7 @@
 # S002/S003 R12 held-out recorded-EEG learned-policy replay — summary
 
+> **Dated Correction (2026-11-11):** The `(59, 120]` command-count threshold interpretation in this report is **retracted**. That interval compared full-recording (`123.0–125.0 s`, 485–493 windows) `grasp_lift` counts against `20.0 s` (`400`-step @ `20 Hz`) robot episodes, which never consume decisions issued at `t >= 20.0 s`. On the actual `20.0 s` robot horizon, `S002 confidence` (`59` full-recording events) issued only **7** enable events (`36` requested steps = `1.80 s`, `0/3` retained), whereas `S002 raw` (`150` full-recording events) issued only **22** enable events (`110` requested steps = `5.50 s`, `3/3` retained), `S003 temporal` issued **26** (`130` steps = `6.50 s`, `3/3` retained), and `S006 raw` issued **44** (`218` steps = `10.90 s`, `3/3` retained). All measured rollout outcomes (`12/18` retained here) remain valid; see [docs/NEXT_STEPS_AUDIT_2026-11-11.md](../../docs/NEXT_STEPS_AUDIT_2026-11-11.md) and [results/project_audit_2026-11-11/horizon_aligned_telemetry_audit.md](../project_audit_2026-11-11/horizon_aligned_telemetry_audit.md) for the full 20-second horizon alignment. The original 2026-11-06 text is preserved unmodified below.
+
 Run: `results/robomimic_eeg_s002s003_2026-11-06/` (2026-11-06)
 Continuation of the frozen Stage-1 order after S001R12 and the Stage-1 addendum.
 

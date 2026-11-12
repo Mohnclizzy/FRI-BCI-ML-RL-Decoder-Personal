@@ -1,6 +1,6 @@
 # Start here: EEG-to-Franka project
 
-> Navigation updated November 8, 2026: use [STATUS.md](STATUS.md) for the later execution record and [repository layout](docs/REPOSITORY_LAYOUT.md) for files and downloads. The plans and results below are retained as dated historical context.
+> **Navigation updated November 11, 2026:** Use [STATUS.md](STATUS.md) and [docs/NEXT_STEPS_AUDIT_2026-11-11.md](docs/NEXT_STEPS_AUDIT_2026-11-11.md) for current execution status, the [November 11 EA-EEGNet + CRC-Hysteresis evaluation](results/eegnet_training_2026-11-11/evaluation_summary.md) (note: `S011–S015` `R12` were opened on 2026-11-11 and are no longer an unopened confirmation cohort), and the [20-second horizon-aligned robot telemetry audit](results/project_audit_2026-11-11/horizon_aligned_telemetry_audit.md). Earlier navigation from November 8, 2026 ([repository layout](docs/REPOSITORY_LAYOUT.md)) and the plans/results below are retained as dated historical context.
 
 The current roadmap is the [execution handoff](docs/PROJECT_EXECUTION_HANDOFF_2026-11-03.md). It is self-contained for the continuing CLI/account and supersedes older next-step recommendations. The [latest evidence handoff](docs/HANDOFF_2026-11-03_AFTER_RETENTION.md) links the underlying runs. These documents describe the last verified state; writing the plan did not run new experiments.
 

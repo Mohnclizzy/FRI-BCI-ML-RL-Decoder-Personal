@@ -217,6 +217,24 @@ class ReproducibilityAndHarnessTests(unittest.TestCase):
         self.assertNotIn("|| true", exec_lines)
         self.assertNotIn('--condition "pause"', exec_lines)
 
+    def test_dev_decoder_gate_study_respects_r04_r08_only_split(self) -> None:
+        study_path = (
+            REPO_ROOT
+            / "results"
+            / "decoder_gate_study_2026-11-11"
+            / "dev_decoder_gate_study.json"
+        )
+        study = json.loads(study_path.read_text(encoding="utf-8"))
+        self.assertFalse(study["target_r12_touched"])
+        self.assertEqual(study["target_fit_run"], 4)
+        self.assertEqual(study["development_scoring_run"], 8)
+        self.assertEqual(study["development_subjects"], [f"S{s:03d}" for s in range(1, 11)])
+        dec = study["decoder_comparison_r08"]
+        self.assertAlmostEqual(dec["transfer_ea_eegnet_r04"]["mean_balanced_accuracy"], 0.6633333333, places=4)
+        self.assertAlmostEqual(dec["riemannian_lda_r04"]["mean_balanced_accuracy"], 0.6266666667, places=4)
+        self.assertAlmostEqual(dec["csp_lda_r04"]["mean_balanced_accuracy"], 0.6100000000, places=4)
+        self.assertAlmostEqual(dec["scratch_ea_eegnet_r04"]["mean_balanced_accuracy"], 0.5600000000, places=4)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,0 +1,7 @@
+condition	seed	completion_state	terminal_retained	first_acquisition_step	max_rise_m
+always-enable	0	complete_retained	True	58	0.1074734192347262
+always-enable	1	complete_retained	True	54	0.10151733972940702
+always-enable	2	complete_retained	True	47	0.10350535634707969
+always-hold	0	contact_none	False	None	0.0
+always-hold	1	contact_none	False	None	0.0
+always-hold	2	contact_none	False	None	0.0

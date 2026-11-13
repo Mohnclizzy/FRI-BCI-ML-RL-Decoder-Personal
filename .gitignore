@@ -2,9 +2,25 @@
 __pycache__/
 .pytest_cache/
 data/
-outputs/
+outputs/*
+!outputs/isaac/
+outputs/isaac/*
+!outputs/isaac/S0*R12-decisions.jsonl
+!outputs/isaac/eeg-batch-inputs/
+outputs/isaac/eeg-batch-inputs/*
+!outputs/isaac/eeg-batch-inputs/S0*R12-decisions.jsonl
+!outputs/isaac/eeg-batch-inputs/source_manifest.json
 *.egg-info/
 logs/
 simulation/build/
 simulation/dist/
 EEG-Decoder-Project*.zip
+
+# Recreated local environments and caches
+.ipynb_checkpoints/
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key

@@ -1,0 +1,277 @@
+{
+  "scope": "Selected seed 8 and 11 trace diagnostic; neither a new rollout nor an unbiased success estimate",
+  "contact_threshold_n": 1.0,
+  "cases": [
+    {
+      "seed": 8,
+      "original": {
+        "raw_sha256": "ae470debc15d8e2d5428056f3897f78739a42e10fc994926d1aabcd5026f37bc",
+        "start": {
+          "time_s": 0.0,
+          "contact_n": [
+            0.0,
+            0.0
+          ],
+          "cube_minus_hand_xyz_m": [
+            0.0,
+            -0.0,
+            -0.1
+          ],
+          "cube_z_m": 0.2800000011920929,
+          "finger_position_m": [
+            0.03999999910593033,
+            0.03999999910593033
+          ],
+          "finger_target_m": [
+            0.0,
+            0.0
+          ]
+        },
+        "first_contact_at_least_1_n": {
+          "time_s": 0.05,
+          "contact_n": [
+            0.0,
+            9.878960609436035
+          ],
+          "cube_minus_hand_xyz_m": [
+            -0.00521,
+            -0.01372,
+            -0.09148
+          ],
+          "cube_z_m": 0.27870306372642517,
+          "finger_position_m": [
+            0.03636140748858452,
+            0.0369572751224041
+          ],
+          "finger_target_m": [
+            -0.017326898872852325,
+            -0.02453945204615593
+          ]
+        },
+        "peak_contact": {
+          "time_s": 0.241667,
+          "contact_n": [
+            0.0,
+            153.51287841796875
+          ],
+          "cube_minus_hand_xyz_m": [
+            -0.01706,
+            -0.01434,
+            -0.09328
+          ],
+          "cube_z_m": 0.2801993787288666,
+          "finger_position_m": [
+            0.0397505909204483,
+            0.040710628032684326
+          ],
+          "finger_target_m": [
+            -0.04765132814645767,
+            -0.037415504455566406
+          ]
+        }
+      },
+      "finger_guard": {
+        "raw_sha256": "ae613682e33187db10b0a47f67402e62ff99dfd01760e7478eb155814a986f76",
+        "start": {
+          "time_s": 0.0,
+          "contact_n": [
+            0.0,
+            0.0
+          ],
+          "cube_minus_hand_xyz_m": [
+            0.0,
+            -0.0,
+            -0.1
+          ],
+          "cube_z_m": 0.2800000011920929,
+          "finger_position_m": [
+            0.03999999910593033,
+            0.03999999910593033
+          ],
+          "finger_target_m": [
+            0.0,
+            0.0
+          ]
+        },
+        "first_contact_at_least_1_n": {
+          "time_s": 0.058333,
+          "contact_n": [
+            0.0,
+            10.047018051147461
+          ],
+          "cube_minus_hand_xyz_m": [
+            -0.00598,
+            -0.01561,
+            -0.09138
+          ],
+          "cube_z_m": 0.2786056399345398,
+          "finger_position_m": [
+            0.03808453679084778,
+            0.03925619646906853
+          ],
+          "finger_target_m": [
+            0.019999999552965164,
+            0.019999999552965164
+          ]
+        },
+        "peak_contact": {
+          "time_s": 0.316667,
+          "contact_n": [
+            0.0,
+            203.03778076171875
+          ],
+          "cube_minus_hand_xyz_m": [
+            -0.02757,
+            -0.00892,
+            -0.08934
+          ],
+          "cube_z_m": 0.2814389169216156,
+          "finger_position_m": [
+            0.03979221731424332,
+            0.040207453072071075
+          ],
+          "finger_target_m": [
+            0.019999999552965164,
+            0.019999999552965164
+          ]
+        }
+      }
+    },
+    {
+      "seed": 11,
+      "original": {
+        "raw_sha256": "cc13ca4b450b2ad51b2dbffb95fff34bca56c556eb76a46cbda0687292d86d29",
+        "start": {
+          "time_s": 0.0,
+          "contact_n": [
+            0.0,
+            0.0
+          ],
+          "cube_minus_hand_xyz_m": [
+            0.0,
+            -0.0,
+            -0.1
+          ],
+          "cube_z_m": 0.2800000011920929,
+          "finger_position_m": [
+            0.03999999910593033,
+            0.03999999910593033
+          ],
+          "finger_target_m": [
+            0.0,
+            0.0
+          ]
+        },
+        "first_contact_at_least_1_n": {
+          "time_s": 0.075,
+          "contact_n": [
+            0.0,
+            4.843029975891113
+          ],
+          "cube_minus_hand_xyz_m": [
+            -0.00536,
+            -0.01213,
+            -0.09229
+          ],
+          "cube_z_m": 0.27865299582481384,
+          "finger_position_m": [
+            0.035966306924819946,
+            0.03631192445755005
+          ],
+          "finger_target_m": [
+            0.008763523772358894,
+            -0.010602131485939026
+          ]
+        },
+        "peak_contact": {
+          "time_s": 0.283333,
+          "contact_n": [
+            0.0,
+            107.0064468383789
+          ],
+          "cube_minus_hand_xyz_m": [
+            -0.01721,
+            -0.01498,
+            -0.09353
+          ],
+          "cube_z_m": 0.2808537781238556,
+          "finger_position_m": [
+            0.039650287479162216,
+            0.04030254855751991
+          ],
+          "finger_target_m": [
+            -0.008936475962400436,
+            -0.019570261240005493
+          ]
+        }
+      },
+      "finger_guard": {
+        "raw_sha256": "1bc36a7f5b88b8e21dd930fc5ceeb4e135a3a931d7a10379d48751f466fbf9cd",
+        "start": {
+          "time_s": 0.0,
+          "contact_n": [
+            0.0,
+            0.0
+          ],
+          "cube_minus_hand_xyz_m": [
+            0.0,
+            -0.0,
+            -0.1
+          ],
+          "cube_z_m": 0.2800000011920929,
+          "finger_position_m": [
+            0.03999999910593033,
+            0.03999999910593033
+          ],
+          "finger_target_m": [
+            0.0,
+            0.0
+          ]
+        },
+        "first_contact_at_least_1_n": {
+          "time_s": 0.083333,
+          "contact_n": [
+            0.0,
+            5.569196701049805
+          ],
+          "cube_minus_hand_xyz_m": [
+            -0.0059,
+            -0.01315,
+            -0.09247
+          ],
+          "cube_z_m": 0.27873390913009644,
+          "finger_position_m": [
+            0.03709959238767624,
+            0.03779072314500809
+          ],
+          "finger_target_m": [
+            0.019999999552965164,
+            0.019999999552965164
+          ]
+        },
+        "peak_contact": {
+          "time_s": 0.45,
+          "contact_n": [
+            0.0,
+            115.50778198242188
+          ],
+          "cube_minus_hand_xyz_m": [
+            -0.02497,
+            -0.00747,
+            -0.09338
+          ],
+          "cube_z_m": 0.28071147203445435,
+          "finger_position_m": [
+            0.03984024375677109,
+            0.0404665507376194
+          ],
+          "finger_target_m": [
+            0.019999999552965164,
+            0.019999999552965164
+          ]
+        }
+      }
+    }
+  ],
+  "interpretation": "The recorded contact occurs very early with the cube nearly centered under the hand and is predominantly on the right finger. Bounding finger targets did not remove it. Hand pose is the palm body, not a fingertip pose; the trace alone cannot establish collision geometry or a unique cause."
+}

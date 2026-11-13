@@ -1,0 +1,173 @@
+{
+  "error": null,
+  "episodes_requested": 5,
+  "episodes": [
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": 0.671859597787261,
+      "best_sampled_sustain_s": 1.5916666666666612,
+      "first_sampled_success_s": 1.8916666666666624,
+      "physical_lift_pass": true,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 1,
+      "duration_s": 2.9833333333333254,
+      "termination": {
+        "terminated": false,
+        "timeout": true
+      },
+      "interventions_at_start": {
+        "finger_clamps": 0,
+        "arm_velocity_clamps": 0,
+        "max_finger_correction_m": 0.0,
+        "max_velocity_correction_rad_s": 0.0
+      },
+      "interventions_at_end": {
+        "finger_clamps": 2,
+        "arm_velocity_clamps": 154,
+        "max_finger_correction_m": 0.0005512908101081848,
+        "max_velocity_correction_rad_s": 8.608315467834473
+      },
+      "observed_update_intervals_s": [
+        0.008333333333333333
+      ]
+    },
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": 0.668371057137847,
+      "best_sampled_sustain_s": 0.0,
+      "first_sampled_success_s": null,
+      "physical_lift_pass": false,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 2,
+      "duration_s": 2.9833333333333254,
+      "termination": {
+        "terminated": false,
+        "timeout": true
+      },
+      "interventions_at_start": {
+        "finger_clamps": 2,
+        "arm_velocity_clamps": 154,
+        "max_finger_correction_m": 0.0005512908101081848,
+        "max_velocity_correction_rad_s": 8.608315467834473
+      },
+      "interventions_at_end": {
+        "finger_clamps": 25,
+        "arm_velocity_clamps": 349,
+        "max_finger_correction_m": 0.0031386464834213257,
+        "max_velocity_correction_rad_s": 8.608315467834473
+      },
+      "observed_update_intervals_s": [
+        0.008333333333333333
+      ]
+    },
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": -0.003107761964201927,
+      "best_sampled_sustain_s": 0.0,
+      "first_sampled_success_s": null,
+      "physical_lift_pass": false,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 3,
+      "duration_s": 2.9833333333333254,
+      "termination": {
+        "terminated": false,
+        "timeout": true
+      },
+      "interventions_at_start": {
+        "finger_clamps": 25,
+        "arm_velocity_clamps": 349,
+        "max_finger_correction_m": 0.0031386464834213257,
+        "max_velocity_correction_rad_s": 8.608315467834473
+      },
+      "interventions_at_end": {
+        "finger_clamps": 25,
+        "arm_velocity_clamps": 349,
+        "max_finger_correction_m": 0.0031386464834213257,
+        "max_velocity_correction_rad_s": 8.608315467834473
+      },
+      "observed_update_intervals_s": [
+        0.008333333333333333
+      ]
+    },
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": -0.003107761964201927,
+      "best_sampled_sustain_s": 0.0,
+      "first_sampled_success_s": null,
+      "physical_lift_pass": false,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 4,
+      "duration_s": 2.9833333333333254,
+      "termination": {
+        "terminated": false,
+        "timeout": true
+      },
+      "interventions_at_start": {
+        "finger_clamps": 25,
+        "arm_velocity_clamps": 349,
+        "max_finger_correction_m": 0.0031386464834213257,
+        "max_velocity_correction_rad_s": 8.608315467834473
+      },
+      "interventions_at_end": {
+        "finger_clamps": 25,
+        "arm_velocity_clamps": 349,
+        "max_finger_correction_m": 0.0031386464834213257,
+        "max_velocity_correction_rad_s": 8.608315467834473
+      },
+      "observed_update_intervals_s": [
+        0.008333333333333333
+      ]
+    },
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": -0.003107769414782524,
+      "best_sampled_sustain_s": 0.0,
+      "first_sampled_success_s": null,
+      "physical_lift_pass": false,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 5,
+      "duration_s": 2.9833333333333254,
+      "termination": {
+        "terminated": false,
+        "timeout": true
+      },
+      "interventions_at_start": {
+        "finger_clamps": 25,
+        "arm_velocity_clamps": 349,
+        "max_finger_correction_m": 0.0031386464834213257,
+        "max_velocity_correction_rad_s": 8.608315467834473
+      },
+      "interventions_at_end": {
+        "finger_clamps": 25,
+        "arm_velocity_clamps": 349,
+        "max_finger_correction_m": 0.0031386464834213257,
+        "max_velocity_correction_rad_s": 8.608315467834473
+      },
+      "observed_update_intervals_s": [
+        0.008333333333333333
+      ]
+    }
+  ],
+  "probe_pass": false,
+  "training": false
+}

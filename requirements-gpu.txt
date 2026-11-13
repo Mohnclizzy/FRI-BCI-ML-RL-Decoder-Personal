@@ -1,0 +1,4 @@
+# Python >=3.11. Install the CUDA-enabled PyTorch build appropriate to your cloud
+# runtime first; Colab's preinstalled torch is normally sufficient.
+-r requirements.txt
+torch>=2.6,<3

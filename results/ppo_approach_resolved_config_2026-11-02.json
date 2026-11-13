@@ -1,0 +1,25 @@
+{
+  "task": "FRI-Franka-Lift-Approach",
+  "reset_curriculum": "table-only",
+  "seed": 8,
+  "num_envs": 64,
+  "rollout_steps_per_environment": 32,
+  "additional_updates": 100,
+  "transitions": 204800,
+  "reward_weights": {
+    "fingers_to_object": 1.0,
+    "good_finger_contact": 2.0,
+    "contact_count": 0.25
+  },
+  "agent_yaml_sha256": "76f18b1d5e211cbf38a6de83aef657d69380f5a38b76b71aa2ab214954fb0fad",
+  "env_yaml_sha256": "87f66af1f3ac48488df46c577aaff7168b205e234c51fde18397814be25703c5",
+  "original_checkpoint_sha256": "6a9c5ff66ff813c5b3a72596b620f9729953f91febeb564a88421c59c564ee9b",
+  "final_checkpoint_sha256": "4ca3e23b639bda131ec55df8d8ac16551d547b0ae03cae0f5685d91f2597bde7",
+  "evaluation_thresholds": {
+    "cube_rise_m": 0.08,
+    "each_finger_contact_n": 0.1,
+    "sustained_contact_seconds": 0.5,
+    "drop_below_baseline_plus_m": 0.04,
+    "sustained_drop_seconds": 0.25
+  }
+}

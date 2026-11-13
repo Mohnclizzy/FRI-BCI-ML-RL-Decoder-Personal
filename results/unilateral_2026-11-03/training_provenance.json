@@ -1,0 +1,47 @@
+{
+  "launch": {
+    "argv": [
+      "/home/ubuntu/IsaacLab-fri/.venv/bin/isaaclab",
+      "train",
+      "--task",
+      "FRI-Franka-Lift-NearTable-Unilateral",
+      "--rl_library",
+      "rsl_rl",
+      "--num_envs",
+      "256",
+      "--seed",
+      "8",
+      "--max_iterations",
+      "50",
+      "--checkpoint",
+      "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/unilateral-50-seed8-20261103T2310Z/input/model_298.pt",
+      "physics=newton_mjwarp",
+      "--viz",
+      "none"
+    ],
+    "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/unilateral-50-seed8-20261103T2310Z",
+    "source_hashes": {
+      "simulation/src/fri_bci_sim/tasks/near_table_unilateral.py": "2a63ec899ced29e954a2d0e8080020f9cc36048add14f3b2cc6509e930db67dd",
+      "simulation/src/fri_bci_sim/tasks/near_table_antipush.py": "13fdb7a38011b7a01f0a1a17de64b0e393fb0de863b39d5d247b1348ffb442bb",
+      "simulation/src/fri_bci_sim/tasks/near_table_progress.py": "6184906be8444f90ebab5057bc8aae782c68407d0d61a24876e3d798e2bf2e22",
+      "simulation/src/fri_bci_sim/tasks/near_table.py": "a4fbdf45eb36a004d5769d15b20f623900f3802cb897882469351189a762d632",
+      "simulation/src/fri_bci_sim/tasks/__init__.py": "332cbb6689516280e1d5a9647cd39275cd7ca237aca87b8eb36e3cb00c9ec3ee",
+      "simulation/src/fri_bci_sim/ppo_telemetry.py": "0444cfed87f3198a9306855f4333baaee2773536209e5cd9373357d72a8279f0",
+      "docs/UNILATERAL_PROTOCOL_2026-11-03.md": "59092b5cc36d5f143edd3cb2aff0a1be454dfc3df5dba1d1c204b32d2a3e84e2",
+      "simulation/scripts/run_unilateral_training.py": "dd499c07a268283f38f4863e818fc661606407e04a6f886f42e9b4404887c363"
+    },
+    "checkpoint_sha256": "e80a46414db8482cf780c56f785154d93ac479b2e2a48ac3d7b1567e3d84729f",
+    "PYTHONPATH": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/simulation/src",
+    "isaaclab_head": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4"
+  },
+  "exit": {
+    "exit_code": 0
+  },
+  "resolved_config_sha256": {
+    "outputs/isaac/unilateral-50-seed8-20261103T2310Z/logs/rsl_rl/lift_franka/2026-11-03_23-11-39/params/agent.yaml": "27dc7526a70a8dcd89cbce248d41b52a61bf28dbc52157ca76889ec082be3d9c",
+    "outputs/isaac/unilateral-50-seed8-20261103T2310Z/logs/rsl_rl/lift_franka/2026-11-03_23-11-39/params/env.yaml": "457069115ccf8a6acd5d5bded7d73593d2d686b796818198c642260d76446b47"
+  },
+  "training_iterations_logged": "298-347 inclusive",
+  "additional_env_transitions": 409600,
+  "gpu": "NVIDIA L4 driver 580.178.04"
+}

@@ -1,0 +1,511 @@
+{
+  "run_dir": "/home/ubuntu/robomimic-native-phase4-20261104/matched_batch",
+  "run_count": 24,
+  "audit_errors": [],
+  "groups": {
+    "always-hold": {
+      "runs": 3,
+      "acquisitions": 0,
+      "retained": 0,
+      "post_acquisition_losses": 0,
+      "max_hold_eef_drift_m": 0.028865009339383046,
+      "max_hold_cube_drift_m": 0.01265598510902266
+    },
+    "pause_15_10": {
+      "runs": 3,
+      "acquisitions": 3,
+      "retained": 0,
+      "post_acquisition_losses": 3,
+      "max_hold_eef_drift_m": 0.006113764740079932,
+      "max_hold_cube_drift_m": 4.84431568298745e-07
+    },
+    "pause_15_60": {
+      "runs": 3,
+      "acquisitions": 3,
+      "retained": 0,
+      "post_acquisition_losses": 3,
+      "max_hold_eef_drift_m": 0.006113764740079932,
+      "max_hold_cube_drift_m": 7.419062046120298e-07
+    },
+    "pause_35_10": {
+      "runs": 3,
+      "acquisitions": 3,
+      "retained": 1,
+      "post_acquisition_losses": 2,
+      "max_hold_eef_drift_m": 0.005937495377696156,
+      "max_hold_cube_drift_m": 0.0006007980354052169
+    },
+    "pause_35_60": {
+      "runs": 3,
+      "acquisitions": 3,
+      "retained": 0,
+      "post_acquisition_losses": 3,
+      "max_hold_eef_drift_m": 0.005937495377696156,
+      "max_hold_cube_drift_m": 0.0006007980354052169
+    },
+    "pause_70_10": {
+      "runs": 3,
+      "acquisitions": 3,
+      "retained": 0,
+      "post_acquisition_losses": 3,
+      "max_hold_eef_drift_m": 0.013531808554577605,
+      "max_hold_cube_drift_m": 0.013817449445438609
+    },
+    "pause_70_60": {
+      "runs": 3,
+      "acquisitions": 3,
+      "retained": 2,
+      "post_acquisition_losses": 1,
+      "max_hold_eef_drift_m": 0.013531808554577605,
+      "max_hold_cube_drift_m": 0.013817449445438609
+    },
+    "uninterrupted": {
+      "runs": 3,
+      "acquisitions": 3,
+      "retained": 0,
+      "post_acquisition_losses": 3,
+      "max_hold_eef_drift_m": 0.0,
+      "max_hold_cube_drift_m": 0.0
+    }
+  },
+  "runs": {
+    "always-hold_seed0": {
+      "seed": 0,
+      "condition": "always-hold",
+      "pause_start": null,
+      "pause_steps": null,
+      "first_acquisition_step": null,
+      "terminal_retained": false,
+      "post_acquisition_loss": false,
+      "terminal_rise_m": -0.01021553759255256,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.028865009339383046,
+      "max_hold_cube_drift_m": 0.012655967475688748,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": null,
+      "trace_sha256": "59343e6487ac4176bf379e506306a1148fff2f8818d9945b7c215392f6ee5e78"
+    },
+    "always-hold_seed1": {
+      "seed": 1,
+      "condition": "always-hold",
+      "pause_start": null,
+      "pause_steps": null,
+      "first_acquisition_step": null,
+      "terminal_retained": false,
+      "post_acquisition_loss": false,
+      "terminal_rise_m": -0.010215539590044398,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.017105903582852036,
+      "max_hold_cube_drift_m": 0.012655939651240592,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": null,
+      "trace_sha256": "3643075cf7b7ade5a15f1dfcb64c4ea006652959a1df494c7726437e8dc2dfde"
+    },
+    "always-hold_seed2": {
+      "seed": 2,
+      "condition": "always-hold",
+      "pause_start": null,
+      "pause_steps": null,
+      "first_acquisition_step": null,
+      "terminal_retained": false,
+      "post_acquisition_loss": false,
+      "terminal_rise_m": -0.0102155357961915,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.02571989546655995,
+      "max_hold_cube_drift_m": 0.01265598510902266,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": null,
+      "trace_sha256": "fe04bc3300a89d1d91ee61a60a79a158fedf633ec126b8137540837b7e489972"
+    },
+    "approach_10_seed0": {
+      "seed": 0,
+      "condition": "pause",
+      "pause_start": 15,
+      "pause_steps": 10,
+      "first_acquisition_step": 69,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.010215537592549895,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.005205432899708648,
+      "max_hold_cube_drift_m": 4.84431568298745e-07,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010216026564018543,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "62c6b856a212871797b45715dde875946a43bda6d28d0875b132a30c3466dff2"
+    },
+    "approach_10_seed1": {
+      "seed": 1,
+      "condition": "pause",
+      "pause_start": 15,
+      "pause_steps": 10,
+      "first_acquisition_step": 58,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.00938173959004407,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.006113764740079932,
+      "max_hold_cube_drift_m": 4.834985166008028e-07,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010216028555989354,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "28cea4edd296033b94dd527bafd1da4a4d1108f1cb9b2a3929136d98e8ab86c0"
+    },
+    "approach_10_seed2": {
+      "seed": 2,
+      "condition": "pause",
+      "pause_start": 15,
+      "pause_steps": 10,
+      "first_acquisition_step": 63,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.01126293579616544,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.005260158617133263,
+      "max_hold_cube_drift_m": 4.7511075063066954e-07,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010216024771296017,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "aba128e4ee8eb002482176b8b2219cc9f16e7aea1e5f35e3858436157227f24e"
+    },
+    "approach_60_seed0": {
+      "seed": 0,
+      "condition": "pause",
+      "pause_start": 15,
+      "pause_steps": 60,
+      "first_acquisition_step": 119,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.010215537592551227,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.005205432899708648,
+      "max_hold_cube_drift_m": 7.419062046120298e-07,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010216026564018543,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "35d430195362842ed28c8f8b8afb79b34a075bb11fe242b49a90d7ee02cc9655"
+    },
+    "approach_60_seed1": {
+      "seed": 1,
+      "condition": "pause",
+      "pause_start": 15,
+      "pause_steps": 60,
+      "first_acquisition_step": 110,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.008775139590043612,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.006113764740079932,
+      "max_hold_cube_drift_m": 7.196349392238451e-07,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010216028555989354,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "2f347906a8a66a23959fa21c35574e0dbd2009ba36b25fe05c626bfaeb1b9acd"
+    },
+    "approach_60_seed2": {
+      "seed": 2,
+      "condition": "pause",
+      "pause_start": 15,
+      "pause_steps": 60,
+      "first_acquisition_step": 113,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.011262935796166329,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.005260158617133263,
+      "max_hold_cube_drift_m": 4.755831977121261e-07,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010216024771296017,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "abd6862825ae77e880a051617adb99ad36641d4c3e9545bef486c2378ddb6ef4"
+    },
+    "carrying_10_seed0": {
+      "seed": 0,
+      "condition": "pause",
+      "pause_start": 70,
+      "pause_steps": 10,
+      "first_acquisition_step": 58,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.009990637592550478,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.013531808554577605,
+      "max_hold_cube_drift_m": 0.013817449445438609,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": 0.22515873508509754,
+        "bilateral_contact": true
+      },
+      "trace_sha256": "340dc175d8492f4b26dab410bc0918977cbb8a26edcee15d50943f0474bd6c09"
+    },
+    "carrying_10_seed1": {
+      "seed": 1,
+      "condition": "pause",
+      "pause_start": 70,
+      "pause_steps": 10,
+      "first_acquisition_step": 54,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.8101077841698442,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.01007936667908304,
+      "max_hold_cube_drift_m": 0.010025260733493987,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": 0.164203425241915,
+        "bilateral_contact": true
+      },
+      "trace_sha256": "c7b5dd8b0870d571b4d1f599dbc740cf61889d3f6b4854d5240c63a2e682a093"
+    },
+    "carrying_10_seed2": {
+      "seed": 2,
+      "condition": "pause",
+      "pause_start": 70,
+      "pause_steps": 10,
+      "first_acquisition_step": 47,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.010442835796167116,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.011278367638942856,
+      "max_hold_cube_drift_m": 0.01117726446783566,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": 0.3603790645932319,
+        "bilateral_contact": true
+      },
+      "trace_sha256": "04ecccdee458826dff46f966f6adcfba4c1eef52c0b704b07e96506035aa0c44"
+    },
+    "carrying_60_seed0": {
+      "seed": 0,
+      "condition": "pause",
+      "pause_start": 70,
+      "pause_steps": 60,
+      "first_acquisition_step": 58,
+      "terminal_retained": true,
+      "post_acquisition_loss": false,
+      "terminal_rise_m": 0.6858547862538852,
+      "terminal_contact": true,
+      "max_hold_eef_drift_m": 0.013531808554577605,
+      "max_hold_cube_drift_m": 0.013817449445438609,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": 0.22515873508509754,
+        "bilateral_contact": true
+      },
+      "trace_sha256": "62d786407772c50b30cec13e4a714b53279c717bab62be99278209d285bd28a5"
+    },
+    "carrying_60_seed1": {
+      "seed": 1,
+      "condition": "pause",
+      "pause_start": 70,
+      "pause_steps": 60,
+      "first_acquisition_step": 54,
+      "terminal_retained": true,
+      "post_acquisition_loss": false,
+      "terminal_rise_m": 0.3563427659219197,
+      "terminal_contact": true,
+      "max_hold_eef_drift_m": 0.01007936667908304,
+      "max_hold_cube_drift_m": 0.010025260733493987,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": 0.164203425241915,
+        "bilateral_contact": true
+      },
+      "trace_sha256": "62f488970450408ae16ded6f17c52a415668e119c0e11a3e42ae6768460ad5b1"
+    },
+    "carrying_60_seed2": {
+      "seed": 2,
+      "condition": "pause",
+      "pause_start": 70,
+      "pause_steps": 60,
+      "first_acquisition_step": 47,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.011262935796166107,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.011278367638942856,
+      "max_hold_cube_drift_m": 0.01117726446783566,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": 0.3603790645932319,
+        "bilateral_contact": true
+      },
+      "trace_sha256": "461af07ae612f369fb2807e5d5cc8195a8189e22f9fdcf7edf48252e5b229851"
+    },
+    "closure_10_seed0": {
+      "seed": 0,
+      "condition": "pause",
+      "pause_start": 35,
+      "pause_steps": 10,
+      "first_acquisition_step": 68,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.8102156821723524,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.005937495377696156,
+      "max_hold_cube_drift_m": 9.458802676733572e-08,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010215537593006863,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "cc1ed03bf9fc77f4abf6dfaa1f0ebbbd4a89b55313ef8ef7e256cba786eee653"
+    },
+    "closure_10_seed1": {
+      "seed": 1,
+      "condition": "pause",
+      "pause_start": 35,
+      "pause_steps": 10,
+      "first_acquisition_step": 65,
+      "terminal_retained": true,
+      "post_acquisition_loss": false,
+      "terminal_rise_m": 0.13121132900429255,
+      "terminal_contact": true,
+      "max_hold_eef_drift_m": 0.0012736864636231462,
+      "max_hold_cube_drift_m": 0.0006007980354052169,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010215539590498701,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "6dec08d0be0b861c873d1e7e4bc889c6ae2d0a644f5a3b68985ae1d9a7e7579f"
+    },
+    "closure_10_seed2": {
+      "seed": 2,
+      "condition": "pause",
+      "pause_start": 35,
+      "pause_steps": 10,
+      "first_acquisition_step": 57,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.011262935796165663,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.002985228584179081,
+      "max_hold_cube_drift_m": 4.418687638008123e-13,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010215535796645914,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "1cc623af89decd5cab142c070c52f650d98472d715f2e0fd5806dfe6bdabb48e"
+    },
+    "closure_60_seed0": {
+      "seed": 0,
+      "condition": "pause",
+      "pause_start": 35,
+      "pause_steps": 60,
+      "first_acquisition_step": 118,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.8102156821723527,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.005937495377696156,
+      "max_hold_cube_drift_m": 5.694275185651911e-07,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010215537593006863,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "359d642d0ad0406f171dc01b3219c2bd3b863ac673090c98d878a220f72be36a"
+    },
+    "closure_60_seed1": {
+      "seed": 1,
+      "condition": "pause",
+      "pause_start": 35,
+      "pause_steps": 60,
+      "first_acquisition_step": 115,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.8092739841698436,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.0012736864636231462,
+      "max_hold_cube_drift_m": 0.0006007980354052169,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010215539590498701,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "0d4d4bda96d66ccbce58172d94b49efe6f12e38adcd5abc0bbc0d2cccca65da5"
+    },
+    "closure_60_seed2": {
+      "seed": 2,
+      "condition": "pause",
+      "pause_start": 35,
+      "pause_steps": 60,
+      "first_acquisition_step": 107,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.010215535796166408,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.002985228584179081,
+      "max_hold_cube_drift_m": 4.418687638008123e-13,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": {
+        "cube_rise_m": -0.010215535796645914,
+        "bilateral_contact": false
+      },
+      "trace_sha256": "cf3fb2be610eb1e0e27ef48feb9f7237eb72ba1ae3671b1c55afbbae84a9495f"
+    },
+    "uninterrupted_seed0": {
+      "seed": 0,
+      "condition": "uninterrupted",
+      "pause_start": null,
+      "pause_steps": null,
+      "first_acquisition_step": 58,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.009990637592550367,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.0,
+      "max_hold_cube_drift_m": 0.0,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": null,
+      "trace_sha256": "12588ecc9c12ab1b6339b964880c658d7d4081e8a2f791067f63c0a064383f7d"
+    },
+    "uninterrupted_seed1": {
+      "seed": 1,
+      "condition": "uninterrupted",
+      "pause_start": null,
+      "pause_steps": null,
+      "first_acquisition_step": 54,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.8086673841698445,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.0,
+      "max_hold_cube_drift_m": 0.0,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": null,
+      "trace_sha256": "bd306c006f904418f2f1533abfcd48d02c82ed300e534721794274b9c751b20e"
+    },
+    "uninterrupted_seed2": {
+      "seed": 2,
+      "condition": "uninterrupted",
+      "pause_start": null,
+      "pause_steps": null,
+      "first_acquisition_step": 47,
+      "terminal_retained": false,
+      "post_acquisition_loss": true,
+      "terminal_rise_m": -0.010215535796166186,
+      "terminal_contact": false,
+      "max_hold_eef_drift_m": 0.0,
+      "max_hold_cube_drift_m": 0.0,
+      "hold_invariants_pass": true,
+      "observed_pause_entry": null,
+      "trace_sha256": "6fff73f9e452171b81fec6c2cd8b6155bf1263b21e1d26fdb01adc252f8e3fdb"
+    }
+  }
+}

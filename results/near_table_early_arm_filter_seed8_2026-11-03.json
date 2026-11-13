@@ -1,0 +1,117 @@
+{
+  "checkpoint_sha256": "46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6",
+  "collector_sha256": "eb6e720726f0288a528be7b06bb00cab5075f62f84e387f8c08e292fa9b33c87",
+  "filtered": {
+    "contact_coverage": 1.0,
+    "drop_count": 0,
+    "duration_s": 0.966667,
+    "end_cube_position_w_m": [
+      -0.10910661518573761,
+      0.6071694493293762,
+      0.22818385064601898
+    ],
+    "end_record_type": "terminal_pre_reset",
+    "first_left_right_contact_ge_1n_s": [
+      0.766667,
+      0.125
+    ],
+    "first_policy_action": [
+      -0.8905551433563232,
+      0.24486571550369263,
+      -1.14421808719635,
+      -0.4873237609863281,
+      0.21198499202728271,
+      0.6018829941749573,
+      0.45374569296836853,
+      -0.5401740074157715,
+      -0.5819991230964661
+    ],
+    "max_cube_rise_m": 0.006829798221588135,
+    "max_cube_xy_displacement_m": 0.6720177349640967,
+    "max_left_right_sensor_force_n": [
+      6.320392608642578,
+      130.81271362304688
+    ],
+    "physical_lift_pass": false,
+    "physics_samples": 116,
+    "physics_step_gaps": 0,
+    "run_dir": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-early-arm-filter-seed8-20261103T0341Z",
+    "status": "completed",
+    "termination": {
+      "terminated": true,
+      "time_out": false
+    }
+  },
+  "input_sha256": {
+    "baseline_summary": "c46cbebe0b63e97ba7162a5e0abac6d89cc1172e047a1731b72be70c7f8fe7d0",
+    "baseline_telemetry": "ae470debc15d8e2d5428056f3897f78739a42e10fc994926d1aabcd5026f37bc",
+    "exported_policy_jit": "8ee9cd2ed6ade3b9034a67288f27ede5b48bb4189903535879427e42738b08b2",
+    "exported_policy_onnx": "6112acb0ae70133280cef12b8c5376625c085a0a476a9cf186cab41807fc7509",
+    "exported_policy_onnx_data": "e16fa3a2e20eb8ca94077a59842ab5d399f97cffdef4305f7654a16f851132af",
+    "filtered_console": "27f8fd5d65a10536ab11c5044999eb41f6e81cbb7880368155191f4a5b2065d9",
+    "filtered_exit": "296e27fead09d4a7790bea4d2d2764d10a72f1fc8d8ed069dc45576208ddef75",
+    "filtered_launch": "f76cb24e49b9832d430480933a01e0dcce8922d0cd12d8749859ab004cfee2fa",
+    "filtered_summary": "3176eb7786d05b252d22f733220d53103040d2e31f93caf7ee3aaf2cde2b297d",
+    "filtered_telemetry": "ec7097a14ba23b165ca28ad2bf00692d8d3f6fad3aaaaaef0dc0c7c14e48d93f",
+    "filtered_validation": "a19d6f50186fc4a48c7421b46439c89e3826974dcc9f55d2b55c1647e1ff7aa1",
+    "isolated_checkpoint": "46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6"
+  },
+  "intervention": "zero action components 0 and 2 only on policy steps 1 and 2",
+  "isaaclab_commit": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4",
+  "kind": "one_episode_near_table_inference_only_early_arm_filter",
+  "limits": [
+    "One selected seed cannot estimate pickup reliability or spatial generalization.",
+    "The policy remains closed-loop after the modified first action, so later contact paths differ.",
+    "Contact force fields are sampled filtered sensor proxies, not bilateral grasp force measurements.",
+    "The terminal flag and process exit do not imply a lift; physical_lift_pass uses the frozen threshold."
+  ],
+  "scope": "one fixed seed-8 physical episode, one environment, 12-second cap, no training or EEG",
+  "source_sha256_at_launch": {
+    "simulation/scripts/run_near_table_early_arm_filter.py": "ba6ba266e8e284c04f5b3edd2a4e65221ee4ac38d1757f00701a0f185de15752",
+    "simulation/src/fri_bci_sim/ppo_telemetry.py": "0444cfed87f3198a9306855f4333baaee2773536209e5cd9373357d72a8279f0",
+    "simulation/src/fri_bci_sim/tasks/__init__.py": "7243b89004790ae5c826934a4f9b5608ff2227dfd2397182ff0151e28605b372",
+    "simulation/src/fri_bci_sim/tasks/near_table.py": "a4fbdf45eb36a004d5769d15b20f623900f3802cb897882469351189a762d632",
+    "simulation/src/fri_bci_sim/tasks/near_table_progress.py": "6184906be8444f90ebab5057bc8aae782c68407d0d61a24876e3d798e2bf2e22"
+  },
+  "unmodified_saved_seed8": {
+    "contact_coverage": 1.0,
+    "drop_count": 0,
+    "duration_s": 0.933333,
+    "end_cube_position_w_m": [
+      -0.10125312209129333,
+      0.6684444546699524,
+      0.23933598399162292
+    ],
+    "end_record_type": "terminal_pre_reset",
+    "first_left_right_contact_ge_1n_s": [
+      0.583333,
+      0.05
+    ],
+    "first_policy_action": [
+      -0.8905551433563232,
+      0.24486571550369263,
+      -1.14421808719635,
+      -0.4873237609863281,
+      0.21198499202728271,
+      0.6018829941749573,
+      0.45374569296836853,
+      -0.5401740074157715,
+      -0.5819991230964661
+    ],
+    "max_cube_rise_m": 0.019022971391677856,
+    "max_cube_xy_displacement_m": 0.7242257020312758,
+    "max_left_right_sensor_force_n": [
+      7.034217357635498,
+      153.51287841796875
+    ],
+    "physical_lift_pass": false,
+    "physics_samples": 112,
+    "physics_step_gaps": 0,
+    "run_dir": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-eval-5x12s-seed8-12-20261102T2330Z/seed8",
+    "status": "completed",
+    "termination": {
+      "terminated": true,
+      "time_out": false
+    }
+  }
+}

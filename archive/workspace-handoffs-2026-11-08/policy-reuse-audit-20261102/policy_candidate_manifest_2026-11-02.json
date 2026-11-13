@@ -1,0 +1,168 @@
+{
+  "acquired_date": "2026-11-02",
+  "source_url": "https://developer.download.nvidia.com/Omniverse/learning/Courses/GettingStartedNewton/getting_started_with_newton_franka_cube.zip",
+  "archive_sha256": "d0fdef74d06752b224e78402437de2b8aaf5ee76145f13338bd81049a9f75f67",
+  "candidate_executed": false,
+  "records": [
+    {
+      "path": "pyproject.toml",
+      "bytes": 1993,
+      "sha256": "610450cc7f410e02bbd03a9e9401228eeeac59ce1e4dcfc3510fd1f651a0fdf8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2478,
+      "sha256": "7743719b2ba65b7c091d0bf2c0acc62f939fac3ff87b4e99af810c2075a05dc2"
+    },
+    {
+      "path": ".vscode/tools/setup_vscode.py",
+      "bytes": 8585,
+      "sha256": "d5dab23e903339c068e1529ce4b7369fa3c5dcc9a6f62d6121a12a8c6fbbfb4b"
+    },
+    {
+      "path": "checkpoint/model_399.pt",
+      "bytes": 1276899,
+      "sha256": "832d8262ede665b5698c557e79ef0aa4167ec0fae1b5d5d8b222e829effc24a4"
+    },
+    {
+      "path": "scripts/list_envs.py",
+      "bytes": 1634,
+      "sha256": "2a01db78bdd40879e65ed1ea3e8f12b1a982c3e90249b4ec812bed0c89d9a592"
+    },
+    {
+      "path": "scripts/random_agent.py",
+      "bytes": 3217,
+      "sha256": "7e08453e9f6d51c7e24c119280a89d81dd5de5e22a960e48ee3bd64637762d49"
+    },
+    {
+      "path": "scripts/zero_agent.py",
+      "bytes": 3247,
+      "sha256": "9b3d49e8f419e58dd7953ba10f56c3b9cd6da8c929795742f73e8016068648ff"
+    },
+    {
+      "path": "scripts/rsl_rl/cli_args.py",
+      "bytes": 3722,
+      "sha256": "610ecd0a51bac90c206e57578c7789c8cf5dfd5ebd0096c3ca398f9bd2f2b42d"
+    },
+    {
+      "path": "scripts/rsl_rl/play.py",
+      "bytes": 9432,
+      "sha256": "d7d68b09678ab48a1142fa5d565756a6abc169dfdc0845b85fff9f1cc9480a41"
+    },
+    {
+      "path": "scripts/rsl_rl/train.py",
+      "bytes": 10300,
+      "sha256": "0a13603dacc530c788c2ab75ccc9e47ca223709090e97b305973c19a4080475f"
+    },
+    {
+      "path": "source/franka_cube/pyproject.toml",
+      "bytes": 105,
+      "sha256": "0aafaeecb08244d278aa82585d07d1c8b4a31b58815b097bca70e1e1dbcee146"
+    },
+    {
+      "path": "source/franka_cube/setup.py",
+      "bytes": 1407,
+      "sha256": "e3858a184d3a8520dc1580a689f7c61c538c2fd82252a531fb895396755c5fe6"
+    },
+    {
+      "path": "source/franka_cube/build/lib/franka_cube/__init__.py",
+      "bytes": 686,
+      "sha256": "d98ceba70ec5d8584b0cab085fa96514406564bf8e28fa71cca8b811ff5b4f4b"
+    },
+    {
+      "path": "source/franka_cube/build/lib/franka_cube/ui_extension_example.py",
+      "bytes": 1761,
+      "sha256": "34ad2ee1afbbb866aa24a76edc005a3a62b3fcc8eb87e1b378d1a493d889a644"
+    },
+    {
+      "path": "source/franka_cube/build/lib/franka_cube/tasks/__init__.py",
+      "bytes": 532,
+      "sha256": "098fcc6bb68a96b995f3dc47aa377afb9d5e1da108a4e404a754b70e3bcca9eb"
+    },
+    {
+      "path": "source/franka_cube/build/lib/franka_cube/tasks/direct/__init__.py",
+      "bytes": 231,
+      "sha256": "0f061c6be551c578c0bf4e7b9c217d86b5ff740adce37b99d70fd997feddcabe"
+    },
+    {
+      "path": "source/franka_cube/build/lib/franka_cube/tasks/direct/franka_cube/__init__.py",
+      "bytes": 611,
+      "sha256": "392143fa5a65deb584adad7aebc1cfd4e548e83264115e02c5cce7ce3cca17c5"
+    },
+    {
+      "path": "source/franka_cube/build/lib/franka_cube/tasks/direct/franka_cube/franka_cube_env_cfg.py",
+      "bytes": 6161,
+      "sha256": "7ba1932af481e58f88da40007e6794743b99a9b27dfcd8f097372d44463eeb09"
+    },
+    {
+      "path": "source/franka_cube/build/lib/franka_cube/tasks/direct/franka_cube/franka_cube_env.py",
+      "bytes": 26865,
+      "sha256": "1bc9e13e923836d24a98a01b2714c5e14550b465963e23a79294a23ad204ec5d"
+    },
+    {
+      "path": "source/franka_cube/build/lib/franka_cube/tasks/direct/franka_cube/model_400.pt",
+      "bytes": 1276899,
+      "sha256": "04b32fc4dbb1eddd84271bafa09c74080215dcd1f9cb338201e90e533937737c"
+    },
+    {
+      "path": "source/franka_cube/build/lib/franka_cube/tasks/direct/franka_cube/agents/__init__.py",
+      "bytes": 191,
+      "sha256": "e72b43071221e271f69574d1d5e6116c5d71b41727973bf00560cb667d766435"
+    },
+    {
+      "path": "source/franka_cube/build/lib/franka_cube/tasks/direct/franka_cube/agents/rsl_rl_ppo_cfg.py",
+      "bytes": 1221,
+      "sha256": "9b345a1b3a75e16c964469b0b9b79238ed50523902fbfae815d794f9f1369523"
+    },
+    {
+      "path": "source/franka_cube/config/extension.toml",
+      "bytes": 1553,
+      "sha256": "77978e78564a85ddc514898556c8c1b8cc9548aef8df52a689cbd5bc922964d7"
+    },
+    {
+      "path": "source/franka_cube/franka_cube/__init__.py",
+      "bytes": 686,
+      "sha256": "d98ceba70ec5d8584b0cab085fa96514406564bf8e28fa71cca8b811ff5b4f4b"
+    },
+    {
+      "path": "source/franka_cube/franka_cube/ui_extension_example.py",
+      "bytes": 1761,
+      "sha256": "34ad2ee1afbbb866aa24a76edc005a3a62b3fcc8eb87e1b378d1a493d889a644"
+    },
+    {
+      "path": "source/franka_cube/franka_cube/tasks/__init__.py",
+      "bytes": 532,
+      "sha256": "098fcc6bb68a96b995f3dc47aa377afb9d5e1da108a4e404a754b70e3bcca9eb"
+    },
+    {
+      "path": "source/franka_cube/franka_cube/tasks/direct/__init__.py",
+      "bytes": 231,
+      "sha256": "0f061c6be551c578c0bf4e7b9c217d86b5ff740adce37b99d70fd997feddcabe"
+    },
+    {
+      "path": "source/franka_cube/franka_cube/tasks/direct/franka_cube/__init__.py",
+      "bytes": 611,
+      "sha256": "392143fa5a65deb584adad7aebc1cfd4e548e83264115e02c5cce7ce3cca17c5"
+    },
+    {
+      "path": "source/franka_cube/franka_cube/tasks/direct/franka_cube/franka_cube_env_cfg.py",
+      "bytes": 6080,
+      "sha256": "c5d48fe57f4ef3426e93573acd93c4927789ef0f160e039e3b20da3b208cdd0e"
+    },
+    {
+      "path": "source/franka_cube/franka_cube/tasks/direct/franka_cube/franka_cube_env.py",
+      "bytes": 26865,
+      "sha256": "1bc9e13e923836d24a98a01b2714c5e14550b465963e23a79294a23ad204ec5d"
+    },
+    {
+      "path": "source/franka_cube/franka_cube/tasks/direct/franka_cube/agents/__init__.py",
+      "bytes": 191,
+      "sha256": "e72b43071221e271f69574d1d5e6116c5d71b41727973bf00560cb667d766435"
+    },
+    {
+      "path": "source/franka_cube/franka_cube/tasks/direct/franka_cube/agents/rsl_rl_ppo_cfg.py",
+      "bytes": 1221,
+      "sha256": "9b345a1b3a75e16c964469b0b9b79238ed50523902fbfae815d794f9f1369523"
+    }
+  ]
+}

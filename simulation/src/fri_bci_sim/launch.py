@@ -10,7 +10,8 @@ def build_command(root: Path, mode: str, num_envs: int, seed: int, iterations: i
                   checkpoint: Path | None = None, task: str = "FRI-Franka-Lift") -> list[str]:
     if mode not in ("train", "play") or num_envs < 1 or iterations < 1 or seed < 0:
         raise ValueError("Invalid launch configuration")
-    if task not in ("FRI-Franka-Lift", "FRI-Franka-Lift-Pregrasp", "FRI-Franka-Lift-Approach"):
+    if task not in ("FRI-Franka-Lift", "FRI-Franka-Lift-Pregrasp", "FRI-Franka-Lift-Approach",
+                    "FRI-Franka-Lift-NearTable", "FRI-Franka-Lift-NearTable-Progress"):
         raise ValueError("Unknown task")
     executable = root / ".venv" / ("Scripts/isaaclab.exe" if os.name == "nt" else "bin/isaaclab")
     cmd = [str(executable), mode, "--task", task, "--rl_library", "rsl_rl",

@@ -1,0 +1,17 @@
+{
+  "base_config": "configs/gpu_research.json",
+  "seeds": [42, 123, 2026],
+  "models": {
+    "eegnet8": {"f1": 8, "depth": 2, "f2": 16, "dropout": 0.25},
+    "eegnet32": {"f1": 32, "depth": 2, "f2": 64, "dropout": 0.5}
+  },
+  "source_epochs": 300,
+  "source_patience": 60,
+  "source_batch_size": 128,
+  "source_lr": 0.001,
+  "target_epochs": [25, 100, 300],
+  "target_batch_size": 15,
+  "target_lrs": [0.0001, 0.0005, 0.001],
+  "modes": ["scratch", "transfer", "head_only"],
+  "checkpoint_every": 10
+}

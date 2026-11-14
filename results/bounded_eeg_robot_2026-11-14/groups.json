@@ -1,0 +1,128 @@
+[
+  {
+    "name": "eegnet/moderate",
+    "participants": 15,
+    "pass_fraction": 0.4666666666666667,
+    "rest_command_fraction": 0.27907127801436754,
+    "imagery_command_coverage": 0.3647877145438121
+  },
+  {
+    "name": "riemannian/rest_q80",
+    "participants": 15,
+    "pass_fraction": 0.4,
+    "rest_command_fraction": 0.25090850432313855,
+    "imagery_command_coverage": 0.33875338753387535
+  },
+  {
+    "name": "riemannian/confidence",
+    "participants": 15,
+    "pass_fraction": 0.4,
+    "rest_command_fraction": 0.33393728222996527,
+    "imagery_command_coverage": 0.4331165311653117
+  },
+  {
+    "name": "riemannian/raw",
+    "participants": 15,
+    "pass_fraction": 0.4,
+    "rest_command_fraction": 0.3876371144663829,
+    "imagery_command_coverage": 0.4739837398373984
+  },
+  {
+    "name": "eegnet/rest_q80",
+    "participants": 15,
+    "pass_fraction": 0.3333333333333333,
+    "rest_command_fraction": 0.19986320815589123,
+    "imagery_command_coverage": 0.2672809394760614
+  },
+  {
+    "name": "riemannian/moderate",
+    "participants": 15,
+    "pass_fraction": 0.3333333333333333,
+    "rest_command_fraction": 0.32965156794425093,
+    "imagery_command_coverage": 0.4114363143631436
+  },
+  {
+    "name": "eegnet/raw",
+    "participants": 15,
+    "pass_fraction": 0.3333333333333333,
+    "rest_command_fraction": 0.40113649072998675,
+    "imagery_command_coverage": 0.5205058717253839
+  },
+  {
+    "name": "riemannian/temporal",
+    "participants": 15,
+    "pass_fraction": 0.26666666666666666,
+    "rest_command_fraction": 0.2685572331913796,
+    "imagery_command_coverage": 0.3410840108401084
+  },
+  {
+    "name": "eegnet/confidence",
+    "participants": 15,
+    "pass_fraction": 0.2,
+    "rest_command_fraction": 0.15696562997376012,
+    "imagery_command_coverage": 0.2295573622402891
+  },
+  {
+    "name": "csp/rest_q80",
+    "participants": 15,
+    "pass_fraction": 0.2,
+    "rest_command_fraction": 0.18910311007871997,
+    "imagery_command_coverage": 0.24856368563685644
+  },
+  {
+    "name": "csp/temporal",
+    "participants": 15,
+    "pass_fraction": 0.2,
+    "rest_command_fraction": 0.22342495805910448,
+    "imagery_command_coverage": 0.2728455284552845
+  },
+  {
+    "name": "csp/confidence",
+    "participants": 15,
+    "pass_fraction": 0.2,
+    "rest_command_fraction": 0.2851309846431798,
+    "imagery_command_coverage": 0.35523035230352307
+  },
+  {
+    "name": "csp/moderate",
+    "participants": 15,
+    "pass_fraction": 0.2,
+    "rest_command_fraction": 0.31801264679313473,
+    "imagery_command_coverage": 0.38390243902439025
+  },
+  {
+    "name": "csp/raw",
+    "participants": 15,
+    "pass_fraction": 0.2,
+    "rest_command_fraction": 0.3788114595431669,
+    "imagery_command_coverage": 0.45777777777777773
+  },
+  {
+    "name": "eegnet/temporal",
+    "participants": 15,
+    "pass_fraction": 0.06666666666666667,
+    "rest_command_fraction": 0.10313975996902829,
+    "imagery_command_coverage": 0.13539295392953932
+  },
+  {
+    "name": "eegnet/crc",
+    "participants": 15,
+    "pass_fraction": 0.0,
+    "rest_command_fraction": 0.0,
+    "imagery_command_coverage": 0.00027100271002710054
+  },
+  {
+    "name": "csp/crc",
+    "participants": 15,
+    "pass_fraction": 0.0,
+    "rest_command_fraction": 0.0,
+    "imagery_command_coverage": 0.0
+  },
+  {
+    "name": "riemannian/crc",
+    "participants": 15,
+    "pass_fraction": 0.0,
+    "rest_command_fraction": 0.0,
+    "imagery_command_coverage": 0.0
+  }
+]

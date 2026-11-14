@@ -1,0 +1,11 @@
+{
+  "selected": {
+    "name": "eegnet/moderate",
+    "participants": 15,
+    "pass_fraction": 0.4666666666666667,
+    "rest_command_fraction": 0.27907127801436754,
+    "imagery_command_coverage": 0.3647877145438121
+  },
+  "protocol_sha256": "a0525f1568fb06c3bad42920708ac15db85af7f114a02f33892a5e71194841cc",
+  "groups_sha256": "c13ea34209e7ecb9f99ef1d432cb009d6e96f5e5d35fb4dcf5a86b003343712b"
+}

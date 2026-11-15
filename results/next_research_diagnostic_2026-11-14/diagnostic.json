@@ -1,0 +1,105 @@
+{
+  "study": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\results\\bounded_eeg_robot_2026-11-14",
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "seed_rule": "Analyze all three EEGNet seeds, average metric within participant, then summarize N=15 participants; classical models have one fit each.",
+  "transition_definition": "A two-second trailing score window is transitional if it crosses a labeled interval boundary; interval labels only classify predictions for offline evaluation.",
+  "decoders": {
+    "eegnet": {
+      "pure_rest_interior": {
+        "participant_mean": 0.34715746280720133,
+        "participant_sd": 0.13589815556289817,
+        "n_participants": 15
+      },
+      "transition_imagery_to_rest": {
+        "participant_mean": 0.47947539175561754,
+        "participant_sd": 0.09608560166510545,
+        "n_participants": 15
+      },
+      "pure_imagery_interior": {
+        "participant_mean": 0.5475505108956968,
+        "participant_sd": 0.13674110100818193,
+        "n_participants": 15
+      },
+      "transition_rest_to_imagery": {
+        "participant_mean": 0.40642464575086484,
+        "participant_sd": 0.12619629220568826,
+        "n_participants": 15
+      },
+      "post_imagery_rest_max_in_transition_fraction": {
+        "participant_mean": 0.6793650793650793,
+        "participant_sd": 0.15993870978132008,
+        "n_participants": 15
+      }
+    },
+    "csp": {
+      "pure_rest_interior": {
+        "participant_mean": 0.31696488643618753,
+        "participant_sd": 0.2563315989819253,
+        "n_participants": 15
+      },
+      "transition_imagery_to_rest": {
+        "participant_mean": 0.4406602346770345,
+        "participant_sd": 0.1878660902638539,
+        "n_participants": 15
+      },
+      "pure_imagery_interior": {
+        "participant_mean": 0.53286174225529,
+        "participant_sd": 0.22488960892388163,
+        "n_participants": 15
+      },
+      "transition_rest_to_imagery": {
+        "participant_mean": 0.3750763711273048,
+        "participant_sd": 0.253573527291337,
+        "n_participants": 15
+      },
+      "post_imagery_rest_max_in_transition_fraction": {
+        "participant_mean": 0.6523809523809524,
+        "participant_sd": 0.1848225582469009,
+        "n_participants": 15
+      }
+    },
+    "riemannian": {
+      "pure_rest_interior": {
+        "participant_mean": 0.3233077607296807,
+        "participant_sd": 0.27214129517233754,
+        "n_participants": 15
+      },
+      "transition_imagery_to_rest": {
+        "participant_mean": 0.4645956050563328,
+        "participant_sd": 0.20293238289492024,
+        "n_participants": 15
+      },
+      "pure_imagery_interior": {
+        "participant_mean": 0.5856205392302232,
+        "participant_sd": 0.250010301904172,
+        "n_participants": 15
+      },
+      "transition_rest_to_imagery": {
+        "participant_mean": 0.37134583024869255,
+        "participant_sd": 0.29189011907313367,
+        "n_participants": 15
+      },
+      "post_imagery_rest_max_in_transition_fraction": {
+        "participant_mean": 0.6904761904761905,
+        "participant_sd": 0.16123310060532423,
+        "n_participants": 15
+      }
+    }
+  }
+}

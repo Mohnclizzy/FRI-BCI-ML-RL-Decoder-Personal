@@ -2,6 +2,8 @@
 
 > **November 14 update:** The bounded EEG command comparison and all 270 robot replays are complete. Read the [completed results](results/bounded_eeg_robot_2026-11-14/summary.md) and [reproduction handoff](docs/BOUNDED_STUDY_HANDOFF_2026-11-14.md). The [research follow-up handoff](docs/NEXT_RESEARCH_HANDOFF_2026-11-14.md) specifies the proposed diagnostic, repeated-request experiment, conditional training ablation, and independent confirmation requirements. That follow-up is planned, not yet implemented.
 
+> **Next research diagnostic:** The saved R08 stream audit and focused prior-art scan are complete in [results/next_research_diagnostic_2026-11-14/](results/next_research_diagnostic_2026-11-14/). It finds both elevated transition scores and weak state-interior separation. Do not present a replay of cued labels as self-paced intent control.
+
 > **Navigation & Reproducibility Update (2026-11-11):** For current project status, verified November 11 artifacts, and the forward execution plan, start at [STATUS.md](STATUS.md) and [docs/NEXT_STEPS_AUDIT_2026-11-11.md](docs/NEXT_STEPS_AUDIT_2026-11-11.md). See [results/eegnet_training_2026-11-11/evaluation_summary.md](results/eegnet_training_2026-11-11/evaluation_summary.md) for the 89-source / 15-target `EA-EEGNet` + `CRC-Hysteresis` evaluation (`S001–S015` `R12` are now inspected) and [results/project_audit_2026-11-11/horizon_aligned_telemetry_audit.md](results/project_audit_2026-11-11/horizon_aligned_telemetry_audit.md) for the 20-second horizon-aligned robot telemetry audit and `robomimic-latch6-v2.0.0` control harness. Sections below are preserved for historical context.
 
 Public EEG motor-imagery decoding research for simulated robotic-hand control using machine learning and reinforcement learning.

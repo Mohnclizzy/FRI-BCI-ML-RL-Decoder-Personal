@@ -4,6 +4,12 @@
     123,
     2026
   ],
+  "source_epochs_completed_before_patience_stop": {
+    "42": 99,
+    "123": 65,
+    "2026": 121
+  },
+  "target_epochs_per_participant_seed": 300,
   "n_participants": 15,
   "n_seed_subject_rows": 45,
   "aggregation": "average the 3 training seeds within each participant, then summarize n=15 participants",

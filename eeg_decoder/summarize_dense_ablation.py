@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import json
 from pathlib import Path
 import statistics
@@ -41,6 +42,16 @@ def main():
     subjects = sorted({int(r['subject']) for r in rows})
     if len(rows) != len(seeds)*15 or subjects != list(range(1, 16)):
         raise ValueError('Expected complete S001-S015 coverage for every seed')
+    source_epochs = {}
+    log_path = args.run_dir/'training.log.gz'
+    if log_path.exists():
+        with gzip.open(log_path, 'rt', encoding='utf-8') as handle:
+            for line in handle:
+                try: item = json.loads(line)
+                except json.JSONDecodeError: continue
+                if 'source_epoch' in item and 'bad_epochs' in item:
+                    source_epochs[str(item['seed'])] = max(source_epochs.get(str(item['seed']), 0),
+                                                           int(item['source_epoch']))
 
     per_subject = []
     for subject in subjects:
@@ -85,7 +96,9 @@ def main():
             },
             'caveat': 'Historical development aggregate; seed/participant pairing was unavailable in its compact summary.'
         }
-    result = {'seeds': seeds, 'n_participants': len(subjects), 'n_seed_subject_rows': len(rows),
+    result = {'seeds': seeds, 'source_epochs_completed_before_patience_stop': source_epochs,
+              'target_epochs_per_participant_seed': 300,
+              'n_participants': len(subjects), 'n_seed_subject_rows': len(rows),
               'aggregation': 'average the 3 training seeds within each participant, then summarize n=15 participants',
               'target_r12_touched': False, 'role': 'exploratory R08 development; not independent confirmation',
               'aggregate': aggregate, 'historical_baseline_context': historical_baseline,
@@ -93,6 +106,7 @@ def main():
     (args.run_dir/'aggregate.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
     md = ['# Dense causal-window ablation (R08 development)', '',
           f"Seeds: {', '.join(map(str, seeds))}. Participants: {len(subjects)}.",
+          f"Source pretraining stopped by the frozen 60-epoch patience rule after {', '.join(f'seed {s}: {source_epochs.get(str(s), 'unknown')} epochs' for s in seeds)}; every target adaptation ran 300 epochs.",
           'Seeds are averaged within participant; cohort SD uses the 15 participants.',
           'R08 is development data and is not independent confirmation. Target R12 was not loaded.', '',
           '| Metric | Mean across participants | SD across participants |', '|---|---:|---:|']

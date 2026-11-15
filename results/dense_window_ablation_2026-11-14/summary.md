@@ -1,6 +1,7 @@
 # Dense causal-window ablation (R08 development)
 
 Seeds: 42, 123, 2026. Participants: 15.
+Source pretraining stopped by the frozen 60-epoch patience rule after seed 42: 99 epochs, seed 123: 65 epochs, seed 2026: 121 epochs; every target adaptation ran 300 epochs.
 Seeds are averaged within participant; cohort SD uses the 15 participants.
 R08 is development data and is not independent confirmation. Target R12 was not loaded.
 

@@ -1,5 +1,11 @@
 # Research follow-up: reliable EEG requests for an autonomous robot
 
+## Status update — 2026-11-14
+
+The Phase 3 dense causal-window ablation has now been completed as a conditional, exploratory R08 development run. It used the frozen EEGNet8 transfer architecture, three training seeds, all 15 target participants, and source R04/R08 training with source-only R12 validation. The dense-window result was 62.52% mean balanced accuracy (participant SD 10.23%), 42.07% raw REST activation, and 40.61% missed imagery. The historical cue-window recipe reported 68.15%, 40.11%, and 47.95%, respectively. This descriptive comparison suggests a modest reduction in missed imagery, with worse accuracy and no improvement in REST activation; it does not support more training or a positive command-quality claim. Full metrics and checkpoint bundle are in `results/dense_window_ablation_2026-11-14/`.
+
+**Decision:** stop further EEG model-training expansion in this finish pass. The dense-window hypothesis did not solve the measured command bottleneck, and stronger gates still suppress most imagery coverage. Finish analysis/reporting of the already completed robot study, retain the dense ablation as a negative exploratory result, and identify genuinely unused data before any confirmatory modeling. R08 is not confirmation and historical target R12 remains unsuitable for that role.
+
 ## Objective and authority
 
 The user wants a credible, compelling research contribution, not merely another completed training run. The recommended direction is to test whether a causal command controller can turn noisy recorded EEG into more reliably timed robot task requests. Preserve the completed study as the baseline. This document is a plan for a separate follow-up; its proposed methods and success targets are not achieved results.

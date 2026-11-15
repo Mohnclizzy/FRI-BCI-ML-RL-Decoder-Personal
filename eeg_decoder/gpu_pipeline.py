@@ -25,8 +25,11 @@ from .risk_gate import HysteresisGate, calibrate_threshold, rest_episode_maxima
 
 
 def digest(path):
+    hasher = hashlib.sha256()
     with Path(path).open('rb') as handle:
-        return hashlib.file_digest(handle, 'sha256').hexdigest()
+        for block in iter(lambda: handle.read(1 << 20), b''):
+            hasher.update(block)
+    return hasher.hexdigest()
 
 
 def config_digest(config):

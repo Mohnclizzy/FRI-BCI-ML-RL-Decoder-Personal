@@ -15,7 +15,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--study", type=Path, required=True)
     parser.add_argument("--robot-results", type=Path, required=True)
-    parser.add_argument("--cache-dir", type=Path, default=Path("outputs/local_scratch_2026-11-11"))
+    parser.add_argument("--cache-dir", type=Path, default=Path("outputs/local_scratch_2026-11-11"),
+                        help="R08 cache fallback for older studies without exported annotations")
     args = parser.parse_args()
     study, robot = args.study, args.robot_results
     jobs = json.loads((study / "robot_jobs.json").read_text())["jobs"]
@@ -24,6 +25,19 @@ def main():
         raise ValueError("Robot batch incomplete")
     if len(jobs) != 270:
         raise ValueError("Frozen job manifest is not 270 rows")
+    intervals_by_subject = {}
+    for subject in sorted({job["subject"] for job in jobs}):
+        annotations = study / "scores" / f"S{subject:03d}_annotations.json"
+        if annotations.is_file():
+            intervals_by_subject[subject] = json.loads(annotations.read_text())
+        else:
+            cache = args.cache_dir / "cache" / "7d3de6fbf853d44a" / f"S{subject:03d}R08.json"
+            if not cache.is_file():
+                raise FileNotFoundError(f"Missing R08 annotations: {annotations} or {cache}")
+            record = json.loads(cache.read_text())
+            if record["subject"] != subject or record["run"] != 8:
+                raise ValueError(f"Wrong R08 annotation source: {cache}")
+            intervals_by_subject[subject] = record["intervals"]
     rows = []
     for job in jobs:
         key = "S%03d_seed%d_%s" % (job["subject"], job["seed"], job["condition"])
@@ -44,11 +58,9 @@ def main():
         else:
             condition = job["harness_condition"]
             decisions, gate, schedule = None, None, None
-        cache = args.cache_dir / "cache" / "7d3de6fbf853d44a" / ("S%03dR08.json" % job["subject"])
-        intervals = json.loads(cache.read_text())["intervals"]
         joined = join_horizon_exposure_and_telemetry(
             condition=condition, decisions_path=decisions, gate=gate, schedule_spans=schedule,
-            telemetry_path=telemetry, summary_path=summary, intervals=intervals,
+            telemetry_path=telemetry, summary_path=summary, intervals=intervals_by_subject[job["subject"]],
         )
         physical = json.loads(summary.read_text())
         rows.append(dict(job=job, physical=physical, joined=joined))

@@ -15,18 +15,31 @@ The run used the selected `EEGNet8 / transfer / lr 0.0001 / epoch 300` recipe, a
 
 ## Reproduction
 
-From the repository root:
+From the repository root, reproduce the robot aggregates from the committed telemetry, traces, schedules, and annotations. The aggregation runs with Python, NumPy, and Matplotlib. Each invocation writes to a fresh directory under `outputs`.
 
 ```powershell
+$published = 'results\bounded_eeg_robot_2026-11-14'
+$replay = Join-Path 'outputs' ('robot_reaggregation_' + [guid]::NewGuid())
+New-Item -ItemType Directory -Path $replay -Force | Out-Null
+Copy-Item "$published\robot_jobs.json" $replay
+Copy-Item "$published\scores","$published\schedules" $replay -Recurse
+tar -xzf "$published\command_traces.tar.gz" -C $replay
+if ($LASTEXITCODE) { throw 'Could not unpack the command traces' }
+tar -xzf "$published\robot_results_bundle.tar.gz" -C $replay
+if ($LASTEXITCODE) { throw 'Could not unpack the robot telemetry' }
+
+python simulation\scripts\aggregate_frozen_robot_jobs.py `
+  --study $replay --robot-results "$replay\robot_results"
+```
+
+To regenerate the EEG comparison from the recovered campaign checkpoints and R04/R08 cache, use the EEG project environment and a new output path. The native robot rollouts and the EEG comparison are separate commands.
+
+```powershell
+$eegOutput = Join-Path 'outputs' ('bounded_eeg_replay_' + [guid]::NewGuid())
 python -m eeg_decoder.bounded_study `
   --campaign-dir outputs\campaign_recovered `
   --cache-dir outputs\local_scratch_2026-11-11 `
-  --output results\bounded_eeg_robot_2026-11-14
-
-python simulation\scripts\aggregate_frozen_robot_jobs.py `
-  --study results\bounded_eeg_robot_2026-11-14 `
-  --robot-results results\bounded_eeg_robot_2026-11-14\robot\robot_results `
-  --cache-dir outputs\local_scratch_2026-11-11
+  --output $eegOutput
 ```
 
 For a robot rerun, provision the exact native environment and checkpoint listed above. Execute the immutable `robot_jobs.json` with `simulation/scripts/run_frozen_robot_jobs.py` and `simulation/src/fri_bci_sim/robomimic_harness.py`. The runner checks that the frozen manifest still contains the same 270 unique jobs and refuses a changed manifest. The current Windows environment cannot run this native simulator build; the tested runtime was Brev. Do not run target R12 or change the gate, robot policy, or simulator in this finish pass.

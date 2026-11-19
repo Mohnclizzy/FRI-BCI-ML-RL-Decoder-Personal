@@ -24,24 +24,40 @@ METRICS = {
 }
 
 
+def read_complete_cohort(run_dir):
+    """Accept the published flat summaries or the trainer's per-seed directories."""
+    expected_seeds = [42, 123, 2026]
+    rows = []
+    subjects = list(range(1, 16))
+    flat = sorted(run_dir.glob('seed_*_target_summary.json'))
+    nested = sorted(run_dir.glob('seed_*/target_summary.json'))
+    if flat and nested:
+        raise ValueError('Choose a directory with a single summary layout.')
+    paths = flat or nested
+    expected = [run_dir / (f'seed_{seed}_target_summary.json' if flat
+                else f'seed_{seed}/target_summary.json') for seed in expected_seeds]
+    if set(paths) != set(expected):
+        raise ValueError('Expected exactly the completed seeds 42, 123 and 2026.')
+    for seed, path in zip(expected_seeds, expected):
+        items = json.loads(path.read_text(encoding='utf-8'))
+        if sorted(r['subject'] for r in items) != subjects:
+            raise ValueError(f'{path}: expected S001-S015 exactly once')
+        if any(r['seed'] != seed or r['epoch'] != 300 or r['metrics']['run'] != 8
+               or r['metrics']['target_r12_touched'] is not False for r in items):
+            raise ValueError(f'{path}: unexpected seed, epoch, or development partition')
+        rows.extend(items)
+    versions = {r.get('run_version', 'historical-nov14') for r in rows}
+    if len(versions) != 1:
+        raise ValueError('Summaries mix different training budget versions.')
+    return rows, expected_seeds, subjects
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--run-dir', type=Path, required=True,
-                        help='Directory containing seed_<n>_target_summary.json files.')
+                        help='Directory containing flat or per-seed target summaries.')
     args = parser.parse_args()
-    summaries = sorted(args.run_dir.glob('seed_*_target_summary.json'))
-    if not summaries:
-        raise FileNotFoundError(f'No seed target summaries in {args.run_dir}')
-    rows = []
-    for path in summaries:
-        items = json.loads(path.read_text(encoding='utf-8'))
-        if len(items) != 15:
-            raise ValueError(f'{path} contains {len(items)} subjects, expected 15')
-        rows.extend(items)
-    seeds = sorted({int(r['seed']) for r in rows})
-    subjects = sorted({int(r['subject']) for r in rows})
-    if len(rows) != len(seeds)*15 or subjects != list(range(1, 16)):
-        raise ValueError('Expected complete S001-S015 coverage for every seed')
+    rows, seeds, subjects = read_complete_cohort(args.run_dir)
     source_epochs = {}
     log_path = args.run_dir/'training.log.gz'
     if log_path.exists():
@@ -96,7 +112,8 @@ def main():
             },
             'caveat': 'Historical development aggregate; seed/participant pairing was unavailable in its compact summary.'
         }
-    result = {'seeds': seeds, 'source_epochs_completed_before_patience_stop': source_epochs,
+    run_version = rows[0].get('run_version', 'historical-nov14')
+    result = {'run_version': run_version, 'seeds': seeds, 'source_epochs_completed_before_patience_stop': source_epochs,
               'target_epochs_per_participant_seed': 300,
               'n_participants': len(subjects), 'n_seed_subject_rows': len(rows),
               'aggregation': 'average the 3 training seeds within each participant, then summarize n=15 participants',
@@ -104,17 +121,31 @@ def main():
               'aggregate': aggregate, 'historical_baseline_context': historical_baseline,
               'participant_metrics_file': csv_path.name}
     (args.run_dir/'aggregate.json').write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
+    epoch_note = ', '.join(f'seed {seed}: {source_epochs[str(seed)]}' for seed in seeds
+                           if str(seed) in source_epochs)
     md = ['# Dense causal-window ablation (R08 development)', '',
           f"Seeds: {', '.join(map(str, seeds))}. Participants: {len(subjects)}.",
-          f"Source pretraining stopped by the frozen 60-epoch patience rule after {', '.join(f'seed {s}: {source_epochs.get(str(s), 'unknown')} epochs' for s in seeds)}; every target adaptation ran 300 epochs.",
+          f'Training budget version: {run_version}.',
+          f'Source epochs observed in the supplied log: {epoch_note or "unavailable"}. '
+          'Every target adaptation ran 300 epochs.',
           'Seeds are averaged within participant; cohort SD uses the 15 participants.',
           'R08 is development data and is not independent confirmation. Target R12 was not loaded.', '',
           '| Metric | Mean across participants | SD across participants |', '|---|---:|---:|']
     for key, item in aggregate.items():
         md.append(f"| {key.replace('_',' ')} | {item['participant_mean']:.3f} | {item['participant_sd']:.3f} |")
+    if run_version == 'historical-nov14':
+        md += ['', 'Budget correction for November 14: dense source training used 178 '
+               'updates per epoch versus 42 in the cue-window campaign. This comparison '
+               'cannot isolate the effect of training windows.']
     if historical_baseline:
         md += ['', '## Historical recipe context', '',
-               'The earlier selected EEGNet8 transfer recipe (LR .0001, epoch 300) reported 68.15% balanced accuracy, 40.11% raw REST activation, and 47.95% missed imagery across 45 participant-seed rows. This run reports 62.52%, 42.07%, and 40.61%, respectively. Dense training modestly reduced missed imagery in this exploratory comparison but reduced balanced accuracy and did not reduce REST activation. The compact historical summary has no paired rows, so these are descriptive differences, not paired inference.']
+               '| R08 metric | Historical cue-window recipe | Supplied dense run |',
+               '|---|---:|---:|']
+        for key in ('balanced_accuracy', 'raw_rest_activation', 'raw_missed_imagery'):
+            md.append(f"| {key.replace('_', ' ')} | {historical_baseline[key]:.2%} | "
+                      f"{aggregate[key]['participant_mean']:.2%} |")
+        md += ['', 'These are descriptive development comparisons. Interpret training '
+                   'differences using the optimizer budgets recorded for each run.']
     (args.run_dir/'summary.md').write_text('\n'.join(md)+'\n', encoding='utf-8')
     try:
         import matplotlib.pyplot as plt

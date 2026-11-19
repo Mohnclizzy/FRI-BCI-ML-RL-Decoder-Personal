@@ -1,3 +1,5 @@
+> **November 19 closeout:** The irregular-timing request pilot and 240 versioned-harness (`robomimic-latch6-v2.0.0`) robot replays on BCI Competition IV Dataset 1 (`ds1a, ds1b, ds1f, ds1g`) are packaged in [results/bciciv_ds1_request_pilot_2026-11-19/summary.md](results/bciciv_ds1_request_pilot_2026-11-19/summary.md) with runner scripts [analysis/bciciv_ds1_request_pilot.py](analysis/bciciv_ds1_request_pilot.py) and [simulation/scripts/run_one_request_window_grid.py](simulation/scripts/run_one_request_window_grid.py).
+
 > [November 18 engineering review](results/project_review_2026-11-18/review.md) documents a correction to the historical dense training budget, a timing-only EEG control, and the feasibility limit for the proposed request scheduler. Read it before running the supervisor experiment.
 
 > **November 18, 2026 — agent handoff:** Start with [the Antigravity handoff](docs/ANTIGRAVITY_HANDOFF_2026-11-18.md) for verified robomimic policy attribution, completed November 14 results, artifact recovery, and the proposed learned EEG supervisory policy. The supervisor is a proposal, not an implemented result. Older entries below are historical.

@@ -1,0 +1,401 @@
+{
+  "source": "R04 cached EDF annotation intervals from outputs/local_scratch_2026-11-11/cache/7d3de6fbf853d44a. Per-subject R08 source EDF hashes were read separately from R08 metadata.",
+  "subjects": {
+    "S001": {
+      "schedule": "dfc5cbd87ebb",
+      "fit_edf_sha256": "3d161f88e1c00632585287d2ce584c2bc0f08862438eb255ea8723e00fac693d",
+      "fit_metadata_sha256": "b825c3239a33a2d1dd2f73766bea4dff7fafd247917b1b7d9e134c3060679f56",
+      "dev_edf_sha256": "358fb5189220725141968ae285fbe9e3f36210b834ffba71d940af308e3aca68"
+    },
+    "S002": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "fcd37831378c411d50c223d97ffbc00949be2271d093f1d8e56bbe7c02bd1539",
+      "fit_metadata_sha256": "b7391aa6fb18c73007da1effd52bafda571cf766d2cfd59d7e34b47c4e08368d",
+      "dev_edf_sha256": "02d64941f6bcd1635bc7dd187a9553331b73933e9771f4e7c59249dfc5632c5a"
+    },
+    "S003": {
+      "schedule": "dfc5cbd87ebb",
+      "fit_edf_sha256": "7d0732eea963488a53153835524e55c2b68220b0a0c7c5be99e535a9f5367e7f",
+      "fit_metadata_sha256": "d174a47b759a6b2d10a5e89b3d793577b33f1a2271c4b18f4153f845851bce72",
+      "dev_edf_sha256": "0f50978bb972e693b8c758a9223a2d9fa35c7f117226391090bcc32a83ce765d"
+    },
+    "S004": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "c9ddf0294961f0b877192a2479802b9c6c88403682a17b5ad679fd6485aa6f59",
+      "fit_metadata_sha256": "90bf095e219c973f3262192b7744674ef0d1e1a340ff12f5350c95c56d46a600",
+      "dev_edf_sha256": "1ab5909b183413283a7ea76e35311a68a4688558f0044b9faab3987291cbdb92"
+    },
+    "S005": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "956d0857b17b040955fee9b2384f818f85bfb02248c387d9aa7930c42934ca0c",
+      "fit_metadata_sha256": "b072a9157aa13442faec45677f7407c12c1d8c72fc4927960881f5527c25be96",
+      "dev_edf_sha256": "eeed6c328ee256dd2c20d1808e05819bed4ce56b8de1c57914ded00565b6b7bc"
+    },
+    "S006": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "4bd532bb728e1f2ed2afc0a5c162830a07465b6a4a58e105d1316c6ff1921f3b",
+      "fit_metadata_sha256": "73651abd91d5d40446991b866ed41b8033fa5029e3f21480d3372bedf06c7abd",
+      "dev_edf_sha256": "006e55ec16590f5f5b9230ac53a2f8fd0660960fa7b4b512ff61f8f7e2f8714e"
+    },
+    "S007": {
+      "schedule": "dfc5cbd87ebb",
+      "fit_edf_sha256": "3b31e50c4a5ebbb25459b1ebdf802b7ca86010857637580aacd53067350553a6",
+      "fit_metadata_sha256": "83a41ca70948eeac01bee0ac0696c31a461b19d17e97953e064abec7e5cd32f1",
+      "dev_edf_sha256": "fa8cfc38727e908be4626cf82b19533f7a761f102319696e53e4ee2d61b1092b"
+    },
+    "S008": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "034a26131e1425e6374a459e5887b1f831f7bfdb101a3658d2cd07620cf2c06b",
+      "fit_metadata_sha256": "190ca4fdc0baf96fc0a53c97f510c4c60bcc599180ece74f0e779e4449da5d11",
+      "dev_edf_sha256": "534c25b65a4fa68afe29a5c0272a686ac474e638c86521b177660d888401f374"
+    },
+    "S009": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "705f53460954e465e7a6ef45bd1f64e675548c08e9238dfb1f448713f9e559f8",
+      "fit_metadata_sha256": "739e7474a74dac76a3a4797480121be19b414b419474b552d2ed8651f4b7e8e1",
+      "dev_edf_sha256": "a8121c688ffca3db1d3b1f61dd53d6636ac91763cd2269b39636c65dfc6e4fe2"
+    },
+    "S010": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "8e68b22936cbcb7f84ed8ff037cb4a99f01064589d181c8056dbef06c1c7159b",
+      "fit_metadata_sha256": "ff3120fc0fc5d0a1ae3e22a19c70cdd01eead99bf8f58a0d938afec3ebe9e4b7",
+      "dev_edf_sha256": "b468e77d0c8a73377b4510220c6be95bdefd572f6ed5c4b5f539c9dc0bdef485"
+    },
+    "S011": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "072b75496dd935be460bc8ac9c3bf2d1fdcdb62f32ffb552955319abcb24cfe9",
+      "fit_metadata_sha256": "1b7c26b769a6d9ae17dcda803a23c9977bdb06d1cb7a9c47761820333a9d82a5",
+      "dev_edf_sha256": "70b05e696e9faff6566cabda58b9144e1cd8ca3b16e04178309b22ef7bb612b7"
+    },
+    "S012": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "974d6c7558c8d8ee48449bf9a1f40cda596febb6365e69e8e65c2d952644017e",
+      "fit_metadata_sha256": "4d198be9caf0a4a9f011fac7558cd116f030fa8589c57cef033e5637094f24aa",
+      "dev_edf_sha256": "5d7d13ad211f615a21db64c3a4dbc8ff4ef10dc3f777b8e6441d8942e8d40336"
+    },
+    "S013": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "796eb8df7d12b32e6ebbfb6756e527217c7b59a282735eb782dd50f5f16c39c8",
+      "fit_metadata_sha256": "5de40dcd725637f8d0f73960e3731652823c078e5787da5d1ebe8fbd3dd2e325",
+      "dev_edf_sha256": "dac533ea38aaa6c7505565059a5a8e19825702e68f5d27f47edd11cff0035736"
+    },
+    "S014": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "7e443b4a4bb000506137ffd79eae9fd915a282f4c6c5aac71ad8b8612072227d",
+      "fit_metadata_sha256": "5f9b136ca8437e45de86ea6edb228389a86e57852136cbd4dfc972b8687ce45f",
+      "dev_edf_sha256": "a63bc896da7b0fa302c3c3b0ad53a4c54f1a35fd1f66bebb2cedc81cbabc9320"
+    },
+    "S015": {
+      "schedule": "6ce8332fc0da",
+      "fit_edf_sha256": "1721d4a066e0c28221877d0f9e7da2402bdd924a532f5f19261c429def061273",
+      "fit_metadata_sha256": "6a13fa455049644f34035e7a30a67f12357441178bc2d32f39800c88dfd73751",
+      "dev_edf_sha256": "70e4dcfa5bb501007b4a502fb1ac6975128fb316de67eb825f8eee00cba9377f"
+    }
+  },
+  "schedules": {
+    "dfc5cbd87ebb": [
+      [
+        0.0,
+        4.2,
+        0
+      ],
+      [
+        4.2,
+        8.3,
+        1
+      ],
+      [
+        8.3,
+        12.5,
+        0
+      ],
+      [
+        12.5,
+        16.6,
+        1
+      ],
+      [
+        16.6,
+        20.8,
+        0
+      ],
+      [
+        20.8,
+        24.9,
+        1
+      ],
+      [
+        24.9,
+        29.099999999999998,
+        0
+      ],
+      [
+        29.1,
+        33.2,
+        1
+      ],
+      [
+        33.2,
+        37.4,
+        0
+      ],
+      [
+        37.4,
+        41.5,
+        1
+      ],
+      [
+        41.5,
+        45.7,
+        0
+      ],
+      [
+        45.7,
+        49.8,
+        1
+      ],
+      [
+        49.8,
+        54.0,
+        0
+      ],
+      [
+        54.0,
+        58.1,
+        1
+      ],
+      [
+        58.1,
+        62.3,
+        0
+      ],
+      [
+        62.3,
+        66.39999999999999,
+        1
+      ],
+      [
+        66.4,
+        70.6,
+        0
+      ],
+      [
+        70.6,
+        74.69999999999999,
+        1
+      ],
+      [
+        74.7,
+        78.9,
+        0
+      ],
+      [
+        78.9,
+        83.0,
+        1
+      ],
+      [
+        83.0,
+        87.2,
+        0
+      ],
+      [
+        87.2,
+        91.3,
+        1
+      ],
+      [
+        91.3,
+        95.5,
+        0
+      ],
+      [
+        95.5,
+        99.6,
+        1
+      ],
+      [
+        99.6,
+        103.8,
+        0
+      ],
+      [
+        103.8,
+        107.89999999999999,
+        1
+      ],
+      [
+        107.9,
+        112.1,
+        0
+      ],
+      [
+        112.1,
+        116.19999999999999,
+        1
+      ],
+      [
+        116.2,
+        120.4,
+        0
+      ],
+      [
+        120.4,
+        124.5,
+        1
+      ]
+    ],
+    "6ce8332fc0da": [
+      [
+        0.0,
+        4.1,
+        0
+      ],
+      [
+        4.1,
+        8.2,
+        1
+      ],
+      [
+        8.2,
+        12.299999999999999,
+        0
+      ],
+      [
+        12.3,
+        16.4,
+        1
+      ],
+      [
+        16.4,
+        20.5,
+        0
+      ],
+      [
+        20.5,
+        24.6,
+        1
+      ],
+      [
+        24.6,
+        28.7,
+        0
+      ],
+      [
+        28.7,
+        32.8,
+        1
+      ],
+      [
+        32.8,
+        36.9,
+        0
+      ],
+      [
+        36.9,
+        41.0,
+        1
+      ],
+      [
+        41.0,
+        45.1,
+        0
+      ],
+      [
+        45.1,
+        49.2,
+        1
+      ],
+      [
+        49.2,
+        53.3,
+        0
+      ],
+      [
+        53.3,
+        57.4,
+        1
+      ],
+      [
+        57.4,
+        61.5,
+        0
+      ],
+      [
+        61.5,
+        65.6,
+        1
+      ],
+      [
+        65.6,
+        69.69999999999999,
+        0
+      ],
+      [
+        69.7,
+        73.8,
+        1
+      ],
+      [
+        73.8,
+        77.89999999999999,
+        0
+      ],
+      [
+        77.9,
+        82.0,
+        1
+      ],
+      [
+        82.0,
+        86.1,
+        0
+      ],
+      [
+        86.1,
+        90.19999999999999,
+        1
+      ],
+      [
+        90.2,
+        94.3,
+        0
+      ],
+      [
+        94.3,
+        98.39999999999999,
+        1
+      ],
+      [
+        98.4,
+        102.5,
+        0
+      ],
+      [
+        102.5,
+        106.6,
+        1
+      ],
+      [
+        106.6,
+        110.69999999999999,
+        0
+      ],
+      [
+        110.7,
+        114.8,
+        1
+      ],
+      [
+        114.8,
+        118.89999999999999,
+        0
+      ],
+      [
+        118.9,
+        123.0,
+        1
+      ]
+    ]
+  }
+}

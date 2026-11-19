@@ -1,3 +1,5 @@
+> [November 18 engineering review](results/project_review_2026-11-18/review.md) documents a correction to the historical dense training budget, a timing-only EEG control, and the feasibility limit for the proposed request scheduler. Read it before running the supervisor experiment.
+
 > **November 18, 2026 — agent handoff:** Start with [the Antigravity handoff](docs/ANTIGRAVITY_HANDOFF_2026-11-18.md) for verified robomimic policy attribution, completed November 14 results, artifact recovery, and the proposed learned EEG supervisory policy. The supervisor is a proposal, not an implemented result. Older entries below are historical.
 
 # FRI-BCI-ML-RL-Decoder

@@ -1,5 +1,7 @@
 # Antigravity handoff — November 18, 2026
 
+> [November 18 engineering review](../results/project_review_2026-11-18/review.md) documents a correction to the historical dense training budget, a timing-only EEG control, and the feasibility limit for the proposed request scheduler. Read it before running the supervisor experiment.
+
 ## Source of record and synchronization
 
 Repository: https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal

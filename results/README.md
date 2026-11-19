@@ -1,8 +1,20 @@
 # Results index
 
-> **Updated November 11, 2026:** Start with the [Consolidated End-to-End Study Summary](../docs/FINAL_STUDY_SUMMARY_2026-11-11.md), [Current Execution Status](../STATUS.md), and [Consolidated Audit & Next Steps](../docs/NEXT_STEPS_AUDIT_2026-11-11.md).
+Start with the [Repository Overview](../README.md), [Antigravity Release Roadmap](../docs/ANTIGRAVITY_ROADMAP.md), and [Current Execution Status](../STATUS.md).
 
-## November 4–11, 2026 Workstreams (Learned Robot Policy, `EA-EEGNet`, Horizon Audit & Matched Development Study)
+## Completed Final Studies (November 13–19, 2026)
+
+| Workstream | Readable evidence | Compact data, media & runners | Key finding |
+|---|---|---|---|
+| **Study 2: Irregular-Timing Single-Request Pilot (`BCI Competition IV Dataset 1`, 2026-11-19)** | [Pilot summary](bciciv_ds1_request_pilot_2026-11-19/summary.md) | [pilot_metrics.json](bciciv_ds1_request_pilot_2026-11-19/pilot_metrics.json), [timestamped requests JSON](bciciv_ds1_request_pilot_2026-11-19/exported_timestamped_requests_runs234.json), [240 rollout summaries](bciciv_ds1_request_pilot_2026-11-19/robomimic_240_summaries.json), [SHA256SUMS.json](bciciv_ds1_request_pilot_2026-11-19/SHA256SUMS.json), [EEG runner](../analysis/bciciv_ds1_request_pilot.py), [robot runner](../simulation/scripts/run_one_request_window_grid.py) | `4` humans (`ds1a,b,f,g`), `720` imagery episodes, `333` slots, `240` native `robomimic-latch6-v2.0.0` rollouts (`0` drops): accumulator **`161`** img / **`62`** REST / **`59`** trans accepted (**`154.0 / 59.0 / 57.0`** retained, 3-seed mean) vs. timer `130 / 133 / 70` (`123.0 / 130.0 / 68.0`), while missing `465/720` episodes |
+| **Engineering Review: Clock, Slot Capacity & Budget Correction (2026-11-18)** | [Review report](project_review_2026-11-18/review.md) | [cue_clock.json](project_review_2026-11-18/cue_clock.json), [request_capacity.json](project_review_2026-11-18/request_capacity.json), [audit_cue_clock.py](../analysis/audit_cue_clock.py), [request_capacity.py](../analysis/request_capacity.py) | PhysioNet `R04 == R08` for `15/15` targets (`7,278/7,278 = 100%` clock replay); `90/225 = 40%` 20 s slot ceiling; dense run used `178` vs. `42` source updates/epoch |
+| **Study 1: Bounded Continuous Gating & 270 Native Rollouts (`PhysioNet`, 2026-11-14)** | [Study summary](bounded_eeg_robot_2026-11-14/summary.md), [handoff](../docs/BOUNDED_STUDY_HANDOFF_2026-11-14.md) | [command_tradeoff.png](bounded_eeg_robot_2026-11-14/command_tradeoff.png), [groups.json](bounded_eeg_robot_2026-11-14/groups.json), [robot aggregate.json](bounded_eeg_robot_2026-11-14/robot/robot_results/aggregate.json), [robot_outcomes.png](bounded_eeg_robot_2026-11-14/robot/robot_results/robot_outcomes.png), [Study 1 S001 seed-0 selected video](bounded_eeg_robot_2026-11-14/robot/robot_results/S001_seed0_selected/video.mp4), [bounded_study.py](../eeg_decoder/bounded_study.py) | Selected EEGNet moderate hysteresis reduces R08 REST `40.1% -> 27.9%` and imagery `52.1% -> 36.5%` (`7/15` pass); `270` rollouts retain `42/45` vs. `45/45` raw (`0.175 m` vs. `0.209 m` REST EEF path; all 3 failures in `S006`) |
+| **Dense Causal-Window Ablation (`PhysioNet`, 2026-11-14)** | [Ablation summary](dense_window_ablation_2026-11-14/summary.md) | [summarize_dense_ablation.py](../eeg_decoder/summarize_dense_ablation.py) | `62.52%` BA, `42.07%` REST, `40.61%` missed imagery (`178` vs. `42` source updates/epoch — not budget-matched) |
+| **89-Source / 15-Target GPU Transfer Campaign (`PhysioNet`, 2026-11-13)** | [Campaign summary](gpu_campaign_2026-11-13/summary.md) | `development_summary.json` (`54` recipe groups, `2,430` checkpoints) | Exploratory R08 selection: full transfer `EEGNet8 (lr 0.0001, ep 300)` `68.15%` BA vs. scratch `64.59%`, classifier-only `66.67%` |
+
+---
+
+## Earlier November 4–11, 2026 Workstreams (Learned Robot Policy, `EA-EEGNet`, Horizon Audit & Matched Development Study)
 
 | Workstream | Readable evidence | Compact data & figures | Interpretation |
 |---|---|---|---|

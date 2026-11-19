@@ -1,3 +1,14 @@
+# Current Project Status & Release Progress
+
+- **Core question:** *When should noisy motor-imagery EEG command a simulated robotic pickup?* Team built EEG decoders (`CSP/LDA`, `Riemannian+LDA`, `EA-EEGNet`), command gating/accumulator logic, and the `robomimic-latch6-v2.0.0` `HOLD`/latch evaluation harness (`simulation/src/fri_bci_sim/robomimic_harness.py`); the externally pretrained `robomimic` Lift PH `BC-RNN` policy (`artifacts/lift_ph_low_dim_epoch_1000_succ_100.pth`, SHA-256 `3ee222ca...`) executes the simulated lift.
+- **Branch & roadmap:** `codex/robot-learning-design` following [docs/ANTIGRAVITY_ROADMAP.md](docs/ANTIGRAVITY_ROADMAP.md) (Milestones 1–4 release track; Milestones 5–6 remain optional post-release follow-up).
+- **Study evidence links:** [PhysioNet continuous-gating study (`15` participants, `270` rollouts)](results/bounded_eeg_robot_2026-11-14/summary.md) · [Engineering review (`R04 == R08` clock & slot ceiling)](results/project_review_2026-11-18/review.md) · [BCI Competition IV Dataset 1 irregular-timing study (`4` humans, `720` imagery episodes, `240` rollouts)](results/bciciv_ds1_request_pilot_2026-11-19/summary.md).
+- **Milestone 1 (COMPLETE — 2026-11-19):** Organized repository entry points (`README.md`, `START_HERE.md`, `STATUS.md`, `results/README.md`) around the core research question, project vs. external `robomimic` attribution, both study summaries, main runners, explicit video labeling, and honest limitations; preserved all dated history below. **Verification:** checked all updated markdown file links resolve to existing tracked files and ran `pytest` baseline. **Next action:** Execute **Milestone 2** — build `report/final/` (`final_report.tex`, `final_report.pdf`, and reproducible study-2 figure via `analysis/build_final_report_artifacts.py`).
+
+---
+
+## Dated History & Prior Milestones
+
 > **November 19 closeout:** The irregular-timing request pilot and 240 versioned-harness (`robomimic-latch6-v2.0.0`) robot replays on BCI Competition IV Dataset 1 (`ds1a, ds1b, ds1f, ds1g`) are packaged in [results/bciciv_ds1_request_pilot_2026-11-19/summary.md](results/bciciv_ds1_request_pilot_2026-11-19/summary.md) with runner scripts [analysis/bciciv_ds1_request_pilot.py](analysis/bciciv_ds1_request_pilot.py) and [simulation/scripts/run_one_request_window_grid.py](simulation/scripts/run_one_request_window_grid.py).
 
 > [November 18 engineering review](results/project_review_2026-11-18/review.md) documents a correction to the historical dense training budget, a timing-only EEG control, and the feasibility limit for the proposed request scheduler. Read it before running the supervisor experiment.

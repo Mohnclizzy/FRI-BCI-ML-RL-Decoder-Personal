@@ -1,10 +1,48 @@
+# FRI-BCI-ML-RL-Decoder
+
+**Research question:** *When should noisy, non-stationary motor-imagery EEG command a simulated robotic pickup?*
+
+## What this repository investigates & attribution
+
+Across two completed simulation studies, we evaluate how causal EEG decoding and command-timing rules govern false starts during rest versus task execution during motor imagery:
+
+- **Project-built contributions:** Causal `8–30 Hz` bandpass EEG preprocessing across 9 sensorimotor channels, three decoder families (`CSP/LDA`, `Riemannian Tangent-Space + LDA`, `EA-EEGNet` transfer), continuous hysteresis/confidence/temporal gates and a leaky evidence accumulator, the `robomimic-latch6-v2.0.0` `HOLD` + `+0.015 m` completion-latch adapter ([`simulation/src/fri_bci_sim/robomimic_harness.py`](simulation/src/fri_bci_sim/robomimic_harness.py)), timing/capacity audits, and replay evaluation harnesses.
+- **External assets (credit & scope):** Neural recordings come from public datasets — [PhysioNet EEG Motor Movement/Imagery](https://physionet.org/content/eegmmidb/1.0.0/) (`S001–S015`) and [BCI Competition IV Dataset 1](https://www.bbci.de/competition/iv/desc_1.html) (`ds1a, ds1b, ds1f, ds1g`). The physical lifting skill is the **externally pretrained** `robomimic` Lift PH low-dimensional `BC-RNN` policy checkpoint (`artifacts/lift_ph_low_dim_epoch_1000_succ_100.pth`, SHA-256 `3ee222cab41f78ba27afca7ef6f70f9f21bd3cc0a37bd79c0b2351dbede51605`) running in `robosuite 1.2` / `MuJoCo 2.1`; this project did not train that `robomimic` checkpoint.
+
+## Completed studies & headline evidence
+
+| Study & Denominator | Core Question | Measured Headline Result | Evidence & Summary |
+| :--- | :--- | :--- | :--- |
+| **Study 1: Continuous Gating**<br>PhysioNet EEGBCI (`15` participants `S001–S015`; `270` native rollouts = `15` × `3` shared seeds × `6` conditions) | What happens when EEG continuously enables or holds the lift policy over `20 s`? | Selected EEGNet moderate hysteresis gate reduced R08 REST activation `40.1% -> 27.9%` and imagery coverage `52.1% -> 36.5%` (`7/15` passed utility screen). In `270` rollouts: **`42/45`** retained lifts vs. **`45/45`** raw (all 3 misses from `S006`, given `1.0 s` total enable) and mean REST EEF path **`0.175 m`** vs. **`0.209 m`**. R04 and R08 share `100%` identical cue schedules (`7,278/7,278`), motivating irregular timing. | [Study 1 summary](results/bounded_eeg_robot_2026-11-14/summary.md) · [Tradeoff figure](results/bounded_eeg_robot_2026-11-14/command_tradeoff.png) · [Aggregate JSON](results/bounded_eeg_robot_2026-11-14/robot/robot_results/aggregate.json) · [Nov 18 review](results/project_review_2026-11-18/review.md) |
+| **Study 2: Irregular-Timing Requests**<br>BCI Competition IV Dataset 1 (`4` real humans `ds1a, ds1b, ds1f, ds1g`; `720` held-out imagery episodes in Runs 2–4; `333` complete `20 s` slots; `240` native rollouts = `80` start offsets × `3` seeds) | Can EEG time a single start-lift request better than a clock when cues arrive unpredictably? | Under variable timing (clock baselines `50.62%` / `50.01%`), the frozen EEG accumulator emitted `255` first detections (`469` total requests) and achieved **`161`** accepted imagery starts / **`62`** REST / **`59`** transition → **`154.0 / 59.0 / 57.0`** continuously retained lifts (3-seed mean, `0` post-acquisition drops), vs. EEG threshold `139 / 60 / 56` (`129.0 / 57.7 / 52.0`) and periodic timer `130 / 133 / 70` (`123.0 / 130.0 / 68.0`). Wins `4/4` humans, while missing **`465/720`** imagery episodes (`64.6%`) plus `94` busy/tail-blocked detections. | [Study 2 summary](results/bciciv_ds1_request_pilot_2026-11-19/summary.md) · [Pilot metrics JSON](results/bciciv_ds1_request_pilot_2026-11-19/pilot_metrics.json) · [240 rollout summaries](results/bciciv_ds1_request_pilot_2026-11-19/robomimic_240_summaries.json) |
+
+## Key entry points, runners & representative media
+
+- **Roadmap & current status:** [docs/ANTIGRAVITY_ROADMAP.md](docs/ANTIGRAVITY_ROADMAP.md) · [STATUS.md](STATUS.md) · [START_HERE.md](START_HERE.md) · [results/README.md](results/README.md)
+- **Final report & reproduction guide:** `report/final/` (planned deliverable in Milestone 2 of [ANTIGRAVITY_ROADMAP.md](docs/ANTIGRAVITY_ROADMAP.md)) and `docs/REPRODUCTION_GUIDE.md` (Milestone 3); midterm context in [report/midterm/](report/midterm/).
+- **Main experiment runners:**
+  - Study 1 EEG + continuous gate sweep: [eeg_decoder/bounded_study.py](eeg_decoder/bounded_study.py)
+  - Predictable-cue clock & 20 s slot-ceiling audits: [analysis/audit_cue_clock.py](analysis/audit_cue_clock.py) · [analysis/request_capacity.py](analysis/request_capacity.py)
+  - Study 2 frozen EEG request pilot (BCICIV-1): [analysis/bciciv_ds1_request_pilot.py](analysis/bciciv_ds1_request_pilot.py)
+  - Study 2 240-rollout native `robomimic-latch6-v2.0.0` grid: [simulation/scripts/run_one_request_window_grid.py](simulation/scripts/run_one_request_window_grid.py)
+- **Representative robot video:** [Study 1 PhysioNet `R08`, participant `S001`, robot `seed 0`, `selected` EEGNet moderate gate (`complete_retained`, acquisition at step `137` / `6.85 s`)](results/bounded_eeg_robot_2026-11-14/robot/robot_results/S001_seed0_selected/video.mp4).
+
+## Scope & honest limitations
+
+- **Recorded cued imagery, not self-paced or live closed-loop BCI:** Both datasets present timed visual or spoken task cues; labels reflect experimental instructions *at request time*, not native grasp-intent verification or online feedback adaptation.
+- **Simulation only:** Robot rollouts share `3` initial states (`seeds 0, 1, 2`) on CPU MuJoCo under an engineered completion latch (`+0.015 m` $z$-offset after acquisition); no hardware robot or clinical safety claim is made.
+- **Study 1 selection & timing caveats:** Gate selection and evaluation both used PhysioNet `R08` (optimistic exploratory selection), and `R04`/`R08` shared identical predictable cue timings; the November 14 dense-window run (`62.52%` BA) used `178` vs. `42` source updates/epoch (not budget-matched).
+- **Study 2 cohort size & missed cues:** Evaluates `N = 4` real humans (`ds1c–e` excluded as artificial); the frozen accumulator still missed `465/720` imagery episodes (`10/115` short cues `<= 2.5 s` detected).
+
+---
+
+## Historical notes and earlier setup
+
 > **November 19 closeout:** The irregular-timing request pilot and 240 versioned-harness (`robomimic-latch6-v2.0.0`) robot replays on BCI Competition IV Dataset 1 (`ds1a, ds1b, ds1f, ds1g`) are packaged in [results/bciciv_ds1_request_pilot_2026-11-19/summary.md](results/bciciv_ds1_request_pilot_2026-11-19/summary.md) with runner scripts [analysis/bciciv_ds1_request_pilot.py](analysis/bciciv_ds1_request_pilot.py) and [simulation/scripts/run_one_request_window_grid.py](simulation/scripts/run_one_request_window_grid.py).
 
 > [November 18 engineering review](results/project_review_2026-11-18/review.md) documents a correction to the historical dense training budget, a timing-only EEG control, and the feasibility limit for the proposed request scheduler. Read it before running the supervisor experiment.
 
 > **November 18, 2026 — agent handoff:** Start with [the Antigravity handoff](docs/ANTIGRAVITY_HANDOFF_2026-11-18.md) for verified robomimic policy attribution, completed November 14 results, artifact recovery, and the proposed learned EEG supervisory policy. The supervisor is a proposal, not an implemented result. Older entries below are historical.
-
-# FRI-BCI-ML-RL-Decoder
 
 > **November 14 update:** The bounded EEG command comparison and all 270 robot replays are complete. Read the [completed results](results/bounded_eeg_robot_2026-11-14/summary.md) and [reproduction handoff](docs/BOUNDED_STUDY_HANDOFF_2026-11-14.md). The [research follow-up handoff](docs/NEXT_RESEARCH_HANDOFF_2026-11-14.md) specifies the proposed diagnostic, repeated-request experiment, conditional training ablation, and independent confirmation requirements. That follow-up is planned, not yet implemented.
 

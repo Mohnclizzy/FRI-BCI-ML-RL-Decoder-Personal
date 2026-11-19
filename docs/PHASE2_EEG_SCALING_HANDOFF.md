@@ -36,11 +36,15 @@ Use later Stieger sessions to test cross-day decoding for the labels they actual
 
 ## Work package 3 · Run a measured GPU campaign
 
-Use one H100 for a short end-to-end run. Record data-loading throughput, GPU memory, training time, validation scores and estimated full-run time. Fix an input bottleneck before scaling hardware.
+Use Google Colab as the initial training platform, reflecting the owner's preference. Build a Phase 2 notebook that invokes the new source adapter and training CLI from a pinned Git revision. The first cells should check the runtime, GPU, disk space and data manifest. Use an H100 if allocated, or profile the available GPU and adjust batch size to its memory. Record data-loading throughput, GPU memory, training time, validation scores and estimated full-run time.
+
+Stage the active data shards on the runtime's local disk and persist verified checkpoints, manifests and compact results to a dedicated Drive folder. Track completed work by configuration and seed. Save model, optimizer, scheduler, random-number and data-progress state periodically and on orderly interruption. Test resume in a fresh runtime before the full campaign, and verify a checkpoint copy before treating it as recoverable. A notebook cell should select the next incomplete job after reconnecting.
+
+Colab runtime lifetimes and GPU availability vary. Its FAQ describes typical maximum runs of 12 hours and up to 24 hours of continuous execution for Pro+ with sufficient compute units. Size jobs to finish or checkpoint within the available session. Keep CPU ingestion and preprocessing on a CPU runtime until GPU training is ready. [Colab runtime and storage guidance](https://research.google.com/colaboratory/faq.html)
 
 Pretrain on nested 10%, 30% and 100% subsets of eligible source participants, with three training seeds. Use a matched optimizer-update budget for the data-scale comparison and report actual examples and updates. A separate convergence run can answer whether extra optimization helps. Select the final recipe on development.
 
-Use multiple GPUs for independent scales and seeds when this reduces completion time. Distributed training of one model is available if profiling justifies it. Store configs, checkpoints, source manifests and resume state with hashes. Launch paid jobs with a concrete instance, duration estimate and spend limit consistent with the owner's authorization.
+Run the selected scales and seeds as resumable jobs on the allocated Colab runtime. If measured throughput or interruption overhead warrants dedicated compute, the same CLI and checkpoints can move to Brev for independent multi-GPU jobs or distributed training. Store configs, checkpoints, source manifests and resume state with hashes. Record projected runtime and compute-unit use before a long run, and use a defined spend limit for any separately rented instance.
 
 **Deliverable** — a development learning curve showing what extra data bought, a reproducible selected checkpoint, and a locked evaluation command.
 

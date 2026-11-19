@@ -1,5 +1,7 @@
 # Antigravity roadmap for the EEG-to-robot study
 
+**Current direction.** Milestones 1–4 completed at the corrected release `019a7d1`. The next development assignment is the [Phase 2 EEG scaling handoff](PHASE2_EEG_SCALING_HANDOFF.md), covering source ingestion, cross-session neural training and independent evaluation. The release milestones below remain the record of the completed work.
+
 **Start with milestone 1.** The experiments at `7a18e72` are complete. The next deliverable is a report a researcher can read, check, and reproduce. Milestones 1–4 finish that job. Milestones 5–6 describe a separate follow-up with its own stopping points. Use the current branch `codex/robot-learning-design` and record progress at the top of [STATUS.md](../STATUS.md).
 
 ## The result the release needs to explain

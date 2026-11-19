@@ -1,0 +1,236 @@
+{
+  "dataset": "BCI Competition IV Dataset 1",
+  "true_labels_zip_sha256": "b34de8373d6476ff534f3a7496397ed86726c04dd12f610d84b8baaa71e28c72",
+  "human_subjects": [
+    "ds1a",
+    "ds1b",
+    "ds1f",
+    "ds1g"
+  ],
+  "artificial_subjects_excluded": [
+    "ds1c",
+    "ds1d",
+    "ds1e"
+  ],
+  "human_summary": {
+    "n_human_participants": 4,
+    "total_human_mi_episodes": 960,
+    "total_human_rest_episodes": 944,
+    "rest_cue_duration_range_s": [
+      1.506,
+      7.998
+    ],
+    "mi_cue_duration_range_s": [
+      1.502,
+      8.358
+    ],
+    "mean_run1_to_runs234_continuous_cue_bal_acc": 0.5063,
+    "mean_periodic_4_1s_bal_acc": 0.5001
+  },
+  "artificial_schedule_note": {
+    "ds1c_run1_vs_run3_exact_match": true,
+    "ds1c_per_run_bal_acc": [
+      0.5207,
+      1.0,
+      0.5192
+    ]
+  },
+  "participants": {
+    "ds1a": {
+      "subject_id": "a",
+      "type": "human",
+      "mat_sha256": "74cbc84e8412a0c44dd173d29222e9dbd9865e2e88fd66f2a452b9b72de568e5",
+      "duration_s": 2405.58,
+      "endpoints_4hz_annotated": 7149,
+      "rest_cue_duration_s": {
+        "count": 236,
+        "mean": 4.7706,
+        "sd": 1.9066,
+        "min": 1.506,
+        "max": 7.997
+      },
+      "mi_cue_duration_s": {
+        "count": 240,
+        "mean": 4.7376,
+        "sd": 1.9096,
+        "min": 1.502,
+        "max": 8.358
+      },
+      "run1_to_runs234_continuous_cue_per_run": [
+        0.5186,
+        0.556,
+        0.4685
+      ],
+      "run1_to_runs234_continuous_cue_bal_acc": 0.5144,
+      "periodic_4_1s_bal_acc": 0.5141
+    },
+    "ds1b": {
+      "subject_id": "b",
+      "type": "human",
+      "mat_sha256": "4763ccae6fe78cfb8f4b473117d189e9f519e05596bb88e65a7c981230cbc9fc",
+      "duration_s": 2469.7,
+      "endpoints_4hz_annotated": 7397,
+      "rest_cue_duration_s": {
+        "count": 236,
+        "mean": 4.7987,
+        "sd": 1.7465,
+        "min": 1.511,
+        "max": 7.998
+      },
+      "mi_cue_duration_s": {
+        "count": 240,
+        "mean": 4.9733,
+        "sd": 1.9688,
+        "min": 1.502,
+        "max": 8.045
+      },
+      "run1_to_runs234_continuous_cue_per_run": [
+        0.5044,
+        0.4526,
+        0.4724
+      ],
+      "run1_to_runs234_continuous_cue_bal_acc": 0.4765,
+      "periodic_4_1s_bal_acc": 0.4946
+    },
+    "ds1c": {
+      "subject_id": "c",
+      "type": "artificial",
+      "mat_sha256": "66dc4a18c5a5b1ef6f29304693cb092d1f74963bf3287b2f6f3770793831d4cb",
+      "duration_s": 2333.65,
+      "endpoints_4hz_annotated": 6776,
+      "rest_cue_duration_s": {
+        "count": 236,
+        "mean": 4.3319,
+        "sd": 1.7705,
+        "min": 1.544,
+        "max": 7.976
+      },
+      "mi_cue_duration_s": {
+        "count": 240,
+        "mean": 4.7818,
+        "sd": 1.8569,
+        "min": 1.502,
+        "max": 7.996
+      },
+      "run1_to_runs234_continuous_cue_per_run": [
+        0.5207,
+        1.0,
+        0.5192
+      ],
+      "run1_to_runs234_continuous_cue_bal_acc": 0.68,
+      "periodic_4_1s_bal_acc": 0.4909
+    },
+    "ds1d": {
+      "subject_id": "d",
+      "type": "artificial",
+      "mat_sha256": "386ae6481f378ad7ec122dabf15fae25886c0558ebf1b5398288b91674ef6a4d",
+      "duration_s": 2450.95,
+      "endpoints_4hz_annotated": 7231,
+      "rest_cue_duration_s": {
+        "count": 236,
+        "mean": 4.9204,
+        "sd": 1.8118,
+        "min": 1.598,
+        "max": 7.98
+      },
+      "mi_cue_duration_s": {
+        "count": 240,
+        "mean": 4.6767,
+        "sd": 1.9645,
+        "min": 1.502,
+        "max": 8.989
+      },
+      "run1_to_runs234_continuous_cue_per_run": [
+        0.454,
+        0.5209,
+        0.5291
+      ],
+      "run1_to_runs234_continuous_cue_bal_acc": 0.5013,
+      "periodic_4_1s_bal_acc": 0.5025
+    },
+    "ds1e": {
+      "subject_id": "e",
+      "type": "artificial",
+      "mat_sha256": "0bcce477b674d644bb1a915645ce94c7a660b1a6d014b8149f28d4fb4b87d9d3",
+      "duration_s": 2384.53,
+      "endpoints_4hz_annotated": 6999,
+      "rest_cue_duration_s": {
+        "count": 236,
+        "mean": 4.7207,
+        "sd": 1.8081,
+        "min": 1.523,
+        "max": 7.951
+      },
+      "mi_cue_duration_s": {
+        "count": 240,
+        "mean": 4.6308,
+        "sd": 1.8804,
+        "min": 1.502,
+        "max": 8.394
+      },
+      "run1_to_runs234_continuous_cue_per_run": [
+        0.5203,
+        0.5243,
+        0.4616
+      ],
+      "run1_to_runs234_continuous_cue_bal_acc": 0.5021,
+      "periodic_4_1s_bal_acc": 0.5155
+    },
+    "ds1f": {
+      "subject_id": "f",
+      "type": "human",
+      "mat_sha256": "48c7458ea57dd10ce6dfb4e371758fd6c730dcc67997ca5c8ca6af3f8a62cbd0",
+      "duration_s": 2392.26,
+      "endpoints_4hz_annotated": 7068,
+      "rest_cue_duration_s": {
+        "count": 236,
+        "mean": 4.8075,
+        "sd": 1.8232,
+        "min": 1.508,
+        "max": 7.981
+      },
+      "mi_cue_duration_s": {
+        "count": 240,
+        "mean": 4.6162,
+        "sd": 1.887,
+        "min": 1.502,
+        "max": 7.922
+      },
+      "run1_to_runs234_continuous_cue_per_run": [
+        0.4409,
+        0.5559,
+        0.4992
+      ],
+      "run1_to_runs234_continuous_cue_bal_acc": 0.4987,
+      "periodic_4_1s_bal_acc": 0.5046
+    },
+    "ds1g": {
+      "subject_id": "g",
+      "type": "human",
+      "mat_sha256": "a9a820e22cb1b029b90d70e0830b58004b3554f86f5f4228b7cc17deba438853",
+      "duration_s": 2435.02,
+      "endpoints_4hz_annotated": 7265,
+      "rest_cue_duration_s": {
+        "count": 236,
+        "mean": 4.6627,
+        "sd": 1.8384,
+        "min": 1.51,
+        "max": 7.997
+      },
+      "mi_cue_duration_s": {
+        "count": 240,
+        "mean": 4.9635,
+        "sd": 1.889,
+        "min": 1.502,
+        "max": 7.952
+      },
+      "run1_to_runs234_continuous_cue_per_run": [
+        0.5354,
+        0.5542,
+        0.5176
+      ],
+      "run1_to_runs234_continuous_cue_bal_acc": 0.5357,
+      "periodic_4_1s_bal_acc": 0.4873
+    }
+  }
+}

@@ -1,3 +1,5 @@
+> **November 18, 2026 — agent handoff:** Start with [the Antigravity handoff](docs/ANTIGRAVITY_HANDOFF_2026-11-18.md) for verified robomimic policy attribution, completed November 14 results, artifact recovery, and the proposed learned EEG supervisory policy. The supervisor is a proposal, not an implemented result. Older entries below are historical.
+
 # FRI-BCI-ML-RL-Decoder
 
 > **November 14 update:** The bounded EEG command comparison and all 270 robot replays are complete. Read the [completed results](results/bounded_eeg_robot_2026-11-14/summary.md) and [reproduction handoff](docs/BOUNDED_STUDY_HANDOFF_2026-11-14.md). The [research follow-up handoff](docs/NEXT_RESEARCH_HANDOFF_2026-11-14.md) specifies the proposed diagnostic, repeated-request experiment, conditional training ablation, and independent confirmation requirements. That follow-up is planned, not yet implemented.

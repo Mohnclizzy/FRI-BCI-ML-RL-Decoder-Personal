@@ -1,0 +1,154 @@
+{
+  "run_count": 12,
+  "audit_errors": [],
+  "groups": {
+    "closure_corrective": {
+      "closure_at_32_10_seed1": {
+        "seed": 1,
+        "pause_start": 32,
+        "pause_steps": 10,
+        "resume_state": "freeze",
+        "retained": false,
+        "acquired": true,
+        "post_acquisition_loss": true,
+        "max_hold_eef_drift_m": 0.0031198191775398103,
+        "max_hold_cube_drift_m": 8.971557283490742e-08,
+        "audit_errors": []
+      },
+      "closure_at_32_60_seed1": {
+        "seed": 1,
+        "pause_start": 32,
+        "pause_steps": 60,
+        "resume_state": "freeze",
+        "retained": true,
+        "acquired": true,
+        "post_acquisition_loss": false,
+        "max_hold_eef_drift_m": 0.0031198191775398103,
+        "max_hold_cube_drift_m": 5.400949541229293e-07,
+        "audit_errors": []
+      },
+      "closure_at_34_10_seed2": {
+        "seed": 2,
+        "pause_start": 34,
+        "pause_steps": 10,
+        "resume_state": "freeze",
+        "retained": false,
+        "acquired": true,
+        "post_acquisition_loss": true,
+        "max_hold_eef_drift_m": 0.003258893068860386,
+        "max_hold_cube_drift_m": 8.870681966755001e-13,
+        "audit_errors": []
+      },
+      "closure_at_34_60_seed2": {
+        "seed": 2,
+        "pause_start": 34,
+        "pause_steps": 60,
+        "resume_state": "freeze",
+        "retained": false,
+        "acquired": true,
+        "post_acquisition_loss": true,
+        "max_hold_eef_drift_m": 0.003258893068860386,
+        "max_hold_cube_drift_m": 8.870681966755001e-13,
+        "audit_errors": []
+      },
+      "closure_at_40_10_seed0": {
+        "seed": 0,
+        "pause_start": 40,
+        "pause_steps": 10,
+        "resume_state": "freeze",
+        "retained": false,
+        "acquired": true,
+        "post_acquisition_loss": true,
+        "max_hold_eef_drift_m": 0.006289997384964752,
+        "max_hold_cube_drift_m": 0.0008222012671312582,
+        "audit_errors": []
+      },
+      "closure_at_40_60_seed0": {
+        "seed": 0,
+        "pause_start": 40,
+        "pause_steps": 60,
+        "resume_state": "freeze",
+        "retained": false,
+        "acquired": true,
+        "post_acquisition_loss": true,
+        "max_hold_eef_drift_m": 0.006289997384964752,
+        "max_hold_cube_drift_m": 0.0008222012671312582,
+        "audit_errors": []
+      }
+    },
+    "resume_reset_diagnostic": {
+      "carrying_70_10_seed0": {
+        "seed": 0,
+        "pause_start": 70,
+        "pause_steps": 10,
+        "resume_state": "reset",
+        "retained": true,
+        "acquired": true,
+        "post_acquisition_loss": false,
+        "max_hold_eef_drift_m": 0.013531808554577605,
+        "max_hold_cube_drift_m": 0.013817449445438609,
+        "audit_errors": []
+      },
+      "carrying_70_10_seed1": {
+        "seed": 1,
+        "pause_start": 70,
+        "pause_steps": 10,
+        "resume_state": "reset",
+        "retained": false,
+        "acquired": true,
+        "post_acquisition_loss": true,
+        "max_hold_eef_drift_m": 0.01007936667908304,
+        "max_hold_cube_drift_m": 0.010025260733493987,
+        "audit_errors": []
+      },
+      "carrying_70_10_seed2": {
+        "seed": 2,
+        "pause_start": 70,
+        "pause_steps": 10,
+        "resume_state": "reset",
+        "retained": false,
+        "acquired": true,
+        "post_acquisition_loss": true,
+        "max_hold_eef_drift_m": 0.011278367638942856,
+        "max_hold_cube_drift_m": 0.01117726446783566,
+        "audit_errors": []
+      },
+      "closure_32_10_seed1": {
+        "seed": 1,
+        "pause_start": 32,
+        "pause_steps": 10,
+        "resume_state": "reset",
+        "retained": false,
+        "acquired": true,
+        "post_acquisition_loss": true,
+        "max_hold_eef_drift_m": 0.0031198191775398103,
+        "max_hold_cube_drift_m": 8.971557283490742e-08,
+        "audit_errors": []
+      },
+      "closure_34_10_seed2": {
+        "seed": 2,
+        "pause_start": 34,
+        "pause_steps": 10,
+        "resume_state": "reset",
+        "retained": false,
+        "acquired": true,
+        "post_acquisition_loss": true,
+        "max_hold_eef_drift_m": 0.003258893068860386,
+        "max_hold_cube_drift_m": 8.870681966755001e-13,
+        "audit_errors": []
+      },
+      "closure_40_10_seed0": {
+        "seed": 0,
+        "pause_start": 40,
+        "pause_steps": 10,
+        "resume_state": "reset",
+        "retained": false,
+        "acquired": true,
+        "post_acquisition_loss": true,
+        "max_hold_eef_drift_m": 0.006289997384964752,
+        "max_hold_cube_drift_m": 0.0008222012671312582,
+        "audit_errors": []
+      }
+    }
+  }
+}

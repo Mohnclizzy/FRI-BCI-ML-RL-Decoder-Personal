@@ -1,0 +1,2 @@
+# Preserve exact stored byte sequences for frozen result manifests and hashed evidence
+results/** -text

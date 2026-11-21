@@ -1,0 +1,512 @@
+[
+  {
+    "trial_id": "S002R12:0",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 0.0,
+    "window_start_seconds": 1.0,
+    "window_end_seconds": 3.0,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.9201134692390591,
+      "HAND_IMAGERY": 0.07988653076094093
+    },
+    "available_at_recording_seconds": 3.0
+  },
+  {
+    "trial_id": "S002R12:1",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T1",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 4.1,
+    "window_start_seconds": 5.1,
+    "window_end_seconds": 7.1,
+    "predicted_intent": "HAND_IMAGERY",
+    "probabilities": {
+      "REST": 0.3203275064639608,
+      "HAND_IMAGERY": 0.6796724935360392
+    },
+    "available_at_recording_seconds": 7.1
+  },
+  {
+    "trial_id": "S002R12:2",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 8.2,
+    "window_start_seconds": 9.2,
+    "window_end_seconds": 11.2,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.9694884821085468,
+      "HAND_IMAGERY": 0.030511517891453187
+    },
+    "available_at_recording_seconds": 11.2
+  },
+  {
+    "trial_id": "S002R12:3",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T2",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 12.3,
+    "window_start_seconds": 13.3,
+    "window_end_seconds": 15.3,
+    "predicted_intent": "HAND_IMAGERY",
+    "probabilities": {
+      "REST": 0.32670074899394097,
+      "HAND_IMAGERY": 0.673299251006059
+    },
+    "available_at_recording_seconds": 15.3
+  },
+  {
+    "trial_id": "S002R12:4",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 16.4,
+    "window_start_seconds": 17.4,
+    "window_end_seconds": 19.4,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.6348021934434316,
+      "HAND_IMAGERY": 0.3651978065565684
+    },
+    "available_at_recording_seconds": 19.4
+  },
+  {
+    "trial_id": "S002R12:5",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T2",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 20.5,
+    "window_start_seconds": 21.5,
+    "window_end_seconds": 23.5,
+    "predicted_intent": "HAND_IMAGERY",
+    "probabilities": {
+      "REST": 0.3705447492876319,
+      "HAND_IMAGERY": 0.6294552507123681
+    },
+    "available_at_recording_seconds": 23.5
+  },
+  {
+    "trial_id": "S002R12:6",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 24.6,
+    "window_start_seconds": 25.6,
+    "window_end_seconds": 27.6,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.5374964766862249,
+      "HAND_IMAGERY": 0.46250352331377514
+    },
+    "available_at_recording_seconds": 27.6
+  },
+  {
+    "trial_id": "S002R12:7",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T1",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 28.7,
+    "window_start_seconds": 29.7,
+    "window_end_seconds": 31.7,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.7337021687094926,
+      "HAND_IMAGERY": 0.26629783129050744
+    },
+    "available_at_recording_seconds": 31.7
+  },
+  {
+    "trial_id": "S002R12:8",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 32.8,
+    "window_start_seconds": 33.8,
+    "window_end_seconds": 35.8,
+    "predicted_intent": "HAND_IMAGERY",
+    "probabilities": {
+      "REST": 0.38817952394467103,
+      "HAND_IMAGERY": 0.611820476055329
+    },
+    "available_at_recording_seconds": 35.8
+  },
+  {
+    "trial_id": "S002R12:9",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T2",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 36.9,
+    "window_start_seconds": 37.9,
+    "window_end_seconds": 39.9,
+    "predicted_intent": "HAND_IMAGERY",
+    "probabilities": {
+      "REST": 0.3402988016595887,
+      "HAND_IMAGERY": 0.6597011983404113
+    },
+    "available_at_recording_seconds": 39.9
+  },
+  {
+    "trial_id": "S002R12:10",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 41.0,
+    "window_start_seconds": 42.0,
+    "window_end_seconds": 44.0,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.5511279578887798,
+      "HAND_IMAGERY": 0.44887204211122017
+    },
+    "available_at_recording_seconds": 44.0
+  },
+  {
+    "trial_id": "S002R12:11",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T1",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 45.1,
+    "window_start_seconds": 46.1,
+    "window_end_seconds": 48.1,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.7082037267440182,
+      "HAND_IMAGERY": 0.29179627325598184
+    },
+    "available_at_recording_seconds": 48.1
+  },
+  {
+    "trial_id": "S002R12:12",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 49.2,
+    "window_start_seconds": 50.2,
+    "window_end_seconds": 52.2,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.7063678934025603,
+      "HAND_IMAGERY": 0.2936321065974396
+    },
+    "available_at_recording_seconds": 52.2
+  },
+  {
+    "trial_id": "S002R12:13",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T1",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 53.3,
+    "window_start_seconds": 54.3,
+    "window_end_seconds": 56.3,
+    "predicted_intent": "HAND_IMAGERY",
+    "probabilities": {
+      "REST": 0.4797137039641598,
+      "HAND_IMAGERY": 0.5202862960358402
+    },
+    "available_at_recording_seconds": 56.3
+  },
+  {
+    "trial_id": "S002R12:14",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 57.4,
+    "window_start_seconds": 58.4,
+    "window_end_seconds": 60.4,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.9127638602699324,
+      "HAND_IMAGERY": 0.08723613973006762
+    },
+    "available_at_recording_seconds": 60.4
+  },
+  {
+    "trial_id": "S002R12:15",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T2",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 61.5,
+    "window_start_seconds": 62.5,
+    "window_end_seconds": 64.5,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.8079524258290681,
+      "HAND_IMAGERY": 0.1920475741709319
+    },
+    "available_at_recording_seconds": 64.5
+  },
+  {
+    "trial_id": "S002R12:16",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 65.6,
+    "window_start_seconds": 66.6,
+    "window_end_seconds": 68.6,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.6349000094737733,
+      "HAND_IMAGERY": 0.36509999052622666
+    },
+    "available_at_recording_seconds": 68.6
+  },
+  {
+    "trial_id": "S002R12:17",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T2",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 69.7,
+    "window_start_seconds": 70.7,
+    "window_end_seconds": 72.7,
+    "predicted_intent": "HAND_IMAGERY",
+    "probabilities": {
+      "REST": 0.4193967672000156,
+      "HAND_IMAGERY": 0.5806032327999844
+    },
+    "available_at_recording_seconds": 72.7
+  },
+  {
+    "trial_id": "S002R12:18",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 73.8,
+    "window_start_seconds": 74.8,
+    "window_end_seconds": 76.8,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.5807496958361497,
+      "HAND_IMAGERY": 0.41925030416385034
+    },
+    "available_at_recording_seconds": 76.8
+  },
+  {
+    "trial_id": "S002R12:19",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T1",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 77.9,
+    "window_start_seconds": 78.9,
+    "window_end_seconds": 80.9,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.7328872774202693,
+      "HAND_IMAGERY": 0.2671127225797307
+    },
+    "available_at_recording_seconds": 80.9
+  },
+  {
+    "trial_id": "S002R12:20",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 82.0,
+    "window_start_seconds": 83.0,
+    "window_end_seconds": 85.0,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.5020104989944663,
+      "HAND_IMAGERY": 0.49798950100553374
+    },
+    "available_at_recording_seconds": 85.0
+  },
+  {
+    "trial_id": "S002R12:21",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T2",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 86.1,
+    "window_start_seconds": 87.1,
+    "window_end_seconds": 89.1,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.8508722981903027,
+      "HAND_IMAGERY": 0.14912770180969723
+    },
+    "available_at_recording_seconds": 89.1
+  },
+  {
+    "trial_id": "S002R12:22",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 90.2,
+    "window_start_seconds": 91.2,
+    "window_end_seconds": 93.2,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.8584768661743064,
+      "HAND_IMAGERY": 0.1415231338256936
+    },
+    "available_at_recording_seconds": 93.2
+  },
+  {
+    "trial_id": "S002R12:23",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T1",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 94.3,
+    "window_start_seconds": 95.3,
+    "window_end_seconds": 97.3,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.7838776483223164,
+      "HAND_IMAGERY": 0.21612235167768357
+    },
+    "available_at_recording_seconds": 97.3
+  },
+  {
+    "trial_id": "S002R12:24",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 98.4,
+    "window_start_seconds": 99.4,
+    "window_end_seconds": 101.4,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.5696986172411644,
+      "HAND_IMAGERY": 0.4303013827588356
+    },
+    "available_at_recording_seconds": 101.4
+  },
+  {
+    "trial_id": "S002R12:25",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T1",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 102.5,
+    "window_start_seconds": 103.5,
+    "window_end_seconds": 105.5,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.5165601859132791,
+      "HAND_IMAGERY": 0.4834398140867208
+    },
+    "available_at_recording_seconds": 105.5
+  },
+  {
+    "trial_id": "S002R12:26",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 106.6,
+    "window_start_seconds": 107.6,
+    "window_end_seconds": 109.6,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.7642096640669678,
+      "HAND_IMAGERY": 0.23579033593303222
+    },
+    "available_at_recording_seconds": 109.6
+  },
+  {
+    "trial_id": "S002R12:27",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T2",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 110.7,
+    "window_start_seconds": 111.7,
+    "window_end_seconds": 113.7,
+    "predicted_intent": "HAND_IMAGERY",
+    "probabilities": {
+      "REST": 0.3493369432922073,
+      "HAND_IMAGERY": 0.6506630567077927
+    },
+    "available_at_recording_seconds": 113.7
+  },
+  {
+    "trial_id": "S002R12:28",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T0",
+    "label": "REST",
+    "label_id": 0,
+    "annotation_onset_seconds": 114.8,
+    "window_start_seconds": 115.8,
+    "window_end_seconds": 117.8,
+    "predicted_intent": "REST",
+    "probabilities": {
+      "REST": 0.7401804723996821,
+      "HAND_IMAGERY": 0.25981952760031785
+    },
+    "available_at_recording_seconds": 117.8
+  },
+  {
+    "trial_id": "S002R12:29",
+    "subject": 2,
+    "run": 12,
+    "source_annotation": "T1",
+    "label": "HAND_IMAGERY",
+    "label_id": 1,
+    "annotation_onset_seconds": 118.9,
+    "window_start_seconds": 119.9,
+    "window_end_seconds": 121.9,
+    "predicted_intent": "HAND_IMAGERY",
+    "probabilities": {
+      "REST": 0.1603834308827945,
+      "HAND_IMAGERY": 0.8396165691172055
+    },
+    "available_at_recording_seconds": 121.9
+  }
+]

@@ -1,0 +1,71 @@
+{
+  "experiment": "dense causal-window EEGNet8 training ablation",
+  "status": "completed",
+  "role": "exploratory R08 development; not independent confirmation",
+  "hypothesis": "Dense causal windows that include transitions may improve continuous command quality relative to cue-centered window training.",
+  "model": "EEGNet8 transfer recipe; no architecture change",
+  "seeds": [42, 123, 2026],
+  "source": {
+    "subjects": "89 eligible source participants from S016-S109 per configs/gpu_research.json",
+    "training_runs": [4, 8],
+    "validation_run": 12,
+    "maximum_epochs": 300,
+    "early_stopping_patience": 60,
+    "completed_epochs_by_seed": {"42": 99, "123": 65, "2026": 121},
+    "learning_rate": 0.001,
+    "batch_size": 128,
+    "weight_decay": 0.0001
+  },
+  "target": {
+    "subjects": "S001-S015",
+    "fit_run": 4,
+    "development_run": 8,
+    "locked_target_run_12_loaded": false,
+    "maximum_epochs": 300,
+    "completed_epochs_per_participant_seed": 300,
+    "learning_rate": 0.0001,
+    "batch_size": 15,
+    "weight_decay": 0.0001
+  },
+  "dense_windows": {
+    "window_seconds": 2.0,
+    "stride_seconds": 0.25,
+    "label": "instruction state at causal window endpoint",
+    "transition_windows_retained": true,
+    "sampling": "balanced binary class sampling; sample an episode uniformly within class before sampling a window",
+    "optimizer_update_budget": "matched per epoch to the cue-window recipe; source count from all source R04/R08 cue windows, target count from target R04 cue windows"
+  },
+  "evaluation": {
+    "target_metric_run": 8,
+    "gates": {
+      "raw": "threshold 0.50000001, no persistence",
+      "confidence": "threshold 0.70, no persistence",
+      "temporal": "threshold 0.70 with 0.50 s persistence"
+    },
+    "aggregation": "average training seeds within each participant, then summarize 15 participant means",
+    "robot_rollouts": 0,
+    "independent_confirmation": false
+  },
+  "hardware": {
+    "provider": "Brev",
+    "gpu": "NVIDIA L4",
+    "vram_bytes": 23659151360,
+    "python": "3.10",
+    "torch": "2.11.0+cu128",
+    "numpy": "1.26.4",
+    "mne": "1.12.1",
+    "scikit_learn": "1.7.2",
+    "peak_torch_allocated_bytes": 68310016,
+    "observed_nvidia_smi_utilization_range_percent": [9, 47]
+  },
+  "reproduction": {
+    "command": "python -m eeg_decoder.dense_window_ablation --config configs/gpu_research.json --cache results --work results/run_20261114 --seeds 42 123 2026",
+    "aggregation_command": "python -m eeg_decoder.summarize_dense_ablation --run-dir results/dense_window_ablation_2026-11-14"
+  },
+  "limitations": [
+    "R08 was development data and is not fresh confirmation.",
+    "All eligible source participants contributed to source training or validation; target R12 had prior historical inspection.",
+    "Endpoint instruction labels do not establish neural-intent onset.",
+    "No robot rollouts were run for this training ablation."
+  ]
+}

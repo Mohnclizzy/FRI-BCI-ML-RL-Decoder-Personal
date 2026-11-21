@@ -1,0 +1,357 @@
+{
+  "manifest": {
+    "source_checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/antipush-50-seed8-20261103T2305Z/logs/rsl_rl/lift_franka/2026-11-03_23-03-36/model_298.pt",
+    "checkpoint_sha256": "e80a46414db8482cf780c56f785154d93ac479b2e2a48ac3d7b1567e3d84729f",
+    "seeds": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "max_policy_steps": 360,
+    "episodes_per_seed": 1,
+    "task": "FRI-Franka-Lift-NearTable-AntiPush"
+  },
+  "episodes": [
+    {
+      "seed": 8,
+      "episode": 1,
+      "status": "completed",
+      "reason": null,
+      "error": null,
+      "policy_steps": null,
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      },
+      "physics_samples": 1440,
+      "contact_samples": 1440,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": 0,
+      "steps": 1440,
+      "duration_s": 12.0,
+      "baseline_cube_height_m": 0.2800000011920929,
+      "max_cube_height_m": 0.4833051860332489,
+      "max_cube_lift_m": 0.203305184841156,
+      "max_finger_contact_n": [
+        72.97164916992188,
+        91.8310317993164
+      ],
+      "first_contact_time_s": 0.25,
+      "first_lift_time_s": 0.391667,
+      "first_bilateral_lift_time_s": 0.391667,
+      "acquisition_time_s": 1.0,
+      "best_sustained_lift_contact_s": 11.5,
+      "drop_count": 0,
+      "drop_times_s": [],
+      "physical_lift_pass": true,
+      "contact_threshold_n": 0.1,
+      "lift_threshold_m": 0.08,
+      "sustained_contact_threshold_s": 0.5,
+      "drop_height_m_above_baseline": 0.04,
+      "sustained_drop_threshold_s": 0.25,
+      "start_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "end_cube_pose_w": [
+        -0.5060476660728455,
+        0.1399233341217041,
+        0.4112778604030609,
+        0.12588201463222504,
+        0.2835732102394104,
+        0.22779110074043274,
+        0.9229578375816345
+      ],
+      "max_cube_xy_displacement_m": 0.4091674158720652,
+      "sampling_mode": "environment_physics_step",
+      "physics_dt_s": 0.008333333333333333,
+      "policy_dt_s": 0.03333333333333333,
+      "exit": {
+        "exit_code": 0
+      },
+      "telemetry_sha256": "6383a71ff2d67ca9ea5ec5a3d86547690d0e9b79f89185c74dda3247324ef576",
+      "summary_sha256": "461aea9a0aedddbecaa2864bb6baecf923ea0231e3c355b30ec51cda34120036"
+    },
+    {
+      "seed": 9,
+      "episode": 1,
+      "status": "completed",
+      "reason": null,
+      "error": null,
+      "policy_steps": null,
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      },
+      "physics_samples": 1440,
+      "contact_samples": 1440,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": 0,
+      "steps": 1440,
+      "duration_s": 12.0,
+      "baseline_cube_height_m": 0.2800000011920929,
+      "max_cube_height_m": 0.29140418767929077,
+      "max_cube_lift_m": 0.011404186487197876,
+      "max_finger_contact_n": [
+        0.0,
+        295.3834228515625
+      ],
+      "first_contact_time_s": null,
+      "first_lift_time_s": null,
+      "first_bilateral_lift_time_s": null,
+      "acquisition_time_s": null,
+      "best_sustained_lift_contact_s": 0.0,
+      "drop_count": 0,
+      "drop_times_s": [],
+      "physical_lift_pass": false,
+      "contact_threshold_n": 0.1,
+      "lift_threshold_m": 0.08,
+      "sustained_contact_threshold_s": 0.5,
+      "drop_height_m_above_baseline": 0.04,
+      "sustained_drop_threshold_s": 0.25,
+      "start_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "end_cube_pose_w": [
+        -0.2533882260322571,
+        0.533485472202301,
+        0.27989208698272705,
+        -2.7312236738907814e-07,
+        7.563371440255651e-08,
+        -0.26387661695480347,
+        0.9645564556121826
+      ],
+      "max_cube_xy_displacement_m": 0.5257185772129108,
+      "sampling_mode": "environment_physics_step",
+      "physics_dt_s": 0.008333333333333333,
+      "policy_dt_s": 0.03333333333333333,
+      "exit": {
+        "exit_code": 0
+      },
+      "telemetry_sha256": "abb6d0b5446705a7df6f8c040604280fa5b822ad0eba05e9ed3fb493ad601f2b",
+      "summary_sha256": "ea858c02f7424e29f273f8324c36007874c2909c82c74a529969a28937e92c3e"
+    },
+    {
+      "seed": 10,
+      "episode": 1,
+      "status": "completed",
+      "reason": null,
+      "error": null,
+      "policy_steps": null,
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      },
+      "physics_samples": 1440,
+      "contact_samples": 1440,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": 0,
+      "steps": 1440,
+      "duration_s": 12.0,
+      "baseline_cube_height_m": 0.2800000011920929,
+      "max_cube_height_m": 0.29263797402381897,
+      "max_cube_lift_m": 0.012637972831726074,
+      "max_finger_contact_n": [
+        2.2945022583007812,
+        114.84127807617188
+      ],
+      "first_contact_time_s": null,
+      "first_lift_time_s": null,
+      "first_bilateral_lift_time_s": null,
+      "acquisition_time_s": null,
+      "best_sustained_lift_contact_s": 0.0,
+      "drop_count": 0,
+      "drop_times_s": [],
+      "physical_lift_pass": false,
+      "contact_threshold_n": 0.1,
+      "lift_threshold_m": 0.08,
+      "sustained_contact_threshold_s": 0.5,
+      "drop_height_m_above_baseline": 0.04,
+      "sustained_drop_threshold_s": 0.25,
+      "start_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "end_cube_pose_w": [
+        -0.20913565158843994,
+        0.5078333616256714,
+        0.27989208698272705,
+        7.022973136372457e-08,
+        -1.4734894193679793e-08,
+        -0.3161035478115082,
+        0.9487248063087463
+      ],
+      "max_cube_xy_displacement_m": 0.5315764978897423,
+      "sampling_mode": "environment_physics_step",
+      "physics_dt_s": 0.008333333333333333,
+      "policy_dt_s": 0.03333333333333333,
+      "exit": {
+        "exit_code": 0
+      },
+      "telemetry_sha256": "487a49bc1a1b1d6960bcfd602c43ea08c011353cdee92d57dff676e01bd20fdc",
+      "summary_sha256": "a6829b43a450f58718eab4c55da21ee14bdad4bf895a60bf3429427920d48666"
+    },
+    {
+      "seed": 11,
+      "episode": 1,
+      "status": "completed",
+      "reason": null,
+      "error": null,
+      "policy_steps": null,
+      "termination": {
+        "terminated": true,
+        "time_out": false
+      },
+      "physics_samples": 124,
+      "contact_samples": 124,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": 0,
+      "steps": 124,
+      "duration_s": 1.033333,
+      "baseline_cube_height_m": 0.2800000011920929,
+      "max_cube_height_m": 0.2935866713523865,
+      "max_cube_lift_m": 0.013586670160293579,
+      "max_finger_contact_n": [
+        2.9058072566986084,
+        113.82586669921875
+      ],
+      "first_contact_time_s": null,
+      "first_lift_time_s": null,
+      "first_bilateral_lift_time_s": null,
+      "acquisition_time_s": null,
+      "best_sustained_lift_contact_s": 0.0,
+      "drop_count": 0,
+      "drop_times_s": [],
+      "physical_lift_pass": false,
+      "contact_threshold_n": 0.1,
+      "lift_threshold_m": 0.08,
+      "sustained_contact_threshold_s": 0.5,
+      "drop_height_m_above_baseline": 0.04,
+      "sustained_drop_threshold_s": 0.25,
+      "start_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "end_cube_pose_w": [
+        -0.0719732791185379,
+        0.620607852935791,
+        0.2339177429676056,
+        -0.593231201171875,
+        0.6382120847702026,
+        0.472572922706604,
+        -0.13204887509346008
+      ],
+      "max_cube_xy_displacement_m": 0.7067829173520045,
+      "sampling_mode": "environment_physics_step",
+      "physics_dt_s": 0.008333333333333333,
+      "policy_dt_s": 0.03333333333333333,
+      "exit": {
+        "exit_code": 0
+      },
+      "telemetry_sha256": "08834acda67a4165956b2917467bcf5bfb356c239fe1a95b4bfd92e51016d296",
+      "summary_sha256": "2e33275a5eb4d07811fb5fc5140ee87717173a0f94fb2980903bed24cf9ebaee"
+    },
+    {
+      "seed": 12,
+      "episode": 1,
+      "status": "completed",
+      "reason": null,
+      "error": null,
+      "policy_steps": null,
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      },
+      "physics_samples": 1440,
+      "contact_samples": 1440,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": 0,
+      "steps": 1440,
+      "duration_s": 12.0,
+      "baseline_cube_height_m": 0.2800000011920929,
+      "max_cube_height_m": 0.4712032675743103,
+      "max_cube_lift_m": 0.1912032663822174,
+      "max_finger_contact_n": [
+        5.889388084411621,
+        126.40782165527344
+      ],
+      "first_contact_time_s": 0.766667,
+      "first_lift_time_s": 0.958333,
+      "first_bilateral_lift_time_s": 0.958333,
+      "acquisition_time_s": 1.45,
+      "best_sustained_lift_contact_s": 1.683333,
+      "drop_count": 1,
+      "drop_times_s": [
+        3.016667
+      ],
+      "physical_lift_pass": true,
+      "contact_threshold_n": 0.1,
+      "lift_threshold_m": 0.08,
+      "sustained_contact_threshold_s": 0.5,
+      "drop_height_m_above_baseline": 0.04,
+      "sustained_drop_threshold_s": 0.25,
+      "start_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "end_cube_pose_w": [
+        -0.5638327598571777,
+        0.08576507866382599,
+        0.2798919379711151,
+        -0.6332520246505737,
+        -0.7739457488059998,
+        3.468828069230767e-08,
+        -1.2816695260653432e-08
+      ],
+      "max_cube_xy_displacement_m": 0.5911134487795685,
+      "sampling_mode": "environment_physics_step",
+      "physics_dt_s": 0.008333333333333333,
+      "policy_dt_s": 0.03333333333333333,
+      "exit": {
+        "exit_code": 0
+      },
+      "telemetry_sha256": "73dce488013eeb00bbdd4c88f1cb365dc10696211c6c02558aeebada29be9e11",
+      "summary_sha256": "496e79f2e9c1e9f98022dd7cf58b05c49690701e969858ea34edbe42773bd882"
+    }
+  ],
+  "trace_note": "Every fourth recorded physics sample plus final sample; full 120 Hz raw traces retained in ignored outputs.",
+  "trace_sha256": "332133ac6e4962ae3a353319a355da0f0aea1e2799d14844e594b8f7f558448d"
+}

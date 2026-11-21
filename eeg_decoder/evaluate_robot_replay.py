@@ -98,7 +98,7 @@ def main(argv=None):
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--edf", type=Path)
     parser.add_argument("--decisions", type=Path)
-    parser.add_argument("--condition", choices=("raw", "confidence", "temporal"))
+    parser.add_argument("--condition", choices=("raw", "confidence", "temporal", "crc_hysteresis"))
     parser.add_argument("--horizon-s", type=float)
     parser.add_argument("--max-sample-gap-s", type=float, default=0.25)
     args = parser.parse_args(argv)

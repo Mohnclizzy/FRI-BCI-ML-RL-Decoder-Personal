@@ -19,7 +19,7 @@ matches this project.
    folders; preserve existing checkouts.
 
 ```bash
-git clone --branch codex/isaaclab-project-scaffold https://github.com/AL-DEV06/FRI-BCI-ML-RL-Decoder.git
+git clone --branch codex/robot-learning-design https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal.git
 export FRI_REPO="$(realpath FRI-BCI-ML-RL-Decoder)"
 git clone --branch v3.0.0 --depth 1 https://github.com/isaac-sim/IsaacLab.git IsaacLab-fri
 export ISAACLAB_ROOT="$(realpath IsaacLab-fri)"

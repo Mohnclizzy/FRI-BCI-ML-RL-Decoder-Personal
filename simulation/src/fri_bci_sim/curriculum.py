@@ -1,8 +1,7 @@
 """Plan or launch one explicit stage of the physical Franka lift curriculum.
 
-Run a bounded pre-grasp startup pilot, inspect physical trajectories and saved
-configuration, then transfer its checkpoint to the table-only task.  This CLI
-never advances stages based on training reward alone.
+Near-table starts are an opt-in table-supported first rung that can start from
+scratch. This CLI never advances stages based on training reward alone.
 """
 
 import argparse
@@ -19,6 +18,8 @@ STAGES = {
     "pregrasp": ("FRI-Franka-Lift-Pregrasp", "in_hand_pregrasp"),
     "table": ("FRI-Franka-Lift", "table_only"),
     "table-approach": ("FRI-Franka-Lift-Approach", "table_only_approach_shaped"),
+    "near-table": ("FRI-Franka-Lift-NearTable", "table_near_grasp_open"),
+    "near-table-progress": ("FRI-Franka-Lift-NearTable-Progress", "table_near_grasp_open"),
 }
 
 
@@ -44,7 +45,9 @@ def build_stage_plan(root: Path, stage: str, num_envs: int, seed: int,
         "isaaclab_commit": ISAACLAB_COMMIT,
         "eeg_connected": False,
         "measured_table_pickup_evaluation": False,
-        "reward_variant": "approach_contact_shaped_v1" if stage == "table-approach" else "upstream_baseline",
+        "reward_variant": ("near_table_progress_v2" if stage == "near-table-progress" else
+                           "approach_contact_shaped_v1" if stage in ("table-approach", "near-table") else
+                           "upstream_baseline"),
     }
 
 
@@ -56,7 +59,7 @@ def main(argv: list[str] | None = None):
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--iterations", type=int, default=2)
     parser.add_argument("--checkpoint", type=Path,
-                        help="Absolute or relative pregrasp model_*.pt path, required for table stages")
+                        help="Source checkpoint: required for table/Approach transfer; optional for near-table")
     parser.add_argument("--run-dir", required=True, type=Path)
     parser.add_argument("--execute", action="store_true", help="Default is dry-run only")
     args = parser.parse_args(argv)

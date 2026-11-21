@@ -1,0 +1,331 @@
+{
+  "collector_sha256": "5b7c0fbb6d97d55bd246364d8ce92d1937e8eb66a4c4fdfc9c51b5be096ec9c8",
+  "cube_half_extent_m": 0.025,
+  "episodes": [
+    {
+      "checkpoint_sha256": "46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6",
+      "contact_coverage": 1.0,
+      "duration_s": 0.833333,
+      "end_cube_position_w_m": [
+        -0.07101739197969437,
+        0.640416145324707,
+        0.20599189400672913
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "first_contact_actual_finger_joints_m": [
+        0.03636140748858452,
+        0.0369572751224041
+      ],
+      "first_contact_arm_targets_rad": {
+        "panda_joint1": -0.16640087962150574,
+        "panda_joint2": 0.10281358659267426,
+        "panda_joint3": -0.24093769490718842,
+        "panda_joint4": -2.1636719703674316,
+        "panda_joint5": 0.04012073576450348,
+        "panda_joint6": 2.2531771659851074,
+        "panda_joint7": 0.6381359100341797
+      },
+      "first_contact_finger_targets_m": {
+        "panda_finger_joint1": -0.017326898872852325,
+        "panda_finger_joint2": -0.02453945204615593
+      },
+      "first_contact_geometry": {
+        "hand_center_minus_cube_m": [
+          0.005209743976593018,
+          0.013716928660869598,
+          0.09148016571998596
+        ],
+        "left_finger_frame_minus_cube_m": [
+          0.007005214691162109,
+          0.0496382936835289,
+          0.032835930585861206
+        ],
+        "right_finger_frame_minus_cube_m": [
+          0.0038198232650756836,
+          -0.023609526455402374,
+          0.03333204984664917
+        ]
+      },
+      "first_contact_left_right_force_n": [
+        0.0,
+        9.878961563110352
+      ],
+      "first_contact_pose_max_abs_difference_from_prior_m": 0.0,
+      "first_policy_action": [
+        -0.8905551433563232,
+        0.24486571550369263,
+        -1.14421808719635,
+        -0.4873237609863281,
+        0.21198499202728271,
+        0.6018829941749573,
+        0.45374569296836853,
+        -0.5401740074157715,
+        -0.5819991230964661
+      ],
+      "first_policy_action_matches_prior": true,
+      "first_right_contact_ge_1n_s": 0.05,
+      "max_cube_rise_m": 0.012163043022155762,
+      "max_cube_xy_displacement_m": 0.722131538379829,
+      "peak_right_force_geometry": {
+        "hand_center_minus_cube_m": [
+          0.02802884578704834,
+          0.005241811275482178,
+          0.09239012002944946
+        ],
+        "left_finger_frame_minus_cube_m": [
+          0.048720091581344604,
+          0.03348925709724426,
+          0.03126797080039978
+        ],
+        "right_finger_frame_minus_cube_m": [
+          -0.0056022703647613525,
+          -0.024693280458450317,
+          0.037438660860061646
+        ]
+      },
+      "peak_right_force_n": 175.73704528808594,
+      "peak_right_force_time_s": 0.408333,
+      "physical_lift_pass": false,
+      "physics_samples": 100,
+      "physics_step_gaps": 0,
+      "reset_geometry": {
+        "hand_center_minus_cube_m": [
+          -5.960464477539063e-08,
+          4.470348358154297e-08,
+          0.09999996423721313
+        ],
+        "left_finger_frame_minus_cube_m": [
+          -5.960464477539063e-08,
+          0.04000013321638107,
+          0.04159995913505554
+        ],
+        "right_finger_frame_minus_cube_m": [
+          -5.960464477539063e-08,
+          -0.03999994695186615,
+          0.04159995913505554
+        ]
+      },
+      "run_dir": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/fingertip-geometry-progress-20261103T0314Z/seed8",
+      "seed": 8,
+      "source_sha256_at_launch": {
+        "simulation/scripts/run_fingertip_geometry_diagnostic.py": "f2b01293558cf20f02592e537d1a5da4c03bc7e7a3c902f3f450f9bdb285cd9c",
+        "simulation/src/fri_bci_sim/ppo_telemetry.py": "ecec8da11e25fc4bbb05c60a23f8022020916996b59927960655a1852a4b94ea",
+        "simulation/src/fri_bci_sim/tasks/__init__.py": "7243b89004790ae5c826934a4f9b5608ff2227dfd2397182ff0151e28605b372",
+        "simulation/src/fri_bci_sim/tasks/near_table.py": "a4fbdf45eb36a004d5769d15b20f623900f3802cb897882469351189a762d632",
+        "simulation/src/fri_bci_sim/tasks/near_table_progress.py": "6184906be8444f90ebab5057bc8aae782c68407d0d61a24876e3d798e2bf2e22"
+      },
+      "status": "completed",
+      "termination": {
+        "terminated": true,
+        "time_out": false
+      }
+    },
+    {
+      "checkpoint_sha256": "46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6",
+      "contact_coverage": 1.0,
+      "duration_s": 1.0,
+      "end_cube_position_w_m": [
+        -0.22087393701076508,
+        0.5326449871063232,
+        0.28099873661994934
+      ],
+      "end_record_type": "episode_incomplete_end",
+      "first_contact_actual_finger_joints_m": [
+        0.035966306924819946,
+        0.03631192445755005
+      ],
+      "first_contact_arm_targets_rad": {
+        "panda_joint1": -0.1114804595708847,
+        "panda_joint2": 0.07802915573120117,
+        "panda_joint3": -0.2127280831336975,
+        "panda_joint4": -2.1524012088775635,
+        "panda_joint5": 0.03858109191060066,
+        "panda_joint6": 2.2691338062286377,
+        "panda_joint7": 0.6443166136741638
+      },
+      "first_contact_finger_targets_m": {
+        "panda_finger_joint1": 0.008763523772358894,
+        "panda_finger_joint2": -0.010602124035358429
+      },
+      "first_contact_geometry": {
+        "hand_center_minus_cube_m": [
+          0.005358695983886719,
+          0.012128226459026337,
+          0.09229212999343872
+        ],
+        "left_finger_frame_minus_cube_m": [
+          0.0067324042320251465,
+          0.04763465374708176,
+          0.03362742066383362
+        ],
+        "right_finger_frame_minus_cube_m": [
+          0.0032524466514587402,
+          -0.024557828903198242,
+          0.03416457772254944
+        ]
+      },
+      "first_contact_left_right_force_n": [
+        0.0,
+        4.843031883239746
+      ],
+      "first_contact_pose_max_abs_difference_from_prior_m": 1.5133991837501526e-08,
+      "first_policy_action": [
+        -0.3916870653629303,
+        -0.027977995574474335,
+        -0.7779887914657593,
+        -0.30006152391433716,
+        0.16437074542045593,
+        0.6543231010437012,
+        0.45829665660858154,
+        -0.2755318880081177,
+        -0.46876880526542664
+      ],
+      "first_policy_action_matches_prior": true,
+      "first_right_contact_ge_1n_s": 0.075,
+      "max_cube_rise_m": 0.002607107162475586,
+      "max_cube_xy_displacement_m": 0.543604320038591,
+      "peak_right_force_geometry": {
+        "hand_center_minus_cube_m": [
+          0.01721423864364624,
+          0.01498238742351532,
+          0.09352955222129822
+        ],
+        "left_finger_frame_minus_cube_m": [
+          0.023948073387145996,
+          0.05308736860752106,
+          0.0344923734664917
+        ],
+        "right_finger_frame_minus_cube_m": [
+          0.0024233460426330566,
+          -0.023897960782051086,
+          0.03604570031166077
+        ]
+      },
+      "peak_right_force_n": 107.04714965820312,
+      "peak_right_force_time_s": 0.283333,
+      "physical_lift_pass": false,
+      "physics_samples": 120,
+      "physics_step_gaps": 0,
+      "reset_geometry": {
+        "hand_center_minus_cube_m": [
+          -5.960464477539063e-08,
+          4.470348358154297e-08,
+          0.09999996423721313
+        ],
+        "left_finger_frame_minus_cube_m": [
+          -5.960464477539063e-08,
+          0.04000013321638107,
+          0.04159995913505554
+        ],
+        "right_finger_frame_minus_cube_m": [
+          -5.960464477539063e-08,
+          -0.03999994695186615,
+          0.04159995913505554
+        ]
+      },
+      "run_dir": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/fingertip-geometry-progress-20261103T0314Z/seed11",
+      "seed": 11,
+      "source_sha256_at_launch": {
+        "simulation/scripts/run_fingertip_geometry_diagnostic.py": "f2b01293558cf20f02592e537d1a5da4c03bc7e7a3c902f3f450f9bdb285cd9c",
+        "simulation/src/fri_bci_sim/ppo_telemetry.py": "ecec8da11e25fc4bbb05c60a23f8022020916996b59927960655a1852a4b94ea",
+        "simulation/src/fri_bci_sim/tasks/__init__.py": "7243b89004790ae5c826934a4f9b5608ff2227dfd2397182ff0151e28605b372",
+        "simulation/src/fri_bci_sim/tasks/near_table.py": "a4fbdf45eb36a004d5769d15b20f623900f3802cb897882469351189a762d632",
+        "simulation/src/fri_bci_sim/tasks/near_table_progress.py": "6184906be8444f90ebab5057bc8aae782c68407d0d61a24876e3d798e2bf2e22"
+      },
+      "status": "incomplete",
+      "termination": {
+        "terminated": false,
+        "time_out": false
+      }
+    }
+  ],
+  "input_sha256": {
+    "post_run_import_provenance": "732749d1171d069cba4f6c0d6582b0d1eba61b788e900f00b2d06e737161c5e5",
+    "scripted_positive_run_log": "71078d129442ad4cdf0ef068f1c2155b78c5cedcf0913c1899d4986967dae268",
+    "seed11_exit": "296e27fead09d4a7790bea4d2d2764d10a72f1fc8d8ed069dc45576208ddef75",
+    "seed11_launch": "654a9f69da3db63ff588107c6376ff302cf6e1e1ac87dc03a033b662d1b09d9d",
+    "seed11_prior_telemetry": "cc13ca4b450b2ad51b2dbffb95fff34bca56c556eb76a46cbda0687292d86d29",
+    "seed11_summary": "7eb45e85c75b4f8dd7a5a096810d1bc90f069e1ae66b0b33ecb4da54b53ca6e5",
+    "seed11_telemetry": "5a238dced469f7a23a8a7636b248152bdc5f851bb9f6c6a987ddc6f90c064871",
+    "seed11_validation": "7233467c531a0350ef25ecac311ba488289813bd001b6c02672104f44fd75ca0",
+    "seed8_exit": "296e27fead09d4a7790bea4d2d2764d10a72f1fc8d8ed069dc45576208ddef75",
+    "seed8_launch": "943d0e46bd4aa8da9a1a25e8fd7828eecd965ff08f65ceea69a69ae1d977eb9b",
+    "seed8_prior_telemetry": "ae470debc15d8e2d5428056f3897f78739a42e10fc994926d1aabcd5026f37bc",
+    "seed8_summary": "94d08d0b1a55902a652d5b5bea94efffc1c7fea4c8dc5b6a2e53c54f89b4ed13",
+    "seed8_telemetry": "0d2f8372fb803b2c32e17a83428562d9370a7d87c9a562e48efabebe30b470b0",
+    "seed8_validation": "536659c742f61d1db7c5e27d4f6c050abe0195246d28ad64b57e3a0d44220976",
+    "zero_action_console": "3b90860deb3162a25c3a92ca901b946cbb1b04d2244d12cb6e9b989044112985",
+    "zero_action_exit": "296e27fead09d4a7790bea4d2d2764d10a72f1fc8d8ed069dc45576208ddef75",
+    "zero_action_failed_cli_parse": "1e6cabdcc2abf07b3364314d832fc6a301b22f8c61e3301f4da83277ff44f070",
+    "zero_action_launch": "ed5167f9db38c105ad42fc7dc5359515e1854e3fd2565af5215146fc023d8039",
+    "zero_action_summary": "6700d47b0fc27f3894ee845745d357ba01916b708728630a792fededdd7dd951",
+    "zero_action_telemetry": "a771186ee1d3f55d911b89014514adb16fe67f75c0e06af1d406fbfc4302e8d0",
+    "zero_action_validation": "dd351f511abbd7e7d23be905426d66684833d515f4ddb341a30abbdaa094e75d"
+  },
+  "kind": "fingertip_body_pose_contact_geometry_diagnostic",
+  "limits": [
+    "Finger link body frames are not collision-surface or contact-point poses.",
+    "The script's planned waypoint is a static reference, not a matched dynamic trajectory.",
+    "Only two preselected seeds were screened; neither run estimates pickup reliability.",
+    "Subsequent contact dynamics can diverge despite matching first actions and first-contact states.",
+    "A 1-second cap can end with an explicitly incomplete episode and cannot score a 12-second pickup trial.",
+    "The zero-action control isolates this reset/action comparison, not every policy seed or runtime variant."
+  ],
+  "post_run_import_provenance": {
+    "isaaclab_head": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4",
+    "isaaclab_status": "",
+    "modules": {
+      "fri_bci_sim.ppo_telemetry": {
+        "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/simulation/src/fri_bci_sim/ppo_telemetry.py",
+        "sha256": "ecec8da11e25fc4bbb05c60a23f8022020916996b59927960655a1852a4b94ea"
+      },
+      "fri_bci_sim.tasks": {
+        "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/simulation/src/fri_bci_sim/tasks/__init__.py",
+        "sha256": "7243b89004790ae5c826934a4f9b5608ff2227dfd2397182ff0151e28605b372"
+      },
+      "fri_bci_sim.tasks.near_table": {
+        "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/simulation/src/fri_bci_sim/tasks/near_table.py",
+        "sha256": "a4fbdf45eb36a004d5769d15b20f623900f3802cb897882469351189a762d632"
+      },
+      "fri_bci_sim.tasks.near_table_progress": {
+        "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/simulation/src/fri_bci_sim/tasks/near_table_progress.py",
+        "sha256": "6184906be8444f90ebab5057bc8aae782c68407d0d61a24876e3d798e2bf2e22"
+      }
+    },
+    "python": "/home/ubuntu/IsaacLab-fri/.venv/bin/python",
+    "python_version": "3.12.16",
+    "torch_version": "2.11.0+cu130",
+    "verification_stage": "post_run_same_interpreter_and_pythonpath"
+  },
+  "scope": "two selected, at-most-one-second progress-policy playbacks; no training or EEG",
+  "scripted_grasp_body_frame_minus_cube_m_sorted_by_y": [
+    [
+      -7.152557368605983e-08,
+      -0.03795733898878098,
+      0.04159996032714841
+    ],
+    [
+      -7.152557368605983e-08,
+      0.03954630494117736,
+      0.04159996032714841
+    ]
+  ],
+  "source_checkpoint_sha256": "46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6",
+  "zero_action_control": {
+    "action_components_all_zero": true,
+    "contact_coverage": 1.0,
+    "duration_s": 1.0,
+    "first_policy_contact_time_s": 0.05,
+    "hand_y_minus_cube_y_at_0_05s_m": -0.00019405782222747803,
+    "initial_state_equals_seed8_policy": true,
+    "max_absolute_hand_y_drift_m": 0.0007249191403388977,
+    "max_cube_xy_displacement_m": 0.006038825828962899,
+    "max_left_right_sensor_force_n": [
+      0.0,
+      0.0
+    ],
+    "physics_samples": 120,
+    "run_dir": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/fingertip-zero-action-control-20261103T0323Z/seed8",
+    "status": "incomplete"
+  }
+}

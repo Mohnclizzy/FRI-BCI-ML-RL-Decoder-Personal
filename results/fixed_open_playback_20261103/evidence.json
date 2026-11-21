@@ -1,0 +1,587 @@
+{
+  "scope": "selected contact mechanism diagnostic; not a pickup-success estimate",
+  "fixed_open": {
+    "8": {
+      "trace": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/fixed-open-progress-playback-seed8-20261103T0210Z/ppo-telemetry.jsonl",
+      "trace_sha256": "8e70272e4999d4154ac093f19d727d5fb35a5124f6aa748cbadab652520a8bee",
+      "episode_status": "incomplete",
+      "episode_end_record_type": "episode_incomplete_end",
+      "episode_end_reason": "max_steps_exhausted",
+      "termination": {
+        "terminated": false,
+        "time_out": false
+      },
+      "comparison_window_policy_steps": null,
+      "baseline_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "baseline_hand_pose_w": [
+        -0.5500000715255737,
+        0.1000000461935997,
+        0.37999996542930603,
+        3.9125716000398825e-08,
+        1.0000005960464478,
+        4.957391297466529e-08,
+        9.972555004011951e-10
+      ],
+      "end_cube_pose_w": [
+        -0.1886611431837082,
+        0.8580269813537598,
+        0.26405540108680725,
+        0.9099739789962769,
+        -0.09142538905143738,
+        -0.13052284717559814,
+        0.3828219473361969
+      ],
+      "end_hand_pose_w": [
+        -0.1383192539215088,
+        0.6176575422286987,
+        0.4520833492279053,
+        0.6095049977302551,
+        0.7737550139427185,
+        0.12134356051683426,
+        -0.12281477451324463
+      ],
+      "sampled_physics_steps": 120,
+      "first_right_contact_ge_1n_time_s": 0.066667,
+      "peak_left_contact_n": 0.0,
+      "peak_right_contact_n": 92.3515396118164,
+      "max_cube_displacement_m": 0.8398957736136126,
+      "max_cube_displacement_time_s": 1.0,
+      "end_cube_displacement_m": 0.8398957736136126,
+      "max_cube_rise_m": 0.01645985245704651,
+      "contact_samples": 120,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": [],
+      "physics_time_grid_ok": true,
+      "fixed_open_targets_all_samples_pass": true,
+      "fixed_open_target_violation_count": 0,
+      "fixed_open_target_violation_examples": [],
+      "launch_sha256": "7b6b41d7411a9d7b88a1f14bbfd149f1ff86dc9e9e6680109f0858e5929456e6",
+      "console_sha256": "582a02194d4ae7a9951e551e6fdb36fb606e801410afcbb02ee6b554ef114e4e",
+      "exit": {
+        "exit_code": 0
+      },
+      "checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-256x250-seed8-20261102T2305Z/logs/rsl_rl/lift_franka/2026-11-02_23-03-47/model_249.pt",
+      "checkpoint_sha256": "46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6",
+      "summary_sha256": "b3d2234d21a3f6e21477339ddeb1efdd72a53090ed332f61cb52d63a44db357c",
+      "summary": {
+        "physics_steps": 120,
+        "policy_steps": 30,
+        "duration_s": 1.0,
+        "physics_dt_s": 0.008333333333333333,
+        "policy_dt_s": 0.03333333333333333,
+        "physics_sampling_mode": "environment_physics_step",
+        "episodes_requested": 1,
+        "max_policy_steps_per_episode": 30,
+        "episodes_started": 1,
+        "episodes_completed": 0,
+        "episode_results": [
+          {
+            "episode": 1,
+            "status": "incomplete",
+            "reason": "max_steps_exhausted",
+            "error": null,
+            "policy_steps": 30,
+            "termination": {
+              "terminated": false,
+              "time_out": false
+            },
+            "physics_samples": 120,
+            "contact_samples": 120,
+            "contact_missing_samples": 0,
+            "contact_coverage": 1.0,
+            "physics_step_gaps": 0,
+            "steps": 120,
+            "duration_s": 1.0,
+            "baseline_cube_height_m": 0.2800000011920929,
+            "max_cube_height_m": 0.2964598536491394,
+            "max_cube_lift_m": 0.01645985245704651,
+            "max_finger_contact_n": [
+              0.0,
+              92.3515396118164
+            ],
+            "first_contact_time_s": null,
+            "first_lift_time_s": null,
+            "first_bilateral_lift_time_s": null,
+            "acquisition_time_s": null,
+            "best_sustained_lift_contact_s": 0.0,
+            "drop_count": 0,
+            "drop_times_s": [],
+            "physical_lift_pass": false,
+            "contact_threshold_n": 0.1,
+            "lift_threshold_m": 0.08,
+            "sustained_contact_threshold_s": 0.5,
+            "drop_height_m_above_baseline": 0.04,
+            "sustained_drop_threshold_s": 0.25
+          }
+        ],
+        "physical_lift_successes": 0,
+        "incomplete_episodes": 1,
+        "contact_threshold_n": 0.1,
+        "lift_threshold_m": 0.08,
+        "sustained_contact_threshold_s": 0.5,
+        "drop_height_m_above_baseline": 0.04,
+        "sustained_drop_threshold_s": 0.25,
+        "telemetry_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/fixed-open-progress-playback-seed8-20261103T0210Z/ppo-telemetry.jsonl",
+        "summary_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/fixed-open-progress-playback-seed8-20261103T0210Z/ppo-telemetry.summary.json",
+        "error": null,
+        "checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-256x250-seed8-20261102T2305Z/logs/rsl_rl/lift_franka/2026-11-02_23-03-47/model_249.pt",
+        "playback_error": null
+      }
+    },
+    "11": {
+      "trace": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/fixed-open-progress-playback-seed11-20261103T0212Z/ppo-telemetry.jsonl",
+      "trace_sha256": "cdf30d8c52838404a74392308428c16d38163ecce407ea307fb4a68347b111c8",
+      "episode_status": "incomplete",
+      "episode_end_record_type": "episode_incomplete_end",
+      "episode_end_reason": "max_steps_exhausted",
+      "termination": {
+        "terminated": false,
+        "time_out": false
+      },
+      "comparison_window_policy_steps": null,
+      "baseline_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "baseline_hand_pose_w": [
+        -0.5500000715255737,
+        0.1000000461935997,
+        0.37999996542930603,
+        3.9125716000398825e-08,
+        1.0000005960464478,
+        4.957391297466529e-08,
+        9.972555004011951e-10
+      ],
+      "end_cube_pose_w": [
+        -0.19279222190380096,
+        0.5225479006767273,
+        0.2810881435871124,
+        -0.01267370954155922,
+        0.011755787767469883,
+        -0.5402838587760925,
+        0.8413053154945374
+      ],
+      "end_hand_pose_w": [
+        -0.16290079057216644,
+        0.49927762150764465,
+        0.3754808306694031,
+        0.5740566849708557,
+        0.8133857846260071,
+        0.030843526124954224,
+        -0.08894876390695572
+      ],
+      "sampled_physics_steps": 120,
+      "first_right_contact_ge_1n_time_s": 0.1,
+      "peak_left_contact_n": 0.0,
+      "peak_right_contact_n": 169.2813262939453,
+      "max_cube_displacement_m": 0.5533039999944072,
+      "max_cube_displacement_time_s": 1.0,
+      "end_cube_displacement_m": 0.5533039999944072,
+      "max_cube_rise_m": 0.002673238515853882,
+      "contact_samples": 120,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": [],
+      "physics_time_grid_ok": true,
+      "fixed_open_targets_all_samples_pass": true,
+      "fixed_open_target_violation_count": 0,
+      "fixed_open_target_violation_examples": [],
+      "launch_sha256": "fbbf0b031667dc9248108cd7b6d9209486b041073ea84fe193a9f7451148ebbf",
+      "console_sha256": "c2f154bba3c8056c94299f74cbeb9c5e67156f45efca27964d4e5a72bfdea9bc",
+      "exit": {
+        "exit_code": 0
+      },
+      "checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-256x250-seed8-20261102T2305Z/logs/rsl_rl/lift_franka/2026-11-02_23-03-47/model_249.pt",
+      "checkpoint_sha256": "46f68c087111b5f713c33a63b7355f3c4c35eeaba26e4240f778667086b443d6",
+      "summary_sha256": "93c8599a23e4053cdd86e4af6fef13ca34e60b8c452698b4958463453ffec21a",
+      "summary": {
+        "physics_steps": 120,
+        "policy_steps": 30,
+        "duration_s": 1.0,
+        "physics_dt_s": 0.008333333333333333,
+        "policy_dt_s": 0.03333333333333333,
+        "physics_sampling_mode": "environment_physics_step",
+        "episodes_requested": 1,
+        "max_policy_steps_per_episode": 30,
+        "episodes_started": 1,
+        "episodes_completed": 0,
+        "episode_results": [
+          {
+            "episode": 1,
+            "status": "incomplete",
+            "reason": "max_steps_exhausted",
+            "error": null,
+            "policy_steps": 30,
+            "termination": {
+              "terminated": false,
+              "time_out": false
+            },
+            "physics_samples": 120,
+            "contact_samples": 120,
+            "contact_missing_samples": 0,
+            "contact_coverage": 1.0,
+            "physics_step_gaps": 0,
+            "steps": 120,
+            "duration_s": 1.0,
+            "baseline_cube_height_m": 0.2800000011920929,
+            "max_cube_height_m": 0.2826732397079468,
+            "max_cube_lift_m": 0.002673238515853882,
+            "max_finger_contact_n": [
+              0.0,
+              169.2813262939453
+            ],
+            "first_contact_time_s": null,
+            "first_lift_time_s": null,
+            "first_bilateral_lift_time_s": null,
+            "acquisition_time_s": null,
+            "best_sustained_lift_contact_s": 0.0,
+            "drop_count": 0,
+            "drop_times_s": [],
+            "physical_lift_pass": false,
+            "contact_threshold_n": 0.1,
+            "lift_threshold_m": 0.08,
+            "sustained_contact_threshold_s": 0.5,
+            "drop_height_m_above_baseline": 0.04,
+            "sustained_drop_threshold_s": 0.25
+          }
+        ],
+        "physical_lift_successes": 0,
+        "incomplete_episodes": 1,
+        "contact_threshold_n": 0.1,
+        "lift_threshold_m": 0.08,
+        "sustained_contact_threshold_s": 0.5,
+        "drop_height_m_above_baseline": 0.04,
+        "sustained_drop_threshold_s": 0.25,
+        "telemetry_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/fixed-open-progress-playback-seed11-20261103T0212Z/ppo-telemetry.jsonl",
+        "summary_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/fixed-open-progress-playback-seed11-20261103T0212Z/ppo-telemetry.summary.json",
+        "error": null,
+        "checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-256x250-seed8-20261102T2305Z/logs/rsl_rl/lift_franka/2026-11-02_23-03-47/model_249.pt",
+        "playback_error": null
+      }
+    }
+  },
+  "published_progress_trace_aligned_window": {
+    "8": {
+      "trace": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-eval-5x12s-seed8-12-20261102T2330Z/seed8/ppo-telemetry.jsonl",
+      "trace_sha256": "ae470debc15d8e2d5428056f3897f78739a42e10fc994926d1aabcd5026f37bc",
+      "episode_status": "completed",
+      "episode_end_record_type": "terminal_pre_reset",
+      "episode_end_reason": null,
+      "termination": {
+        "terminated": true,
+        "time_out": false
+      },
+      "comparison_window_policy_steps": 30,
+      "baseline_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "baseline_hand_pose_w": [
+        -0.5500000715255737,
+        0.1000000461935997,
+        0.37999996542930603,
+        3.9125716000398825e-08,
+        1.0000005960464478,
+        4.957391297466529e-08,
+        9.972555004011951e-10
+      ],
+      "end_cube_pose_w": [
+        -0.10125312209129333,
+        0.6684444546699524,
+        0.23933598399162292,
+        -0.4604530930519104,
+        0.32713785767555237,
+        0.6376804113388062,
+        0.5237629413604736
+      ],
+      "end_hand_pose_w": [
+        -0.12940901517868042,
+        0.5740870833396912,
+        0.4881562292575836,
+        0.6047561168670654,
+        0.7744739055633545,
+        0.06742200255393982,
+        -0.17296086251735687
+      ],
+      "sampled_physics_steps": 112,
+      "first_right_contact_ge_1n_time_s": 0.05,
+      "peak_left_contact_n": 7.034217357635498,
+      "peak_right_contact_n": 153.51287841796875,
+      "max_cube_displacement_m": 0.7253664107039794,
+      "max_cube_displacement_time_s": 0.933333,
+      "end_cube_displacement_m": 0.7253664107039794,
+      "max_cube_rise_m": 0.019022971391677856,
+      "contact_samples": 112,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": [],
+      "physics_time_grid_ok": true,
+      "fixed_open_targets_all_samples_pass": null,
+      "fixed_open_target_violation_count": 112,
+      "fixed_open_target_violation_examples": [
+        {
+          "physics_step": 1,
+          "values": [
+            -0.01401740312576294,
+            -0.018199913203716278
+          ]
+        },
+        {
+          "physics_step": 2,
+          "values": [
+            -0.014470912516117096,
+            -0.02024528756737709
+          ]
+        },
+        {
+          "physics_step": 3,
+          "values": [
+            -0.015266533941030502,
+            -0.020858284085989
+          ]
+        }
+      ],
+      "summary_sha256": "c46cbebe0b63e97ba7162a5e0abac6d89cc1172e047a1731b72be70c7f8fe7d0",
+      "summary": {
+        "physics_steps": 112,
+        "policy_steps": 28,
+        "duration_s": 0.933333,
+        "physics_dt_s": 0.008333333333333333,
+        "policy_dt_s": 0.03333333333333333,
+        "physics_sampling_mode": "environment_physics_step",
+        "episodes_requested": 1,
+        "max_policy_steps_per_episode": 360,
+        "episodes_started": 1,
+        "episodes_completed": 1,
+        "episode_results": [
+          {
+            "episode": 1,
+            "status": "completed",
+            "reason": null,
+            "error": null,
+            "policy_steps": null,
+            "termination": {
+              "terminated": true,
+              "time_out": false
+            },
+            "physics_samples": 112,
+            "contact_samples": 112,
+            "contact_missing_samples": 0,
+            "contact_coverage": 1.0,
+            "physics_step_gaps": 0,
+            "steps": 112,
+            "duration_s": 0.933333,
+            "baseline_cube_height_m": 0.2800000011920929,
+            "max_cube_height_m": 0.29902297258377075,
+            "max_cube_lift_m": 0.019022971391677856,
+            "max_finger_contact_n": [
+              7.034217357635498,
+              153.51287841796875
+            ],
+            "first_contact_time_s": null,
+            "first_lift_time_s": null,
+            "first_bilateral_lift_time_s": null,
+            "acquisition_time_s": null,
+            "best_sustained_lift_contact_s": 0.0,
+            "drop_count": 0,
+            "drop_times_s": [],
+            "physical_lift_pass": false,
+            "contact_threshold_n": 0.1,
+            "lift_threshold_m": 0.08,
+            "sustained_contact_threshold_s": 0.5,
+            "drop_height_m_above_baseline": 0.04,
+            "sustained_drop_threshold_s": 0.25
+          }
+        ],
+        "physical_lift_successes": 0,
+        "incomplete_episodes": 0,
+        "contact_threshold_n": 0.1,
+        "lift_threshold_m": 0.08,
+        "sustained_contact_threshold_s": 0.5,
+        "drop_height_m_above_baseline": 0.04,
+        "sustained_drop_threshold_s": 0.25,
+        "telemetry_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-eval-5x12s-seed8-12-20261102T2330Z/seed8/ppo-telemetry.jsonl",
+        "summary_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-eval-5x12s-seed8-12-20261102T2330Z/seed8/ppo-telemetry.summary.json",
+        "error": null,
+        "checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-256x250-seed8-20261102T2305Z/logs/rsl_rl/lift_franka/2026-11-02_23-03-47/model_249.pt",
+        "playback_error": null
+      }
+    },
+    "11": {
+      "trace": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-eval-5x12s-seed8-12-20261102T2330Z/seed11/ppo-telemetry.jsonl",
+      "trace_sha256": "cc13ca4b450b2ad51b2dbffb95fff34bca56c556eb76a46cbda0687292d86d29",
+      "episode_status": "completed",
+      "episode_end_record_type": "physics_step",
+      "episode_end_reason": null,
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      },
+      "comparison_window_policy_steps": 30,
+      "baseline_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "baseline_hand_pose_w": [
+        -0.5500000715255737,
+        0.1000000461935997,
+        0.37999996542930603,
+        3.9125716000398825e-08,
+        1.0000005960464478,
+        4.957391297466529e-08,
+        9.972555004011951e-10
+      ],
+      "end_cube_pose_w": [
+        -0.23369351029396057,
+        0.5454314351081848,
+        0.3442460000514984,
+        -0.02850126102566719,
+        0.003828158602118492,
+        -0.535696804523468,
+        0.8439206480979919
+      ],
+      "end_hand_pose_w": [
+        -0.21310776472091675,
+        0.5136529803276062,
+        0.4452177584171295,
+        0.5339289307594299,
+        0.8291670083999634,
+        0.0668841227889061,
+        -0.15142400562763214
+      ],
+      "sampled_physics_steps": 120,
+      "first_right_contact_ge_1n_time_s": 0.075,
+      "peak_left_contact_n": 13.973868370056152,
+      "peak_right_contact_n": 107.0064468383789,
+      "max_cube_displacement_m": 0.5500786429193393,
+      "max_cube_displacement_time_s": 1.0,
+      "end_cube_displacement_m": 0.5500786429193393,
+      "max_cube_rise_m": 0.06424599885940552,
+      "contact_samples": 120,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": [],
+      "physics_time_grid_ok": true,
+      "fixed_open_targets_all_samples_pass": null,
+      "fixed_open_target_violation_count": 120,
+      "fixed_open_target_violation_examples": [
+        {
+          "physics_step": 1,
+          "values": [
+            0.012446809560060501,
+            -0.006876882165670395
+          ]
+        },
+        {
+          "physics_step": 2,
+          "values": [
+            0.012134484946727753,
+            -0.008286513388156891
+          ]
+        },
+        {
+          "physics_step": 3,
+          "values": [
+            0.011582836508750916,
+            -0.00872524082660675
+          ]
+        }
+      ],
+      "summary_sha256": "406a8e2a8a3d8c9bf48acad719ebf2f8dc1f93dfc694b3d91c94ee6ba6c4314e",
+      "summary": {
+        "physics_steps": 1440,
+        "policy_steps": 360,
+        "duration_s": 12.0,
+        "physics_dt_s": 0.008333333333333333,
+        "policy_dt_s": 0.03333333333333333,
+        "physics_sampling_mode": "environment_physics_step",
+        "episodes_requested": 1,
+        "max_policy_steps_per_episode": 360,
+        "episodes_started": 1,
+        "episodes_completed": 1,
+        "episode_results": [
+          {
+            "episode": 1,
+            "status": "completed",
+            "reason": null,
+            "error": null,
+            "policy_steps": null,
+            "termination": {
+              "terminated": false,
+              "time_out": true
+            },
+            "physics_samples": 1440,
+            "contact_samples": 1440,
+            "contact_missing_samples": 0,
+            "contact_coverage": 1.0,
+            "physics_step_gaps": 0,
+            "steps": 1440,
+            "duration_s": 12.0,
+            "baseline_cube_height_m": 0.2800000011920929,
+            "max_cube_height_m": 0.5815007090568542,
+            "max_cube_lift_m": 0.30150070786476135,
+            "max_finger_contact_n": [
+              13.973868370056152,
+              107.0064468383789
+            ],
+            "first_contact_time_s": 0.775,
+            "first_lift_time_s": 1.033333,
+            "first_bilateral_lift_time_s": 1.041667,
+            "acquisition_time_s": 1.533333,
+            "best_sustained_lift_contact_s": 6.2,
+            "drop_count": 0,
+            "drop_times_s": [],
+            "physical_lift_pass": true,
+            "contact_threshold_n": 0.1,
+            "lift_threshold_m": 0.08,
+            "sustained_contact_threshold_s": 0.5,
+            "drop_height_m_above_baseline": 0.04,
+            "sustained_drop_threshold_s": 0.25
+          }
+        ],
+        "physical_lift_successes": 1,
+        "incomplete_episodes": 0,
+        "contact_threshold_n": 0.1,
+        "lift_threshold_m": 0.08,
+        "sustained_contact_threshold_s": 0.5,
+        "drop_height_m_above_baseline": 0.04,
+        "sustained_drop_threshold_s": 0.25,
+        "telemetry_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-eval-5x12s-seed8-12-20261102T2330Z/seed11/ppo-telemetry.jsonl",
+        "summary_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-eval-5x12s-seed8-12-20261102T2330Z/seed11/ppo-telemetry.summary.json",
+        "error": null,
+        "checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-progress-256x250-seed8-20261102T2305Z/logs/rsl_rl/lift_franka/2026-11-02_23-03-47/model_249.pt",
+        "playback_error": null
+      }
+    }
+  },
+  "checks": {
+    "all_fixed_open_runs_have_explicit_end_state": true,
+    "all_fixed_open_targets_exact_each_sample": true,
+    "all_fixed_open_contact_coverage_complete": true,
+    "all_fixed_open_have_no_physics_gaps": true
+  }
+}

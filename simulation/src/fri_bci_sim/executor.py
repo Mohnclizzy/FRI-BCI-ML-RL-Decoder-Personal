@@ -85,7 +85,7 @@ class DecisionReplay:
     def __init__(self, path: Path | None, condition: str, max_age_s: float = 1.0):
         if not math.isfinite(max_age_s) or max_age_s <= 0:
             raise ValueError("Maximum estimate age must be finite and positive")
-        if condition not in ("raw", "confidence", "temporal", "always-hold", "scripted-positive", "scripted-pause"):
+        if condition not in ("raw", "confidence", "temporal", "crc_hysteresis", "always-hold", "scripted-positive", "scripted-pause"):
             raise ValueError("Unknown command condition")
         self.condition, self.max_age_s = condition, max_age_s
         self.events, self.times = [], []

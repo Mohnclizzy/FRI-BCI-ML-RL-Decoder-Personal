@@ -1,0 +1,15 @@
+{
+  "archive_path": "outputs/local_scratch_2026-11-11/eegnet_training_artifacts_2026-11-11.tar.gz",
+  "archive_sha256": "aa560f644d467711b50a538b5cb456adaf9c9d0c81136cdbfa6a7e3f9d08cb09",
+  "archive_bytes": 1388079,
+  "included_files_count": 260,
+  "manifest_hashes_verified_on_restore": 155,
+  "all_155_hashes_match": true,
+  "offhost_drive_backup": {
+    "folder_id": "12RGB-wZiboJpO0oHb_qFElCdqvzoo6Lo",
+    "file_id": "1WiHfafk7-rjQ07As6GTIN4ikA0ZTwgNL",
+    "downloaded_sha256": "aa560f644d467711b50a538b5cb456adaf9c9d0c81136cdbfa6a7e3f9d08cb09",
+    "roundtrip_verified": true,
+    "restored_manifest_hashes_verified": 155
+  }
+}

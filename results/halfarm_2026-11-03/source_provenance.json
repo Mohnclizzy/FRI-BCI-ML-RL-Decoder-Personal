@@ -1,0 +1,12 @@
+{
+  "files_sha256": {
+    "simulation/src/fri_bci_sim/tasks/near_table_halfarm.py": "721c67418b31ad1d17b7a47cfdbdfe6bca11bfdfe74b03c3a32500b2d8bc74f6",
+    "simulation/src/fri_bci_sim/tasks/__init__.py": "84e4e2500afbc311ffa22c759385bbf7b92ec7772496d8392f84899c3a1d89d7",
+    "simulation/src/fri_bci_sim/ppo_telemetry.py": "0444cfed87f3198a9306855f4333baaee2773536209e5cd9373357d72a8279f0",
+    "simulation/scripts/run_halfarm_evaluation.py": "21aa701dc9557f7bd0442c03e24d87dcf13544ca177fe467079b58f2fb44df20",
+    "docs/HALFARM_PROTOCOL_2026-11-03.md": "d951b992fbd393b94d66ffa33bd6262c2e0a6f8780e076565b381acf044f3498"
+  },
+  "isaaclab_commit": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4",
+  "gpu": "NVIDIA L4, driver 580.178.04",
+  "source_checkpoint_sha256": "37eb85242539f7d2f0c36a916f3aa8e44d2fe6a70030a9da18963d2506e673f7"
+}

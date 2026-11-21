@@ -1,0 +1,158 @@
+{
+  "condition": "five independent fresh simulator processes, one native-horizon episode each, seeds 9-13, unmodified candidate weights",
+  "archive_sha256": "8a282ee1fb074506cffd9b2c515d68a709c5f81a61c891760e9eb2b3f53ae080",
+  "candidate_checkpoint_sha256": "832d8262ede665b5698c557e79ef0aa4167ec0fae1b5d5d8b222e829effc24a4",
+  "isaac_commit": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4",
+  "successful_valid_lifts": 1,
+  "valid_episodes": 5,
+  "all_contact_coverage_complete": true,
+  "all_start_continuity_pass": true,
+  "episodes": [
+    {
+      "seed": 9,
+      "valid_start": true,
+      "initial_cube_xyz_m": [
+        0.38723522424697876,
+        -0.10895762592554092,
+        0.02500000037252903
+      ],
+      "first_physics_cube_jump_m": 0.0004087500274181366,
+      "first_physics_hand_jump_m": 0.0027590319879103025,
+      "physical_lift_pass": true,
+      "max_post_action_rise_m": 0.5611576195806265,
+      "best_sampled_sustain_s": 2.04166666666666,
+      "first_bilateral_contact_s": 0.5833333333333337,
+      "max_finger_contact_n": [
+        103.72513580322266,
+        86.7160873413086
+      ],
+      "arm_velocity_clamps": 123,
+      "finger_clamps": 14,
+      "max_velocity_correction_rad_s": 5.683842658996582,
+      "max_finger_correction_m": 0.00819738581776619,
+      "samples": 358,
+      "duration_s": 2.9833333333333254,
+      "termination": {
+        "terminated": false,
+        "timeout": true
+      }
+    },
+    {
+      "seed": 10,
+      "valid_start": true,
+      "initial_cube_xyz_m": [
+        0.3914104700088501,
+        0.1955188363790512,
+        0.02500000037252903
+      ],
+      "first_physics_cube_jump_m": 0.0004087500274181366,
+      "first_physics_hand_jump_m": 0.0024236013647947943,
+      "physical_lift_pass": false,
+      "max_post_action_rise_m": 0.020841604098677635,
+      "best_sampled_sustain_s": 0.0,
+      "first_bilateral_contact_s": null,
+      "max_finger_contact_n": [
+        102.72410583496094,
+        4.682963848114014
+      ],
+      "arm_velocity_clamps": 65,
+      "finger_clamps": 0,
+      "max_velocity_correction_rad_s": 5.673445701599121,
+      "max_finger_correction_m": 0.0,
+      "samples": 68,
+      "duration_s": 0.5666666666666671,
+      "termination": {
+        "terminated": true,
+        "timeout": false
+      }
+    },
+    {
+      "seed": 11,
+      "valid_start": true,
+      "initial_cube_xyz_m": [
+        0.38351666927337646,
+        0.04150371253490448,
+        0.02500000037252903
+      ],
+      "first_physics_cube_jump_m": 0.0004087500274181366,
+      "first_physics_hand_jump_m": 0.0027357335489515146,
+      "physical_lift_pass": false,
+      "max_post_action_rise_m": 0.1062371488660574,
+      "best_sampled_sustain_s": 0.033333333333333215,
+      "first_bilateral_contact_s": 0.483333333333334,
+      "max_finger_contact_n": [
+        88.912109375,
+        172.7860870361328
+      ],
+      "arm_velocity_clamps": 101,
+      "finger_clamps": 33,
+      "max_velocity_correction_rad_s": 4.085631370544434,
+      "max_finger_correction_m": 0.02183472365140915,
+      "samples": 160,
+      "duration_s": 1.333333333333331,
+      "termination": {
+        "terminated": true,
+        "timeout": false
+      }
+    },
+    {
+      "seed": 12,
+      "valid_start": true,
+      "initial_cube_xyz_m": [
+        0.4300169348716736,
+        0.07405830919742584,
+        0.02500000037252903
+      ],
+      "first_physics_cube_jump_m": 0.0004087500274181366,
+      "first_physics_hand_jump_m": 0.0025966966845472356,
+      "physical_lift_pass": false,
+      "max_post_action_rise_m": 0.04027620516717434,
+      "best_sampled_sustain_s": 0.0,
+      "first_bilateral_contact_s": 0.45000000000000057,
+      "max_finger_contact_n": [
+        132.84535217285156,
+        150.78773498535156
+      ],
+      "arm_velocity_clamps": 177,
+      "finger_clamps": 20,
+      "max_velocity_correction_rad_s": 5.549104690551758,
+      "max_finger_correction_m": 0.0077928826212882996,
+      "samples": 358,
+      "duration_s": 2.9833333333333254,
+      "termination": {
+        "terminated": false,
+        "timeout": true
+      }
+    },
+    {
+      "seed": 13,
+      "valid_start": true,
+      "initial_cube_xyz_m": [
+        0.41290780901908875,
+        -0.13012295961380005,
+        0.02500000037252903
+      ],
+      "first_physics_cube_jump_m": 0.0004087500274181366,
+      "first_physics_hand_jump_m": 0.0027198701249329066,
+      "physical_lift_pass": false,
+      "max_post_action_rise_m": 0.03389269672334194,
+      "best_sampled_sustain_s": 0.0,
+      "first_bilateral_contact_s": null,
+      "max_finger_contact_n": [
+        81.76640319824219,
+        9.097804069519043
+      ],
+      "arm_velocity_clamps": 81,
+      "finger_clamps": 17,
+      "max_velocity_correction_rad_s": 7.798876762390137,
+      "max_finger_correction_m": 0.010815158486366272,
+      "samples": 96,
+      "duration_s": 0.7999999999999996,
+      "termination": {
+        "terminated": true,
+        "timeout": false
+      }
+    }
+  ],
+  "interpretation": "screen only; high forces and state clamps remain; not a robust or hardware-ready policy"
+}

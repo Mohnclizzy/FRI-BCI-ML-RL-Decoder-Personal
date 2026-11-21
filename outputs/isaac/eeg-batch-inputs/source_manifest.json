@@ -1,0 +1,37 @@
+{
+  "head": "376927c1a147363e056c50c15d6e2ebbd6cc025a",
+  "dirty_status": " M README.md\n M simulation/README.md\n M simulation/cloud/pregrasp_pilot_2026-11-02.md\n M simulation/scripts/controlled_lift.py\n M simulation/src/fri_bci_sim/curriculum.py\n M simulation/src/fri_bci_sim/launch.py\n M simulation/src/fri_bci_sim/tasks/__init__.py\n M simulation/tests/test_contracts.py\n M simulation/tests/test_curriculum.py\n M tests/test_evaluate_replay.py\n?? START_HERE.md\n?? docs/completion_protocol_2026-11-02.md\n?? docs/end_to_end_pilot_2026-11-02.md\n?? docs/multi_person_replay_2026-11-02.md\n?? docs/ppo_lift_evaluation_2026-11-02.md\n?? eeg_decoder/evaluate_robot_replay.py\n?? simulation/cloud/deploy_eeg_matched_batch.sh\n?? simulation/cloud/run_eeg_matched_batch.sh\n?? simulation/cloud/smoke_ppo_approach.sh\n?? simulation/scripts/plot_matched_results.py\n?? simulation/src/fri_bci_sim/executor.py\n?? simulation/src/fri_bci_sim/physical_evaluation.py\n?? simulation/src/fri_bci_sim/ppo_telemetry.py\n?? simulation/src/fri_bci_sim/tasks/approach.py\n?? simulation/tests/test_executor.py\n?? simulation/tests/test_physical_evaluation.py\n",
+  "files": {
+    "simulation/src/fri_bci_sim/commands.py": {
+      "sha256_deployed": "eaa32b71a8bb6103e7d65a92cfbcc6eb0c4e5913df4b9854cf9ffaed25885e2e",
+      "sha256_local": "eaa32b71a8bb6103e7d65a92cfbcc6eb0c4e5913df4b9854cf9ffaed25885e2e"
+    },
+    "simulation/src/fri_bci_sim/executor.py": {
+      "sha256_deployed": "c2f3d82cd2a83892562cb4b11ea09fb43ed0bd719d53d8808a857422026dd84b",
+      "sha256_local": "c2f3d82cd2a83892562cb4b11ea09fb43ed0bd719d53d8808a857422026dd84b"
+    },
+    "simulation/src/fri_bci_sim/ppo_telemetry.py": {
+      "sha256_deployed": "8a9d9f7f5759c01db76c832a6f24fe65a6a838ea88eaaa1c65b7b98f745146cf",
+      "sha256_local": "8a9d9f7f5759c01db76c832a6f24fe65a6a838ea88eaaa1c65b7b98f745146cf"
+    },
+    "simulation/scripts/controlled_lift.py": {
+      "sha256_deployed": "59ee397a113367076529717ba3ee7522d8203fea35dabaa9e89d3482b608d892",
+      "sha256_local": "59ee397a113367076529717ba3ee7522d8203fea35dabaa9e89d3482b608d892"
+    },
+    "simulation/cloud/run_eeg_matched_batch.sh": {
+      "sha256_deployed": "c35a03620f7e9da28c7c56e3ebeda63a63af40ee6f7fe3470e7b98a9dc0d5b4b",
+      "sha256_local": "43798b73bd5d6f8eb4d33efbb4eeac5da734f8014181fa4838e62a03a03f2166"
+    },
+    "simulation/cloud/deploy_eeg_matched_batch.sh": {
+      "sha256_deployed": "f52d38d8768362186a2a1698244754a609cfb79bf3b86f9756bcdb3852be6878",
+      "sha256_local": "c55f39f79c4aeebb34c4ee465e487751b4f26dc9327f71eef26996de10d12634"
+    },
+    "simulation/src/fri_bci_sim/tasks/lift.py": {
+      "sha256_deployed": "19187b0b45539a45a0364c70db1b1fca485dfce854fe3886c66bcc7f124318eb",
+      "sha256_local": "19187b0b45539a45a0364c70db1b1fca485dfce854fe3886c66bcc7f124318eb"
+    }
+  },
+  "purpose": "corrected HOLD controls and 120s exploratory EEG matched replay",
+  "protocol": "docs/completion_protocol_2026-11-02.md",
+  "initialization": "Fixed2s open-gripper commanded-ready pre-roll logged separately; no target relatching"
+}

@@ -1,0 +1,101 @@
+{
+  "serialized_rescore_matches": true,
+  "episodes": [
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": 0.671859597787261,
+      "best_sampled_sustain_s": 1.5916666666666612,
+      "first_sampled_success_s": 1.8916666666666624,
+      "physical_lift_pass": true,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 1,
+      "max_finger_contact_n": [
+        149.1663360595703,
+        78.36581420898438
+      ],
+      "first_bilateral_contact_s": 0.9499999999999991,
+      "max_hand_displacement_m": 0.5040735830179557
+    },
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": 0.668371057137847,
+      "best_sampled_sustain_s": 0.0,
+      "first_sampled_success_s": null,
+      "physical_lift_pass": false,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 2,
+      "max_finger_contact_n": [
+        272.7389831542969,
+        133.5579833984375
+      ],
+      "first_bilateral_contact_s": 0.7583333333333331,
+      "max_hand_displacement_m": 0.526119296125731
+    },
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": -0.003107761964201927,
+      "best_sampled_sustain_s": 0.0,
+      "first_sampled_success_s": null,
+      "physical_lift_pass": false,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 3,
+      "max_finger_contact_n": [
+        0.0,
+        0.0
+      ],
+      "first_bilateral_contact_s": null,
+      "max_hand_displacement_m": 0.33199572864946675
+    },
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": -0.003107761964201927,
+      "best_sampled_sustain_s": 0.0,
+      "first_sampled_success_s": null,
+      "physical_lift_pass": false,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 4,
+      "max_finger_contact_n": [
+        0.0,
+        0.0
+      ],
+      "first_bilateral_contact_s": null,
+      "max_hand_displacement_m": 0.3566321449821118
+    },
+    {
+      "status": "completed",
+      "samples": 358,
+      "contact_coverage": 1.0,
+      "max_cube_rise_m": -0.003107769414782524,
+      "best_sampled_sustain_s": 0.0,
+      "first_sampled_success_s": null,
+      "physical_lift_pass": false,
+      "drop_detection_times_s": [],
+      "definition": "rise>=0.08m and each finger force>=0.1N spanning>=0.5s",
+      "limitation": "Sampled contact only; no claim about contact between observations.",
+      "episode": 5,
+      "max_finger_contact_n": [
+        0.0,
+        0.0
+      ],
+      "first_bilateral_contact_s": null,
+      "max_hand_displacement_m": 0.3332097936886855
+    }
+  ],
+  "successes": 1
+}

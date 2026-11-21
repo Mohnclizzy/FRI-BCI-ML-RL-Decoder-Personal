@@ -1,0 +1,5 @@
+[console_scripts]
+fri-bci-sim = fri_bci_sim.cli:main
+
+[isaaclab.tasks]
+fri_bci_sim = fri_bci_sim.tasks

@@ -1,0 +1,1457 @@
+[
+  {
+    "subject": 1,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "3d161f88e1c00632585287d2ce584c2bc0f08862438eb255ea8723e00fac693d",
+    "r08_sha256": "358fb5189220725141968ae285fbe9e3f36210b834ffba71d940af308e3aca68",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "61874070d6e304155137e08db5f265fd02ef6bd9b6acea7d3be21c8d02b0d66e",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.6666666666666666,
+        "macro_f1": 0.6651785714285714,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            9,
+            6
+          ],
+          [
+            4,
+            11
+          ]
+        ],
+        "rest_false_activation_fraction": 0.4,
+        "report": {
+          "REST": {
+            "precision": 0.6923076923076923,
+            "recall": 0.6,
+            "f1-score": 0.6428571428571429,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.6470588235294118,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.6875,
+            "support": 15.0
+          },
+          "accuracy": 0.6666666666666666,
+          "macro avg": {
+            "precision": 0.6696832579185521,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6651785714285714,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.669683257918552,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6651785714285715,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 31.99999999999999,
+          "rest_seconds": 62.999999999999986,
+          "rest_command_fraction": 0.5079365079365079,
+          "imagery_command_seconds": 46.749999999999964,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.23983739837398377,
+          "rest_episodes_with_any_command": 14,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.9333333333333333,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.09999999999999787,
+          "rest_seconds": 62.999999999999986,
+          "rest_command_fraction": 0.001587301587301554,
+          "imagery_command_seconds": 0.6499999999999986,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.9894308943089432,
+          "rest_episodes_with_any_command": 1,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.06666666666666667,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 62.999999999999986,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 2,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "fcd37831378c411d50c223d97ffbc00949be2271d093f1d8e56bbe7c02bd1539",
+    "r08_sha256": "02d64941f6bcd1635bc7dd187a9553331b73933e9771f4e7c59249dfc5632c5a",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "cd8e65aa1d52aff534536f7b81fe627600658c719a91ab2265c1097c86d85243",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.6333333333333333,
+        "macro_f1": 0.6329254727474972,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            9,
+            6
+          ],
+          [
+            5,
+            10
+          ]
+        ],
+        "rest_false_activation_fraction": 0.4,
+        "report": {
+          "REST": {
+            "precision": 0.6428571428571429,
+            "recall": 0.6,
+            "f1-score": 0.6206896551724138,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.625,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6451612903225806,
+            "support": 15.0
+          },
+          "accuracy": 0.6333333333333333,
+          "macro avg": {
+            "precision": 0.6339285714285714,
+            "recall": 0.6333333333333333,
+            "f1-score": 0.6329254727474972,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6339285714285715,
+            "recall": 0.6333333333333333,
+            "f1-score": 0.6329254727474972,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 32.399999999999984,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.5268292682926831,
+          "imagery_command_seconds": 38.59999999999997,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.37235772357723573,
+          "rest_episodes_with_any_command": 15,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 1.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.25,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.9959349593495935,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 3,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "7d0732eea963488a53153835524e55c2b68220b0a0c7c5be99e535a9f5367e7f",
+    "r08_sha256": "0f50978bb972e693b8c758a9223a2d9fa35c7f117226391090bcc32a83ce765d",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "90899f7af3b0964a56c37e811047233b85a9b25ee8f3d6932da66eaf81b57963",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.5333333333333333,
+        "macro_f1": 0.513888888888889,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            5,
+            10
+          ],
+          [
+            4,
+            11
+          ]
+        ],
+        "rest_false_activation_fraction": 0.6666666666666666,
+        "report": {
+          "REST": {
+            "precision": 0.5555555555555556,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.4166666666666667,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.5238095238095238,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.6111111111111112,
+            "support": 15.0
+          },
+          "accuracy": 0.5333333333333333,
+          "macro avg": {
+            "precision": 0.5396825396825398,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.513888888888889,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.5396825396825397,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.513888888888889,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 39.95,
+          "rest_seconds": 62.999999999999986,
+          "rest_command_fraction": 0.6341269841269843,
+          "imagery_command_seconds": 35.54999999999997,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.4219512195121953,
+          "rest_episodes_with_any_command": 15,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 1.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 62.999999999999986,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 62.999999999999986,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 4,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "c9ddf0294961f0b877192a2479802b9c6c88403682a17b5ad679fd6485aa6f59",
+    "r08_sha256": "1ab5909b183413283a7ea76e35311a68a4688558f0044b9faab3987291cbdb92",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "cc99add292d5703fa58013e780b0bfc205313946472cebab3b8a0543566bfa8f",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.6000000000000001,
+        "macro_f1": 0.5833333333333333,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            12,
+            3
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "rest_false_activation_fraction": 0.2,
+        "report": {
+          "REST": {
+            "precision": 0.5714285714285714,
+            "recall": 0.8,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.6666666666666666,
+            "recall": 0.4,
+            "f1-score": 0.5,
+            "support": 15.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.6190476190476191,
+            "recall": 0.6000000000000001,
+            "f1-score": 0.5833333333333333,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.619047619047619,
+            "recall": 0.6,
+            "f1-score": 0.5833333333333334,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 15.700000000000008,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.25528455284552876,
+          "imagery_command_seconds": 35.299999999999976,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.42601626016260163,
+          "rest_episodes_with_any_command": 14,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.9333333333333333,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.5,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.008130081300813014,
+          "imagery_command_seconds": 3.25,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.9471544715447154,
+          "rest_episodes_with_any_command": 1,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.06666666666666667,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.75,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.9878048780487805,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 5,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "956d0857b17b040955fee9b2384f818f85bfb02248c387d9aa7930c42934ca0c",
+    "r08_sha256": "eeed6c328ee256dd2c20d1808e05819bed4ce56b8de1c57914ded00565b6b7bc",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "62c3e6708a47eb37515abb101940d96c1342e98c7fe3d3685b63ca4a64b3c0f8",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.6666666666666666,
+        "macro_f1": 0.6666666666666666,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            10,
+            5
+          ],
+          [
+            5,
+            10
+          ]
+        ],
+        "rest_false_activation_fraction": 0.3333333333333333,
+        "report": {
+          "REST": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "accuracy": 0.6666666666666666,
+          "macro avg": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6666666666666666,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6666666666666666,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 21.899999999999984,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.35609756097560974,
+          "imagery_command_seconds": 33.09999999999999,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.46178861788617864,
+          "rest_episodes_with_any_command": 14,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.9333333333333333,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 6,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "4bd532bb728e1f2ed2afc0a5c162830a07465b6a4a58e105d1316c6ff1921f3b",
+    "r08_sha256": "006e55ec16590f5f5b9230ac53a2f8fd0660960fa7b4b512ff61f8f7e2f8714e",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "f2a562d50dd4e50ef2bc1bb6d685bf7fbc1fe3dd9805318a1d8694f8c98838b4",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.5,
+        "macro_f1": 0.38440492476060195,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            14,
+            1
+          ],
+          [
+            14,
+            1
+          ]
+        ],
+        "rest_false_activation_fraction": 0.06666666666666667,
+        "report": {
+          "REST": {
+            "precision": 0.5,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.6511627906976745,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.5,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.11764705882352941,
+            "support": 15.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.38440492476060195,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.38440492476060195,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 10.499999999999996,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.17073170731707324,
+          "imagery_command_seconds": 13.24999999999999,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.7845528455284553,
+          "rest_episodes_with_any_command": 8,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.5333333333333333,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 7,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "3b31e50c4a5ebbb25459b1ebdf802b7ca86010857637580aacd53067350553a6",
+    "r08_sha256": "fa8cfc38727e908be4626cf82b19533f7a761f102319696e53e4ee2d61b1092b",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "80d62caf870e26dd0f7ca19fa511ec03310d91a377f8e5000e79b3c959e39204",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.5333333333333333,
+        "macro_f1": 0.5248868778280543,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            10,
+            5
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "rest_false_activation_fraction": 0.3333333333333333,
+        "report": {
+          "REST": {
+            "precision": 0.5263157894736842,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.5882352941176471,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.5454545454545454,
+            "recall": 0.4,
+            "f1-score": 0.46153846153846156,
+            "support": 15.0
+          },
+          "accuracy": 0.5333333333333333,
+          "macro avg": {
+            "precision": 0.5358851674641147,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.5248868778280543,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.5358851674641147,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.5248868778280543,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 26.100000000000005,
+          "rest_seconds": 62.999999999999986,
+          "rest_command_fraction": 0.4142857142857145,
+          "imagery_command_seconds": 34.39999999999998,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.44065040650406506,
+          "rest_episodes_with_any_command": 13,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.8666666666666667,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 8.950000000000003,
+          "rest_seconds": 62.999999999999986,
+          "rest_command_fraction": 0.14206349206349214,
+          "imagery_command_seconds": 8.549999999999997,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.8609756097560975,
+          "rest_episodes_with_any_command": 9,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.6,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 5.700000000000003,
+          "rest_seconds": 62.999999999999986,
+          "rest_command_fraction": 0.09047619047619054,
+          "imagery_command_seconds": 4.299999999999997,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.9300813008130081,
+          "rest_episodes_with_any_command": 6,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.4,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 8,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "034a26131e1425e6374a459e5887b1f831f7bfdb101a3658d2cd07620cf2c06b",
+    "r08_sha256": "534c25b65a4fa68afe29a5c0272a686ac474e638c86521b177660d888401f374",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "0374de7dfe1ee141b05fa11eaad966d676f6312717370e1830cc81573c66496e",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.7,
+        "macro_f1": 0.696969696969697,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            9,
+            6
+          ],
+          [
+            3,
+            12
+          ]
+        ],
+        "rest_false_activation_fraction": 0.4,
+        "report": {
+          "REST": {
+            "precision": 0.75,
+            "recall": 0.6,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.6666666666666666,
+            "recall": 0.8,
+            "f1-score": 0.7272727272727273,
+            "support": 15.0
+          },
+          "accuracy": 0.7,
+          "macro avg": {
+            "precision": 0.7083333333333333,
+            "recall": 0.7,
+            "f1-score": 0.696969696969697,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.7083333333333334,
+            "recall": 0.7,
+            "f1-score": 0.696969696969697,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 26.9,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.4373983739837401,
+          "imagery_command_seconds": 35.84999999999999,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.41707317073170713,
+          "rest_episodes_with_any_command": 15,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 1.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 9,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "705f53460954e465e7a6ef45bd1f64e675548c08e9238dfb1f448713f9e559f8",
+    "r08_sha256": "a8121c688ffca3db1d3b1f61dd53d6636ac91763cd2269b39636c65dfc6e4fe2",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "e677044526fbc01d95080304bff9038165b9203520a64346c1d7c1575ee38f6d",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.4666666666666667,
+        "macro_f1": 0.3650793650793651,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            1,
+            14
+          ],
+          [
+            2,
+            13
+          ]
+        ],
+        "rest_false_activation_fraction": 0.9333333333333333,
+        "report": {
+          "REST": {
+            "precision": 0.3333333333333333,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.1111111111111111,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.48148148148148145,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.6190476190476191,
+            "support": 15.0
+          },
+          "accuracy": 0.4666666666666667,
+          "macro avg": {
+            "precision": 0.4074074074074074,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.3650793650793651,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.4074074074074074,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.36507936507936506,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 47.74999999999996,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.7764227642276421,
+          "imagery_command_seconds": 55.49999999999996,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.09756097560975618,
+          "rest_episodes_with_any_command": 15,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 1.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 10,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "8e68b22936cbcb7f84ed8ff037cb4a99f01064589d181c8056dbef06c1c7159b",
+    "r08_sha256": "b468e77d0c8a73377b4510220c6be95bdefd572f6ed5c4b5f539c9dc0bdef485",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "57ab759079b91a2561fbe290e709c90eb1f13b310fe68636d4c0dcb8f30d3f24",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.6,
+        "macro_f1": 0.5927601809954751,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            7,
+            8
+          ],
+          [
+            4,
+            11
+          ]
+        ],
+        "rest_false_activation_fraction": 0.5333333333333333,
+        "report": {
+          "REST": {
+            "precision": 0.6363636363636364,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.5384615384615384,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.5789473684210527,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.6470588235294118,
+            "support": 15.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.6076555023923444,
+            "recall": 0.6,
+            "f1-score": 0.5927601809954751,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6076555023923444,
+            "recall": 0.6,
+            "f1-score": 0.5927601809954751,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 35.649999999999984,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.5796747967479676,
+          "imagery_command_seconds": 45.09999999999997,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.2666666666666666,
+          "rest_episodes_with_any_command": 15,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 1.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 11,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "072b75496dd935be460bc8ac9c3bf2d1fdcdb62f32ffb552955319abcb24cfe9",
+    "r08_sha256": "70b05e696e9faff6566cabda58b9144e1cd8ca3b16e04178309b22ef7bb612b7",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "52690b4e8922f5d1bb749abf5623be9fb57778307b036fd86686c8e35d71efc3",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.6,
+        "macro_f1": 0.5982142857142857,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            10,
+            5
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "rest_false_activation_fraction": 0.3333333333333333,
+        "report": {
+          "REST": {
+            "precision": 0.5882352941176471,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.625,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.6153846153846154,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.5714285714285714,
+            "support": 15.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.6018099547511313,
+            "recall": 0.6,
+            "f1-score": 0.5982142857142857,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6018099547511312,
+            "recall": 0.6,
+            "f1-score": 0.5982142857142857,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 24.94999999999999,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.4056910569105692,
+          "imagery_command_seconds": 38.55,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.37317073170731674,
+          "rest_episodes_with_any_command": 15,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 1.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 12,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "974d6c7558c8d8ee48449bf9a1f40cda596febb6365e69e8e65c2d952644017e",
+    "r08_sha256": "5d7d13ad211f615a21db64c3a4dbc8ff4ef10dc3f777b8e6441d8942e8d40336",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "fb3cd083069243b6e7d544b4e85024b00b530021a64b0b4a38794a63ca318bb6",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.6,
+        "macro_f1": 0.6,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            9,
+            6
+          ],
+          [
+            6,
+            9
+          ]
+        ],
+        "rest_false_activation_fraction": 0.4,
+        "report": {
+          "REST": {
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1-score": 0.6,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1-score": 0.6,
+            "support": 15.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1-score": 0.6,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1-score": 0.6,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 21.649999999999984,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.35203252032520327,
+          "imagery_command_seconds": 31.599999999999973,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.486178861788618,
+          "rest_episodes_with_any_command": 15,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 1.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.0,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 1.0,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 13,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "796eb8df7d12b32e6ebbfb6756e527217c7b59a282735eb782dd50f5f16c39c8",
+    "r08_sha256": "dac533ea38aaa6c7505565059a5a8e19825702e68f5d27f47edd11cff0035736",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "292bac625f740033c32bbef201c90604fd0cc47e93a9219178d541cc8514222f",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.4,
+        "macro_f1": 0.3973214285714286,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            5
+          ]
+        ],
+        "rest_false_activation_fraction": 0.5333333333333333,
+        "report": {
+          "REST": {
+            "precision": 0.4117647058823529,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.4375,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.38461538461538464,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.35714285714285715,
+            "support": 15.0
+          },
+          "accuracy": 0.4,
+          "macro avg": {
+            "precision": 0.3981900452488688,
+            "recall": 0.4,
+            "f1-score": 0.3973214285714286,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.3981900452488688,
+            "recall": 0.4,
+            "f1-score": 0.3973214285714286,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 21.499999999999986,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.34959349593495936,
+          "imagery_command_seconds": 34.74999999999997,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.434959349593496,
+          "rest_episodes_with_any_command": 15,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 1.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 0.7999999999999972,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.013008130081300777,
+          "imagery_command_seconds": 1.4500000000000028,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.9764227642276422,
+          "rest_episodes_with_any_command": 3,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.2,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 0.0,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.0,
+          "imagery_command_seconds": 0.25,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.9959349593495935,
+          "rest_episodes_with_any_command": 0,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.0,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 14,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "7e443b4a4bb000506137ffd79eae9fd915a282f4c6c5aac71ad8b8612072227d",
+    "r08_sha256": "a63bc896da7b0fa302c3c3b0ad53a4c54f1a35fd1f66bebb2cedc81cbabc9320",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "7c74d4a61d13d55060ab1a553ab5b1ed82e148b1fa15b3f1a9500f7518ab7d8e",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.6666666666666667,
+        "macro_f1": 0.6527777777777778,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            13,
+            2
+          ],
+          [
+            8,
+            7
+          ]
+        ],
+        "rest_false_activation_fraction": 0.13333333333333333,
+        "report": {
+          "REST": {
+            "precision": 0.6190476190476191,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.7222222222222222,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.7777777777777778,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.5833333333333334,
+            "support": 15.0
+          },
+          "accuracy": 0.6666666666666666,
+          "macro avg": {
+            "precision": 0.6984126984126984,
+            "recall": 0.6666666666666667,
+            "f1-score": 0.6527777777777778,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6984126984126984,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6527777777777779,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 20.49999999999999,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.33333333333333337,
+          "imagery_command_seconds": 30.249999999999982,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.5081300813008129,
+          "rest_episodes_with_any_command": 14,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.9333333333333333,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 1.2000000000000028,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.01951219512195128,
+          "imagery_command_seconds": 1.5499999999999972,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.9747967479674797,
+          "rest_episodes_with_any_command": 1,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.06666666666666667,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 1.2000000000000028,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.01951219512195128,
+          "imagery_command_seconds": 0.04999999999999716,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.9991869918699188,
+          "rest_episodes_with_any_command": 1,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.06666666666666667,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  },
+  {
+    "subject": 15,
+    "seed": 123,
+    "source_sha256": "4662d2ff6a9aa3ca9912342179abed7f14cd8f75225618cc8dd269e8daf0e8c8",
+    "r04_sha256": "1721d4a066e0c28221877d0f9e7da2402bdd924a532f5f19261c429def061273",
+    "r08_sha256": "70e4dcfa5bb501007b4a502fb1ac6975128fb316de67eb825f8eee00cba9377f",
+    "epoch": 300,
+    "updates_per_epoch": 2,
+    "model_sha256": "d9a7577bab0016302ca2a8cc32d530a2d37af601dbe064e8b69df6a1d949aed7",
+    "role": "exploratory R08 development; not independent confirmation",
+    "metrics": {
+      "window_metrics": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.8666666666666667,
+        "macro_f1": 0.8666666666666667,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            13,
+            2
+          ],
+          [
+            2,
+            13
+          ]
+        ],
+        "rest_false_activation_fraction": 0.13333333333333333,
+        "report": {
+          "REST": {
+            "precision": 0.8666666666666667,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.8666666666666667,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.8666666666666667,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.8666666666666667,
+            "support": 15.0
+          },
+          "accuracy": 0.8666666666666667,
+          "macro avg": {
+            "precision": 0.8666666666666667,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.8666666666666667,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.8666666666666667,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.8666666666666667,
+            "support": 30.0
+          }
+        }
+      },
+      "command_metrics": {
+        "raw": {
+          "rest_command_seconds": 21.99999999999999,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.3577235772357724,
+          "imagery_command_seconds": 46.499999999999986,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.2439024390243899,
+          "rest_episodes_with_any_command": 14,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.9333333333333333,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "confidence": {
+          "rest_command_seconds": 6.700000000000006,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.1089430894308945,
+          "imagery_command_seconds": 23.04999999999998,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.6252032520325204,
+          "rest_episodes_with_any_command": 8,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.5333333333333333,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        },
+        "temporal": {
+          "rest_command_seconds": 5.850000000000012,
+          "rest_seconds": 61.49999999999996,
+          "rest_command_fraction": 0.09512195121951246,
+          "imagery_command_seconds": 14.399999999999988,
+          "imagery_seconds": 61.49999999999996,
+          "missed_imagery_fraction": 0.7658536585365854,
+          "rest_episodes_with_any_command": 7,
+          "rest_episode_count": 15,
+          "rest_episode_activation_fraction": 0.4666666666666667,
+          "physical_robot_metrics": "not measured; these are command-stream metrics only"
+        }
+      },
+      "run": 8,
+      "role": "development; not independent confirmation",
+      "target_r12_touched": false
+    }
+  }
+]

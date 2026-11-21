@@ -1,0 +1,1667 @@
+{
+  "harness_version": "robomimic-latch6-v2.0.0",
+  "generated_date": "2026-11-11",
+  "horizon_steps": 400,
+  "control_freq_hz": 20.0,
+  "episode_duration_s": 20.0,
+  "diagnostic_contiguous_enable_windows": [
+    {
+      "label": "enable_window_036_steps",
+      "condition": "enable-window",
+      "window_start": 1,
+      "window_steps": 36,
+      "enabled_seconds": 1.8,
+      "rationale": "Matches S002 confidence 20s-horizon exposure (36 steps = 1.80s, 7 events, 0/3 retained)"
+    },
+    {
+      "label": "enable_window_048_steps",
+      "condition": "enable-window",
+      "window_start": 1,
+      "window_steps": 48,
+      "enabled_seconds": 2.4,
+      "rationale": "2.40s contiguous enable window (near single-seed acquisition boundary ~42-58 policy calls)"
+    },
+    {
+      "label": "enable_window_060_steps",
+      "condition": "enable-window",
+      "window_start": 1,
+      "window_steps": 60,
+      "enabled_seconds": 3.0,
+      "rationale": "3.00s contiguous enable window (just above always-enable acquisition steps [58, 54, 47])"
+    },
+    {
+      "label": "enable_window_080_steps",
+      "condition": "enable-window",
+      "window_start": 1,
+      "window_steps": 80,
+      "enabled_seconds": 4.0,
+      "rationale": "4.00s contiguous enable window (intermediate between 36-step failure and 110-step S002 raw success)"
+    },
+    {
+      "label": "enable_window_110_steps",
+      "condition": "enable-window",
+      "window_start": 1,
+      "window_steps": 110,
+      "enabled_seconds": 5.5,
+      "rationale": "Matches S002 raw 20s-horizon exposure (110 steps = 5.50s, 22 events, 3/3 retained)"
+    },
+    {
+      "label": "enable_window_130_steps",
+      "condition": "enable-window",
+      "window_start": 1,
+      "window_steps": 130,
+      "enabled_seconds": 6.5,
+      "rationale": "Matches S003 temporal 20s-horizon exposure (130 steps = 6.50s, 26 events, 3/3 retained)"
+    },
+    {
+      "label": "enable_window_212_steps",
+      "condition": "enable-window",
+      "window_start": 1,
+      "window_steps": 212,
+      "enabled_seconds": 10.6,
+      "rationale": "Matches S003 confidence 20s-horizon exposure (212 steps = 10.60s, 43 events, 3/3 retained)"
+    },
+    {
+      "label": "enable_window_218_steps",
+      "condition": "enable-window",
+      "window_start": 1,
+      "window_steps": 218,
+      "enabled_seconds": 10.9,
+      "rationale": "Matches S006 raw 20s-horizon exposure (218 steps = 10.90s, 44 events, 3/3 retained)"
+    }
+  ],
+  "eeg_matched_schedules": [
+    {
+      "subject": "S001",
+      "gate": "raw",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\results\\robomimic_eeg_s001r12_heldout_2026-11-05\\S001R12-decisions.jsonl",
+      "source": "S001R12",
+      "episode": "S001R12",
+      "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            41,
+            371
+          ]
+        ],
+        "bout_count": 1,
+        "bout_lengths_steps": [
+          330
+        ],
+        "first_enable_step": 41,
+        "requested_enable_steps": 330,
+        "requested_enable_duration_s": 16.5
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 41,
+        "window_steps": 330,
+        "spans": [
+          [
+            41,
+            371
+          ]
+        ],
+        "requested_enable_steps": 330,
+        "requested_enable_duration_s": 16.5
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              41,
+              371
+            ]
+          ],
+          "bout_lengths_steps": [
+            330
+          ],
+          "requested_enable_steps": 330,
+          "requested_enable_duration_s": 16.5
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              41,
+              371
+            ]
+          ],
+          "bout_lengths_steps": [
+            330
+          ],
+          "requested_enable_steps": 330,
+          "requested_enable_duration_s": 16.5
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              71,
+              401
+            ]
+          ],
+          "bout_lengths_steps": [
+            330
+          ],
+          "requested_enable_steps": 330,
+          "requested_enable_duration_s": 16.5
+        }
+      ]
+    },
+    {
+      "subject": "S001",
+      "gate": "confidence",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\results\\robomimic_eeg_s001r12_heldout_2026-11-05\\S001R12-decisions.jsonl",
+      "source": "S001R12",
+      "episode": "S001R12",
+      "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            41,
+            231
+          ],
+          [
+            251,
+            301
+          ],
+          [
+            331,
+            337
+          ],
+          [
+            341,
+            367
+          ]
+        ],
+        "bout_count": 4,
+        "bout_lengths_steps": [
+          190,
+          50,
+          6,
+          26
+        ],
+        "first_enable_step": 41,
+        "requested_enable_steps": 272,
+        "requested_enable_duration_s": 13.6
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 41,
+        "window_steps": 272,
+        "spans": [
+          [
+            41,
+            313
+          ]
+        ],
+        "requested_enable_steps": 272,
+        "requested_enable_duration_s": 13.6
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              70,
+              76
+            ],
+            [
+              77,
+              127
+            ],
+            [
+              161,
+              351
+            ],
+            [
+              371,
+              397
+            ]
+          ],
+          "bout_lengths_steps": [
+            6,
+            50,
+            190,
+            26
+          ],
+          "requested_enable_steps": 272,
+          "requested_enable_duration_s": 13.6
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              70,
+              260
+            ],
+            [
+              261,
+              267
+            ],
+            [
+              301,
+              351
+            ],
+            [
+              355,
+              381
+            ]
+          ],
+          "bout_lengths_steps": [
+            190,
+            6,
+            50,
+            26
+          ],
+          "requested_enable_steps": 272,
+          "requested_enable_duration_s": 13.6
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              74,
+              100
+            ],
+            [
+              101,
+              151
+            ],
+            [
+              171,
+              361
+            ],
+            [
+              391,
+              397
+            ]
+          ],
+          "bout_lengths_steps": [
+            26,
+            50,
+            190,
+            6
+          ],
+          "requested_enable_steps": 272,
+          "requested_enable_duration_s": 13.6
+        }
+      ]
+    },
+    {
+      "subject": "S001",
+      "gate": "temporal",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\results\\robomimic_eeg_s001r12_heldout_2026-11-05\\S001R12-decisions.jsonl",
+      "source": "S001R12",
+      "episode": "S001R12",
+      "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            51,
+            231
+          ],
+          [
+            261,
+            301
+          ],
+          [
+            351,
+            367
+          ]
+        ],
+        "bout_count": 3,
+        "bout_lengths_steps": [
+          180,
+          40,
+          16
+        ],
+        "first_enable_step": 51,
+        "requested_enable_steps": 236,
+        "requested_enable_duration_s": 11.8
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 51,
+        "window_steps": 236,
+        "spans": [
+          [
+            51,
+            287
+          ]
+        ],
+        "requested_enable_steps": 236,
+        "requested_enable_duration_s": 11.8
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              51,
+              67
+            ],
+            [
+              101,
+              141
+            ],
+            [
+              171,
+              351
+            ]
+          ],
+          "bout_lengths_steps": [
+            16,
+            40,
+            180
+          ],
+          "requested_enable_steps": 236,
+          "requested_enable_duration_s": 11.8
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              91,
+              271
+            ],
+            [
+              281,
+              297
+            ],
+            [
+              331,
+              371
+            ]
+          ],
+          "bout_lengths_steps": [
+            180,
+            16,
+            40
+          ],
+          "requested_enable_steps": 236,
+          "requested_enable_duration_s": 11.8
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              51,
+              91
+            ],
+            [
+              125,
+              305
+            ],
+            [
+              355,
+              371
+            ]
+          ],
+          "bout_lengths_steps": [
+            40,
+            180,
+            16
+          ],
+          "requested_enable_steps": 236,
+          "requested_enable_duration_s": 11.8
+        }
+      ]
+    },
+    {
+      "subject": "S002",
+      "gate": "raw",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\results\\robomimic_eeg_s002s003_2026-11-06\\S002\\S002R12_decisions.jsonl",
+      "source": "S002R12",
+      "episode": "S002R12",
+      "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            137,
+            157
+          ],
+          [
+            167,
+            187
+          ],
+          [
+            197,
+            201
+          ],
+          [
+            291,
+            321
+          ],
+          [
+            351,
+            387
+          ]
+        ],
+        "bout_count": 5,
+        "bout_lengths_steps": [
+          20,
+          20,
+          4,
+          30,
+          36
+        ],
+        "first_enable_step": 137,
+        "requested_enable_steps": 110,
+        "requested_enable_duration_s": 5.5
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 137,
+        "window_steps": 110,
+        "spans": [
+          [
+            137,
+            247
+          ]
+        ],
+        "requested_enable_steps": 110,
+        "requested_enable_duration_s": 5.5
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              71,
+              75
+            ],
+            [
+              85,
+              121
+            ],
+            [
+              217,
+              237
+            ],
+            [
+              247,
+              267
+            ],
+            [
+              281,
+              311
+            ]
+          ],
+          "bout_lengths_steps": [
+            4,
+            36,
+            20,
+            20,
+            30
+          ],
+          "requested_enable_steps": 110,
+          "requested_enable_duration_s": 5.5
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              55,
+              75
+            ],
+            [
+              105,
+              109
+            ],
+            [
+              199,
+              235
+            ],
+            [
+              245,
+              265
+            ],
+            [
+              361,
+              391
+            ]
+          ],
+          "bout_lengths_steps": [
+            20,
+            4,
+            36,
+            20,
+            30
+          ],
+          "requested_enable_steps": 110,
+          "requested_enable_duration_s": 5.5
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              55,
+              85
+            ],
+            [
+              115,
+              151
+            ],
+            [
+              247,
+              267
+            ],
+            [
+              277,
+              297
+            ],
+            [
+              307,
+              311
+            ]
+          ],
+          "bout_lengths_steps": [
+            30,
+            36,
+            20,
+            20,
+            4
+          ],
+          "requested_enable_steps": 110,
+          "requested_enable_duration_s": 5.5
+        }
+      ]
+    },
+    {
+      "subject": "S002",
+      "gate": "confidence",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\results\\robomimic_eeg_s002s003_2026-11-06\\S002\\S002R12_decisions.jsonl",
+      "source": "S002R12",
+      "episode": "S002R12",
+      "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            147,
+            151
+          ],
+          [
+            301,
+            307
+          ],
+          [
+            351,
+            377
+          ]
+        ],
+        "bout_count": 3,
+        "bout_lengths_steps": [
+          4,
+          6,
+          26
+        ],
+        "first_enable_step": 147,
+        "requested_enable_steps": 36,
+        "requested_enable_duration_s": 1.8
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 147,
+        "window_steps": 36,
+        "spans": [
+          [
+            147,
+            183
+          ]
+        ],
+        "requested_enable_steps": 36,
+        "requested_enable_duration_s": 1.8
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              147,
+              173
+            ],
+            [
+              197,
+              203
+            ],
+            [
+              353,
+              357
+            ]
+          ],
+          "bout_lengths_steps": [
+            26,
+            6,
+            4
+          ],
+          "requested_enable_steps": 36,
+          "requested_enable_duration_s": 1.8
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              85,
+              89
+            ],
+            [
+              195,
+              221
+            ],
+            [
+              245,
+              251
+            ]
+          ],
+          "bout_lengths_steps": [
+            4,
+            26,
+            6
+          ],
+          "requested_enable_steps": 36,
+          "requested_enable_duration_s": 1.8
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              147,
+              153
+            ],
+            [
+              177,
+              181
+            ],
+            [
+              225,
+              251
+            ]
+          ],
+          "bout_lengths_steps": [
+            6,
+            4,
+            26
+          ],
+          "requested_enable_steps": 36,
+          "requested_enable_duration_s": 1.8
+        }
+      ]
+    },
+    {
+      "subject": "S002",
+      "gate": "temporal",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\results\\robomimic_eeg_s002s003_2026-11-06\\S002\\S002R12_decisions.jsonl",
+      "source": "S002R12",
+      "episode": "S002R12",
+      "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            361,
+            377
+          ]
+        ],
+        "bout_count": 1,
+        "bout_lengths_steps": [
+          16
+        ],
+        "first_enable_step": 361,
+        "requested_enable_steps": 16,
+        "requested_enable_duration_s": 0.8
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 361,
+        "window_steps": 16,
+        "spans": [
+          [
+            361,
+            377
+          ]
+        ],
+        "requested_enable_steps": 16,
+        "requested_enable_duration_s": 0.8
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              361,
+              377
+            ]
+          ],
+          "bout_lengths_steps": [
+            16
+          ],
+          "requested_enable_steps": 16,
+          "requested_enable_duration_s": 0.8
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              361,
+              377
+            ]
+          ],
+          "bout_lengths_steps": [
+            16
+          ],
+          "requested_enable_steps": 16,
+          "requested_enable_duration_s": 0.8
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              65,
+              81
+            ]
+          ],
+          "bout_lengths_steps": [
+            16
+          ],
+          "requested_enable_steps": 16,
+          "requested_enable_duration_s": 0.8
+        }
+      ]
+    },
+    {
+      "subject": "S003",
+      "gate": "raw",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\results\\robomimic_eeg_s002s003_2026-11-06\\S003\\S003R12_decisions.jsonl",
+      "source": "S003R12",
+      "episode": "S003R12",
+      "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            41,
+            401
+          ]
+        ],
+        "bout_count": 1,
+        "bout_lengths_steps": [
+          360
+        ],
+        "first_enable_step": 41,
+        "requested_enable_steps": 360,
+        "requested_enable_duration_s": 18.0
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 41,
+        "window_steps": 360,
+        "spans": [
+          [
+            41,
+            401
+          ]
+        ],
+        "requested_enable_steps": 360,
+        "requested_enable_duration_s": 18.0
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              41,
+              401
+            ]
+          ],
+          "bout_lengths_steps": [
+            360
+          ],
+          "requested_enable_steps": 360,
+          "requested_enable_duration_s": 18.0
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              41,
+              401
+            ]
+          ],
+          "bout_lengths_steps": [
+            360
+          ],
+          "requested_enable_steps": 360,
+          "requested_enable_duration_s": 18.0
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              41,
+              401
+            ]
+          ],
+          "bout_lengths_steps": [
+            360
+          ],
+          "requested_enable_steps": 360,
+          "requested_enable_duration_s": 18.0
+        }
+      ]
+    },
+    {
+      "subject": "S003",
+      "gate": "confidence",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\results\\robomimic_eeg_s002s003_2026-11-06\\S003\\S003R12_decisions.jsonl",
+      "source": "S003R12",
+      "episode": "S003R12",
+      "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            41,
+            61
+          ],
+          [
+            87,
+            91
+          ],
+          [
+            97,
+            111
+          ],
+          [
+            117,
+            121
+          ],
+          [
+            147,
+            217
+          ],
+          [
+            221,
+            231
+          ],
+          [
+            247,
+            251
+          ],
+          [
+            277,
+            281
+          ],
+          [
+            291,
+            307
+          ],
+          [
+            311,
+            317
+          ],
+          [
+            321,
+            381
+          ]
+        ],
+        "bout_count": 11,
+        "bout_lengths_steps": [
+          20,
+          4,
+          14,
+          4,
+          70,
+          10,
+          4,
+          4,
+          16,
+          6,
+          60
+        ],
+        "first_enable_step": 41,
+        "requested_enable_steps": 212,
+        "requested_enable_duration_s": 10.6
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 41,
+        "window_steps": 212,
+        "spans": [
+          [
+            41,
+            253
+          ]
+        ],
+        "requested_enable_steps": 212,
+        "requested_enable_duration_s": 10.6
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              46,
+              116
+            ],
+            [
+              136,
+              150
+            ],
+            [
+              156,
+              162
+            ],
+            [
+              166,
+              170
+            ],
+            [
+              196,
+              200
+            ],
+            [
+              201,
+              217
+            ],
+            [
+              221,
+              281
+            ],
+            [
+              285,
+              289
+            ],
+            [
+              315,
+              325
+            ],
+            [
+              351,
+              371
+            ],
+            [
+              387,
+              391
+            ]
+          ],
+          "bout_lengths_steps": [
+            70,
+            14,
+            6,
+            4,
+            4,
+            16,
+            60,
+            4,
+            10,
+            20,
+            4
+          ],
+          "requested_enable_steps": 212,
+          "requested_enable_duration_s": 10.6
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              46,
+              50
+            ],
+            [
+              54,
+              64
+            ],
+            [
+              90,
+              94
+            ],
+            [
+              110,
+              170
+            ],
+            [
+              190,
+              206
+            ],
+            [
+              212,
+              282
+            ],
+            [
+              286,
+              300
+            ],
+            [
+              326,
+              330
+            ],
+            [
+              340,
+              360
+            ],
+            [
+              361,
+              365
+            ],
+            [
+              369,
+              375
+            ]
+          ],
+          "bout_lengths_steps": [
+            4,
+            10,
+            4,
+            60,
+            16,
+            70,
+            14,
+            4,
+            20,
+            4,
+            6
+          ],
+          "requested_enable_steps": 212,
+          "requested_enable_duration_s": 10.6
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              66,
+              70
+            ],
+            [
+              74,
+              144
+            ],
+            [
+              150,
+              160
+            ],
+            [
+              186,
+              200
+            ],
+            [
+              210,
+              214
+            ],
+            [
+              218,
+              234
+            ],
+            [
+              235,
+              239
+            ],
+            [
+              255,
+              259
+            ],
+            [
+              279,
+              285
+            ],
+            [
+              289,
+              309
+            ],
+            [
+              315,
+              375
+            ]
+          ],
+          "bout_lengths_steps": [
+            4,
+            70,
+            10,
+            14,
+            4,
+            16,
+            4,
+            4,
+            6,
+            20,
+            60
+          ],
+          "requested_enable_steps": 212,
+          "requested_enable_duration_s": 10.6
+        }
+      ]
+    },
+    {
+      "subject": "S003",
+      "gate": "temporal",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\results\\robomimic_eeg_s002s003_2026-11-06\\S003\\S003R12_decisions.jsonl",
+      "source": "S003R12",
+      "episode": "S003R12",
+      "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            51,
+            61
+          ],
+          [
+            107,
+            111
+          ],
+          [
+            157,
+            217
+          ],
+          [
+            301,
+            307
+          ],
+          [
+            331,
+            381
+          ]
+        ],
+        "bout_count": 5,
+        "bout_lengths_steps": [
+          10,
+          4,
+          60,
+          6,
+          50
+        ],
+        "first_enable_step": 51,
+        "requested_enable_steps": 130,
+        "requested_enable_duration_s": 6.5
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 51,
+        "window_steps": 130,
+        "spans": [
+          [
+            51,
+            181
+          ]
+        ],
+        "requested_enable_steps": 130,
+        "requested_enable_duration_s": 6.5
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              65,
+              125
+            ],
+            [
+              171,
+              221
+            ],
+            [
+              231,
+              235
+            ],
+            [
+              281,
+              291
+            ],
+            [
+              311,
+              317
+            ]
+          ],
+          "bout_lengths_steps": [
+            60,
+            50,
+            4,
+            10,
+            6
+          ],
+          "requested_enable_steps": 130,
+          "requested_enable_duration_s": 6.5
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              61,
+              71
+            ],
+            [
+              95,
+              155
+            ],
+            [
+              239,
+              289
+            ],
+            [
+              335,
+              339
+            ],
+            [
+              349,
+              355
+            ]
+          ],
+          "bout_lengths_steps": [
+            10,
+            60,
+            50,
+            4,
+            6
+          ],
+          "requested_enable_steps": 130,
+          "requested_enable_duration_s": 6.5
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              61,
+              67
+            ],
+            [
+              91,
+              141
+            ],
+            [
+              151,
+              155
+            ],
+            [
+              201,
+              211
+            ],
+            [
+              257,
+              317
+            ]
+          ],
+          "bout_lengths_steps": [
+            6,
+            50,
+            4,
+            10,
+            60
+          ],
+          "requested_enable_steps": 130,
+          "requested_enable_duration_s": 6.5
+        }
+      ]
+    },
+    {
+      "subject": "S006",
+      "gate": "raw",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\outputs\\isaac\\S006R12-decisions.jsonl",
+      "source": "S006R12",
+      "episode": "S006R12",
+      "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            87,
+            197
+          ],
+          [
+            237,
+            301
+          ],
+          [
+            347,
+            351
+          ],
+          [
+            361,
+            401
+          ]
+        ],
+        "bout_count": 4,
+        "bout_lengths_steps": [
+          110,
+          64,
+          4,
+          40
+        ],
+        "first_enable_step": 87,
+        "requested_enable_steps": 218,
+        "requested_enable_duration_s": 10.9
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 87,
+        "window_steps": 218,
+        "spans": [
+          [
+            87,
+            305
+          ]
+        ],
+        "requested_enable_steps": 218,
+        "requested_enable_duration_s": 10.9
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              86,
+              90
+            ],
+            [
+              136,
+              200
+            ],
+            [
+              201,
+              311
+            ],
+            [
+              351,
+              391
+            ]
+          ],
+          "bout_lengths_steps": [
+            4,
+            64,
+            110,
+            40
+          ],
+          "requested_enable_steps": 218,
+          "requested_enable_duration_s": 10.9
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              86,
+              196
+            ],
+            [
+              242,
+              246
+            ],
+            [
+              247,
+              311
+            ],
+            [
+              321,
+              361
+            ]
+          ],
+          "bout_lengths_steps": [
+            110,
+            4,
+            64,
+            40
+          ],
+          "requested_enable_steps": 218,
+          "requested_enable_duration_s": 10.9
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              41,
+              81
+            ],
+            [
+              127,
+              191
+            ],
+            [
+              231,
+              341
+            ],
+            [
+              387,
+              391
+            ]
+          ],
+          "bout_lengths_steps": [
+            40,
+            64,
+            110,
+            4
+          ],
+          "requested_enable_steps": 218,
+          "requested_enable_duration_s": 10.9
+        }
+      ]
+    },
+    {
+      "subject": "S006",
+      "gate": "confidence",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\outputs\\isaac\\S006R12-decisions.jsonl",
+      "source": "S006R12",
+      "episode": "S006R12",
+      "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            257,
+            281
+          ]
+        ],
+        "bout_count": 1,
+        "bout_lengths_steps": [
+          24
+        ],
+        "first_enable_step": 257,
+        "requested_enable_steps": 24,
+        "requested_enable_duration_s": 1.2
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 257,
+        "window_steps": 24,
+        "spans": [
+          [
+            257,
+            281
+          ]
+        ],
+        "requested_enable_steps": 24,
+        "requested_enable_duration_s": 1.2
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              257,
+              281
+            ]
+          ],
+          "bout_lengths_steps": [
+            24
+          ],
+          "requested_enable_steps": 24,
+          "requested_enable_duration_s": 1.2
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              257,
+              281
+            ]
+          ],
+          "bout_lengths_steps": [
+            24
+          ],
+          "requested_enable_steps": 24,
+          "requested_enable_duration_s": 1.2
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              161,
+              185
+            ]
+          ],
+          "bout_lengths_steps": [
+            24
+          ],
+          "requested_enable_steps": 24,
+          "requested_enable_duration_s": 1.2
+        }
+      ]
+    },
+    {
+      "subject": "S006",
+      "gate": "temporal",
+      "decisions_path": "C:\\Users\\mario\\.gemini\\antigravity\\scratch\\FRI-BCI-ML-RL-Decoder-Personal\\outputs\\isaac\\S006R12-decisions.jsonl",
+      "source": "S006R12",
+      "episode": "S006R12",
+      "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "eeg_schedule": {
+        "spans": [
+          [
+            267,
+            281
+          ]
+        ],
+        "bout_count": 1,
+        "bout_lengths_steps": [
+          14
+        ],
+        "first_enable_step": 267,
+        "requested_enable_steps": 14,
+        "requested_enable_duration_s": 0.7
+      },
+      "contiguous_duration_matched": {
+        "condition": "enable-window",
+        "window_start": 267,
+        "window_steps": 14,
+        "spans": [
+          [
+            267,
+            281
+          ]
+        ],
+        "requested_enable_steps": 14,
+        "requested_enable_duration_s": 0.7
+      },
+      "bout_shuffled_matched": [
+        {
+          "shuffle_seed": 0,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              267,
+              281
+            ]
+          ],
+          "bout_lengths_steps": [
+            14
+          ],
+          "requested_enable_steps": 14,
+          "requested_enable_duration_s": 0.7
+        },
+        {
+          "shuffle_seed": 1,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              267,
+              281
+            ]
+          ],
+          "bout_lengths_steps": [
+            14
+          ],
+          "requested_enable_steps": 14,
+          "requested_enable_duration_s": 0.7
+        },
+        {
+          "shuffle_seed": 2,
+          "condition": "enable-schedule",
+          "spans": [
+            [
+              161,
+              175
+            ]
+          ],
+          "bout_lengths_steps": [
+            14
+          ],
+          "requested_enable_steps": 14,
+          "requested_enable_duration_s": 0.7
+        }
+      ]
+    }
+  ]
+}

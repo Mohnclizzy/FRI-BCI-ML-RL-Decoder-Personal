@@ -1,0 +1,19 @@
+# Phase 5 stable completion latch: bounded physical failure — 2026-11-04
+
+The [frozen protocol](protocol.md) added one irreversible completion latch to the Phase 4 native BC-RNN adapter. Before acquisition, enable/HOLD/resume used the same continuous fixed-goal HOLD and explicit frozen recurrent state. At the first sampled state with 10 consecutive bilateral fingerpad/cube contact samples and at least 0.08 m rise from the episode's initial cube center, the adapter fixed the measured absolute end-effector pose and sent Panda gripper-close input `+1` at every remaining action through the 400-step deadline. Later enable/HOLD requests could not reactivate the policy. No training, checkpoint, reward, or simulator change was made.
+
+Matched seeds 0–2 included always-HOLD, always-enable, and 10- or 60-step pauses at approach step 15, seed-specific actual closure steps 40/32/34, and carrying step 70: 24 runs total. Every run had 401 sampled physical states and 400 actions at 20 Hz control/500 Hz physics. Initial cube positions matched within each seed. Direct bilateral contact agreed with robosuite's grasp check at every sample. All HOLD goals and gripper commands were fixed; no policy call or recurrent-counter advance occurred during HOLD. After latching, pose goals stayed exactly fixed, the mapped Panda actuator command stayed `[-1,+1]`, no policy call or recurrent advance occurred, and the latch never released. Maximum pre-latch HOLD end-effector and cube drifts were 0.0289 m and 0.0127 m, within the frozen 0.035 m and 0.025 m bounds. All deadlines and controller invariants passed. Contact is sampled at 20 Hz, so substep breaks are unobserved.
+
+| Condition | Acquired | Retained through step 400 |
+|---|---:|---:|
+| Always HOLD | 0/3 | 0/3 (negative control) |
+| Always enable | 3/3 | 3/3 |
+| Approach, 10/60 steps | 6/6 | 5/6 |
+| Actual closure, 10/60 steps | 6/6 | 3/6 |
+| Carrying, 10/60 steps | 6/6 | 6/6 |
+
+**Physical failure:** 17/21 acquired positive trials retained. In the four failures, bilateral contact remained present but cube rise crossed below 0.08 m after latching: approach 10-step seed 0 (first loss step 351; terminal rise 0.07941 m), closure 10-step seed 0 (383; 0.07984 m), closure 10-step seed 1 (170; 0.07953 m), and closure 60-step seed 0 (162; 0.07724 m). Closure 60-step seed 1 retained with only 0.00012 m margin. The latch stabilizes the controller equilibrium in many starts but does not guarantee the required physical rise; acquisition can be transient. A representative video repeat of closure 60-step seed 0 exactly matched the batch run's latch step, terminal rise, contact, retention, and policy-call count.
+
+The frozen gate required every acquired positive control to retain without a post-latch drop. It failed, so **no 120-second S006R12 raw/confidence/temporal EEG replay was run**. Native reward and process exit were not used to declare success. These inspected seeds and pause timings are an exploratory diagnostic, not independent reliability evidence. Historical `mujoco-py` version deviation noted in Phases 2–4 remains unresolved.
+
+Full [per-run metrics](metrics.json), [rollout source](latch_rollout.py), [audit source](analyze_batch.py), batch logs and 24 raw telemetry traces are preserved in `/home/ubuntu/robomimic-native-phase5-20261104/`. The private [Phase 5 Drive folder](https://drive.google.com/drive/folders/1_2inM732QxX0jLFS1Sgjpe19tGOS8A_P) holds the [full raw archive](https://drive.google.com/file/d/1JKRcvQ3Q4tR37WwQwbCSEVOQ7avQpX2D/view) (SHA256 `7d9dfe84f1729489c880f5bbfad85313cb65d88c030da0f4be742cd6b1cf0d26`) and [failure video](https://drive.google.com/file/d/1_dIk626D_HzWRo0btpV9PVs4vWP1YeRd/view) (SHA256 `c0992e6fa5de3687455be6562bcdbcf77016c038c083dc3ac0fa0750c3b8b5b1`). Both were downloaded from Drive and byte-verified by SHA256; connector metadata showed owner-only permissions. No job remains active.

@@ -1,0 +1,6 @@
+episode,status,termination,duration_s,physics_samples,contact_samples,contact_coverage,physics_step_gaps,baseline_cube_height_m,max_cube_lift_m,max_finger_contact_n,first_bilateral_contact_time_s,acquisition_time_s,drop_count,physical_lift_pass,error
+1,completed,"{'terminated': False, 'time_out': True}",12.0,1440,1440,1.0,0,0.2800000011920929,9.751319885253906e-05,"[0.0, 5.386036396026611]",,,0,False,
+2,completed,"{'terminated': False, 'time_out': True}",12.0,1440,1440,1.0,0,0.2800000011920929,0.00015288591384887695,"[0.0, 6.086518287658691]",,,0,False,
+3,completed,"{'terminated': False, 'time_out': True}",12.0,1440,1440,1.0,0,0.2800000011920929,0.00017070770263671875,"[0.0, 5.326315402984619]",,,0,False,
+4,completed,"{'terminated': False, 'time_out': True}",12.0,1440,1440,1.0,0,0.2800000011920929,0.00023043155670166016,"[1.5799510478973389, 6.567994117736816]",2.275,,0,False,
+5,completed,"{'terminated': False, 'time_out': True}",12.0,1440,1440,1.0,0,0.2800000011920929,0.0001646280288696289,"[0.0, 8.668375015258789]",,,0,False,

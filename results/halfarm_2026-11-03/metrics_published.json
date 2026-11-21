@@ -1,0 +1,1271 @@
+{
+  "manifest": {
+    "source_checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/unilateral-50-seed8-20261103T2310Z/logs/rsl_rl/lift_franka/2026-11-03_23-11-39/model_347.pt",
+    "checkpoint_sha256": "37eb85242539f7d2f0c36a916f3aa8e44d2fe6a70030a9da18963d2506e673f7",
+    "seeds": [
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "max_policy_steps": 360,
+    "episodes_per_seed": 1,
+    "task": "FRI-Franka-Lift-NearTable-HalfArm"
+  },
+  "episodes": [
+    {
+      "seed": 8,
+      "matched_recorded_cube_and_joint_reset": true,
+      "max_target_mapping_error": 1.1734664440155029e-07,
+      "events": {
+        "first_right_only": {
+          "time_s": 0.108333,
+          "finger_positions_m": [
+            0.037446945905685425,
+            0.03742600232362747
+          ],
+          "contact_n": [
+            0.0,
+            19.772502899169922
+          ],
+          "cube_pose_w": [
+            -0.5511224865913391,
+            0.10517700016498566,
+            0.27788159251213074,
+            -0.0136405099183321,
+            -0.0011289175599813461,
+            -0.00841656792908907,
+            0.999871015548706
+          ]
+        },
+        "first_xy_2cm_below_4cm": {
+          "time_s": 0.208333,
+          "finger_positions_m": [
+            0.03949158638715744,
+            0.039832938462495804
+          ],
+          "contact_n": [
+            0.0,
+            8.080507278442383
+          ],
+          "cube_pose_w": [
+            -0.5432324409484863,
+            0.12156599760055542,
+            0.2814984917640686,
+            -0.023228680714964867,
+            0.014533121138811111,
+            -0.04892880842089653,
+            0.9984264373779297
+          ]
+        },
+        "first_either_finger_at_most_20mm": null,
+        "first_both_fingers_at_most_20mm": null,
+        "first_rise_8cm": null
+      },
+      "episode": 1,
+      "status": "completed",
+      "reason": null,
+      "error": null,
+      "policy_steps": null,
+      "termination": {
+        "terminated": true,
+        "time_out": false
+      },
+      "physics_samples": 160,
+      "contact_samples": 160,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": 0,
+      "steps": 160,
+      "duration_s": 1.333333,
+      "baseline_cube_height_m": 0.2800000011920929,
+      "max_cube_height_m": 0.2844865620136261,
+      "max_cube_lift_m": 0.004486560821533203,
+      "max_finger_contact_n": [
+        6.3050923347473145,
+        151.23284912109375
+      ],
+      "first_contact_time_s": 1.241667,
+      "first_lift_time_s": null,
+      "first_bilateral_lift_time_s": null,
+      "acquisition_time_s": null,
+      "best_sustained_lift_contact_s": 0.0,
+      "drop_count": 0,
+      "drop_times_s": [],
+      "physical_lift_pass": false,
+      "contact_threshold_n": 0.1,
+      "lift_threshold_m": 0.08,
+      "sustained_contact_threshold_s": 0.5,
+      "drop_height_m_above_baseline": 0.04,
+      "sustained_drop_threshold_s": 0.25,
+      "start_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "end_cube_pose_w": [
+        -0.028247404843568802,
+        0.5717808604240417,
+        0.23278041183948517,
+        -0.44818371534347534,
+        -0.45221778750419617,
+        -0.38982677459716797,
+        0.6653313040733337
+      ],
+      "max_cube_xy_displacement_m": 0.7034223211190094,
+      "last_sample_lift_bilateral": false,
+      "terminal_half_second_lift_bilateral": false,
+      "last_sample_contacts_n": [
+        0.0,
+        0.0
+      ],
+      "terminal_state": {
+        "record_type": "terminal_pre_reset",
+        "episode": 1,
+        "physics_step": 160,
+        "physics_time_s": 1.333333,
+        "episode_time_s": 1.333333,
+        "termination": {
+          "terminated": true,
+          "time_out": false
+        },
+        "cube_pose_w": [
+          -0.028247404843568802,
+          0.5717808604240417,
+          0.23278041183948517,
+          -0.44818371534347534,
+          -0.45221778750419617,
+          -0.38982677459716797,
+          0.6653313040733337
+        ],
+        "cube_height_m": 0.23278041183948517,
+        "robot_joint_pos": [
+          -0.8019338250160217,
+          0.1480095386505127,
+          -0.7627607583999634,
+          -2.097790002822876,
+          0.1729307919740677,
+          2.1761157512664795,
+          0.582769513130188,
+          0.02579317055642605,
+          0.025503061711788177
+        ],
+        "joint_names": [
+          "panda_joint1",
+          "panda_joint2",
+          "panda_joint3",
+          "panda_joint4",
+          "panda_joint5",
+          "panda_joint6",
+          "panda_joint7",
+          "panda_finger_joint1",
+          "panda_finger_joint2"
+        ],
+        "joint_pos_target": {
+          "panda_joint1": -0.8895979523658752,
+          "panda_joint2": 0.10829731822013855,
+          "panda_joint3": -0.7824253439903259,
+          "panda_joint4": -2.0706560611724854,
+          "panda_joint5": 0.14827057719230652,
+          "panda_joint6": 2.1575095653533936,
+          "panda_joint7": 0.6017113924026489,
+          "panda_finger_joint1": 0.021006811410188675,
+          "panda_finger_joint2": -0.043095849454402924
+        },
+        "processed_arm_targets": {
+          "panda_joint1": -0.8895979523658752,
+          "panda_joint2": 0.10829731822013855,
+          "panda_joint3": -0.7824253439903259,
+          "panda_joint4": -2.0706560611724854,
+          "panda_joint5": 0.14827057719230652,
+          "panda_joint6": 2.1575095653533936,
+          "panda_joint7": 0.6017113924026489
+        },
+        "processed_finger_targets": {
+          "panda_finger_joint1": 0.021006811410188675,
+          "panda_finger_joint2": -0.043095849454402924
+        },
+        "processed_action_terms": {
+          "action": [
+            -0.1937054842710495,
+            -0.07811587303876877,
+            -0.042163167148828506,
+            0.05320851877331734,
+            -0.05317007377743721,
+            -0.04042794182896614,
+            0.038902949541807175,
+            -0.004860968329012394,
+            -0.06887570768594742
+          ]
+        },
+        "hand_pose_w": [
+          -0.016552887856960297,
+          0.5591128468513489,
+          0.36730027198791504,
+          0.6660729646682739,
+          0.7455403804779053,
+          -0.021510260179638863,
+          -0.007384083233773708
+        ],
+        "finger_contact_n": [
+          0.0,
+          0.0
+        ],
+        "cube_to_hand_distance_m": 0.13562017679214478,
+        "fingertip_body_pose_w": {
+          "panda_leftfinger": [
+            0.0067394450306892395,
+            0.5606971383094788,
+            0.3078796863555908,
+            0.6660729646682739,
+            0.7455403804779053,
+            -0.021510260179638863,
+            -0.007384083233773708
+          ],
+          "panda_rightfinger": [
+            -0.04419006407260895,
+            0.5549638271331787,
+            0.3100295066833496,
+            -0.7455403804779053,
+            0.6660729646682739,
+            0.007384083233773708,
+            -0.021510260179638863
+          ]
+        }
+      },
+      "sampling_mode": "environment_physics_step",
+      "physics_dt_s": 0.008333333333333333,
+      "policy_dt_s": 0.03333333333333333,
+      "exit": {
+        "exit_code": 0
+      },
+      "telemetry_sha256": "e9be38cb0ea240ab44f39f8a0336e82cb6ec79f1b5d650b4b0d7a0a610216696",
+      "summary_sha256": "f2988d40196a609855c9835113b356703970fb1b163411058f29adb20811ba83",
+      "raw_trace_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/halfarm-eval-5x12s-20261103T2333Z/seed8/ppo-telemetry.jsonl"
+    },
+    {
+      "seed": 9,
+      "matched_recorded_cube_and_joint_reset": true,
+      "max_target_mapping_error": 1.1874362826347351e-07,
+      "events": {
+        "first_right_only": {
+          "time_s": 0.45,
+          "finger_positions_m": [
+            0.03996945545077324,
+            0.03992675989866257
+          ],
+          "contact_n": [
+            0.0,
+            3.6378300189971924
+          ],
+          "cube_pose_w": [
+            -0.5601589679718018,
+            0.10965108126401901,
+            0.27889034152030945,
+            -0.023610902950167656,
+            -0.013067804276943207,
+            -0.03916710987687111,
+            0.9988682270050049
+          ]
+        },
+        "first_xy_2cm_below_4cm": {
+          "time_s": 0.65,
+          "finger_positions_m": [
+            0.03952440246939659,
+            0.0400441437959671
+          ],
+          "contact_n": [
+            0.0,
+            19.418720245361328
+          ],
+          "cube_pose_w": [
+            -0.5561299324035645,
+            0.11964714527130127,
+            0.2820301055908203,
+            -0.04308276250958443,
+            0.0051139057613909245,
+            -0.09065762907266617,
+            0.9949367046356201
+          ]
+        },
+        "first_either_finger_at_most_20mm": null,
+        "first_both_fingers_at_most_20mm": null,
+        "first_rise_8cm": null
+      },
+      "episode": 1,
+      "status": "completed",
+      "reason": null,
+      "error": null,
+      "policy_steps": null,
+      "termination": {
+        "terminated": true,
+        "time_out": false
+      },
+      "physics_samples": 312,
+      "contact_samples": 312,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": 0,
+      "steps": 312,
+      "duration_s": 2.6,
+      "baseline_cube_height_m": 0.2800000011920929,
+      "max_cube_height_m": 0.2841039001941681,
+      "max_cube_lift_m": 0.004103899002075195,
+      "max_finger_contact_n": [
+        0.0,
+        109.52272033691406
+      ],
+      "first_contact_time_s": null,
+      "first_lift_time_s": null,
+      "first_bilateral_lift_time_s": null,
+      "acquisition_time_s": null,
+      "best_sustained_lift_contact_s": 0.0,
+      "drop_count": 0,
+      "drop_times_s": [],
+      "physical_lift_pass": false,
+      "contact_threshold_n": 0.1,
+      "lift_threshold_m": 0.08,
+      "sustained_contact_threshold_s": 0.5,
+      "drop_height_m_above_baseline": 0.04,
+      "sustained_drop_threshold_s": 0.25,
+      "start_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "end_cube_pose_w": [
+        -0.07724297046661377,
+        0.5584470629692078,
+        0.23153997957706451,
+        -0.06207193806767464,
+        0.08856279402971268,
+        -0.840915858745575,
+        0.5302492380142212
+      ],
+      "max_cube_xy_displacement_m": 0.6585384790757873,
+      "last_sample_lift_bilateral": false,
+      "terminal_half_second_lift_bilateral": false,
+      "last_sample_contacts_n": [
+        0.0,
+        0.0
+      ],
+      "terminal_state": {
+        "record_type": "terminal_pre_reset",
+        "episode": 1,
+        "physics_step": 312,
+        "physics_time_s": 2.6,
+        "episode_time_s": 2.6,
+        "termination": {
+          "terminated": true,
+          "time_out": false
+        },
+        "cube_pose_w": [
+          -0.07724297046661377,
+          0.5584470629692078,
+          0.23153997957706451,
+          -0.06207193806767464,
+          0.08856279402971268,
+          -0.840915858745575,
+          0.5302492380142212
+        ],
+        "cube_height_m": 0.23153997957706451,
+        "robot_joint_pos": [
+          -0.7063507437705994,
+          0.26973870396614075,
+          -0.7815121412277222,
+          -1.9869276285171509,
+          0.17450934648513794,
+          2.1677095890045166,
+          0.6810411810874939,
+          0.03571882098913193,
+          0.03574536368250847
+        ],
+        "joint_names": [
+          "panda_joint1",
+          "panda_joint2",
+          "panda_joint3",
+          "panda_joint4",
+          "panda_joint5",
+          "panda_joint6",
+          "panda_joint7",
+          "panda_finger_joint1",
+          "panda_finger_joint2"
+        ],
+        "joint_pos_target": {
+          "panda_joint1": -0.7615463137626648,
+          "panda_joint2": 0.2434273213148117,
+          "panda_joint3": -0.7895945906639099,
+          "panda_joint4": -1.9643666744232178,
+          "panda_joint5": 0.16352620720863342,
+          "panda_joint6": 2.155402660369873,
+          "panda_joint7": 0.699271023273468,
+          "panda_finger_joint1": 0.036284513771533966,
+          "panda_finger_joint2": -0.015629082918167114
+        },
+        "processed_arm_targets": {
+          "panda_joint1": -0.7615463137626648,
+          "panda_joint2": 0.2434273213148117,
+          "panda_joint3": -0.7895945906639099,
+          "panda_joint4": -1.9643666744232178,
+          "panda_joint5": 0.16352620720863342,
+          "panda_joint6": 2.155402660369873,
+          "panda_joint7": 0.699271023273468
+        },
+        "processed_finger_targets": {
+          "panda_finger_joint1": 0.036284513771533966,
+          "panda_finger_joint2": -0.015629082918167114
+        },
+        "processed_action_terms": {
+          "action": [
+            -0.1223474070429802,
+            -0.04869155213236809,
+            -0.01626545749604702,
+            0.04337999224662781,
+            -0.023845547810196877,
+            -0.027125895023345947,
+            0.037479057908058167,
+            0.000550590455532074,
+            -0.05155777558684349
+          ]
+        },
+        "hand_pose_w": [
+          -0.07277781516313553,
+          0.5864159464836121,
+          0.3653333783149719,
+          0.6685046553611755,
+          0.7433670163154602,
+          0.014598126523196697,
+          0.01717856526374817
+        ],
+        "finger_contact_n": [
+          0.0,
+          0.0
+        ],
+        "cube_to_hand_distance_m": 0.13675843179225922,
+        "fingertip_body_pose_w": {
+          "panda_leftfinger": [
+            -0.03466382622718811,
+            0.5901204347610474,
+            0.3085883557796478,
+            0.6685046553611755,
+            0.7433670163154602,
+            0.014598126523196697,
+            0.01717856526374817
+          ],
+          "panda_rightfinger": [
+            -0.10565541684627533,
+            0.5825610756874084,
+            0.3053959310054779,
+            -0.7433670163154602,
+            0.6685046553611755,
+            -0.01717856526374817,
+            0.014598126523196697
+          ]
+        }
+      },
+      "sampling_mode": "environment_physics_step",
+      "physics_dt_s": 0.008333333333333333,
+      "policy_dt_s": 0.03333333333333333,
+      "exit": {
+        "exit_code": 0
+      },
+      "telemetry_sha256": "47adae6410ce6eaf4c4d14759bfe4822f5c69c39ebce03a8e3bb0f6ee908b727",
+      "summary_sha256": "0e510c933c0d72fa5e513db6333b87435f7e3a1ae3d3d381e9e60119bc560048",
+      "raw_trace_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/halfarm-eval-5x12s-20261103T2333Z/seed9/ppo-telemetry.jsonl"
+    },
+    {
+      "seed": 10,
+      "matched_recorded_cube_and_joint_reset": true,
+      "max_target_mapping_error": 1.1781230568885803e-07,
+      "events": {
+        "first_right_only": {
+          "time_s": 0.425,
+          "finger_positions_m": [
+            0.03901553899049759,
+            0.03898594528436661
+          ],
+          "contact_n": [
+            0.0,
+            4.162772178649902
+          ],
+          "cube_pose_w": [
+            -0.5568832159042358,
+            0.1092589795589447,
+            0.2792171239852905,
+            -0.030694061890244484,
+            -0.003021825570613146,
+            -0.03417735919356346,
+            0.9989398121833801
+          ]
+        },
+        "first_xy_2cm_below_4cm": {
+          "time_s": 0.733333,
+          "finger_positions_m": [
+            0.039645276963710785,
+            0.040044788271188736
+          ],
+          "contact_n": [
+            0.0,
+            16.389307022094727
+          ],
+          "cube_pose_w": [
+            -0.5537281632423401,
+            0.12026648223400116,
+            0.28287580609321594,
+            -0.0648440420627594,
+            0.008954905904829502,
+            -0.09949713200330734,
+            0.9928823709487915
+          ]
+        },
+        "first_either_finger_at_most_20mm": {
+          "time_s": 1.991667,
+          "finger_positions_m": [
+            0.020836323499679565,
+            0.019389912486076355
+          ],
+          "contact_n": [
+            0.0,
+            0.0
+          ],
+          "cube_pose_w": [
+            -0.31978821754455566,
+            0.41458797454833984,
+            0.2796655595302582,
+            -0.016270995140075684,
+            0.012984562665224075,
+            -0.7998396754264832,
+            0.5998526811599731
+          ]
+        },
+        "first_both_fingers_at_most_20mm": {
+          "time_s": 2.0,
+          "finger_positions_m": [
+            0.019412098452448845,
+            0.018439067527651787
+          ],
+          "contact_n": [
+            0.0,
+            0.0
+          ],
+          "cube_pose_w": [
+            -0.319753497838974,
+            0.4146161377429962,
+            0.27992868423461914,
+            -0.012714720331132412,
+            0.013619964011013508,
+            -0.801361620426178,
+            0.5978899002075195
+          ]
+        },
+        "first_rise_8cm": null
+      },
+      "episode": 1,
+      "status": "completed",
+      "reason": null,
+      "error": null,
+      "policy_steps": null,
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      },
+      "physics_samples": 1440,
+      "contact_samples": 1440,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": 0,
+      "steps": 1440,
+      "duration_s": 12.0,
+      "baseline_cube_height_m": 0.2800000011920929,
+      "max_cube_height_m": 0.28928956389427185,
+      "max_cube_lift_m": 0.009289562702178955,
+      "max_finger_contact_n": [
+        0.0,
+        97.42240905761719
+      ],
+      "first_contact_time_s": null,
+      "first_lift_time_s": null,
+      "first_bilateral_lift_time_s": null,
+      "acquisition_time_s": null,
+      "best_sustained_lift_contact_s": 0.0,
+      "drop_count": 0,
+      "drop_times_s": [],
+      "physical_lift_pass": false,
+      "contact_threshold_n": 0.1,
+      "lift_threshold_m": 0.08,
+      "sustained_contact_threshold_s": 0.5,
+      "drop_height_m_above_baseline": 0.04,
+      "sustained_drop_threshold_s": 0.25,
+      "start_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "end_cube_pose_w": [
+        -0.32059338688850403,
+        0.4148658215999603,
+        0.2798920273780823,
+        4.067005576757765e-08,
+        2.4406562104672958e-08,
+        -0.8022680282592773,
+        0.5969640016555786
+      ],
+      "max_cube_xy_displacement_m": 0.3898676319439493,
+      "last_sample_lift_bilateral": false,
+      "terminal_half_second_lift_bilateral": false,
+      "last_sample_contacts_n": [
+        0.0,
+        0.0
+      ],
+      "terminal_state": {
+        "record_type": "terminal_pre_reset",
+        "episode": 1,
+        "physics_step": 1440,
+        "physics_time_s": 12.0,
+        "episode_time_s": 12.0,
+        "termination": {
+          "terminated": false,
+          "time_out": true
+        },
+        "cube_pose_w": [
+          -0.32059338688850403,
+          0.4148658215999603,
+          0.2798920273780823,
+          4.067005576757765e-08,
+          2.4406562104672958e-08,
+          -0.8022680282592773,
+          0.5969640016555786
+        ],
+        "cube_height_m": 0.2798920273780823,
+        "robot_joint_pos": [
+          -1.512627124786377,
+          1.5028574466705322,
+          0.4622807502746582,
+          -0.1607905924320221,
+          1.2934051752090454,
+          0.43298259377479553,
+          0.9329575300216675,
+          0.03996305540204048,
+          0.03995359688997269
+        ],
+        "joint_names": [
+          "panda_joint1",
+          "panda_joint2",
+          "panda_joint3",
+          "panda_joint4",
+          "panda_joint5",
+          "panda_joint6",
+          "panda_joint7",
+          "panda_finger_joint1",
+          "panda_finger_joint2"
+        ],
+        "joint_pos_target": {
+          "panda_joint1": -1.5505743026733398,
+          "panda_joint2": 1.504496455192566,
+          "panda_joint3": 0.46734893321990967,
+          "panda_joint4": -0.1706218123435974,
+          "panda_joint5": 1.2915245294570923,
+          "panda_joint6": 0.40974050760269165,
+          "panda_joint7": 0.9344186782836914,
+          "panda_finger_joint1": 0.09323060512542725,
+          "panda_finger_joint2": 0.05538059026002884
+        },
+        "processed_arm_targets": {
+          "panda_joint1": -1.5505743026733398,
+          "panda_joint2": 1.504496455192566,
+          "panda_joint3": 0.46734893321990967,
+          "panda_joint4": -0.1706218123435974,
+          "panda_joint5": 1.2915245294570923,
+          "panda_joint6": 0.40974050760269165,
+          "panda_joint7": 0.9344186782836914
+        },
+        "processed_finger_targets": {
+          "panda_finger_joint1": 0.09323060512542725,
+          "panda_finger_joint2": 0.05538059026002884
+        },
+        "processed_action_terms": {
+          "action": [
+            -0.07786007970571518,
+            0.004364904016256332,
+            0.014451599679887295,
+            -0.021023107692599297,
+            0.0008334740996360779,
+            -0.048019878566265106,
+            0.0004936799523420632,
+            0.053268205374479294,
+            0.015427599661052227
+          ]
+        },
+        "hand_pose_w": [
+          -0.18320976197719574,
+          0.6339259147644043,
+          0.3527128994464874,
+          0.10122207552194595,
+          0.6455749273300171,
+          -0.7490561604499817,
+          -0.10910067707300186
+        ],
+        "finger_contact_n": [
+          0.0,
+          0.0
+        ],
+        "cube_to_hand_distance_m": 0.2686344385147095,
+        "fingertip_body_pose_w": {
+          "panda_leftfinger": [
+            -0.2016010731458664,
+            0.5730334520339966,
+            0.32170525193214417,
+            0.10122207552194595,
+            0.6455749273300171,
+            -0.7490561604499817,
+            -0.10910067707300186
+          ],
+          "panda_rightfinger": [
+            -0.19898362457752228,
+            0.584434449672699,
+            0.4007612466812134,
+            -0.6455749273300171,
+            0.10122207552194595,
+            0.10910067707300186,
+            -0.7490561604499817
+          ]
+        }
+      },
+      "sampling_mode": "environment_physics_step",
+      "physics_dt_s": 0.008333333333333333,
+      "policy_dt_s": 0.03333333333333333,
+      "exit": {
+        "exit_code": 0
+      },
+      "telemetry_sha256": "4557d3366595afcdbbeffcce717fabd9877944741bac3793caa4b0962dc6602f",
+      "summary_sha256": "e10b5f9cac5296ab4063302df958ce4b072d53cb7060cb0d07d1dcde59002b6f",
+      "raw_trace_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/halfarm-eval-5x12s-20261103T2333Z/seed10/ppo-telemetry.jsonl"
+    },
+    {
+      "seed": 11,
+      "matched_recorded_cube_and_joint_reset": true,
+      "max_target_mapping_error": 1.1848169378936291e-07,
+      "events": {
+        "first_right_only": {
+          "time_s": 0.475,
+          "finger_positions_m": [
+            0.039831772446632385,
+            0.03971148282289505
+          ],
+          "contact_n": [
+            0.0,
+            3.810878038406372
+          ],
+          "cube_pose_w": [
+            -0.5571977496147156,
+            0.10954409837722778,
+            0.27918246388435364,
+            -0.028820771723985672,
+            -0.00418900465592742,
+            -0.03713848069310188,
+            0.9988856911659241
+          ]
+        },
+        "first_xy_2cm_below_4cm": {
+          "time_s": 0.725,
+          "finger_positions_m": [
+            0.039505865424871445,
+            0.03984786942601204
+          ],
+          "contact_n": [
+            0.0,
+            10.237739562988281
+          ],
+          "cube_pose_w": [
+            -0.552612841129303,
+            0.12067188322544098,
+            0.28233790397644043,
+            -0.05393342673778534,
+            0.005705634132027626,
+            -0.09861630201339722,
+            0.9936466217041016
+          ]
+        },
+        "first_either_finger_at_most_20mm": null,
+        "first_both_fingers_at_most_20mm": null,
+        "first_rise_8cm": null
+      },
+      "episode": 1,
+      "status": "completed",
+      "reason": null,
+      "error": null,
+      "policy_steps": null,
+      "termination": {
+        "terminated": true,
+        "time_out": false
+      },
+      "physics_samples": 288,
+      "contact_samples": 288,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": 0,
+      "steps": 288,
+      "duration_s": 2.4,
+      "baseline_cube_height_m": 0.2800000011920929,
+      "max_cube_height_m": 0.2854782044887543,
+      "max_cube_lift_m": 0.005478203296661377,
+      "max_finger_contact_n": [
+        0.0,
+        72.26091766357422
+      ],
+      "first_contact_time_s": null,
+      "first_lift_time_s": null,
+      "first_bilateral_lift_time_s": null,
+      "acquisition_time_s": null,
+      "best_sustained_lift_contact_s": 0.0,
+      "drop_count": 0,
+      "drop_times_s": [],
+      "physical_lift_pass": false,
+      "contact_threshold_n": 0.1,
+      "lift_threshold_m": 0.08,
+      "sustained_contact_threshold_s": 0.5,
+      "drop_height_m_above_baseline": 0.04,
+      "sustained_drop_threshold_s": 0.25,
+      "start_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "end_cube_pose_w": [
+        -0.07104204595088959,
+        0.5358867645263672,
+        0.22763019800186157,
+        -0.14519119262695312,
+        0.05516458675265312,
+        -0.6226068735122681,
+        0.7669662237167358
+      ],
+      "max_cube_xy_displacement_m": 0.6476094528003573,
+      "last_sample_lift_bilateral": false,
+      "terminal_half_second_lift_bilateral": false,
+      "last_sample_contacts_n": [
+        0.0,
+        0.0
+      ],
+      "terminal_state": {
+        "record_type": "terminal_pre_reset",
+        "episode": 1,
+        "physics_step": 288,
+        "physics_time_s": 2.4,
+        "episode_time_s": 2.4,
+        "termination": {
+          "terminated": true,
+          "time_out": false
+        },
+        "cube_pose_w": [
+          -0.07104204595088959,
+          0.5358867645263672,
+          0.22763019800186157,
+          -0.14519119262695312,
+          0.05516458675265312,
+          -0.6226068735122681,
+          0.7669662237167358
+        ],
+        "cube_height_m": 0.22763019800186157,
+        "robot_joint_pos": [
+          -0.7589125633239746,
+          0.16845616698265076,
+          -0.7257707118988037,
+          -2.0736312866210938,
+          0.17817983031272888,
+          2.1153922080993652,
+          0.6783757209777832,
+          0.03627992793917656,
+          0.03629482164978981
+        ],
+        "joint_names": [
+          "panda_joint1",
+          "panda_joint2",
+          "panda_joint3",
+          "panda_joint4",
+          "panda_joint5",
+          "panda_joint6",
+          "panda_joint7",
+          "panda_finger_joint1",
+          "panda_finger_joint2"
+        ],
+        "joint_pos_target": {
+          "panda_joint1": -0.8214282393455505,
+          "panda_joint2": 0.14089828729629517,
+          "panda_joint3": -0.730499267578125,
+          "panda_joint4": -2.0542540550231934,
+          "panda_joint5": 0.1666145920753479,
+          "panda_joint6": 2.0995934009552,
+          "panda_joint7": 0.6960564255714417,
+          "panda_finger_joint1": 0.04181358218193054,
+          "panda_finger_joint2": -0.0163186714053154
+        },
+        "processed_arm_targets": {
+          "panda_joint1": -0.8214282393455505,
+          "panda_joint2": 0.14089828729629517,
+          "panda_joint3": -0.730499267578125,
+          "panda_joint4": -2.0542540550231934,
+          "panda_joint5": 0.1666145920753479,
+          "panda_joint6": 2.0995934009552,
+          "panda_joint7": 0.6960564255714417
+        },
+        "processed_finger_targets": {
+          "panda_finger_joint1": 0.04181358218193054,
+          "panda_finger_joint2": -0.0163186714053154
+        },
+        "processed_action_terms": {
+          "action": [
+            -0.1388292759656906,
+            -0.05184624344110489,
+            -0.009828648529946804,
+            0.036217398941516876,
+            -0.025105837732553482,
+            -0.03438478335738182,
+            0.03635362908244133,
+            0.005572274327278137,
+            -0.05274490267038345
+          ]
+        },
+        "hand_pose_w": [
+          -0.06349114328622818,
+          0.5562640428543091,
+          0.36214950680732727,
+          0.6713728308677673,
+          0.7398410439491272,
+          -0.04104376584291458,
+          0.014482277445495129
+        ],
+        "finger_contact_n": [
+          0.0,
+          0.0
+        ],
+        "cube_to_hand_distance_m": 0.13626332581043243,
+        "fingertip_body_pose_w": {
+          "panda_leftfinger": [
+            -0.029373899102211,
+            0.5550336837768555,
+            0.30247291922569275,
+            0.6713728308677673,
+            0.7398410439491272,
+            -0.04104376584291458,
+            0.014482277445495129
+          ],
+          "panda_rightfinger": [
+            -0.10155726969242096,
+            0.5481283068656921,
+            0.30546921491622925,
+            -0.7398410439491272,
+            0.6713728308677673,
+            -0.014482277445495129,
+            -0.04104376584291458
+          ]
+        }
+      },
+      "sampling_mode": "environment_physics_step",
+      "physics_dt_s": 0.008333333333333333,
+      "policy_dt_s": 0.03333333333333333,
+      "exit": {
+        "exit_code": 0
+      },
+      "telemetry_sha256": "a9b6d6f60c0a04b89000687bafe88ac764293ae82af0e0d853a5496063ced1be",
+      "summary_sha256": "eecdeee364eef38ea6c0f7a15a72a20e97a2be145d6c96332fa81b8627e3cc51",
+      "raw_trace_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/halfarm-eval-5x12s-20261103T2333Z/seed11/ppo-telemetry.jsonl"
+    },
+    {
+      "seed": 12,
+      "matched_recorded_cube_and_joint_reset": true,
+      "max_target_mapping_error": 1.1920928955078125e-07,
+      "events": {
+        "first_right_only": {
+          "time_s": 0.616667,
+          "finger_positions_m": [
+            0.03697672486305237,
+            0.037054989486932755
+          ],
+          "contact_n": [
+            0.0,
+            2.86370849609375
+          ],
+          "cube_pose_w": [
+            -0.5568256974220276,
+            0.10704618692398071,
+            0.2798413336277008,
+            -0.03792006894946098,
+            -0.0007604018319398165,
+            -0.019071366637945175,
+            0.9990984797477722
+          ]
+        },
+        "first_xy_2cm_below_4cm": {
+          "time_s": 1.391667,
+          "finger_positions_m": [
+            0.03466254100203514,
+            0.0351492278277874
+          ],
+          "contact_n": [
+            0.0,
+            13.179945945739746
+          ],
+          "cube_pose_w": [
+            -0.5570002198219299,
+            0.1189480647444725,
+            0.2843424379825592,
+            -0.10493923723697662,
+            0.016951540485024452,
+            -0.15163877606391907,
+            0.982703447341919
+          ]
+        },
+        "first_either_finger_at_most_20mm": {
+          "time_s": 3.183333,
+          "finger_positions_m": [
+            0.020438916981220245,
+            0.019808951765298843
+          ],
+          "contact_n": [
+            0.0,
+            0.19680547714233398
+          ],
+          "cube_pose_w": [
+            -0.254167377948761,
+            0.4258037805557251,
+            0.2833225429058075,
+            -0.016816118732094765,
+            0.0362439788877964,
+            -0.8461673855781555,
+            0.5314174294471741
+          ]
+        },
+        "first_both_fingers_at_most_20mm": {
+          "time_s": 3.191667,
+          "finger_positions_m": [
+            0.019749319180846214,
+            0.018251832574605942
+          ],
+          "contact_n": [
+            0.0,
+            0.0
+          ],
+          "cube_pose_w": [
+            -0.2512471675872803,
+            0.4261553883552551,
+            0.2823786735534668,
+            -0.004486960358917713,
+            0.012605221010744572,
+            -0.8701459169387817,
+            0.4926126301288605
+          ]
+        },
+        "first_rise_8cm": null
+      },
+      "episode": 1,
+      "status": "completed",
+      "reason": null,
+      "error": null,
+      "policy_steps": null,
+      "termination": {
+        "terminated": false,
+        "time_out": true
+      },
+      "physics_samples": 1440,
+      "contact_samples": 1440,
+      "contact_missing_samples": 0,
+      "contact_coverage": 1.0,
+      "physics_step_gaps": 0,
+      "steps": 1440,
+      "duration_s": 12.0,
+      "baseline_cube_height_m": 0.2800000011920929,
+      "max_cube_height_m": 0.29214876890182495,
+      "max_cube_lift_m": 0.012148767709732056,
+      "max_finger_contact_n": [
+        8.627917289733887,
+        65.26217651367188
+      ],
+      "first_contact_time_s": 2.625,
+      "first_lift_time_s": null,
+      "first_bilateral_lift_time_s": null,
+      "acquisition_time_s": null,
+      "best_sustained_lift_contact_s": 0.0,
+      "drop_count": 0,
+      "drop_times_s": [],
+      "physical_lift_pass": false,
+      "contact_threshold_n": 0.1,
+      "lift_threshold_m": 0.08,
+      "sustained_contact_threshold_s": 0.5,
+      "drop_height_m_above_baseline": 0.04,
+      "sustained_drop_threshold_s": 0.25,
+      "start_cube_pose_w": [
+        -0.550000011920929,
+        0.10000000149011612,
+        0.2800000011920929,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "end_record_type": "terminal_pre_reset",
+      "end_cube_pose_w": [
+        -0.24389143288135529,
+        0.4258112907409668,
+        0.27989208698272705,
+        6.964661025676833e-08,
+        2.2800078269824553e-08,
+        -0.9152294397354126,
+        0.402933269739151
+      ],
+      "max_cube_xy_displacement_m": 0.4473618807921569,
+      "last_sample_lift_bilateral": false,
+      "terminal_half_second_lift_bilateral": false,
+      "last_sample_contacts_n": [
+        0.0,
+        0.0
+      ],
+      "terminal_state": {
+        "record_type": "terminal_pre_reset",
+        "episode": 1,
+        "physics_step": 1440,
+        "physics_time_s": 12.0,
+        "episode_time_s": 12.0,
+        "termination": {
+          "terminated": false,
+          "time_out": true
+        },
+        "cube_pose_w": [
+          -0.24389143288135529,
+          0.4258112907409668,
+          0.27989208698272705,
+          6.964661025676833e-08,
+          2.2800078269824553e-08,
+          -0.9152294397354126,
+          0.402933269739151
+        ],
+        "cube_height_m": 0.27989208698272705,
+        "robot_joint_pos": [
+          -2.8973000049591064,
+          1.7628182172775269,
+          1.0884648561477661,
+          -1.883466362953186,
+          0.9810780882835388,
+          0.739773690700531,
+          0.641682505607605,
+          0.039999883621931076,
+          0.0399983786046505
+        ],
+        "joint_names": [
+          "panda_joint1",
+          "panda_joint2",
+          "panda_joint3",
+          "panda_joint4",
+          "panda_joint5",
+          "panda_joint6",
+          "panda_joint7",
+          "panda_finger_joint1",
+          "panda_finger_joint2"
+        ],
+        "joint_pos_target": {
+          "panda_joint1": -2.9312634468078613,
+          "panda_joint2": 1.7414342164993286,
+          "panda_joint3": 1.1301069259643555,
+          "panda_joint4": -1.8925822973251343,
+          "panda_joint5": 0.9934452772140503,
+          "panda_joint6": 0.7081531286239624,
+          "panda_joint7": 0.6507604718208313,
+          "panda_finger_joint1": 0.08194822072982788,
+          "panda_finger_joint2": 0.049752503633499146
+        },
+        "processed_arm_targets": {
+          "panda_joint1": -2.9312634468078613,
+          "panda_joint2": 1.7414342164993286,
+          "panda_joint3": 1.1301069259643555,
+          "panda_joint4": -1.8925822973251343,
+          "panda_joint5": 0.9934452772140503,
+          "panda_joint6": 0.7081531286239624,
+          "panda_joint7": 0.6507604718208313
+        },
+        "processed_finger_targets": {
+          "panda_finger_joint1": 0.08194822072982788,
+          "panda_finger_joint2": 0.049752503633499146
+        },
+        "processed_action_terms": {
+          "action": [
+            -0.06792710721492767,
+            -0.042767979204654694,
+            0.08311565220355988,
+            -0.018481982871890068,
+            0.02653784118592739,
+            -0.06561189889907837,
+            0.018687522038817406,
+            0.0419483408331871,
+            0.00975413341075182
+          ]
+        },
+        "hand_pose_w": [
+          0.07642878592014313,
+          0.4670894742012024,
+          0.19579164683818817,
+          -0.16927075386047363,
+          0.17065425217151642,
+          -0.8735435605049133,
+          -0.4232577681541443
+        ],
+        "finger_contact_n": [
+          0.0,
+          0.0
+        ],
+        "cube_to_hand_distance_m": 0.33373913168907166,
+        "fingertip_body_pose_w": {
+          "panda_leftfinger": [
+            0.05337333306670189,
+            0.417971134185791,
+            0.24124930799007416,
+            -0.16927075386047363,
+            0.17065425217151642,
+            -0.8735435605049133,
+            -0.4232577681541443
+          ],
+          "panda_rightfinger": [
+            0.11715129017829895,
+            0.4646470248699188,
+            0.2536376416683197,
+            -0.17065425217151642,
+            -0.16927075386047363,
+            0.4232577681541443,
+            -0.8735435605049133
+          ]
+        }
+      },
+      "sampling_mode": "environment_physics_step",
+      "physics_dt_s": 0.008333333333333333,
+      "policy_dt_s": 0.03333333333333333,
+      "exit": {
+        "exit_code": 0
+      },
+      "telemetry_sha256": "e443b3dfd07f165573c7073990ad146f84389245ba7d484934c8f354eea553d0",
+      "summary_sha256": "7f4988b807774bfdc0f01e005a8e6e146887f2545c3d96ec78a1f22a1b7c30b2",
+      "raw_trace_path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/halfarm-eval-5x12s-20261103T2333Z/seed12/ppo-telemetry.jsonl"
+    }
+  ],
+  "trace_note": "Compact 30 Hz selected fields, every fourth 120 Hz sample; raw unrounded 120 Hz traces remain at raw_trace_path.",
+  "trace_sha256": "b0eeb721fdd3cda54848ca6f924b7f2b284cba6eb9f2ba3a653a49eed9a30785"
+}

@@ -1,0 +1,86 @@
+{
+  "seed": 2,
+  "condition": "eeg",
+  "gate": "raw",
+  "pause_start": null,
+  "pause_steps": null,
+  "resume_state": "freeze",
+  "latch_z_offset_m": 0.015,
+  "steps": 400,
+  "horizon": 400,
+  "control_hz": 20.0,
+  "physics_dt_s": 0.002,
+  "tolerances": {
+    "rise_m": 0.08,
+    "contact_steps": 10,
+    "goal_pos_m": 1e-09,
+    "goal_ori_matrix": 1e-09,
+    "gripper_command": 1e-09,
+    "eef_drift_m": 0.035,
+    "cube_drift_m": 0.025
+  },
+  "initial_cube_pos": [
+    0.0017485256566223406,
+    -0.021925203279303987,
+    0.8310993249557574
+  ],
+  "terminal_cube_pos": [
+    -0.02038106312516831,
+    -0.011767282874235062,
+    0.9258000883077793
+  ],
+  "terminal_rise_m": 0.09470076335202182,
+  "max_rise_m": 0.09926018670468228,
+  "first_acquisition_step": 84,
+  "longest_bilateral_contact_steps": 326,
+  "contact_proxy_validated": true,
+  "post_acquisition_loss": false,
+  "terminal_contact": true,
+  "terminal_retained": true,
+  "native_success_any": true,
+  "latch_step": 84,
+  "latch_steps": 316,
+  "latch_goal_pos": [
+    -0.024076381207647737,
+    -0.012197500365092732,
+    0.921401244428745
+  ],
+  "latch_goal_ori": [
+    [
+      -0.08422821931078173,
+      0.9832554434756259,
+      0.16159931914239378
+    ],
+    [
+      0.9962030144748216,
+      0.08667776966046503,
+      -0.008155868927704132
+    ],
+    [
+      -0.022026371081351193,
+      0.16029877455001879,
+      -0.986822750981527
+    ]
+  ],
+  "latch_policy_call_violations": 0,
+  "latch_rnn_counter_violations": 0,
+  "max_latch_goal_pos_error_m": 0.0,
+  "max_latch_goal_ori_error": 0.0,
+  "max_latch_gripper_close_error": 0.0,
+  "latch_invariants_pass": true,
+  "hold_steps": 40,
+  "hold_entries": 1,
+  "resumes": 1,
+  "policy_calls": 44,
+  "hold_policy_call_violations": 0,
+  "hold_rnn_counter_violations": 0,
+  "max_hold_goal_pos_error_m": 0.0,
+  "max_hold_goal_ori_error": 0.0,
+  "max_hold_gripper_command_error": 0.0,
+  "max_hold_eef_drift_m": 0.02571989546655995,
+  "max_hold_cube_drift_m": 0.01265598510902266,
+  "hold_invariants_pass": true,
+  "completion_state": "complete_retained",
+  "checkpoint_sha256": "3ee222cab41f78ba27afca7ef6f70f9f21bd3cc0a37bd79c0b2351dbede51605",
+  "decisions_sha256": "9a7905431faec59f3dba5fe79136d409bb1528bea32a009b1d853d7829d31f5f"
+}

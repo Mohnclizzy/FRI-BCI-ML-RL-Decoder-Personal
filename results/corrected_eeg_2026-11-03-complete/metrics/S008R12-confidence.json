@@ -1,0 +1,701 @@
+{
+  "protocol": "offline physical robot replay evaluation v1",
+  "time_alignment": "Simulator time zero equals recording time zero; no timestamp rescaling or label-dependent resets",
+  "condition": "confidence",
+  "inputs": {
+    "telemetry": {
+      "path": "C:\\Users\\mario\\OneDrive\\Documents\\ChatGPT\\New project 6\\FRI-BCI-ML-RL-Decoder\\outputs\\isaac\\eeg-matched-5p-continuation-20261103T0300Z-b120s\\S008R12-confidence\\telemetry.jsonl",
+      "sha256": "6ee13ef8496ba893700c216e9cc65d0b28fe2f3dcd236e60c0cb9d6e31686847"
+    },
+    "edf_annotations": {
+      "path": "C:\\Users\\mario\\OneDrive\\Documents\\ChatGPT\\New project 6\\FRI-BCI-ML-RL-Decoder\\data\\physionet\\MNE-eegbci-data\\files\\eegmmidb\\1.0.0\\S008\\S008R12.edf",
+      "sha256": "ddced4ba4dc801313554039823fa1826d0dd52648f87a5ee5ada8e9cdd0678c8"
+    },
+    "decisions": {
+      "path": "C:\\Users\\mario\\OneDrive\\Documents\\ChatGPT\\New project 6\\FRI-BCI-ML-RL-Decoder\\outputs\\isaac\\S008R12-decisions.jsonl",
+      "sha256": "3661761f0f6e768a9ce849866c063e9e3f423d25d31bb44794598b4536e948da"
+    }
+  },
+  "annotation_source": {
+    "recording_duration_s": 123.0,
+    "requested_horizon_s": 120.0,
+    "effective_horizon_s": 120.0,
+    "clipped_away_events": 0,
+    "duration_semantics": "positive duration ends at the earlier of onset+duration and next onset; zero duration continues to next onset (or recording end for final event); ends are clipped to recording end/effective horizon; onsets at or after effective horizon are omitted",
+    "label_mapping": {
+      "T0": "rest",
+      "T1": "imagery",
+      "T2": "imagery"
+    },
+    "edf": "C:\\Users\\mario\\OneDrive\\Documents\\ChatGPT\\New project 6\\FRI-BCI-ML-RL-Decoder\\data\\physionet\\MNE-eegbci-data\\files\\eegmmidb\\1.0.0\\S008\\S008R12.edf",
+    "source": "S008R12",
+    "subject": 8,
+    "run": 12
+  },
+  "physical": {
+    "measurement_kind": "sampled_simulator_state",
+    "thresholds": {
+      "lift_m": 0.08,
+      "contact_n": 0.1,
+      "sustain_s": 0.5,
+      "joint_speed_rad_s": 0.02,
+      "hand_speed_m_s": 0.005,
+      "drop_height_m": 0.04,
+      "drop_sustain_s": 0.25,
+      "max_sample_gap_s": 0.25,
+      "target_change_rad": 1e-06,
+      "finger_target_change_m": 1e-06
+    },
+    "samples": 14401,
+    "first_sample_s": 0.0,
+    "last_sample_s": 120.0,
+    "observed_interval_duration_s": 120.0,
+    "unobserved_duration_s": 0.0,
+    "maximum_sample_interval_s": 0.008333333333339965,
+    "excluded_gaps": [],
+    "baseline_cube_height_m": 0.2798919379711151,
+    "baseline_source": "first_saved_sample",
+    "max_cube_lift_m": 0.1752803921699524,
+    "max_finger_contact_n": [
+      7.220546245574951,
+      8.260237693786621
+    ],
+    "sampled_physical_lift_pass": true,
+    "first_sampled_success_time_s": 25.416666666666668,
+    "best_sampled_lift_with_bilateral_contact_s": 25.766666666666662,
+    "drops_after_sampled_acquisition": 1,
+    "drop_detection_times_s": [
+      51.06666666666666
+    ],
+    "max_hand_displacement_from_start_m": 0.2688517820533562,
+    "max_joint_displacement_from_start_rad": 1.5165748596191406,
+    "max_hand_speed_m_s": 0.06770161951471511,
+    "max_joint_speed_rad_s": 0.22018432617188752,
+    "total_moving_duration_s": 19.16666666666667,
+    "max_hold_target_excursion_rad": 0.0,
+    "max_hold_finger_target_excursion_m": 0.0,
+    "rest_motion": {
+      "observed_rest_duration_s": 61.49999999999996,
+      "moving_duration_s": 8.050000000000004,
+      "moving_fraction": 0.1308943089430896,
+      "hand_path_length_m": 0.27466616937876703
+    },
+    "limitations": [
+      "Samples cannot establish uninterrupted contact or exclude motion between samples.",
+      "Motion durations assume each finite-difference speed applies uniformly between samples.",
+      "Drop means falling below the drop-height threshold continuously for the configured duration after sustained lift acquisition; contact loss alone is not a drop.",
+      "Physical REST motion includes servo settling/drift and cannot be attributed solely to accepted EEG requests."
+    ]
+  },
+  "command_evaluation": {
+    "scope": "offline evaluator of saved decisions; no decoder labels, robot outcomes, or real-time claims",
+    "time_model": "decision state held until next decision; HOLD before first; no extrapolation after last event",
+    "interval_convention": "half-open [start_s, end_s); imagery bouts partially outside observed trace are censored",
+    "trials": 1,
+    "conditions": {
+      "confidence": {
+        "rest_duration_s": 61.49999999999996,
+        "false_activation_duration_s": 33.499999999999986,
+        "imagery_duration_s": 58.49999999999996,
+        "observed_duration_s": 120.0,
+        "active_duration_s": 67.6,
+        "imagery_bouts": 15,
+        "detected_bouts": 14,
+        "missed_bouts": 1,
+        "censored_bouts": 0,
+        "state_switches": 48,
+        "truncated_trials": 0,
+        "truncated_duration_s": 0.0,
+        "false_activation_fraction_of_rest": 0.5447154471544717,
+        "active_coverage_fraction": 0.5633333333333332,
+        "observation_coverage_fraction": 1.0,
+        "detection_coverage_fraction": 0.9333333333333333,
+        "mean_detection_delay_s": 0.8928571428571429,
+        "per_trial": [
+          {
+            "rest_duration_s": 61.49999999999996,
+            "false_activation_duration_s": 33.499999999999986,
+            "imagery_duration_s": 58.49999999999996,
+            "observed_duration_s": 120.0,
+            "active_duration_s": 67.6,
+            "imagery_bouts": 15,
+            "detected_bouts": 14,
+            "missed_bouts": 1,
+            "censored_bouts": 0,
+            "state_switches": 48,
+            "truncated_trials": 0,
+            "truncated_duration_s": 0.0,
+            "source": "S008R12",
+            "episode": "S008R12",
+            "declared_horizon_s": 120.0,
+            "observed_horizon_s": 120.0,
+            "truncated_s": 0.0,
+            "observation_coverage_fraction": 1.0,
+            "false_activation_fraction_of_rest": 0.5447154471544717,
+            "active_coverage_fraction": 0.5633333333333332,
+            "detection_coverage_fraction": 0.9333333333333333,
+            "mean_detection_delay_s": 0.8928571428571429,
+            "detection_delays_s": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              4.0,
+              0.0,
+              0.7999999999999972,
+              3.0999999999999943,
+              2.9000000000000057,
+              1.7000000000000028,
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "request_to_action": {
+    "definition": "First saved arm/finger target change in each active request span; target-dispatch timing, not actual motion latency",
+    "timing": "interval_start_s where recorded; otherwise post-step sample time (upper-bound timestamp)",
+    "active_request_spans": 24,
+    "spans_with_target_change": 6,
+    "mean_target_change_delay_s": 0.2486111111111112,
+    "events": [
+      {
+        "request_time_s": 2.0,
+        "active_span_end_s": 5.3,
+        "target_change_time_s": 3.0,
+        "target_change_delay_s": 1.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 6.0,
+        "active_span_end_s": 10.0,
+        "target_change_time_s": 6.0,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 12.0,
+        "active_span_end_s": 13.308333333333334,
+        "target_change_time_s": 12.0,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 13.5,
+        "active_span_end_s": 18.0,
+        "target_change_time_s": 13.5,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 18.5,
+        "active_span_end_s": 19.8,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 20.0,
+        "active_span_end_s": 20.8,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 21.0,
+        "active_span_end_s": 21.3,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 21.5,
+        "active_span_end_s": 25.8,
+        "target_change_time_s": 21.991666666666667,
+        "target_change_delay_s": 0.49166666666666714,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 27.8,
+        "active_span_end_s": 37.3,
+        "target_change_time_s": 27.8,
+        "target_change_delay_s": 0.0,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 39.3,
+        "active_span_end_s": 45.8,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 48.5,
+        "active_span_end_s": 51.3,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 57.3,
+        "active_span_end_s": 57.5,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 58.3,
+        "active_span_end_s": 58.5,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 61.0,
+        "active_span_end_s": 67.8,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 70.5,
+        "active_span_end_s": 76.0,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 81.0,
+        "active_span_end_s": 84.5,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 89.0,
+        "active_span_end_s": 91.8,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 96.0,
+        "active_span_end_s": 99.5,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 101.8,
+        "active_span_end_s": 103.0,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 103.3,
+        "active_span_end_s": 104.0,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 105.0,
+        "active_span_end_s": 105.3,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 105.8,
+        "active_span_end_s": 108.3,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 110.3,
+        "active_span_end_s": 111.8,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      },
+      {
+        "request_time_s": 117.0,
+        "active_span_end_s": 117.3,
+        "target_change_time_s": null,
+        "target_change_delay_s": null,
+        "right_censored": false
+      }
+    ]
+  },
+  "collector_metrics": {
+    "evaluation_horizon_s": 120.0,
+    "request_active_duration_s": 67.60833333333332,
+    "request_active_fraction_of_horizon": 0.5634027777777777,
+    "request_switch_count": 48,
+    "request_switches_per_minute": 24.0,
+    "rest_annotation_duration_s": 61.49999999999996,
+    "rest_command_active_duration_s": 33.499999999999986,
+    "rest_command_activation_fraction": 0.5447154471544717,
+    "decision_trace_sha256": "3661761f0f6e768a9ce849866c063e9e3f423d25d31bb44794598b4536e948da",
+    "first_sampled_physical_success_time_s": 25.416666666666668,
+    "trajectory_complete_time_s": 31.991666666666667,
+    "absorbing_executor_complete_time_s": 32.0,
+    "physical_action_latency_definition": "first sampled interval exceeding the configured joint/hand speed threshold after an active request; sample time is an upper bound, and requests after absorbing completion are unavailable",
+    "physical_action_latency_events": [
+      {
+        "request_time_s": 2.0,
+        "request_end_s": 5.3,
+        "response_latency_s": 1.025,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 6.0,
+        "request_end_s": 10.0,
+        "response_latency_s": 0.025000000000000355,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 12.0,
+        "request_end_s": 13.308333333333334,
+        "response_latency_s": 0.025000000000000355,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 13.5,
+        "request_end_s": 18.0,
+        "response_latency_s": 0.00833333333333286,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 18.5,
+        "request_end_s": 19.8,
+        "response_latency_s": null,
+        "status": "no_motion_before_hold",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 20.0,
+        "request_end_s": 20.8,
+        "response_latency_s": null,
+        "status": "no_motion_before_hold",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 21.0,
+        "request_end_s": 21.3,
+        "response_latency_s": null,
+        "status": "no_motion_before_hold",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 21.5,
+        "request_end_s": 25.8,
+        "response_latency_s": 0.5249999999999986,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 27.8,
+        "request_end_s": 37.3,
+        "response_latency_s": 0.03333333333333144,
+        "status": "observed_motion_upper_bound",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 39.3,
+        "request_end_s": 45.8,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 48.5,
+        "request_end_s": 51.3,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 57.3,
+        "request_end_s": 57.5,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 58.3,
+        "request_end_s": 58.5,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 61.0,
+        "request_end_s": 67.8,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 70.5,
+        "request_end_s": 76.0,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 81.0,
+        "request_end_s": 84.5,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 89.0,
+        "request_end_s": 91.8,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 96.0,
+        "request_end_s": 99.5,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 101.8,
+        "request_end_s": 103.0,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 103.3,
+        "request_end_s": 104.0,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 105.0,
+        "request_end_s": 105.3,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 105.8,
+        "request_end_s": 108.3,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 110.3,
+        "request_end_s": 111.8,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      },
+      {
+        "request_time_s": 117.0,
+        "request_end_s": 117.3,
+        "response_latency_s": null,
+        "status": "unavailable_after_absorbing_completion",
+        "right_censored": false
+      }
+    ],
+    "mean_observed_physical_action_latency_s": 0.2736111111111106,
+    "unavailable_after_completion_count": 15,
+    "not_responding_count": 3,
+    "target_dispatch_metrics": {
+      "definition": "First saved arm/finger target change in each active request span; target-dispatch timing, not actual motion latency",
+      "timing": "interval_start_s where recorded; otherwise post-step sample time (upper-bound timestamp)",
+      "active_request_spans": 24,
+      "spans_with_target_change": 6,
+      "mean_target_change_delay_s": 0.2486111111111112,
+      "events": [
+        {
+          "request_time_s": 2.0,
+          "active_span_end_s": 5.3,
+          "target_change_time_s": 3.0,
+          "target_change_delay_s": 1.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 6.0,
+          "active_span_end_s": 10.0,
+          "target_change_time_s": 6.0,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 12.0,
+          "active_span_end_s": 13.308333333333334,
+          "target_change_time_s": 12.0,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 13.5,
+          "active_span_end_s": 18.0,
+          "target_change_time_s": 13.5,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 18.5,
+          "active_span_end_s": 19.8,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 20.0,
+          "active_span_end_s": 20.8,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 21.0,
+          "active_span_end_s": 21.3,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 21.5,
+          "active_span_end_s": 25.8,
+          "target_change_time_s": 21.991666666666667,
+          "target_change_delay_s": 0.49166666666666714,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 27.8,
+          "active_span_end_s": 37.3,
+          "target_change_time_s": 27.8,
+          "target_change_delay_s": 0.0,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 39.3,
+          "active_span_end_s": 45.8,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 48.5,
+          "active_span_end_s": 51.3,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 57.3,
+          "active_span_end_s": 57.5,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 58.3,
+          "active_span_end_s": 58.5,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 61.0,
+          "active_span_end_s": 67.8,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 70.5,
+          "active_span_end_s": 76.0,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 81.0,
+          "active_span_end_s": 84.5,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 89.0,
+          "active_span_end_s": 91.8,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 96.0,
+          "active_span_end_s": 99.5,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 101.8,
+          "active_span_end_s": 103.0,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 103.3,
+          "active_span_end_s": 104.0,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 105.0,
+          "active_span_end_s": 105.3,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 105.8,
+          "active_span_end_s": 108.3,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 110.3,
+          "active_span_end_s": 111.8,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        },
+        {
+          "request_time_s": 117.0,
+          "active_span_end_s": 117.3,
+          "target_change_time_s": null,
+          "target_change_delay_s": null,
+          "right_censored": false
+        }
+      ]
+    }
+  }
+}

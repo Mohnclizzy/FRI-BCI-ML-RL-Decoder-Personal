@@ -1,0 +1,35 @@
+{
+  "subjects": [
+    2
+  ],
+  "runs": [
+    4,
+    8,
+    12
+  ],
+  "test_run": 12,
+  "test_subjects": [],
+  "channels": [
+    "C3",
+    "Cz",
+    "C4",
+    "C1",
+    "C2",
+    "FC1",
+    "FC2",
+    "CP1",
+    "CP2"
+  ],
+  "sample_rate_hz": 160,
+  "bandpass_hz": [
+    8.0,
+    30.0
+  ],
+  "filter_order": 4,
+  "window_seconds": 2.0,
+  "offset_seconds": 1.0,
+  "csp_components": 4,
+  "csp_regularization": 0.1,
+  "data_dir": "data/physionet",
+  "output_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_prepared"
+}

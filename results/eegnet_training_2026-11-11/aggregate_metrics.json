@@ -1,0 +1,70 @@
+{
+  "transfer": {
+    "subjects": 15,
+    "mean_subject_balanced_accuracy": 0.6377777777777778,
+    "mean_subject_macro_f1": 0.6146107368099424,
+    "gates": {
+      "raw": {
+        "mean_subject_rest_command_fraction": 0.380200025809782,
+        "mean_subject_missed_imagery_fraction": 0.5390785907859078,
+        "mean_subject_rest_episode_activation_fraction": 0.7955555555555557,
+        "silent_subjects": 0
+      },
+      "confidence": {
+        "mean_subject_rest_command_fraction": 0.03702671312427409,
+        "mean_subject_missed_imagery_fraction": 0.9195121951219511,
+        "mean_subject_rest_episode_activation_fraction": 0.21333333333333335,
+        "silent_subjects": 1
+      },
+      "temporal": {
+        "mean_subject_rest_command_fraction": 0.01863208155891081,
+        "mean_subject_missed_imagery_fraction": 0.9590243902439025,
+        "mean_subject_rest_episode_activation_fraction": 0.09777777777777777,
+        "silent_subjects": 4
+      },
+      "crc_hysteresis": {
+        "mean_subject_rest_command_fraction": 0.0,
+        "mean_subject_missed_imagery_fraction": 1.0,
+        "mean_subject_rest_episode_activation_fraction": 0.0,
+        "silent_subjects": 15
+      }
+    }
+  },
+  "scratch": {
+    "subjects": 15,
+    "mean_subject_balanced_accuracy": 0.5377777777777777,
+    "mean_subject_macro_f1": 0.46752885246089637,
+    "gates": {
+      "raw": {
+        "mean_subject_rest_command_fraction": 0.47851722802942315,
+        "mean_subject_missed_imagery_fraction": 0.4927371273712737,
+        "mean_subject_rest_episode_activation_fraction": 0.8177777777777778,
+        "silent_subjects": 0
+      },
+      "confidence": {
+        "mean_subject_rest_command_fraction": 0.0,
+        "mean_subject_missed_imagery_fraction": 1.0,
+        "mean_subject_rest_episode_activation_fraction": 0.0,
+        "silent_subjects": 15
+      },
+      "temporal": {
+        "mean_subject_rest_command_fraction": 0.0,
+        "mean_subject_missed_imagery_fraction": 1.0,
+        "mean_subject_rest_episode_activation_fraction": 0.0,
+        "silent_subjects": 15
+      },
+      "crc_hysteresis": {
+        "mean_subject_rest_command_fraction": 0.0,
+        "mean_subject_missed_imagery_fraction": 1.0,
+        "mean_subject_rest_episode_activation_fraction": 0.0,
+        "silent_subjects": 15
+      }
+    }
+  },
+  "paired_comparison": {
+    "mean_difference_percentage_points": 9.999999999999996,
+    "transfer_higher": 11,
+    "ties": 0,
+    "transfer_lower": 4
+  }
+}

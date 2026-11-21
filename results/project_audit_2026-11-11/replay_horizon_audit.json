@@ -1,0 +1,134 @@
+[
+  {
+    "subject": "S001",
+    "gate": "raw",
+    "source": "results\\robomimic_eeg_s001r12_heldout_2026-11-05\\S001R12-decisions.jsonl",
+    "source_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+    "trace_rows": 493,
+    "last_issued_s": 125.0,
+    "full_trace_enable_events": 227,
+    "events_issued_before_20s": 66,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 330
+  },
+  {
+    "subject": "S001",
+    "gate": "confidence",
+    "source": "results\\robomimic_eeg_s001r12_heldout_2026-11-05\\S001R12-decisions.jsonl",
+    "source_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+    "trace_rows": 493,
+    "last_issued_s": 125.0,
+    "full_trace_enable_events": 170,
+    "events_issued_before_20s": 54,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 272
+  },
+  {
+    "subject": "S001",
+    "gate": "temporal",
+    "source": "results\\robomimic_eeg_s001r12_heldout_2026-11-05\\S001R12-decisions.jsonl",
+    "source_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+    "trace_rows": 493,
+    "last_issued_s": 125.0,
+    "full_trace_enable_events": 128,
+    "events_issued_before_20s": 47,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 236
+  },
+  {
+    "subject": "S002",
+    "gate": "raw",
+    "source": "results\\robomimic_eeg_s002s003_2026-11-06\\S002\\S002R12_decisions.jsonl",
+    "source_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+    "trace_rows": 485,
+    "last_issued_s": 123.0,
+    "full_trace_enable_events": 150,
+    "events_issued_before_20s": 22,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 110
+  },
+  {
+    "subject": "S002",
+    "gate": "confidence",
+    "source": "results\\robomimic_eeg_s002s003_2026-11-06\\S002\\S002R12_decisions.jsonl",
+    "source_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+    "trace_rows": 485,
+    "last_issued_s": 123.0,
+    "full_trace_enable_events": 59,
+    "events_issued_before_20s": 7,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 36
+  },
+  {
+    "subject": "S002",
+    "gate": "temporal",
+    "source": "results\\robomimic_eeg_s002s003_2026-11-06\\S002\\S002R12_decisions.jsonl",
+    "source_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+    "trace_rows": 485,
+    "last_issued_s": 123.0,
+    "full_trace_enable_events": 35,
+    "events_issued_before_20s": 3,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 16
+  },
+  {
+    "subject": "S003",
+    "gate": "raw",
+    "source": "results\\robomimic_eeg_s002s003_2026-11-06\\S003\\S003R12_decisions.jsonl",
+    "source_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+    "trace_rows": 493,
+    "last_issued_s": 125.0,
+    "full_trace_enable_events": 483,
+    "events_issued_before_20s": 72,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 360
+  },
+  {
+    "subject": "S003",
+    "gate": "confidence",
+    "source": "results\\robomimic_eeg_s002s003_2026-11-06\\S003\\S003R12_decisions.jsonl",
+    "source_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+    "trace_rows": 493,
+    "last_issued_s": 125.0,
+    "full_trace_enable_events": 365,
+    "events_issued_before_20s": 43,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 212
+  },
+  {
+    "subject": "S003",
+    "gate": "temporal",
+    "source": "results\\robomimic_eeg_s002s003_2026-11-06\\S003\\S003R12_decisions.jsonl",
+    "source_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+    "trace_rows": 493,
+    "last_issued_s": 125.0,
+    "full_trace_enable_events": 308,
+    "events_issued_before_20s": 26,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 130
+  },
+  {
+    "subject": "S006",
+    "gate": "raw",
+    "source": "outputs\\isaac\\S006R12-decisions.jsonl",
+    "source_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+    "trace_rows": 485,
+    "last_issued_s": 123.0,
+    "full_trace_enable_events": 120,
+    "events_issued_before_20s": 44,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 218
+  },
+  {
+    "subject": "S006",
+    "gate": "confidence",
+    "source": "outputs\\isaac\\S006R12-decisions.jsonl",
+    "source_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+    "trace_rows": 485,
+    "last_issued_s": 123.0,
+    "full_trace_enable_events": 6,
+    "events_issued_before_20s": 5,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 24
+  },
+  {
+    "subject": "S006",
+    "gate": "temporal",
+    "source": "outputs\\isaac\\S006R12-decisions.jsonl",
+    "source_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+    "trace_rows": 485,
+    "last_issued_s": 123.0,
+    "full_trace_enable_events": 3,
+    "events_issued_before_20s": 3,
+    "requested_enabled_steps_on_400_step_20hz_clock_before_latch_override": 14
+  }
+]

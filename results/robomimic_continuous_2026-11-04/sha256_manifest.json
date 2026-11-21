@@ -1,0 +1,17 @@
+{
+  "phase4_full_raw_v3_20261104.tar.gz": {
+    "sha256": "2160353974574251b2afdc51b45114667406bb352b0f127adb89e71f301767b1",
+    "drive_file_id": "1muXMwTkGT-BVEOxR728EAD8La_aL0OgR",
+    "download_sha256_verified": true
+  },
+  "phase4_carrying_60_seed0.mp4": {
+    "sha256": "4a9dd9ad725dde01b4f73e53d832f17bd993a60ee33fdff9fd7cdcd2d45d4896",
+    "drive_file_id": "136hqoivNWFztX6DuNw_I2GqnnAkhCPmE",
+    "download_sha256_verified": true
+  },
+  "lift_ph_low_dim_epoch_1000_succ_100.pth": {
+    "sha256": "3ee222cab41f78ba27afca7ef6f70f9f21bd3cc0a37bd79c0b2351dbede51605",
+    "drive_file_id": "1rjOVjoJemFwSUlE6OBh9Ygzzm4rKZF6G",
+    "download_sha256_verified": true
+  }
+}

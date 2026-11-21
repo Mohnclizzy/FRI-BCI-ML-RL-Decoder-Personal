@@ -1,0 +1,1627 @@
+{
+  "observed_at_utc": "2026-11-02T22:54:10.873205+00:00",
+  "reviewed_remote_commit": "d7d8426de41a0f3d050c25629d9d3f30b2224e15",
+  "scope": "Existing files on this Brev host only. Does not prove backup completeness or physical success. Raw files not moved or modified. Hashes are a point-in-time inventory, not an immutable snapshot of active directories.",
+  "roots": [
+    "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs",
+    "/home/ubuntu/FRI-project-8b9db42/outputs"
+  ],
+  "runs": [
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102",
+      "file_count": 275,
+      "bytes": 16694312,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v1/PREPARATION.json",
+          "bytes": 1396,
+          "sha256": "c2314834638ad6fdcb214cc2f1e486a78dff5726ab81f55aff5403b4e8b75a41",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v1/franka_cube/checkpoint/model_399.pt",
+          "bytes": 1276899,
+          "sha256": "832d8262ede665b5698c557e79ef0aa4167ec0fae1b5d5d8b222e829effc24a4",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v1/franka_cube/source/franka_cube/build/lib/franka_cube/tasks/direct/franka_cube/model_400.pt",
+          "bytes": 1276899,
+          "sha256": "04b32fc4dbb1eddd84271bafa09c74080215dcd1f9cb338201e90e533937737c",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v2/PREPARATION.json",
+          "bytes": 1734,
+          "sha256": "8fa54dc00270e72ca70407c244602da6817f0d4294b1835578e7e7ccc33d9177",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v2/franka_cube/checkpoint/model_399.pt",
+          "bytes": 1276899,
+          "sha256": "832d8262ede665b5698c557e79ef0aa4167ec0fae1b5d5d8b222e829effc24a4",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v2/franka_cube/source/franka_cube/build/lib/franka_cube/tasks/direct/franka_cube/model_400.pt",
+          "bytes": 1276899,
+          "sha256": "04b32fc4dbb1eddd84271bafa09c74080215dcd1f9cb338201e90e533937737c",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v3/PREPARATION.json",
+          "bytes": 1635,
+          "sha256": "fd70da049986927b3a5f4d269b90f80b57c79e49226df49fcd1e49fbc7054439",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v3/franka_cube/checkpoint/model_399.pt",
+          "bytes": 1276899,
+          "sha256": "832d8262ede665b5698c557e79ef0aa4167ec0fae1b5d5d8b222e829effc24a4",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/compat-v3/franka_cube/source/franka_cube/build/lib/franka_cube/tasks/direct/franka_cube/model_400.pt",
+          "bytes": 1276899,
+          "sha256": "04b32fc4dbb1eddd84271bafa09c74080215dcd1f9cb338201e90e533937737c",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/eval-5ep/manifest.json",
+          "bytes": 1751,
+          "sha256": "275d2c780cbec12d86b052047d9b98b9d59601d9695b7e41b197796ffc00aa46",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/eval-5ep/summary.json",
+          "bytes": 5729,
+          "sha256": "5ea48a2328991fc1cadcd81dc5f27f6bebe3ec4c3949ae2557cb5378697d3856",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/eval-5ep/telemetry.jsonl",
+          "bytes": 2549760,
+          "sha256": "e25d8c877ebb0b57c7df4ddc8464c0ab493a12769ca4e49bd6d5148cf36227b4",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/probe-01/manifest.json",
+          "bytes": 1676,
+          "sha256": "be8d45b1a0d05605b90dd4764c6baa63b8292457abc9be4ee22980fbbe0a2167",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/probe-01/summary.json",
+          "bytes": 108,
+          "sha256": "8d96666215503ff6ee5c94cf4b443225604c304a2a8e818b4a4b33e54db8f9c1",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-01/manifest.json",
+          "bytes": 1668,
+          "sha256": "a5869954b94dde4a04a540725adfc22da41fb624d66317ea5a65a925dfe8d2e6",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-01/summary.json",
+          "bytes": 186,
+          "sha256": "5e99e6d3daca6c69eb61cf2a9d48fc9d3b2d77a25801d5119f61167f20ac5de6",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-01/telemetry.jsonl",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-02/manifest.json",
+          "bytes": 1668,
+          "sha256": "243b76546d6d732e609e0a0554031850d40611ac34d88bbe119bfc0dd53e8683",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-02/summary.json",
+          "bytes": 195,
+          "sha256": "0af8c5a2c13ce51f65903ee9047254a00b92e64768cb929d40663efc406908fb",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-02/telemetry.jsonl",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-03/manifest.json",
+          "bytes": 1668,
+          "sha256": "351c6d52cc10f9bb6f666a99aa5589c12b202acba48b379674620efbfbb12dc8",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-03/summary.json",
+          "bytes": 185,
+          "sha256": "0e001c70449f0eecc168bb79b9ea51a55d6118c67c5120bd81aec9f839f1f4b1",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-03/telemetry.jsonl",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-04/manifest.json",
+          "bytes": 1753,
+          "sha256": "bbe7366deaf70bce52a3e8e004ab7698b9f0d38b3c4bbf16768aadf513401d40",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-04/summary.json",
+          "bytes": 1226,
+          "sha256": "435c1159cc56858f606a277543b18682bbab116a70c34f98124d2d651b2c558e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/startup-04/telemetry.jsonl",
+          "bytes": 516030,
+          "sha256": "bddad1c60250f5c71daf1300ce492f4a4cebb5b28a7ba0a6ad7f536809e0d078",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/worker-wip/work/franka_cube/checkpoint/model_399.pt",
+          "bytes": 1276899,
+          "sha256": "832d8262ede665b5698c557e79ef0aa4167ec0fae1b5d5d8b222e829effc24a4",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102/worker-wip/work/franka_cube/source/franka_cube/build/lib/franka_cube/tasks/direct/franka_cube/model_400.pt",
+          "bytes": 1276899,
+          "sha256": "04b32fc4dbb1eddd84271bafa09c74080215dcd1f9cb338201e90e533937737c",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext",
+      "file_count": 20,
+      "bytes": 1534661,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-10/manifest.json",
+          "bytes": 1744,
+          "sha256": "0d3f3eae1417c54e0ff642f46c6eab3850a4aa79479df2b06c41bb7fa1370ca4",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-10/summary.json",
+          "bytes": 1181,
+          "sha256": "af2c748e766d6dd334df826a9e64ae19561f482aa0908f40d1e18e3049a5e979",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-10/telemetry.jsonl",
+          "bytes": 96982,
+          "sha256": "34de15289527eca44b80c450b8b1e4bbfdcada1984c0c4be494979011ae5d5d5",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-11/manifest.json",
+          "bytes": 1744,
+          "sha256": "f53abac972082d7391695e4862b29abbce6860d849b6c19808f2c38229c63734",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-11/summary.json",
+          "bytes": 1214,
+          "sha256": "f3d7931241254d5b3bf27b24f9ce17ece949f1a4cf7c72ac08398cc2a786151f",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-11/telemetry.jsonl",
+          "bytes": 229238,
+          "sha256": "889a9d2be912ab229e0ba6b8774ec43375655988b106327fe0a263f2b1edb53f",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-12/manifest.json",
+          "bytes": 1744,
+          "sha256": "ee15244f51afec181663c5628e6980e8d5fae9871ea746e6c755ab2879ec271e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-12/summary.json",
+          "bytes": 1201,
+          "sha256": "3b4f6ea15c87807401205d9039862c1a1265f1692135138e36606a0cb9d3c79e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-12/telemetry.jsonl",
+          "bytes": 510453,
+          "sha256": "1cca88f7c8a2533b5c3fa825994dcf66ced29ce02a0a3f03001d2ad4d423824a",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-13/manifest.json",
+          "bytes": 1744,
+          "sha256": "6109f7e61dde9d182c2db819ed0821f328e993be67661579544f02a197226a4f",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-13/summary.json",
+          "bytes": 1198,
+          "sha256": "05e376b216ba04db8185c7443d58a8484935157d4eb03c784c9be186aa2caede",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-13/telemetry.jsonl",
+          "bytes": 137739,
+          "sha256": "d3f591750aba4c314500e07bfeafce6697c455666cb62136c5c65f3dc823e884",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-9/manifest.json",
+          "bytes": 1741,
+          "sha256": "78b3940f0961fc3b5cda52d8efb700d46c984c5428e5aa9bcb59dd3a5c6c737b",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-9/summary.json",
+          "bytes": 1223,
+          "sha256": "447c1c48b09c725817451b3d1979fa6acaf79ae4c2535b2887d5c094b1a36335",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext/seed-9/telemetry.jsonl",
+          "bytes": 517179,
+          "sha256": "b6f300ccc041ebfe5ef57a05558b7f3a86b0919d21549b56d48f9e14b46e5888",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-128-20261102T2322Z",
+      "file_count": 10,
+      "bytes": 38845155,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-128-20261102T2322Z/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-128-20261102T2322Z/console.log",
+          "bytes": 14804,
+          "sha256": "acfbc40018ca76efa084e04cbdfa7c9a21ae986be7273d5bbf60f01f01114c0c",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-128-20261102T2322Z/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-128-20261102T2322Z/launch.json",
+          "bytes": 814,
+          "sha256": "a18b8c7ab1e6cdc7b7c9dae1071f95eff5bd96501f0d0c0b5870740e5a14074d",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-128-20261102T2322Z/logs/rsl_rl/lift_franka/2026-11-02_22-48-18/model_0.pt",
+          "bytes": 19382143,
+          "sha256": "118d226dc8491abb4a4580f782e93f1baa1f4ef92b12d49e0c72c4e0487c8498",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-128-20261102T2322Z/logs/rsl_rl/lift_franka/2026-11-02_22-48-18/model_1.pt",
+          "bytes": 19382143,
+          "sha256": "640cde52d8117a66cdf2f66e8afaf736dd4c80803c44c5519a0a81ded52579a4",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-128-20261102T2322Z/logs/rsl_rl/lift_franka/2026-11-02_22-48-18/params/agent.yaml",
+          "bytes": 1359,
+          "sha256": "8b16f923e322237cc0246878565042863e607e634a3314feaec186a51333c28a",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-128-20261102T2322Z/logs/rsl_rl/lift_franka/2026-11-02_22-48-18/params/env.yaml",
+          "bytes": 60251,
+          "sha256": "4f708641b25b94ad78e87ec3f45ec7a261d4de8d10eb6b008d0684b997ac4c3c",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-256-20261102T2324Z",
+      "file_count": 10,
+      "bytes": 38843907,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-256-20261102T2324Z/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-256-20261102T2324Z/console.log",
+          "bytes": 13556,
+          "sha256": "9f79de6dc78311195af4b6b19464f4b6f0ddecb5131b40682f5eead167731b41",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-256-20261102T2324Z/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-256-20261102T2324Z/launch.json",
+          "bytes": 814,
+          "sha256": "dbf48afa52cd2ffc3cae8727b86510c666bc278bbee4e78ff886ea8d8398a341",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-256-20261102T2324Z/logs/rsl_rl/lift_franka/2026-11-02_22-48-45/model_0.pt",
+          "bytes": 19382143,
+          "sha256": "a529e20f6d30af87ec9820bd47a8c98a3dab094179506b338f97f02e47ad8afb",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-256-20261102T2324Z/logs/rsl_rl/lift_franka/2026-11-02_22-48-45/model_1.pt",
+          "bytes": 19382143,
+          "sha256": "c5edb15d92fa54d6755b8c9ee91ae5a6c62f58e7e1824f35f85aa99bce11f43b",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-256-20261102T2324Z/logs/rsl_rl/lift_franka/2026-11-02_22-48-45/params/agent.yaml",
+          "bytes": 1359,
+          "sha256": "8b16f923e322237cc0246878565042863e607e634a3314feaec186a51333c28a",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-256-20261102T2324Z/logs/rsl_rl/lift_franka/2026-11-02_22-48-45/params/env.yaml",
+          "bytes": 60251,
+          "sha256": "680c280b76dd7aaf53f797429ca47a3c77fb7b2baa978fdd9cfa9c11dd49c3f3",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-64-20261102T2320Z",
+      "file_count": 10,
+      "bytes": 38845148,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-64-20261102T2320Z/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-64-20261102T2320Z/console.log",
+          "bytes": 14801,
+          "sha256": "38133f0d527fdb0a05244b64347b3b11f96e3d9dedd95eac1aa7f005d0289ca3",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-64-20261102T2320Z/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-64-20261102T2320Z/launch.json",
+          "bytes": 812,
+          "sha256": "7c923b442426ec4705dc2c5b9769f4f1f3e6c80e601e8bb5aba8ce774fe8cf12",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-64-20261102T2320Z/logs/rsl_rl/lift_franka/2026-11-02_22-47-50/model_0.pt",
+          "bytes": 19382143,
+          "sha256": "966bd2266674c7d867f3a43e1c7375e45b6f5cde96375b6b1325196c31a32822",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-64-20261102T2320Z/logs/rsl_rl/lift_franka/2026-11-02_22-47-50/model_1.pt",
+          "bytes": 19382143,
+          "sha256": "22036a206560c967a07aa6c05a7fd8844efb527e1c2c648425a6cf2eaa97763e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-64-20261102T2320Z/logs/rsl_rl/lift_franka/2026-11-02_22-47-50/params/agent.yaml",
+          "bytes": 1359,
+          "sha256": "8b16f923e322237cc0246878565042863e607e634a3314feaec186a51333c28a",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-bench-64-20261102T2320Z/logs/rsl_rl/lift_franka/2026-11-02_22-47-50/params/env.yaml",
+          "bytes": 60249,
+          "sha256": "47a6641cdb792b7e968865a2812dda137c14f1bf4265d0a4eee4df0508983221",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-eval-5x12s-seed8-12-20261102T2258Z",
+      "file_count": 3,
+      "bytes": 5915,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-eval-5x12s-seed8-12-20261102T2258Z/seed8/console.log",
+          "bytes": 5913,
+          "sha256": "d66c2de2e5deeeebfd0780af94630ba9f853795fe062a884bf91eb05b8a3cc32",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-eval-5x12s-seed8-12-20261102T2258Z/seed8/ppo-telemetry.jsonl",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-play-reset-screen-20261102T2255Z",
+      "file_count": 1,
+      "bytes": 3959,
+      "exit_records": [],
+      "key_artifacts": [],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-reset-screen-20261102T2302Z",
+      "file_count": 2,
+      "bytes": 2369,
+      "exit_records": [],
+      "key_artifacts": [],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-reset-screen-20261102T2305Z",
+      "file_count": 1,
+      "bytes": 3938,
+      "exit_records": [],
+      "key_artifacts": [],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z",
+      "file_count": 10,
+      "bytes": 39633186,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z/console.log",
+          "bytes": 399549,
+          "sha256": "034e161e528b51dad67c26a1e242ba9a3038c6fbd230e510759b7d513dd0c590",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z/launch.json",
+          "bytes": 827,
+          "sha256": "5b33bb17e5f9c16793d44634e63f1985380e6571243c7aa4374cb922db2870df",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z/logs/rsl_rl/lift_franka/2026-11-02_22-49-57/model_0.pt",
+          "bytes": 19382143,
+          "sha256": "37d47c5b9693590c1d5f5cd5593caaa56fa21a77a92c9372e64272423d2a9206",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z/logs/rsl_rl/lift_franka/2026-11-02_22-49-57/model_249.pt",
+          "bytes": 19382563,
+          "sha256": "50713284b5c112bce1269a2a25054c10100b115f7c1075d01f49c152ebd3895e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z/logs/rsl_rl/lift_franka/2026-11-02_22-49-57/params/agent.yaml",
+          "bytes": 1361,
+          "sha256": "112fb63b96ccb7eff7a72047ba302da0fa1f5b257f31b3159622b9df1d8c98d6",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z/logs/rsl_rl/lift_franka/2026-11-02_22-49-57/params/env.yaml",
+          "bytes": 60262,
+          "sha256": "44bd9d9c3e2b1f1f80c712adc1223dfcda8ba8c193163339f8575537fa844b25",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-startup-20261102T2245Z",
+      "file_count": 10,
+      "bytes": 38844443,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-startup-20261102T2245Z/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-startup-20261102T2245Z/console.log",
+          "bytes": 14588,
+          "sha256": "14924e88a02a0a623ad610bf5f554d669b0b18bd712c1fbc32330a39ee7701c5",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-startup-20261102T2245Z/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-startup-20261102T2245Z/launch.json",
+          "bytes": 810,
+          "sha256": "3680fe066c0abd656aa4437cd3899def7bbf9fbce81c5bd5ee0946e1fe12f6a4",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-startup-20261102T2245Z/logs/rsl_rl/lift_franka/2026-11-02_22-41-05/model_0.pt",
+          "bytes": 19382143,
+          "sha256": "5ff73f1cfe33ea64fcb78158bbf4669c51ca92517272e9f37527760d8a4f8a80",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-startup-20261102T2245Z/logs/rsl_rl/lift_franka/2026-11-02_22-41-05/model_1.pt",
+          "bytes": 19382143,
+          "sha256": "a5bfc3e8afb095f0acec7b8b63a4ae19b924929c96a5d813a78e1590f31b8cff",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-startup-20261102T2245Z/logs/rsl_rl/lift_franka/2026-11-02_22-41-05/params/agent.yaml",
+          "bytes": 1359,
+          "sha256": "8b16f923e322237cc0246878565042863e607e634a3314feaec186a51333c28a",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-startup-20261102T2245Z/logs/rsl_rl/lift_franka/2026-11-02_22-41-05/params/env.yaml",
+          "bytes": 60247,
+          "sha256": "dde3faadbfce0460a70c0a3aa001ffefef7454f311d8ff679a9bbd38942e8b73",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201500Z",
+      "file_count": 8,
+      "bytes": 29582908,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201500Z/checkpoint/exported/policy.pt",
+          "bytes": 3254292,
+          "sha256": "ff0af3684eacc10681ebfa6c35e07a376d46f9984523cc4ecf233578b69e1cbe",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201500Z/checkpoint/model_99.pt",
+          "bytes": 19382481,
+          "sha256": "6a9c5ff66ff813c5b3a72596b620f9729953f91febeb564a88421c59c564ee9b",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201500Z/console.log",
+          "bytes": 11810,
+          "sha256": "b9a21dd2f18a2cb6d0a2d7cb191f65743261adc51a703cfda6b91f8a70a3ed27",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201500Z/launch.json",
+          "bytes": 1234,
+          "sha256": "eaa57c5eb2a9da0a04e84d3d557321f3e2104388dd31c54ee45cefb51462621b",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201500Z/ppo-telemetry.jsonl",
+          "bytes": 3636298,
+          "sha256": "61e14fee31be953783268878a670e9f85b6ec9c114b40cabdbf7b9d769729b36",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201500Z/ppo-telemetry.summary.json",
+          "bytes": 2157,
+          "sha256": "a1aecc3c0db6893f419ec67fab1c7a4a8d67a0317071311ee24a186a5d01e851",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201627Z",
+      "file_count": 9,
+      "bytes": 29580092,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201627Z/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201627Z/checkpoint/exported/policy.pt",
+          "bytes": 3254292,
+          "sha256": "b9d1e22f9bf17a3222d7dcbf09088cce7fdd2902d927237134cb6070ef00d007",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201627Z/checkpoint/model_99.pt",
+          "bytes": 19382481,
+          "sha256": "6a9c5ff66ff813c5b3a72596b620f9729953f91febeb564a88421c59c564ee9b",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201627Z/console.log",
+          "bytes": 11717,
+          "sha256": "b73b4b57f382159558374221eed87538fc53c5455d6d3a7e73a3b410ae169c4c",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201627Z/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201627Z/launch.json",
+          "bytes": 1324,
+          "sha256": "8f1c8b1707be0dfff7e8f2adc7db7f47adde43583b7baad20f1e4c47947a0635",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201627Z/ppo-telemetry.jsonl",
+          "bytes": 3633473,
+          "sha256": "fad51e82feb1d2c85fc5282b5cdd63f4aca54c4d03f35b25c58ee1c53b30662d",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/ppo-telemetry-validation-20261102T201627Z/ppo-telemetry.summary.json",
+          "bytes": 2152,
+          "sha256": "8409b2501a4842133338027000ff5c9ea790e426b6fa68d2c0c2953041887fd7",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-64env-100-updates-seed8-20261102T201810Z",
+      "file_count": 10,
+      "bytes": 19783681,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-64env-100-updates-seed8-20261102T201810Z/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-64env-100-updates-seed8-20261102T201810Z/console.log",
+          "bytes": 165407,
+          "sha256": "48ac3af8a40568256e596407368f57220476bb69a26f380defffdd392d2e2af5",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-64env-100-updates-seed8-20261102T201810Z/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-64env-100-updates-seed8-20261102T201810Z/launch.json",
+          "bytes": 2045,
+          "sha256": "dbe32a160bf95a1d974d727f1795f1f3cdb7f71e2f15d18e147fff5fb1e3204a",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-64env-100-updates-seed8-20261102T201810Z/logs/rsl_rl/lift_franka/2026-11-02_20-18-31/model_198.pt",
+          "bytes": 19382755,
+          "sha256": "4ca3e23b639bda131ec55df8d8ac16551d547b0ae03cae0f5685d91f2597bde7",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-64env-100-updates-seed8-20261102T201810Z/logs/rsl_rl/lift_franka/2026-11-02_20-18-31/params/agent.yaml",
+          "bytes": 1474,
+          "sha256": "76f18b1d5e211cbf38a6de83aef657d69380f5a38b76b71aa2ab214954fb0fad",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-64env-100-updates-seed8-20261102T201810Z/logs/rsl_rl/lift_franka/2026-11-02_20-18-31/params/env.yaml",
+          "bytes": 60166,
+          "sha256": "87f66af1f3ac48488df46c577aaff7168b205e234c51fde18397814be25703c5",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z",
+      "file_count": 9,
+      "bytes": 44450463,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/checkpoint/exported/policy.pt",
+          "bytes": 3254292,
+          "sha256": "112002485759941ee274c6bfdd89348a4f43c9524d31e67716ee60ae9775312f",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/checkpoint/model_198.pt",
+          "bytes": 19382755,
+          "sha256": "4ca3e23b639bda131ec55df8d8ac16551d547b0ae03cae0f5685d91f2597bde7",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/console.log",
+          "bytes": 15331,
+          "sha256": "0311657e00d24305476d948d377d02b3cf5f3979b4ca70caf1c995b5f4b55254",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/launch.json",
+          "bytes": 2064,
+          "sha256": "a23b61f40cd0fa5b79afbb6f9411d0e53c3ad7e9ebb47a5968f7fbc6ac4850a2",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/ppo-telemetry.jsonl",
+          "bytes": 18494656,
+          "sha256": "5c3a8d72f6a3d4499e09e550d852d6bb5cbb2443118030ae56d8d0e1535f3d22",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/table-approach-eval-5x12s-seed8-20261102T202013Z/ppo-telemetry.summary.json",
+          "bytes": 6712,
+          "sha256": "dffc3b4522d40c738a38ef82b27058a88680aece83f0a2587a9574001c876ee2",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-inputs",
+      "file_count": 6,
+      "bytes": 978996,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-inputs/S006R12-decisions.jsonl",
+          "bytes": 191732,
+          "sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-inputs/S007R12-decisions.jsonl",
+          "bytes": 197171,
+          "sha256": "d0f0c783f45df033151abdafb75f10267bf26d59cda313a26bf5fa811b83b3a0",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-inputs/S008R12-decisions.jsonl",
+          "bytes": 197946,
+          "sha256": "3661761f0f6e768a9ce849866c063e9e3f423d25d31bb44794598b4536e948da",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-inputs/S009R12-decisions.jsonl",
+          "bytes": 196855,
+          "sha256": "504854e750f4ae54bd01131a55ab3d63174a9968bf6091374025512a38dd861f",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-inputs/S010R12-decisions.jsonl",
+          "bytes": 192169,
+          "sha256": "c824b72f889ded15d9a88cb5ec86701f31eba17e17f1e6344edc267f5a7725df",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-transfer",
+      "file_count": 14,
+      "bytes": 1033343,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-transfer/S006R12-decisions.jsonl",
+          "bytes": 191732,
+          "sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-transfer/S007R12-decisions.jsonl",
+          "bytes": 197171,
+          "sha256": "d0f0c783f45df033151abdafb75f10267bf26d59cda313a26bf5fa811b83b3a0",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-transfer/S008R12-decisions.jsonl",
+          "bytes": 197946,
+          "sha256": "3661761f0f6e768a9ce849866c063e9e3f423d25d31bb44794598b4536e948da",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-transfer/S009R12-decisions.jsonl",
+          "bytes": 196855,
+          "sha256": "504854e750f4ae54bd01131a55ab3d63174a9968bf6091374025512a38dd861f",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-batch-transfer/S010R12-decisions.jsonl",
+          "bytes": 192169,
+          "sha256": "c824b72f889ded15d9a88cb5ec86701f31eba17e17f1e6344edc267f5a7725df",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-demo-confidence",
+      "file_count": 2,
+      "bytes": 309891,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-demo-confidence/telemetry.jsonl",
+          "bytes": 305159,
+          "sha256": "686bad76e213286dde80eed7ec7657ed2eafbcca9366dccf00886b891eb77ce2",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-demo-raw",
+      "file_count": 2,
+      "bytes": 310750,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-demo-raw/telemetry.jsonl",
+          "bytes": 306015,
+          "sha256": "bc3489f0ca14be97ce5295efcf7b4db78c393c37c50425bf3149e47f2d2a0dc5",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-demo-temporal",
+      "file_count": 2,
+      "bytes": 307505,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-demo-temporal/telemetry.jsonl",
+          "bytes": 302805,
+          "sha256": "8141527303d82fc16511a262fa9b2206cf175fb31ad1027b64336100d8acb911",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-integration-120s-20261102T1500Z",
+      "file_count": 5,
+      "bytes": 20479989,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-integration-120s-20261102T1500Z/initialization.jsonl",
+          "bytes": 205786,
+          "sha256": "db07eb10f9f767a3072252cd2167ef32c43bdb3562e526a0d5b50319c4636f7e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-integration-120s-20261102T1500Z/telemetry.jsonl",
+          "bytes": 20263849,
+          "sha256": "d9e7a0187d6561290811108b9ba6878fc672d01e920ad36f2998d79ebe6b051e",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z",
+      "file_count": 36,
+      "bytes": 5238493,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S006R12-confidence/telemetry.jsonl",
+          "bytes": 301376,
+          "sha256": "2d8c5a946d175a6fc41cc3ed66a0832e14c5ff57071a82e8ffdadd9bf03a7eb4",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S006R12-raw/telemetry.jsonl",
+          "bytes": 304233,
+          "sha256": "38169f3f6443881236c4ac3e333ab19cff64bf1596ea7601c60d15be385e88e2",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S006R12-temporal/telemetry.jsonl",
+          "bytes": 301536,
+          "sha256": "95550d0f4cdefc76b9c3e7634d31076b6048a04758149b2a9deac2e80508b6be",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S007R12-confidence/telemetry.jsonl",
+          "bytes": 302608,
+          "sha256": "40d6a3a337ad5e6b41d8b466d2863d8a8ffa60c3268efdc52a7258fd6add3c24",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S007R12-raw/telemetry.jsonl",
+          "bytes": 301669,
+          "sha256": "35cf120ec8730f38c3bf9fd5448a3297fc0cbec3e4370981d3927f1d7b27bc2a",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S007R12-temporal/telemetry.jsonl",
+          "bytes": 302620,
+          "sha256": "4f9984541567ccb2cd9cef2217d3bbd851998c74c8bca31e7704bc76d42fc5bb",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S008R12-confidence/telemetry.jsonl",
+          "bytes": 305647,
+          "sha256": "7fb1aa1aa2603982ce43caa54ae51ee1f6bbe36ce4eddb7a416785119e44ae9c",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S008R12-raw/telemetry.jsonl",
+          "bytes": 306097,
+          "sha256": "6cd61c60effa6f7a11e52785baf65b5d8c3204384ece6cf818759088a1a2fab0",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S008R12-temporal/telemetry.jsonl",
+          "bytes": 303984,
+          "sha256": "8275571ff569e49d751c6149ceb3059caea70e18d7b8437bd429a73e792a10e5",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S009R12-confidence/telemetry.jsonl",
+          "bytes": 303929,
+          "sha256": "8a7b9f2087ff95865ab4ed14147567977232b9a429989f7712496df3343fdddf",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S009R12-raw/telemetry.jsonl",
+          "bytes": 305064,
+          "sha256": "1a3b6cb874dab75384049216ad86c851929fd841b8c162f78fd9b1d94385bba2",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S009R12-temporal/telemetry.jsonl",
+          "bytes": 303163,
+          "sha256": "7e1b4db52f9965ccc6a1c3365d00218363eacf05dd50f35247cc6de13c8c9071",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S010R12-confidence/telemetry.jsonl",
+          "bytes": 301442,
+          "sha256": "531cccea077280a3fe41f7db67abd9e8ef558fc43431ae63d476cd6b18848311",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S010R12-raw/telemetry.jsonl",
+          "bytes": 301691,
+          "sha256": "ee9b133f0ca030a1b16a36431682ef97a7719b84f8de3b5152ea805356abe7ff",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/S010R12-temporal/telemetry.jsonl",
+          "bytes": 301353,
+          "sha256": "76b04e92f67d4b636c2337477de9d0b760748afc999741135a00f1197d9c48ab",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/always-hold/telemetry.jsonl",
+          "bytes": 300707,
+          "sha256": "fc4848da7a1bf5b2d82548a11a77f6a1163f2c84bb83ce2f6ae4e291dec989d0",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-20261102T054610Z/scripted-positive/telemetry.jsonl",
+          "bytes": 307294,
+          "sha256": "22b1b6dc59140b38315ab7fd55251db6e82b9c73b006f167a127264b528d99f8",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-20261102T1502Z-b120s",
+      "file_count": 16,
+      "bytes": 36657953,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-20261102T1502Z-b120s/S006R12-raw/initialization.jsonl",
+          "bytes": 205786,
+          "sha256": "db07eb10f9f767a3072252cd2167ef32c43bdb3562e526a0d5b50319c4636f7e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-20261102T1502Z-b120s/S006R12-raw/telemetry.jsonl",
+          "bytes": 21280027,
+          "sha256": "11072d17cb9054a178c47983f5760f0fbeecb171bd50d132d5ed7142e230cea9",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-20261102T1502Z-b120s/always-hold/initialization.jsonl",
+          "bytes": 205786,
+          "sha256": "db07eb10f9f767a3072252cd2167ef32c43bdb3562e526a0d5b50319c4636f7e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-20261102T1502Z-b120s/always-hold/telemetry.jsonl",
+          "bytes": 4074140,
+          "sha256": "3bf6cfabcd3218780b3fc1744527b05deac0c445d1525ee2ddca953bb97253f9",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-20261102T1502Z-b120s/scripted-pause/initialization.jsonl",
+          "bytes": 205786,
+          "sha256": "db07eb10f9f767a3072252cd2167ef32c43bdb3562e526a0d5b50319c4636f7e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-20261102T1502Z-b120s/scripted-pause/telemetry.jsonl",
+          "bytes": 6120609,
+          "sha256": "0e8b49ae808ecd692fd93a883b28b4f960451b2b6553eb952a442ed766b9f2c2",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-20261102T1502Z-b120s/scripted-positive/initialization.jsonl",
+          "bytes": 205786,
+          "sha256": "db07eb10f9f767a3072252cd2167ef32c43bdb3562e526a0d5b50319c4636f7e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-20261102T1502Z-b120s/scripted-positive/telemetry.jsonl",
+          "bytes": 4325537,
+          "sha256": "b0c0cf15635242e76028e9de6db9c53200cdce2c5667f61ecb65d2a6787324f4",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-controls-20261102T1450Z-b120s",
+      "file_count": 5,
+      "bytes": 4233108,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-corrected-controls-20261102T1450Z-b120s/always-hold/telemetry.jsonl",
+          "bytes": 4223577,
+          "sha256": "3b0dad434e6394521144005268c435f1a7792f678d1e8c497780df4f01c38d32",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-preroll-controls-20261102T1500Z-b120s",
+      "file_count": 12,
+      "bytes": 15164091,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-preroll-controls-20261102T1500Z-b120s/always-hold/initialization.jsonl",
+          "bytes": 205786,
+          "sha256": "db07eb10f9f767a3072252cd2167ef32c43bdb3562e526a0d5b50319c4636f7e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-preroll-controls-20261102T1500Z-b120s/always-hold/telemetry.jsonl",
+          "bytes": 4074140,
+          "sha256": "3bf6cfabcd3218780b3fc1744527b05deac0c445d1525ee2ddca953bb97253f9",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-preroll-controls-20261102T1500Z-b120s/scripted-pause/initialization.jsonl",
+          "bytes": 205786,
+          "sha256": "db07eb10f9f767a3072252cd2167ef32c43bdb3562e526a0d5b50319c4636f7e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-preroll-controls-20261102T1500Z-b120s/scripted-pause/telemetry.jsonl",
+          "bytes": 6120520,
+          "sha256": "156f55236d951274692231729fe0889d29d14c12182c3a6ad464a60770d86277",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-preroll-controls-20261102T1500Z-b120s/scripted-positive/initialization.jsonl",
+          "bytes": 205786,
+          "sha256": "db07eb10f9f767a3072252cd2167ef32c43bdb3562e526a0d5b50319c4636f7e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/eeg-matched-5p-preroll-controls-20261102T1500Z-b120s/scripted-positive/telemetry.jsonl",
+          "bytes": 4325718,
+          "sha256": "0c0d974c2b7d9897002db67e46bff7be5ea6500dc6c0b96ad4d38e992cef4749",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8",
+      "file_count": 13,
+      "bytes": 45710411,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/console.log",
+          "bytes": 165763,
+          "sha256": "fc27e32fbadbf9c06fe626256c1eff55e0b49213934ffe59dac4c5d98894decd",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/launch.json",
+          "bytes": 731,
+          "sha256": "ccb85d38c4f7e652ebee5c479330a0fa77cb5a4c6b8a9af2ddb990248ed8a458",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/logs/rsl_rl/lift_franka/2026-11-02_00-39-11/exported/policy.pt",
+          "bytes": 3254292,
+          "sha256": "b9d1e22f9bf17a3222d7dcbf09088cce7fdd2902d927237134cb6070ef00d007",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/logs/rsl_rl/lift_franka/2026-11-02_00-39-11/model_0.pt",
+          "bytes": 19382143,
+          "sha256": "c0033b868f761274d825da77581342f285d915fcfd5a58b49daff7899e94a822",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/logs/rsl_rl/lift_franka/2026-11-02_00-39-11/model_99.pt",
+          "bytes": 19382481,
+          "sha256": "6a9c5ff66ff813c5b3a72596b620f9729953f91febeb564a88421c59c564ee9b",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/logs/rsl_rl/lift_franka/2026-11-02_00-39-11/params/agent.yaml",
+          "bytes": 1361,
+          "sha256": "64b44b8a2b9717c84c53acc4788efcc0f545ca3a074705abe770578325d57b04",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-64x100-seed8/logs/rsl_rl/lift_franka/2026-11-02_00-39-11/params/env.yaml",
+          "bytes": 67388,
+          "sha256": "5d713d7cd2ee364d4010959f1bee63f105b2408d5053db16fcf650483c611fad",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-playback-1env-seed8-20261102",
+      "file_count": 3,
+      "bytes": 173362,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-playback-1env-seed8-20261102/console.log",
+          "bytes": 11360,
+          "sha256": "bc937b47bfcc3907144beb29e5c7cadd8efb94401c5d56189f10aa5c5987e56d",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-playback-1env-seed8-20261102/telemetry.jsonl",
+          "bytes": 162000,
+          "sha256": "bd880b728a14602ebc8c1e80b4c86f33e1585c1d413de202729c61d54cd4bb9f",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-playback-5ep-seed8-20261102",
+      "file_count": 3,
+      "bytes": 966401,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-playback-5ep-seed8-20261102/console.log",
+          "bytes": 14022,
+          "sha256": "c3af89f9a96d876359c0e189b348937ec1f98d3cf167dd1079d8f31281cb5960",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-playback-5ep-seed8-20261102/telemetry.jsonl",
+          "bytes": 952377,
+          "sha256": "04cc4b04109176b1e9e8c762b486f8dafe27f3f412200bc9eab53adbb629ba24",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-playback-bounded",
+      "file_count": 2,
+      "bytes": 11203,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-playback-bounded/console.log",
+          "bytes": 10499,
+          "sha256": "9fb3020177302d17f243bbe322b3ecaa9f5c9ba1d89f02158bf0385bff363b4f",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/pregrasp-playback-bounded/launch.json",
+          "bytes": 704,
+          "sha256": "b644b5e2bd41e908492c6c2c5c5cc3539541b91ba98e7295877793417247b993",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-64x100-seed8-from-pregrasp",
+      "file_count": 12,
+      "bytes": 26323629,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-64x100-seed8-from-pregrasp/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-64x100-seed8-from-pregrasp/console.log",
+          "bytes": 165991,
+          "sha256": "bd80e2dced8d16a80cd5f73365deb9d1ffc3dfc40f32f16090fa9a5cf12672a1",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-64x100-seed8-from-pregrasp/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-64x100-seed8-from-pregrasp/launch.json",
+          "bytes": 989,
+          "sha256": "4164a74036965a10d7e0103d536153e2a9bcbdf6505840c9aaed7294dca39448",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-64x100-seed8-from-pregrasp/logs/rsl_rl/lift_franka/2026-11-02_03-09-47/exported/policy.pt",
+          "bytes": 3254292,
+          "sha256": "1aa88b1d67439f3b455e368242a08ad6bf583d82f65696c3889fb5ac66e3e34c",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-64x100-seed8-from-pregrasp/logs/rsl_rl/lift_franka/2026-11-02_03-09-47/model_198.pt",
+          "bytes": 19382755,
+          "sha256": "48b7585d5c13f53c1a66836bf13c1e1ad4155493854a6ba9e4a8d2100993c009",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-64x100-seed8-from-pregrasp/logs/rsl_rl/lift_franka/2026-11-02_03-09-47/params/agent.yaml",
+          "bytes": 1474,
+          "sha256": "76f18b1d5e211cbf38a6de83aef657d69380f5a38b76b71aa2ab214954fb0fad",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-64x100-seed8-from-pregrasp/logs/rsl_rl/lift_franka/2026-11-02_03-09-47/params/env.yaml",
+          "bytes": 60133,
+          "sha256": "cf33db6d2ccacb78405d3d597ad16de80f1b7d469f054d132a404429760a0c9e",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-20261102",
+      "file_count": 7,
+      "bytes": 72352,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-20261102/console.log",
+          "bytes": 9229,
+          "sha256": "f11dad25f9c831912688bcc8fa5613ec5d042dfa84239042b2b9a8c83fe29897",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-20261102/launch.json",
+          "bytes": 1076,
+          "sha256": "a29e856c4c1bf9fa4292ece66e6a00da714df7812db828fb2924e789c138a63f",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-20261102/logs/rsl_rl/lift_franka/2026-11-02_06-11-32/params/agent.yaml",
+          "bytes": 1472,
+          "sha256": "ee1f6447cd10ddd5c82a99aa86dcb301a1860429735a3743b99bd269a4320cbc",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-20261102/logs/rsl_rl/lift_franka/2026-11-02_06-11-32/params/env.yaml",
+          "bytes": 60128,
+          "sha256": "5a0f1735f4654de34947aec899d53cdeb949da6643d8f71a2335d5a25702ccdf",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-l4-20261102T1954Z",
+      "file_count": 9,
+      "bytes": 19461442,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-l4-20261102T1954Z/exit.json",
+          "value": {
+            "exit_code": 0
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-l4-20261102T1954Z/console.log",
+          "bytes": 12797,
+          "sha256": "e924728955a623465447455e68b0ad70100be53ec18861c95c5b80ce4ef5a3bf",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-l4-20261102T1954Z/exit.json",
+          "bytes": 17,
+          "sha256": "e89df0eae5ec7db81135aed16463968955c578bcc4f2ec43172eff351f080c17",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-l4-20261102T1954Z/launch.json",
+          "bytes": 1085,
+          "sha256": "b6da3a8ac58a74b6064b9ac3f309e49a56d6e62f453a61adf06a49e3c268dc5d",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-l4-20261102T1954Z/logs/rsl_rl/lift_franka/2026-11-02_19-54-10/model_100.pt",
+          "bytes": 19382755,
+          "sha256": "1faadf640ceb6a269cddfaef01b086450b7ad913a4db0ce1fc73ca7447c5799f",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-l4-20261102T1954Z/logs/rsl_rl/lift_franka/2026-11-02_19-54-10/params/agent.yaml",
+          "bytes": 1472,
+          "sha256": "ee1f6447cd10ddd5c82a99aa86dcb301a1860429735a3743b99bd269a4320cbc",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-l4-20261102T1954Z/logs/rsl_rl/lift_franka/2026-11-02_19-54-10/params/env.yaml",
+          "bytes": 60137,
+          "sha256": "de3382f1a10d1592cf979b80ef5d949792ed63d04eab4050f0437150117ffc98",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-ready-20261102",
+      "file_count": 4,
+      "bytes": 6138,
+      "exit_records": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-ready-20261102/exit.json",
+          "value": {
+            "exit_code": 1
+          }
+        }
+      ],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-ready-20261102/console.log",
+          "bytes": 4848,
+          "sha256": "947cce6ae4cca88878898a1321ff9c51e94dc8df658d19b09d94dde9779eb80e",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-ready-20261102/exit.json",
+          "bytes": 17,
+          "sha256": "5cc319f54b05a38799195a491c303aa686eab7caccfdbbf1e8b8c07405cb7392",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-approach-smoke-ready-20261102/launch.json",
+          "bytes": 1082,
+          "sha256": "14f25c17c20dccd7ca9b1662beafd436f2048a88d7aec7b1566f3505a6bf89b7",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-observation-audit-20261102T1455Z",
+      "file_count": 4,
+      "bytes": 844175,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-observation-audit-20261102T1455Z/console.log",
+          "bytes": 12761,
+          "sha256": "d14cece6df588b4db44e6115e52079e1fab3f388db11dc2fd90b42299d076f22",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-observation-audit-20261102T1455Z/telemetry.jsonl",
+          "bytes": 831066,
+          "sha256": "153653c375953ba574a36d99ba8cd9448dfb98cb08ba669630e96f05bdb9c164",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-playback-1env-5ep-seed8-20261102",
+      "file_count": 3,
+      "bytes": 912032,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-playback-1env-5ep-seed8-20261102/console.log",
+          "bytes": 12661,
+          "sha256": "33847fd8c62a206812c9d81b27c0417661c6681b362e76d95cc42a6473e3182c",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-playback-1env-5ep-seed8-20261102/telemetry.jsonl",
+          "bytes": 899369,
+          "sha256": "9e976d9b1aa4ef0e21001d1abc2926403807e7fa0aaf9575a747ae4cba78707b",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    },
+    {
+      "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-playback-diagnostics-1env-seed8-20261102",
+      "file_count": 3,
+      "bytes": 418367,
+      "exit_records": [],
+      "key_artifacts": [
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-playback-diagnostics-1env-seed8-20261102/console.log",
+          "bytes": 11526,
+          "sha256": "7561b04f8758209c95ede47901515f446edcd105ebaa9bdd782862158768a696",
+          "stable_during_hash": true
+        },
+        {
+          "path": "/home/ubuntu/FRI-project-8b9db42/outputs/isaac/table-playback-diagnostics-1env-seed8-20261102/telemetry.jsonl",
+          "bytes": 406839,
+          "sha256": "3b1ff2a530f346faa97b79eb5e631839a64870214e6a741b5f6f4fb50bfb53fd",
+          "stable_during_hash": true
+        }
+      ],
+      "backup_status": "not established by this inventory"
+    }
+  ],
+  "local_archives": [
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-integration-20261102.tar.gz",
+      "bytes": 12802614,
+      "sha256": "0a19b51b72a2b2565264becf529885bff248be82d6618cb679959e7dfd9c8a0b",
+      "second_copy": "Windows copy previously documented; not accessed in this review"
+    },
+    {
+      "path": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/candidate-reset-diagnostic-20261102Tnext.tar.gz",
+      "bytes": 350322,
+      "sha256": "8a282ee1fb074506cffd9b2c515d68a709c5f81a61c891760e9eb2b3f53ae080",
+      "second_copy": "Windows copy previously documented; not accessed in this review"
+    }
+  ],
+  "near_table_latest": {
+    "status": "training_completed; physical_screen_not_verified_in_this_review",
+    "exit_code": 0,
+    "updates": 250,
+    "transitions": 2048000,
+    "evidence": "console.log ends with iteration 249/250 and Total steps: 2048000",
+    "checkpoint": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z/logs/rsl_rl/lift_franka/2026-11-02_22-49-57/model_249.pt",
+    "checkpoint_sha256": "50713284b5c112bce1269a2a25054c10100b115f7c1075d01f49c152ebd3895e",
+    "launch": {
+      "argv": [
+        "/home/ubuntu/IsaacLab-fri/.venv/bin/isaaclab",
+        "train",
+        "--task",
+        "FRI-Franka-Lift-NearTable",
+        "--rl_library",
+        "rsl_rl",
+        "--num_envs",
+        "256",
+        "--seed",
+        "8",
+        "--max_iterations",
+        "250",
+        "physics=newton_mjwarp",
+        "--viz",
+        "none"
+      ],
+      "task": "FRI-Franka-Lift-NearTable",
+      "stage": "near-table",
+      "reset_protocol": "table_near_grasp_open",
+      "source_checkpoint": null,
+      "isaaclab_ref": "v3.0.0",
+      "isaaclab_commit": "e3f7d9ff1f5d7f8280de3ece9000b7117f66bcf4",
+      "eeg_connected": false,
+      "measured_table_pickup_evaluation": false,
+      "reward_variant": "approach_contact_shaped_v1",
+      "cwd": "/home/ubuntu/FRI-BCI-ML-RL-Decoder-Personal/outputs/isaac/near-table-stage1-256x250-seed8-20261102T2250Z",
+      "created_at": "2026-11-02T22:49:52.773001+00:00"
+    }
+  }
+}

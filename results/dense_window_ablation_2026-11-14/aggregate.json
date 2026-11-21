@@ -1,0 +1,90 @@
+{
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "source_epochs_completed_before_patience_stop": {
+    "42": 99,
+    "123": 65,
+    "2026": 121
+  },
+  "target_epochs_per_participant_seed": 300,
+  "n_participants": 15,
+  "n_seed_subject_rows": 45,
+  "aggregation": "average the 3 training seeds within each participant, then summarize n=15 participants",
+  "target_r12_touched": false,
+  "role": "exploratory R08 development; not independent confirmation",
+  "aggregate": {
+    "balanced_accuracy": {
+      "participant_mean": 0.6251851851851852,
+      "participant_sd": 0.10230730298743107,
+      "n_participants": 15
+    },
+    "raw_rest_activation": {
+      "participant_mean": 0.42072611519765996,
+      "participant_sd": 0.12461018924186547,
+      "n_participants": 15
+    },
+    "raw_imagery_coverage": {
+      "participant_mean": 0.593929539295393,
+      "participant_sd": 0.11721440306090038,
+      "n_participants": 15
+    },
+    "raw_missed_imagery": {
+      "participant_mean": 0.40607046070460695,
+      "participant_sd": 0.11721440306090038,
+      "n_participants": 15
+    },
+    "raw_rest_episode_activation": {
+      "participant_mean": 0.9422222222222222,
+      "participant_sd": 0.05986463271783196,
+      "n_participants": 15
+    },
+    "confidence_rest_activation": {
+      "participant_mean": 0.0354054286574612,
+      "participant_sd": 0.039291779453635746,
+      "n_participants": 15
+    },
+    "confidence_imagery_coverage": {
+      "participant_mean": 0.07503161698283653,
+      "participant_sd": 0.09228876496485217,
+      "n_participants": 15
+    },
+    "confidence_missed_imagery": {
+      "participant_mean": 0.9249683830171634,
+      "participant_sd": 0.09228876496485215,
+      "n_participants": 15
+    },
+    "temporal_rest_activation": {
+      "participant_mean": 0.019709639953542416,
+      "participant_sd": 0.028753649276078774,
+      "n_participants": 15
+    },
+    "temporal_imagery_coverage": {
+      "participant_mean": 0.03499548328816623,
+      "participant_sd": 0.056852916492823855,
+      "n_participants": 15
+    },
+    "temporal_missed_imagery": {
+      "participant_mean": 0.9650045167118337,
+      "participant_sd": 0.05685291649282385,
+      "n_participants": 15
+    }
+  },
+  "historical_baseline_context": {
+    "source": "gpu_campaign_2026-11-13/development_summary.json",
+    "recipe": "eegnet8/transfer/0.0001/300",
+    "observations": 45,
+    "balanced_accuracy": 0.6814814814814815,
+    "raw_rest_activation": 0.4011364907299868,
+    "raw_missed_imagery": 0.479494128274616,
+    "dense_minus_baseline": {
+      "balanced_accuracy": -0.05629629629629629,
+      "raw_rest_activation": 0.01958962446767315,
+      "raw_missed_imagery": -0.07342366757000907
+    },
+    "caveat": "Historical development aggregate; seed/participant pairing was unavailable in its compact summary."
+  },
+  "participant_metrics_file": "participant_metrics.csv"
+}

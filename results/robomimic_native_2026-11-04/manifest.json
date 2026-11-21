@@ -1,0 +1,34 @@
+{
+  "robomimic_commit": "2804dd97dd1625ec861298a35cb677129d3bfacc",
+  "robosuite_commit": "d9baa17d5328d7b0ec15ecda54c76c61bb983124",
+  "checkpoint_url": "https://downloads.cs.stanford.edu/downloads/rt_benchmark/model_zoo/lift/bc_rnn/lift_ph_low_dim_epoch_1000_succ_100.pth",
+  "checkpoint_sha256": "3ee222cab41f78ba27afca7ef6f70f9f21bd3cc0a37bd79c0b2351dbede51605",
+  "mujoco_tar_sha256": "a436ca2f4144c38b837205635bbd60ffe1162d5b44c87df22232795978d7d012",
+  "recorder_sha256": "697d0cba4930ff664be171b4f7c45a0b9d5cf66e5022ba2748a0d5de45bd3b79",
+  "analysis_sha256": "c8ba76e81cef74d6c7ac95f686eda219d1d7c75e824c669a6403b17e8dc8d992",
+  "pip_freeze_sha256": "9864da6b040f8879e95e63a59faf10b8273ea72467afc0d0694703ff6d466f35",
+  "runtime": "Python 3.8.20, robomimic v0.1, robosuite offline_study, MuJoCo 2.1.0, mujoco-py 2.1.2.14, torch 1.13.1+cpu, software OSMesa renderer",
+  "aligned_runs": [
+    "seed0c",
+    "aligned_seed1",
+    "aligned_seed2",
+    "aligned_seed3",
+    "aligned_seed4"
+  ],
+  "exploratory_runs": [
+    "seed0",
+    "seed0b",
+    "seed1",
+    "seed2",
+    "seed3",
+    "seed4"
+  ],
+  "seed_order": "aligned: numpy and torch seeded after environment construction, matching official run_trained_agent.py; exploratory: seeded before construction",
+  "control_hz": 20,
+  "physics_hz": 500,
+  "telemetry_hz": 20,
+  "video_hz": 4,
+  "horizon_steps": 400,
+  "contact_proxy": "direct MuJoCo cube-to-left/right fingerpad geom contacts; exact equality with robosuite _check_grasp at all sampled states",
+  "original_playback_parity": "seed0c first 50 actions equal official script HDF5 actions exactly; first native success step 50 in both"
+}

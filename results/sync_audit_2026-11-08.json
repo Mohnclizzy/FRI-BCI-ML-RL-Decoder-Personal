@@ -1,0 +1,44 @@
+{
+  "review_date": "2026-11-08",
+  "commit": "978b8522b0bdb7fa32d3ffa7444f6154f3fc273a",
+  "drive_folder_id": "1X3RB0pG2pIlSK_QVDrvdkK_viop5E8CG",
+  "method": "Downloaded original Drive file bytes; compared SHA-256 with clean local report files at the reviewed commit.",
+  "files": [
+    {
+      "name": "fri_rl_2026.sty",
+      "drive_file_id": "1vgRBM0uQQezVPirjAZxJBjZonRTWWVok",
+      "sha256": "761880cd7f1cdca3867ab433bd7a38681c59f30e998dc499757c20daa835ecde",
+      "matches_local": true
+    },
+    {
+      "name": "FRI_II_Midterm_Report_Overleaf.zip",
+      "drive_file_id": "1UjSlJNzKv5S_XPTqiR52vttUIMXYPt9D",
+      "sha256": "d0c215008849bd098436cb2e9803bd62279892fd284be5d98ff46acb94203df7",
+      "matches_local": true
+    },
+    {
+      "name": "midterm_report.pdf",
+      "drive_file_id": "1WfSMpKphkn-UoLsyT4nhwdBVxiLvEmJa",
+      "sha256": "da9d5fa2ff49c0f7056785378ad96936e5fa69d5522a893419bf732e161cf8d3",
+      "matches_local": true
+    },
+    {
+      "name": "corlabbrvnat.bst",
+      "drive_file_id": "1RF0nTSXggQNbkXxy80_r3zywjdLl-jaW",
+      "sha256": "720ea0a45d8cffad8072a991f4440c8df991e1db8b79af6032adbf75c956868e",
+      "matches_local": true
+    },
+    {
+      "name": "references.bib",
+      "drive_file_id": "1CjBluLM4nTAuBoUnRL-GUIZB4CQW3d86",
+      "sha256": "3b4cee55e0f8c0b16948ac111f978a7e8552eab5fd9c2c75328567fe121d34cd",
+      "matches_local": true
+    },
+    {
+      "name": "midterm_report.tex",
+      "drive_file_id": "1TFCZLjTCDRb_BZuqPKy1otcEiUXOlzte",
+      "sha256": "66e0849f3b25cc91af13f1f5e3c7b94e22639d53b4c6fa58cc9806a47f2d21cb",
+      "matches_local": true
+    }
+  ]
+}

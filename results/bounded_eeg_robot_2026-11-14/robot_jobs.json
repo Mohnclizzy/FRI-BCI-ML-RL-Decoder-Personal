@@ -1,0 +1,1900 @@
+{
+  "selection_sha256": "89f6145d968a58be926705f47ed4b06c97f6f87447b273b92f1426c8270efd59",
+  "jobs": [
+    {
+      "subject": 1,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S001_moderate.jsonl"
+    },
+    {
+      "subject": 1,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S001_raw.jsonl"
+    },
+    {
+      "subject": 1,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 1,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 1,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S001_contiguous.json"
+    },
+    {
+      "subject": 1,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S001_shifted.json"
+    },
+    {
+      "subject": 1,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S001_moderate.jsonl"
+    },
+    {
+      "subject": 1,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S001_raw.jsonl"
+    },
+    {
+      "subject": 1,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 1,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 1,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S001_contiguous.json"
+    },
+    {
+      "subject": 1,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S001_shifted.json"
+    },
+    {
+      "subject": 1,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S001_moderate.jsonl"
+    },
+    {
+      "subject": 1,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S001_raw.jsonl"
+    },
+    {
+      "subject": 1,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 1,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 1,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S001_contiguous.json"
+    },
+    {
+      "subject": 1,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S001_shifted.json"
+    },
+    {
+      "subject": 2,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S002_moderate.jsonl"
+    },
+    {
+      "subject": 2,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S002_raw.jsonl"
+    },
+    {
+      "subject": 2,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 2,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 2,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S002_contiguous.json"
+    },
+    {
+      "subject": 2,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S002_shifted.json"
+    },
+    {
+      "subject": 2,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S002_moderate.jsonl"
+    },
+    {
+      "subject": 2,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S002_raw.jsonl"
+    },
+    {
+      "subject": 2,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 2,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 2,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S002_contiguous.json"
+    },
+    {
+      "subject": 2,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S002_shifted.json"
+    },
+    {
+      "subject": 2,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S002_moderate.jsonl"
+    },
+    {
+      "subject": 2,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S002_raw.jsonl"
+    },
+    {
+      "subject": 2,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 2,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 2,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S002_contiguous.json"
+    },
+    {
+      "subject": 2,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S002_shifted.json"
+    },
+    {
+      "subject": 3,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S003_moderate.jsonl"
+    },
+    {
+      "subject": 3,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S003_raw.jsonl"
+    },
+    {
+      "subject": 3,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 3,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 3,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S003_contiguous.json"
+    },
+    {
+      "subject": 3,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S003_shifted.json"
+    },
+    {
+      "subject": 3,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S003_moderate.jsonl"
+    },
+    {
+      "subject": 3,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S003_raw.jsonl"
+    },
+    {
+      "subject": 3,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 3,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 3,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S003_contiguous.json"
+    },
+    {
+      "subject": 3,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S003_shifted.json"
+    },
+    {
+      "subject": 3,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S003_moderate.jsonl"
+    },
+    {
+      "subject": 3,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S003_raw.jsonl"
+    },
+    {
+      "subject": 3,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 3,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 3,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S003_contiguous.json"
+    },
+    {
+      "subject": 3,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S003_shifted.json"
+    },
+    {
+      "subject": 4,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S004_moderate.jsonl"
+    },
+    {
+      "subject": 4,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S004_raw.jsonl"
+    },
+    {
+      "subject": 4,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 4,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 4,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S004_contiguous.json"
+    },
+    {
+      "subject": 4,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S004_shifted.json"
+    },
+    {
+      "subject": 4,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S004_moderate.jsonl"
+    },
+    {
+      "subject": 4,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S004_raw.jsonl"
+    },
+    {
+      "subject": 4,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 4,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 4,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S004_contiguous.json"
+    },
+    {
+      "subject": 4,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S004_shifted.json"
+    },
+    {
+      "subject": 4,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S004_moderate.jsonl"
+    },
+    {
+      "subject": 4,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S004_raw.jsonl"
+    },
+    {
+      "subject": 4,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 4,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 4,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S004_contiguous.json"
+    },
+    {
+      "subject": 4,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S004_shifted.json"
+    },
+    {
+      "subject": 5,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S005_moderate.jsonl"
+    },
+    {
+      "subject": 5,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S005_raw.jsonl"
+    },
+    {
+      "subject": 5,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 5,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 5,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S005_contiguous.json"
+    },
+    {
+      "subject": 5,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S005_shifted.json"
+    },
+    {
+      "subject": 5,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S005_moderate.jsonl"
+    },
+    {
+      "subject": 5,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S005_raw.jsonl"
+    },
+    {
+      "subject": 5,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 5,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 5,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S005_contiguous.json"
+    },
+    {
+      "subject": 5,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S005_shifted.json"
+    },
+    {
+      "subject": 5,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S005_moderate.jsonl"
+    },
+    {
+      "subject": 5,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S005_raw.jsonl"
+    },
+    {
+      "subject": 5,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 5,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 5,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S005_contiguous.json"
+    },
+    {
+      "subject": 5,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S005_shifted.json"
+    },
+    {
+      "subject": 6,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S006_moderate.jsonl"
+    },
+    {
+      "subject": 6,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S006_raw.jsonl"
+    },
+    {
+      "subject": 6,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 6,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 6,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S006_contiguous.json"
+    },
+    {
+      "subject": 6,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S006_shifted.json"
+    },
+    {
+      "subject": 6,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S006_moderate.jsonl"
+    },
+    {
+      "subject": 6,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S006_raw.jsonl"
+    },
+    {
+      "subject": 6,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 6,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 6,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S006_contiguous.json"
+    },
+    {
+      "subject": 6,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S006_shifted.json"
+    },
+    {
+      "subject": 6,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S006_moderate.jsonl"
+    },
+    {
+      "subject": 6,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S006_raw.jsonl"
+    },
+    {
+      "subject": 6,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 6,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 6,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S006_contiguous.json"
+    },
+    {
+      "subject": 6,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S006_shifted.json"
+    },
+    {
+      "subject": 7,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S007_moderate.jsonl"
+    },
+    {
+      "subject": 7,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S007_raw.jsonl"
+    },
+    {
+      "subject": 7,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 7,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 7,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S007_contiguous.json"
+    },
+    {
+      "subject": 7,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S007_shifted.json"
+    },
+    {
+      "subject": 7,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S007_moderate.jsonl"
+    },
+    {
+      "subject": 7,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S007_raw.jsonl"
+    },
+    {
+      "subject": 7,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 7,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 7,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S007_contiguous.json"
+    },
+    {
+      "subject": 7,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S007_shifted.json"
+    },
+    {
+      "subject": 7,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S007_moderate.jsonl"
+    },
+    {
+      "subject": 7,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S007_raw.jsonl"
+    },
+    {
+      "subject": 7,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 7,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 7,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S007_contiguous.json"
+    },
+    {
+      "subject": 7,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S007_shifted.json"
+    },
+    {
+      "subject": 8,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S008_moderate.jsonl"
+    },
+    {
+      "subject": 8,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S008_raw.jsonl"
+    },
+    {
+      "subject": 8,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 8,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 8,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S008_contiguous.json"
+    },
+    {
+      "subject": 8,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S008_shifted.json"
+    },
+    {
+      "subject": 8,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S008_moderate.jsonl"
+    },
+    {
+      "subject": 8,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S008_raw.jsonl"
+    },
+    {
+      "subject": 8,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 8,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 8,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S008_contiguous.json"
+    },
+    {
+      "subject": 8,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S008_shifted.json"
+    },
+    {
+      "subject": 8,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S008_moderate.jsonl"
+    },
+    {
+      "subject": 8,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S008_raw.jsonl"
+    },
+    {
+      "subject": 8,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 8,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 8,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S008_contiguous.json"
+    },
+    {
+      "subject": 8,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S008_shifted.json"
+    },
+    {
+      "subject": 9,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S009_moderate.jsonl"
+    },
+    {
+      "subject": 9,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S009_raw.jsonl"
+    },
+    {
+      "subject": 9,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 9,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 9,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S009_contiguous.json"
+    },
+    {
+      "subject": 9,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S009_shifted.json"
+    },
+    {
+      "subject": 9,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S009_moderate.jsonl"
+    },
+    {
+      "subject": 9,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S009_raw.jsonl"
+    },
+    {
+      "subject": 9,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 9,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 9,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S009_contiguous.json"
+    },
+    {
+      "subject": 9,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S009_shifted.json"
+    },
+    {
+      "subject": 9,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S009_moderate.jsonl"
+    },
+    {
+      "subject": 9,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S009_raw.jsonl"
+    },
+    {
+      "subject": 9,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 9,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 9,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S009_contiguous.json"
+    },
+    {
+      "subject": 9,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S009_shifted.json"
+    },
+    {
+      "subject": 10,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S010_moderate.jsonl"
+    },
+    {
+      "subject": 10,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S010_raw.jsonl"
+    },
+    {
+      "subject": 10,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 10,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 10,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S010_contiguous.json"
+    },
+    {
+      "subject": 10,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S010_shifted.json"
+    },
+    {
+      "subject": 10,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S010_moderate.jsonl"
+    },
+    {
+      "subject": 10,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S010_raw.jsonl"
+    },
+    {
+      "subject": 10,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 10,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 10,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S010_contiguous.json"
+    },
+    {
+      "subject": 10,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S010_shifted.json"
+    },
+    {
+      "subject": 10,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S010_moderate.jsonl"
+    },
+    {
+      "subject": 10,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S010_raw.jsonl"
+    },
+    {
+      "subject": 10,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 10,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 10,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S010_contiguous.json"
+    },
+    {
+      "subject": 10,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S010_shifted.json"
+    },
+    {
+      "subject": 11,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S011_moderate.jsonl"
+    },
+    {
+      "subject": 11,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S011_raw.jsonl"
+    },
+    {
+      "subject": 11,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 11,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 11,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S011_contiguous.json"
+    },
+    {
+      "subject": 11,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S011_shifted.json"
+    },
+    {
+      "subject": 11,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S011_moderate.jsonl"
+    },
+    {
+      "subject": 11,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S011_raw.jsonl"
+    },
+    {
+      "subject": 11,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 11,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 11,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S011_contiguous.json"
+    },
+    {
+      "subject": 11,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S011_shifted.json"
+    },
+    {
+      "subject": 11,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S011_moderate.jsonl"
+    },
+    {
+      "subject": 11,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S011_raw.jsonl"
+    },
+    {
+      "subject": 11,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 11,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 11,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S011_contiguous.json"
+    },
+    {
+      "subject": 11,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S011_shifted.json"
+    },
+    {
+      "subject": 12,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S012_moderate.jsonl"
+    },
+    {
+      "subject": 12,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S012_raw.jsonl"
+    },
+    {
+      "subject": 12,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 12,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 12,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S012_contiguous.json"
+    },
+    {
+      "subject": 12,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S012_shifted.json"
+    },
+    {
+      "subject": 12,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S012_moderate.jsonl"
+    },
+    {
+      "subject": 12,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S012_raw.jsonl"
+    },
+    {
+      "subject": 12,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 12,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 12,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S012_contiguous.json"
+    },
+    {
+      "subject": 12,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S012_shifted.json"
+    },
+    {
+      "subject": 12,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S012_moderate.jsonl"
+    },
+    {
+      "subject": 12,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S012_raw.jsonl"
+    },
+    {
+      "subject": 12,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 12,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 12,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S012_contiguous.json"
+    },
+    {
+      "subject": 12,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S012_shifted.json"
+    },
+    {
+      "subject": 13,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S013_moderate.jsonl"
+    },
+    {
+      "subject": 13,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S013_raw.jsonl"
+    },
+    {
+      "subject": 13,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 13,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 13,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S013_contiguous.json"
+    },
+    {
+      "subject": 13,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S013_shifted.json"
+    },
+    {
+      "subject": 13,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S013_moderate.jsonl"
+    },
+    {
+      "subject": 13,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S013_raw.jsonl"
+    },
+    {
+      "subject": 13,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 13,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 13,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S013_contiguous.json"
+    },
+    {
+      "subject": 13,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S013_shifted.json"
+    },
+    {
+      "subject": 13,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S013_moderate.jsonl"
+    },
+    {
+      "subject": 13,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S013_raw.jsonl"
+    },
+    {
+      "subject": 13,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 13,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 13,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S013_contiguous.json"
+    },
+    {
+      "subject": 13,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S013_shifted.json"
+    },
+    {
+      "subject": 14,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S014_moderate.jsonl"
+    },
+    {
+      "subject": 14,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S014_raw.jsonl"
+    },
+    {
+      "subject": 14,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 14,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 14,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S014_contiguous.json"
+    },
+    {
+      "subject": 14,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S014_shifted.json"
+    },
+    {
+      "subject": 14,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S014_moderate.jsonl"
+    },
+    {
+      "subject": 14,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S014_raw.jsonl"
+    },
+    {
+      "subject": 14,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 14,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 14,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S014_contiguous.json"
+    },
+    {
+      "subject": 14,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S014_shifted.json"
+    },
+    {
+      "subject": 14,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S014_moderate.jsonl"
+    },
+    {
+      "subject": 14,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S014_raw.jsonl"
+    },
+    {
+      "subject": 14,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 14,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 14,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S014_contiguous.json"
+    },
+    {
+      "subject": 14,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S014_shifted.json"
+    },
+    {
+      "subject": 15,
+      "seed": 0,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S015_moderate.jsonl"
+    },
+    {
+      "subject": 15,
+      "seed": 0,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S015_raw.jsonl"
+    },
+    {
+      "subject": 15,
+      "seed": 0,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 15,
+      "seed": 0,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 15,
+      "seed": 0,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S015_contiguous.json"
+    },
+    {
+      "subject": 15,
+      "seed": 0,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S015_shifted.json"
+    },
+    {
+      "subject": 15,
+      "seed": 1,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S015_moderate.jsonl"
+    },
+    {
+      "subject": 15,
+      "seed": 1,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S015_raw.jsonl"
+    },
+    {
+      "subject": 15,
+      "seed": 1,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 15,
+      "seed": 1,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 15,
+      "seed": 1,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S015_contiguous.json"
+    },
+    {
+      "subject": 15,
+      "seed": 1,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S015_shifted.json"
+    },
+    {
+      "subject": 15,
+      "seed": 2,
+      "condition": "selected",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S015_moderate.jsonl"
+    },
+    {
+      "subject": 15,
+      "seed": 2,
+      "condition": "raw",
+      "harness_condition": "eeg",
+      "gate": "raw",
+      "trace": "traces\\eegnet_seed42_S015_raw.jsonl"
+    },
+    {
+      "subject": 15,
+      "seed": 2,
+      "condition": "always-enable",
+      "harness_condition": "always-enable"
+    },
+    {
+      "subject": 15,
+      "seed": 2,
+      "condition": "always-hold",
+      "harness_condition": "always-hold"
+    },
+    {
+      "subject": 15,
+      "seed": 2,
+      "condition": "contiguous",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S015_contiguous.json"
+    },
+    {
+      "subject": 15,
+      "seed": 2,
+      "condition": "shifted",
+      "harness_condition": "enable-schedule",
+      "schedule": "schedules/S015_shifted.json"
+    }
+  ],
+  "representative_video": {
+    "subject": 1,
+    "seed": 0,
+    "condition": "selected"
+  }
+}

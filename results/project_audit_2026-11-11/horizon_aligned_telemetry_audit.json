@@ -1,0 +1,5318 @@
+{
+  "harness_version": "robomimic-latch6-v2.0.0",
+  "generated_date": "2026-11-11",
+  "horizon_steps": 400,
+  "control_freq_hz": 20.0,
+  "episode_duration_s": 20.0,
+  "total_saved_rollouts_audited": 42,
+  "condition_summaries": [
+    {
+      "subject": "S001",
+      "cohort": "controls",
+      "condition": "always-enable",
+      "gate": null,
+      "seeds": 3,
+      "retained_count": 3,
+      "unretained_count": 0,
+      "incomplete_count": 0,
+      "retained_rate": 1.0,
+      "full_trace_enable_events": null,
+      "events_issued_before_20s": null,
+      "requested_enable_steps_20s": 400,
+      "requested_enable_seconds_20s": 20.0,
+      "requested_bout_count_20s": 1,
+      "requested_bout_lengths_steps_20s": [
+        400
+      ],
+      "executed_policy_steps_mean": 53.0,
+      "executed_policy_steps_by_seed": [
+        58,
+        54,
+        47
+      ],
+      "latched_override_steps_mean": 347.0,
+      "post_latch_requested_enable_steps_mean": 347.0,
+      "post_latch_requested_hold_steps_mean": 0.0,
+      "first_acquisition_step_by_seed": [
+        58,
+        54,
+        47
+      ],
+      "first_acquisition_step_mean": 53.0,
+      "latch_step_by_seed": [
+        58,
+        54,
+        47
+      ],
+      "latch_step_mean": 53.0,
+      "rest_requested_enable_duration_s_20s": 11.799999999999999,
+      "rest_requested_enable_rate_20s": 1.0000000000000002,
+      "rest_pre_latch_executed_policy_s_mean": 2.65,
+      "rest_eef_path_length_m_mean": 0.38692059954887387,
+      "rest_pre_latch_eef_path_length_m_mean": 0.3598454341987439,
+      "imagery_requested_enable_duration_s_20s": 8.200000000000003,
+      "imagery_missed_duration_s_20s": 0.0,
+      "imagery_missed_rate_20s": 0.0,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 2,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subject": "S001",
+      "cohort": "controls",
+      "condition": "always-hold",
+      "gate": null,
+      "seeds": 3,
+      "retained_count": 0,
+      "unretained_count": 3,
+      "incomplete_count": 0,
+      "retained_rate": 0.0,
+      "full_trace_enable_events": null,
+      "events_issued_before_20s": null,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "requested_bout_lengths_steps_20s": [],
+      "executed_policy_steps_mean": 0.0,
+      "executed_policy_steps_by_seed": [
+        0,
+        0,
+        0
+      ],
+      "latched_override_steps_mean": 0.0,
+      "post_latch_requested_enable_steps_mean": 0.0,
+      "post_latch_requested_hold_steps_mean": 0.0,
+      "first_acquisition_step_by_seed": [
+        null,
+        null,
+        null
+      ],
+      "first_acquisition_step_mean": null,
+      "latch_step_by_seed": [
+        null,
+        null,
+        null
+      ],
+      "latch_step_mean": null,
+      "rest_requested_enable_duration_s_20s": 0.0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "rest_pre_latch_executed_policy_s_mean": 0.0,
+      "rest_eef_path_length_m_mean": 0.02870492058802725,
+      "rest_pre_latch_eef_path_length_m_mean": 0.02870492058802725,
+      "imagery_requested_enable_duration_s_20s": 0.0,
+      "imagery_missed_duration_s_20s": 8.200000000000003,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "raw",
+      "seeds": 3,
+      "retained_count": 3,
+      "unretained_count": 0,
+      "incomplete_count": 0,
+      "retained_rate": 1.0,
+      "full_trace_enable_events": 227,
+      "events_issued_before_20s": 66,
+      "requested_enable_steps_20s": 330,
+      "requested_enable_seconds_20s": 16.5,
+      "requested_bout_count_20s": 1,
+      "requested_bout_lengths_steps_20s": [
+        330
+      ],
+      "executed_policy_steps_mean": 45.333333333333336,
+      "executed_policy_steps_by_seed": [
+        50,
+        42,
+        44
+      ],
+      "latched_override_steps_mean": 314.6666666666667,
+      "post_latch_requested_enable_steps_mean": 284.6666666666667,
+      "post_latch_requested_hold_steps_mean": 30.0,
+      "first_acquisition_step_by_seed": [
+        90,
+        82,
+        84
+      ],
+      "first_acquisition_step_mean": 85.33333333333333,
+      "latch_step_by_seed": [
+        90,
+        82,
+        84
+      ],
+      "latch_step_mean": 85.33333333333333,
+      "rest_requested_enable_duration_s_20s": 8.299999999999997,
+      "rest_requested_enable_rate_20s": 0.7033898305084745,
+      "rest_pre_latch_executed_policy_s_mean": 2.1666666666666665,
+      "rest_eef_path_length_m_mean": 0.35707401667928157,
+      "rest_pre_latch_eef_path_length_m_mean": 0.35310967560970447,
+      "imagery_requested_enable_duration_s_20s": 8.200000000000003,
+      "imagery_missed_duration_s_20s": 0.0,
+      "imagery_missed_rate_20s": 0.0,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 2,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "confidence",
+      "seeds": 3,
+      "retained_count": 3,
+      "unretained_count": 0,
+      "incomplete_count": 0,
+      "retained_rate": 1.0,
+      "full_trace_enable_events": 170,
+      "events_issued_before_20s": 54,
+      "requested_enable_steps_20s": 272,
+      "requested_enable_seconds_20s": 13.6,
+      "requested_bout_count_20s": 4,
+      "requested_bout_lengths_steps_20s": [
+        190,
+        50,
+        6,
+        26
+      ],
+      "executed_policy_steps_mean": 45.333333333333336,
+      "executed_policy_steps_by_seed": [
+        50,
+        42,
+        44
+      ],
+      "latched_override_steps_mean": 314.6666666666667,
+      "post_latch_requested_enable_steps_mean": 226.66666666666666,
+      "post_latch_requested_hold_steps_mean": 88.0,
+      "first_acquisition_step_by_seed": [
+        90,
+        82,
+        84
+      ],
+      "first_acquisition_step_mean": 85.33333333333333,
+      "latch_step_by_seed": [
+        90,
+        82,
+        84
+      ],
+      "latch_step_mean": 85.33333333333333,
+      "rest_requested_enable_duration_s_20s": 6.8999999999999995,
+      "rest_requested_enable_rate_20s": 0.5847457627118645,
+      "rest_pre_latch_executed_policy_s_mean": 2.1666666666666665,
+      "rest_eef_path_length_m_mean": 0.35707401667928157,
+      "rest_pre_latch_eef_path_length_m_mean": 0.35310967560970447,
+      "imagery_requested_enable_duration_s_20s": 6.700000000000002,
+      "imagery_missed_duration_s_20s": 1.5000000000000009,
+      "imagery_missed_rate_20s": 0.18292682926829273,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 2,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "temporal",
+      "seeds": 3,
+      "retained_count": 3,
+      "unretained_count": 0,
+      "incomplete_count": 0,
+      "retained_rate": 1.0,
+      "full_trace_enable_events": 128,
+      "events_issued_before_20s": 47,
+      "requested_enable_steps_20s": 236,
+      "requested_enable_seconds_20s": 11.8,
+      "requested_bout_count_20s": 3,
+      "requested_bout_lengths_steps_20s": [
+        180,
+        40,
+        16
+      ],
+      "executed_policy_steps_mean": 45.333333333333336,
+      "executed_policy_steps_by_seed": [
+        50,
+        42,
+        44
+      ],
+      "latched_override_steps_mean": 304.6666666666667,
+      "post_latch_requested_enable_steps_mean": 190.66666666666666,
+      "post_latch_requested_hold_steps_mean": 114.0,
+      "first_acquisition_step_by_seed": [
+        100,
+        92,
+        94
+      ],
+      "first_acquisition_step_mean": 95.33333333333333,
+      "latch_step_by_seed": [
+        100,
+        92,
+        94
+      ],
+      "latch_step_mean": 95.33333333333333,
+      "rest_requested_enable_duration_s_20s": 5.7,
+      "rest_requested_enable_rate_20s": 0.4830508474576273,
+      "rest_pre_latch_executed_policy_s_mean": 1.7000000000000002,
+      "rest_eef_path_length_m_mean": 0.2787658113917956,
+      "rest_pre_latch_eef_path_length_m_mean": 0.27868460332550177,
+      "imagery_requested_enable_duration_s_20s": 6.1000000000000005,
+      "imagery_missed_duration_s_20s": 2.1000000000000023,
+      "imagery_missed_rate_20s": 0.25609756097560993,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 2,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.5
+      ]
+    },
+    {
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "raw",
+      "seeds": 3,
+      "retained_count": 3,
+      "unretained_count": 0,
+      "incomplete_count": 0,
+      "retained_rate": 1.0,
+      "full_trace_enable_events": 150,
+      "events_issued_before_20s": 22,
+      "requested_enable_steps_20s": 110,
+      "requested_enable_seconds_20s": 5.5,
+      "requested_bout_count_20s": 5,
+      "requested_bout_lengths_steps_20s": [
+        20,
+        20,
+        4,
+        30,
+        36
+      ],
+      "executed_policy_steps_mean": 48.0,
+      "executed_policy_steps_by_seed": [
+        52,
+        44,
+        48
+      ],
+      "latched_override_steps_mean": 135.66666666666666,
+      "post_latch_requested_enable_steps_mean": 62.0,
+      "post_latch_requested_hold_steps_mean": 73.66666666666667,
+      "first_acquisition_step_by_seed": [
+        298,
+        201,
+        294
+      ],
+      "first_acquisition_step_mean": 264.3333333333333,
+      "latch_step_by_seed": [
+        298,
+        201,
+        294
+      ],
+      "latch_step_mean": 264.3333333333333,
+      "rest_requested_enable_duration_s_20s": 3.0,
+      "rest_requested_enable_rate_20s": 0.2542372881355932,
+      "rest_pre_latch_executed_policy_s_mean": 1.1999999999999993,
+      "rest_eef_path_length_m_mean": 0.19008062030527242,
+      "rest_pre_latch_eef_path_length_m_mean": 0.18420268067069898,
+      "imagery_requested_enable_duration_s_20s": 2.5,
+      "imagery_missed_duration_s_20s": 5.6999999999999975,
+      "imagery_missed_rate_20s": 0.6951219512195121,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 2,
+      "imagery_onset_delays_s": [
+        2.7,
+        2.1999999999999993
+      ]
+    },
+    {
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "confidence",
+      "seeds": 3,
+      "retained_count": 0,
+      "unretained_count": 3,
+      "incomplete_count": 0,
+      "retained_rate": 0.0,
+      "full_trace_enable_events": 59,
+      "events_issued_before_20s": 7,
+      "requested_enable_steps_20s": 36,
+      "requested_enable_seconds_20s": 1.8,
+      "requested_bout_count_20s": 3,
+      "requested_bout_lengths_steps_20s": [
+        4,
+        6,
+        26
+      ],
+      "executed_policy_steps_mean": 36.0,
+      "executed_policy_steps_by_seed": [
+        36,
+        36,
+        36
+      ],
+      "latched_override_steps_mean": 0.0,
+      "post_latch_requested_enable_steps_mean": 0.0,
+      "post_latch_requested_hold_steps_mean": 0.0,
+      "first_acquisition_step_by_seed": [
+        null,
+        null,
+        null
+      ],
+      "first_acquisition_step_mean": null,
+      "latch_step_by_seed": [
+        null,
+        null,
+        null
+      ],
+      "latch_step_mean": null,
+      "rest_requested_enable_duration_s_20s": 1.3000000000000007,
+      "rest_requested_enable_rate_20s": 0.11016949152542378,
+      "rest_pre_latch_executed_policy_s_mean": 1.3000000000000007,
+      "rest_eef_path_length_m_mean": 0.20011236083080478,
+      "rest_pre_latch_eef_path_length_m_mean": 0.20011236083080478,
+      "imagery_requested_enable_duration_s_20s": 0.5000000000000009,
+      "imagery_missed_duration_s_20s": 7.699999999999997,
+      "imagery_missed_rate_20s": 0.9390243902439023,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 2,
+      "imagery_onset_delays_s": [
+        3.2,
+        2.6999999999999993
+      ]
+    },
+    {
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "temporal",
+      "seeds": 3,
+      "retained_count": 0,
+      "unretained_count": 3,
+      "incomplete_count": 0,
+      "retained_rate": 0.0,
+      "full_trace_enable_events": 35,
+      "events_issued_before_20s": 3,
+      "requested_enable_steps_20s": 16,
+      "requested_enable_seconds_20s": 0.8,
+      "requested_bout_count_20s": 1,
+      "requested_bout_lengths_steps_20s": [
+        16
+      ],
+      "executed_policy_steps_mean": 16.0,
+      "executed_policy_steps_by_seed": [
+        16,
+        16,
+        16
+      ],
+      "latched_override_steps_mean": 0.0,
+      "post_latch_requested_enable_steps_mean": 0.0,
+      "post_latch_requested_hold_steps_mean": 0.0,
+      "first_acquisition_step_by_seed": [
+        null,
+        null,
+        null
+      ],
+      "first_acquisition_step_mean": null,
+      "latch_step_by_seed": [
+        null,
+        null,
+        null
+      ],
+      "latch_step_mean": null,
+      "rest_requested_enable_duration_s_20s": 0.8000000000000007,
+      "rest_requested_enable_rate_20s": 0.06779661016949158,
+      "rest_pre_latch_executed_policy_s_mean": 0.8000000000000007,
+      "rest_eef_path_length_m_mean": 0.18294263158209692,
+      "rest_pre_latch_eef_path_length_m_mean": 0.18294263158209692,
+      "imagery_requested_enable_duration_s_20s": 0.0,
+      "imagery_missed_duration_s_20s": 8.199999999999998,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "raw",
+      "seeds": 3,
+      "retained_count": 3,
+      "unretained_count": 0,
+      "incomplete_count": 0,
+      "retained_rate": 1.0,
+      "full_trace_enable_events": 483,
+      "events_issued_before_20s": 72,
+      "requested_enable_steps_20s": 360,
+      "requested_enable_seconds_20s": 18.0,
+      "requested_bout_count_20s": 1,
+      "requested_bout_lengths_steps_20s": [
+        360
+      ],
+      "executed_policy_steps_mean": 45.333333333333336,
+      "executed_policy_steps_by_seed": [
+        50,
+        42,
+        44
+      ],
+      "latched_override_steps_mean": 314.6666666666667,
+      "post_latch_requested_enable_steps_mean": 314.6666666666667,
+      "post_latch_requested_hold_steps_mean": 0.0,
+      "first_acquisition_step_by_seed": [
+        90,
+        82,
+        84
+      ],
+      "first_acquisition_step_mean": 85.33333333333333,
+      "latch_step_by_seed": [
+        90,
+        82,
+        84
+      ],
+      "latch_step_mean": 85.33333333333333,
+      "rest_requested_enable_duration_s_20s": 9.799999999999997,
+      "rest_requested_enable_rate_20s": 0.8305084745762712,
+      "rest_pre_latch_executed_policy_s_mean": 2.1666666666666665,
+      "rest_eef_path_length_m_mean": 0.35707401667928157,
+      "rest_pre_latch_eef_path_length_m_mean": 0.35310967560970447,
+      "imagery_requested_enable_duration_s_20s": 8.200000000000003,
+      "imagery_missed_duration_s_20s": 0.0,
+      "imagery_missed_rate_20s": 0.0,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 2,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "confidence",
+      "seeds": 3,
+      "retained_count": 3,
+      "unretained_count": 0,
+      "incomplete_count": 0,
+      "retained_rate": 1.0,
+      "full_trace_enable_events": 365,
+      "events_issued_before_20s": 43,
+      "requested_enable_steps_20s": 212,
+      "requested_enable_seconds_20s": 10.6,
+      "requested_bout_count_20s": 11,
+      "requested_bout_lengths_steps_20s": [
+        20,
+        4,
+        14,
+        4,
+        70,
+        10,
+        4,
+        4,
+        16,
+        6,
+        60
+      ],
+      "executed_policy_steps_mean": 48.666666666666664,
+      "executed_policy_steps_by_seed": [
+        51,
+        47,
+        48
+      ],
+      "latched_override_steps_mean": 247.33333333333334,
+      "post_latch_requested_enable_steps_mean": 163.33333333333334,
+      "post_latch_requested_hold_steps_mean": 84.0,
+      "first_acquisition_step_by_seed": [
+        155,
+        151,
+        152
+      ],
+      "first_acquisition_step_mean": 152.66666666666666,
+      "latch_step_by_seed": [
+        155,
+        151,
+        152
+      ],
+      "latch_step_mean": 152.66666666666666,
+      "rest_requested_enable_duration_s_20s": 6.599999999999998,
+      "rest_requested_enable_rate_20s": 0.559322033898305,
+      "rest_pre_latch_executed_policy_s_mean": 1.0,
+      "rest_eef_path_length_m_mean": 0.2201089534101571,
+      "rest_pre_latch_eef_path_length_m_mean": 0.21796932323956308,
+      "imagery_requested_enable_duration_s_20s": 4.0000000000000036,
+      "imagery_missed_duration_s_20s": 4.199999999999999,
+      "imagery_missed_rate_20s": 0.5121951219512193,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 2,
+      "imagery_onset_delays_s": [
+        0.09999999999999964,
+        1.3000000000000007
+      ]
+    },
+    {
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "temporal",
+      "seeds": 3,
+      "retained_count": 3,
+      "unretained_count": 0,
+      "incomplete_count": 0,
+      "retained_rate": 1.0,
+      "full_trace_enable_events": 308,
+      "events_issued_before_20s": 26,
+      "requested_enable_steps_20s": 130,
+      "requested_enable_seconds_20s": 6.5,
+      "requested_bout_count_20s": 5,
+      "requested_bout_lengths_steps_20s": [
+        10,
+        4,
+        60,
+        6,
+        50
+      ],
+      "executed_policy_steps_mean": 46.0,
+      "executed_policy_steps_by_seed": [
+        49,
+        44,
+        45
+      ],
+      "latched_override_steps_mean": 212.0,
+      "post_latch_requested_enable_steps_mean": 84.0,
+      "post_latch_requested_hold_steps_mean": 128.0,
+      "first_acquisition_step_by_seed": [
+        191,
+        186,
+        187
+      ],
+      "first_acquisition_step_mean": 188.0,
+      "latch_step_by_seed": [
+        191,
+        186,
+        187
+      ],
+      "latch_step_mean": 188.0,
+      "rest_requested_enable_duration_s_20s": 5.399999999999999,
+      "rest_requested_enable_rate_20s": 0.4576271186440678,
+      "rest_pre_latch_executed_policy_s_mean": 1.5999999999999996,
+      "rest_eef_path_length_m_mean": 0.31723095858987155,
+      "rest_pre_latch_eef_path_length_m_mean": 0.28677166164271034,
+      "imagery_requested_enable_duration_s_20s": 1.1000000000000032,
+      "imagery_missed_duration_s_20s": 7.1,
+      "imagery_missed_rate_20s": 0.865853658536585,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 2,
+      "imagery_onset_delays_s": [
+        1.0999999999999996,
+        2.5
+      ]
+    },
+    {
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "raw",
+      "seeds": 3,
+      "retained_count": 3,
+      "unretained_count": 0,
+      "incomplete_count": 0,
+      "retained_rate": 1.0,
+      "full_trace_enable_events": 120,
+      "events_issued_before_20s": 44,
+      "requested_enable_steps_20s": 218,
+      "requested_enable_seconds_20s": 10.9,
+      "requested_bout_count_20s": 4,
+      "requested_bout_lengths_steps_20s": [
+        110,
+        64,
+        4,
+        40
+      ],
+      "executed_policy_steps_mean": 45.333333333333336,
+      "executed_policy_steps_by_seed": [
+        50,
+        42,
+        44
+      ],
+      "latched_override_steps_mean": 268.6666666666667,
+      "post_latch_requested_enable_steps_mean": 172.66666666666666,
+      "post_latch_requested_hold_steps_mean": 96.0,
+      "first_acquisition_step_by_seed": [
+        136,
+        128,
+        130
+      ],
+      "first_acquisition_step_mean": 131.33333333333334,
+      "latch_step_by_seed": [
+        136,
+        128,
+        130
+      ],
+      "latch_step_mean": 131.33333333333334,
+      "rest_requested_enable_duration_s_20s": 4.299999999999999,
+      "rest_requested_enable_rate_20s": 0.3644067796610168,
+      "rest_pre_latch_executed_policy_s_mean": 0.0,
+      "rest_eef_path_length_m_mean": 0.02875059577227344,
+      "rest_pre_latch_eef_path_length_m_mean": 0.028634409758122578,
+      "imagery_requested_enable_duration_s_20s": 6.599999999999999,
+      "imagery_missed_duration_s_20s": 1.5999999999999988,
+      "imagery_missed_rate_20s": 0.1951219512195121,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 2,
+      "imagery_onset_delays_s": [
+        0.20000000000000018,
+        0.0
+      ]
+    },
+    {
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "confidence",
+      "seeds": 3,
+      "retained_count": 0,
+      "unretained_count": 3,
+      "incomplete_count": 0,
+      "retained_rate": 0.0,
+      "full_trace_enable_events": 6,
+      "events_issued_before_20s": 5,
+      "requested_enable_steps_20s": 24,
+      "requested_enable_seconds_20s": 1.2,
+      "requested_bout_count_20s": 1,
+      "requested_bout_lengths_steps_20s": [
+        24
+      ],
+      "executed_policy_steps_mean": 24.0,
+      "executed_policy_steps_by_seed": [
+        24,
+        24,
+        24
+      ],
+      "latched_override_steps_mean": 0.0,
+      "post_latch_requested_enable_steps_mean": 0.0,
+      "post_latch_requested_hold_steps_mean": 0.0,
+      "first_acquisition_step_by_seed": [
+        null,
+        null,
+        null
+      ],
+      "first_acquisition_step_mean": null,
+      "latch_step_by_seed": [
+        null,
+        null,
+        null
+      ],
+      "latch_step_mean": null,
+      "rest_requested_enable_duration_s_20s": 0.0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "rest_pre_latch_executed_policy_s_mean": 0.0,
+      "rest_eef_path_length_m_mean": 0.028712857895570428,
+      "rest_pre_latch_eef_path_length_m_mean": 0.028712857895570428,
+      "imagery_requested_enable_duration_s_20s": 1.1999999999999993,
+      "imagery_missed_duration_s_20s": 6.999999999999998,
+      "imagery_missed_rate_20s": 0.853658536585366,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 1,
+      "imagery_onset_delays_s": [
+        0.5
+      ]
+    },
+    {
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "condition": "eeg",
+      "gate": "temporal",
+      "seeds": 3,
+      "retained_count": 0,
+      "unretained_count": 3,
+      "incomplete_count": 0,
+      "retained_rate": 0.0,
+      "full_trace_enable_events": 3,
+      "events_issued_before_20s": 3,
+      "requested_enable_steps_20s": 14,
+      "requested_enable_seconds_20s": 0.7,
+      "requested_bout_count_20s": 1,
+      "requested_bout_lengths_steps_20s": [
+        14
+      ],
+      "executed_policy_steps_mean": 14.0,
+      "executed_policy_steps_by_seed": [
+        14,
+        14,
+        14
+      ],
+      "latched_override_steps_mean": 0.0,
+      "post_latch_requested_enable_steps_mean": 0.0,
+      "post_latch_requested_hold_steps_mean": 0.0,
+      "first_acquisition_step_by_seed": [
+        null,
+        null,
+        null
+      ],
+      "first_acquisition_step_mean": null,
+      "latch_step_by_seed": [
+        null,
+        null,
+        null
+      ],
+      "latch_step_mean": null,
+      "rest_requested_enable_duration_s_20s": 0.0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "rest_pre_latch_executed_policy_s_mean": 0.0,
+      "rest_eef_path_length_m_mean": 0.028714964026252347,
+      "rest_pre_latch_eef_path_length_m_mean": 0.028714964026252347,
+      "imagery_requested_enable_duration_s_20s": 0.6999999999999993,
+      "imagery_missed_duration_s_20s": 7.499999999999998,
+      "imagery_missed_rate_20s": 0.9146341463414634,
+      "imagery_bouts_in_horizon": 2,
+      "detected_imagery_bouts_in_horizon": 1,
+      "imagery_onset_delays_s": [
+        1.0
+      ]
+    }
+  ],
+  "per_run_records": [
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "always-enable",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 400,
+        "requested_enable_duration_s": 20.0,
+        "requested_hold_steps": 0,
+        "requested_hold_duration_s": 0.0,
+        "requested_enable_duty_fraction": 1.0,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            1,
+            401
+          ]
+        ]
+      },
+      "trace_accounting": null,
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 11.799999999999999,
+        "requested_rest_enable_fraction": 1.0000000000000002,
+        "requested_imagery_enable_duration_s": 8.200000000000003,
+        "requested_imagery_missed_duration_s": 0.0,
+        "requested_imagery_missed_fraction": 0.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "b68e949a45920b87629d51b20f963c7d73885ce8a114f7ada2906d4963ef8edb",
+        "seed": 0,
+        "first_acquisition_step": 58,
+        "first_acquisition_time_s": 2.9000000000000004,
+        "latch_step": 58,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09947690364420803,
+        "max_rise_m": 0.1074734192347262,
+        "executed_policy_steps": 58,
+        "executed_policy_duration_s": 2.9000000000000004,
+        "executed_hold_steps": 0,
+        "executed_hold_duration_s": 0.0,
+        "post_acquisition_latch_steps": 342,
+        "post_acquisition_latch_duration_s": 17.1,
+        "post_latch_overridden_enable_steps": 342,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.9,
+          "post_latch_override_during_rest_s": 8.899999999999999,
+          "total_rest_eef_path_length_m": 0.39419804200731917,
+          "pre_latch_rest_eef_path_length_m": 0.36293758170585627,
+          "post_latch_rest_eef_path_length_m": 0.03126046030146296,
+          "total_rest_moving_duration_s": 3.65,
+          "pre_latch_rest_moving_duration_s": 2.9
+        }
+      },
+      "subject": "S001",
+      "cohort": "controls",
+      "seed": 0,
+      "run_dir": "results/robomimic_controls_s001r12_2026-11-06/always-enable_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "always-enable",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 400,
+        "requested_enable_duration_s": 20.0,
+        "requested_hold_steps": 0,
+        "requested_hold_duration_s": 0.0,
+        "requested_enable_duty_fraction": 1.0,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            1,
+            401
+          ]
+        ]
+      },
+      "trace_accounting": null,
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 11.799999999999999,
+        "requested_rest_enable_fraction": 1.0000000000000002,
+        "requested_imagery_enable_duration_s": 8.200000000000003,
+        "requested_imagery_missed_duration_s": 0.0,
+        "requested_imagery_missed_fraction": 0.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "b0c90dd8ddf1b671f47fbb090f43664ea4fea8c50af9f51cb99c5e5382594d66",
+        "seed": 1,
+        "first_acquisition_step": 54,
+        "first_acquisition_time_s": 2.7,
+        "latch_step": 54,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.10029897673369614,
+        "max_rise_m": 0.10151733972940702,
+        "executed_policy_steps": 54,
+        "executed_policy_duration_s": 2.7,
+        "executed_hold_steps": 0,
+        "executed_hold_duration_s": 0.0,
+        "post_acquisition_latch_steps": 346,
+        "post_acquisition_latch_duration_s": 17.3,
+        "post_latch_overridden_enable_steps": 346,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.7,
+          "post_latch_override_during_rest_s": 9.099999999999998,
+          "total_rest_eef_path_length_m": 0.3918962465388966,
+          "pre_latch_rest_eef_path_length_m": 0.3725005363940542,
+          "post_latch_rest_eef_path_length_m": 0.0193957101448421,
+          "total_rest_moving_duration_s": 3.3,
+          "pre_latch_rest_moving_duration_s": 2.7
+        }
+      },
+      "subject": "S001",
+      "cohort": "controls",
+      "seed": 1,
+      "run_dir": "results/robomimic_controls_s001r12_2026-11-06/always-enable_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "always-enable",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 400,
+        "requested_enable_duration_s": 20.0,
+        "requested_hold_steps": 0,
+        "requested_hold_duration_s": 0.0,
+        "requested_enable_duty_fraction": 1.0,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            1,
+            401
+          ]
+        ]
+      },
+      "trace_accounting": null,
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 11.799999999999999,
+        "requested_rest_enable_fraction": 1.0000000000000002,
+        "requested_imagery_enable_duration_s": 8.200000000000003,
+        "requested_imagery_missed_duration_s": 0.0,
+        "requested_imagery_missed_fraction": 0.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "c4a325dcac0c72914fefc804d57d3de70782097b7b88c9ee02a7ced512e43a6d",
+        "seed": 2,
+        "first_acquisition_step": 47,
+        "first_acquisition_time_s": 2.35,
+        "latch_step": 47,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09921163277636569,
+        "max_rise_m": 0.10350535634707969,
+        "executed_policy_steps": 47,
+        "executed_policy_duration_s": 2.35,
+        "executed_hold_steps": 0,
+        "executed_hold_duration_s": 0.0,
+        "post_acquisition_latch_steps": 353,
+        "post_acquisition_latch_duration_s": 17.650000000000002,
+        "post_latch_overridden_enable_steps": 353,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.35,
+          "post_latch_override_during_rest_s": 9.449999999999998,
+          "total_rest_eef_path_length_m": 0.37466751010040583,
+          "pre_latch_rest_eef_path_length_m": 0.34409818449632107,
+          "post_latch_rest_eef_path_length_m": 0.03056932560408503,
+          "total_rest_moving_duration_s": 3.1500000000000004,
+          "pre_latch_rest_moving_duration_s": 2.35
+        }
+      },
+      "subject": "S001",
+      "cohort": "controls",
+      "seed": 2,
+      "run_dir": "results/robomimic_controls_s001r12_2026-11-06/always-enable_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "always-hold",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 0,
+        "requested_enable_duration_s": 0.0,
+        "requested_hold_steps": 400,
+        "requested_hold_duration_s": 20.0,
+        "requested_enable_duty_fraction": 0.0,
+        "requested_bout_count": 0,
+        "requested_spans": []
+      },
+      "trace_accounting": null,
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 0.0,
+        "requested_rest_enable_fraction": 0.0,
+        "requested_imagery_enable_duration_s": 0.0,
+        "requested_imagery_missed_duration_s": 8.200000000000003,
+        "requested_imagery_missed_fraction": 1.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 0,
+        "missed_imagery_bouts_in_horizon": 2,
+        "mean_requested_onset_delay_s": null,
+        "requested_onset_delays_s": []
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "382a28a28fa4441e4defa5e88cdcc4f2d700f9628c0da8cfcc000e0c7dc28bd1",
+        "seed": 0,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.01021553759255256,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 0,
+        "executed_policy_duration_s": 0.0,
+        "executed_hold_steps": 400,
+        "executed_hold_duration_s": 20.0,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.03463019977199242,
+          "pre_latch_rest_eef_path_length_m": 0.03463019977199242,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 0.6,
+          "pre_latch_rest_moving_duration_s": 0.6
+        }
+      },
+      "subject": "S001",
+      "cohort": "controls",
+      "seed": 0,
+      "run_dir": "results/robomimic_controls_s001r12_2026-11-06/always-hold_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "always-hold",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 0,
+        "requested_enable_duration_s": 0.0,
+        "requested_hold_steps": 400,
+        "requested_hold_duration_s": 20.0,
+        "requested_enable_duty_fraction": 0.0,
+        "requested_bout_count": 0,
+        "requested_spans": []
+      },
+      "trace_accounting": null,
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 0.0,
+        "requested_rest_enable_fraction": 0.0,
+        "requested_imagery_enable_duration_s": 0.0,
+        "requested_imagery_missed_duration_s": 8.200000000000003,
+        "requested_imagery_missed_fraction": 1.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 0,
+        "missed_imagery_bouts_in_horizon": 2,
+        "mean_requested_onset_delay_s": null,
+        "requested_onset_delays_s": []
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "ef0c7688a8a3377e6f1a65993c2f8e60ce7f69aa8ce801b6d76eea08fa8ac67a",
+        "seed": 1,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.010215539590044398,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 0,
+        "executed_policy_duration_s": 0.0,
+        "executed_hold_steps": 400,
+        "executed_hold_duration_s": 20.0,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.020549614524958522,
+          "pre_latch_rest_eef_path_length_m": 0.020549614524958522,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 0.55,
+          "pre_latch_rest_moving_duration_s": 0.55
+        }
+      },
+      "subject": "S001",
+      "cohort": "controls",
+      "seed": 1,
+      "run_dir": "results/robomimic_controls_s001r12_2026-11-06/always-hold_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "always-hold",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 0,
+        "requested_enable_duration_s": 0.0,
+        "requested_hold_steps": 400,
+        "requested_hold_duration_s": 20.0,
+        "requested_enable_duty_fraction": 0.0,
+        "requested_bout_count": 0,
+        "requested_spans": []
+      },
+      "trace_accounting": null,
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 0.0,
+        "requested_rest_enable_fraction": 0.0,
+        "requested_imagery_enable_duration_s": 0.0,
+        "requested_imagery_missed_duration_s": 8.200000000000003,
+        "requested_imagery_missed_fraction": 1.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 0,
+        "missed_imagery_bouts_in_horizon": 2,
+        "mean_requested_onset_delay_s": null,
+        "requested_onset_delays_s": []
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "afd0fb22aa9badb1304540fb3362e334c592e3c0e2056d9473a2443a0e6a7d11",
+        "seed": 2,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.0102155357961915,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 0,
+        "executed_policy_duration_s": 0.0,
+        "executed_hold_steps": 400,
+        "executed_hold_duration_s": 20.0,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.030934947467130814,
+          "pre_latch_rest_eef_path_length_m": 0.030934947467130814,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 0.6,
+          "pre_latch_rest_moving_duration_s": 0.6
+        }
+      },
+      "subject": "S001",
+      "cohort": "controls",
+      "seed": 2,
+      "run_dir": "results/robomimic_controls_s001r12_2026-11-06/always-hold_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 330,
+        "requested_enable_duration_s": 16.5,
+        "requested_hold_steps": 70,
+        "requested_hold_duration_s": 3.5,
+        "requested_enable_duty_fraction": 0.825,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            41,
+            371
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+        "gate": "raw",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 227,
+        "events_issued_strictly_before_horizon": 66,
+        "events_issued_at_or_before_horizon": 66
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 8.299999999999997,
+        "requested_rest_enable_fraction": 0.7033898305084745,
+        "requested_imagery_enable_duration_s": 8.200000000000003,
+        "requested_imagery_missed_duration_s": 0.0,
+        "requested_imagery_missed_fraction": 0.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "d08a53f1465a425830495f55a43dc69ff05658b2791f7ff637ba49395a337ec4",
+        "seed": 0,
+        "first_acquisition_step": 90,
+        "first_acquisition_time_s": 4.5,
+        "latch_step": 90,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09474714020328268,
+        "max_rise_m": 0.0986362275080429,
+        "executed_policy_steps": 50,
+        "executed_policy_duration_s": 2.5,
+        "executed_hold_steps": 40,
+        "executed_hold_duration_s": 2.0,
+        "post_acquisition_latch_steps": 310,
+        "post_acquisition_latch_duration_s": 15.5,
+        "post_latch_overridden_enable_steps": 280,
+        "post_latch_overridden_hold_steps": 30,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.2,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.32217028887892113,
+          "pre_latch_rest_eef_path_length_m": 0.32207148745287617,
+          "post_latch_rest_eef_path_length_m": 9.880142604527773e-05,
+          "total_rest_moving_duration_s": 2.8000000000000003,
+          "pre_latch_rest_moving_duration_s": 2.8000000000000003
+        }
+      },
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s001r12_heldout_2026-11-05/raw_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 330,
+        "requested_enable_duration_s": 16.5,
+        "requested_hold_steps": 70,
+        "requested_hold_duration_s": 3.5,
+        "requested_enable_duty_fraction": 0.825,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            41,
+            371
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+        "gate": "raw",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 227,
+        "events_issued_strictly_before_horizon": 66,
+        "events_issued_at_or_before_horizon": 66
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 8.299999999999997,
+        "requested_rest_enable_fraction": 0.7033898305084745,
+        "requested_imagery_enable_duration_s": 8.200000000000003,
+        "requested_imagery_missed_duration_s": 0.0,
+        "requested_imagery_missed_fraction": 0.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "eceb2303e70d3e091879fcf08d8d2c4feaec02f42034638ed21125f13be63673",
+        "seed": 1,
+        "first_acquisition_step": 82,
+        "first_acquisition_time_s": 4.1000000000000005,
+        "latch_step": 82,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09873655983817409,
+        "max_rise_m": 0.10138306730170632,
+        "executed_policy_steps": 42,
+        "executed_policy_duration_s": 2.1,
+        "executed_hold_steps": 40,
+        "executed_hold_duration_s": 2.0,
+        "post_acquisition_latch_steps": 318,
+        "post_acquisition_latch_duration_s": 15.9,
+        "post_latch_overridden_enable_steps": 288,
+        "post_latch_overridden_hold_steps": 30,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.0999999999999996,
+          "post_latch_override_during_rest_s": 7.699999999999998,
+          "total_rest_eef_path_length_m": 0.388117083386817,
+          "pre_latch_rest_eef_path_length_m": 0.37640062909984956,
+          "post_latch_rest_eef_path_length_m": 0.01171645428696749,
+          "total_rest_moving_duration_s": 2.75,
+          "pre_latch_rest_moving_duration_s": 2.6499999999999995
+        }
+      },
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s001r12_heldout_2026-11-05/raw_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 330,
+        "requested_enable_duration_s": 16.5,
+        "requested_hold_steps": 70,
+        "requested_hold_duration_s": 3.5,
+        "requested_enable_duty_fraction": 0.825,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            41,
+            371
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+        "gate": "raw",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 227,
+        "events_issued_strictly_before_horizon": 66,
+        "events_issued_at_or_before_horizon": 66
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 8.299999999999997,
+        "requested_rest_enable_fraction": 0.7033898305084745,
+        "requested_imagery_enable_duration_s": 8.200000000000003,
+        "requested_imagery_missed_duration_s": 0.0,
+        "requested_imagery_missed_fraction": 0.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "3e263544bd369e1571a241510d89c7ef7a4d60a482fa5ebeaf080a235f7cb2e4",
+        "seed": 2,
+        "first_acquisition_step": 84,
+        "first_acquisition_time_s": 4.2,
+        "latch_step": 84,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09470076335202182,
+        "max_rise_m": 0.09926018670468228,
+        "executed_policy_steps": 44,
+        "executed_policy_duration_s": 2.2,
+        "executed_hold_steps": 40,
+        "executed_hold_duration_s": 2.0,
+        "post_acquisition_latch_steps": 316,
+        "post_acquisition_latch_duration_s": 15.8,
+        "post_latch_overridden_enable_steps": 286,
+        "post_latch_overridden_hold_steps": 30,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.2,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.36093467777210664,
+          "pre_latch_rest_eef_path_length_m": 0.3608569102763876,
+          "post_latch_rest_eef_path_length_m": 7.776749571887253e-05,
+          "total_rest_moving_duration_s": 2.8000000000000003,
+          "pre_latch_rest_moving_duration_s": 2.8000000000000003
+        }
+      },
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s001r12_heldout_2026-11-05/raw_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 272,
+        "requested_enable_duration_s": 13.6,
+        "requested_hold_steps": 128,
+        "requested_hold_duration_s": 6.4,
+        "requested_enable_duty_fraction": 0.68,
+        "requested_bout_count": 4,
+        "requested_spans": [
+          [
+            41,
+            231
+          ],
+          [
+            251,
+            301
+          ],
+          [
+            331,
+            337
+          ],
+          [
+            341,
+            367
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+        "gate": "confidence",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 170,
+        "events_issued_strictly_before_horizon": 54,
+        "events_issued_at_or_before_horizon": 54
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 6.8999999999999995,
+        "requested_rest_enable_fraction": 0.5847457627118645,
+        "requested_imagery_enable_duration_s": 6.700000000000002,
+        "requested_imagery_missed_duration_s": 1.5000000000000009,
+        "requested_imagery_missed_fraction": 0.18292682926829273,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "742fd7ee04123ce4a87d632e710f030e1f053e96817f43b1f5a2674624cab83c",
+        "seed": 0,
+        "first_acquisition_step": 90,
+        "first_acquisition_time_s": 4.5,
+        "latch_step": 90,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09474714020328268,
+        "max_rise_m": 0.0986362275080429,
+        "executed_policy_steps": 50,
+        "executed_policy_duration_s": 2.5,
+        "executed_hold_steps": 40,
+        "executed_hold_duration_s": 2.0,
+        "post_acquisition_latch_steps": 310,
+        "post_acquisition_latch_duration_s": 15.5,
+        "post_latch_overridden_enable_steps": 222,
+        "post_latch_overridden_hold_steps": 88,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.2,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.32217028887892113,
+          "pre_latch_rest_eef_path_length_m": 0.32207148745287617,
+          "post_latch_rest_eef_path_length_m": 9.880142604527773e-05,
+          "total_rest_moving_duration_s": 2.8000000000000003,
+          "pre_latch_rest_moving_duration_s": 2.8000000000000003
+        }
+      },
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s001r12_heldout_2026-11-05/confidence_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 272,
+        "requested_enable_duration_s": 13.6,
+        "requested_hold_steps": 128,
+        "requested_hold_duration_s": 6.4,
+        "requested_enable_duty_fraction": 0.68,
+        "requested_bout_count": 4,
+        "requested_spans": [
+          [
+            41,
+            231
+          ],
+          [
+            251,
+            301
+          ],
+          [
+            331,
+            337
+          ],
+          [
+            341,
+            367
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+        "gate": "confidence",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 170,
+        "events_issued_strictly_before_horizon": 54,
+        "events_issued_at_or_before_horizon": 54
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 6.8999999999999995,
+        "requested_rest_enable_fraction": 0.5847457627118645,
+        "requested_imagery_enable_duration_s": 6.700000000000002,
+        "requested_imagery_missed_duration_s": 1.5000000000000009,
+        "requested_imagery_missed_fraction": 0.18292682926829273,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "dc93214230211c73ae22eb5a0540e686ec1c6aaae40993f9b0a3207a829fb0af",
+        "seed": 1,
+        "first_acquisition_step": 82,
+        "first_acquisition_time_s": 4.1000000000000005,
+        "latch_step": 82,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09873655983817409,
+        "max_rise_m": 0.10138306730170632,
+        "executed_policy_steps": 42,
+        "executed_policy_duration_s": 2.1,
+        "executed_hold_steps": 40,
+        "executed_hold_duration_s": 2.0,
+        "post_acquisition_latch_steps": 318,
+        "post_acquisition_latch_duration_s": 15.9,
+        "post_latch_overridden_enable_steps": 230,
+        "post_latch_overridden_hold_steps": 88,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.0999999999999996,
+          "post_latch_override_during_rest_s": 7.699999999999998,
+          "total_rest_eef_path_length_m": 0.388117083386817,
+          "pre_latch_rest_eef_path_length_m": 0.37640062909984956,
+          "post_latch_rest_eef_path_length_m": 0.01171645428696749,
+          "total_rest_moving_duration_s": 2.75,
+          "pre_latch_rest_moving_duration_s": 2.6499999999999995
+        }
+      },
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s001r12_heldout_2026-11-05/confidence_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 272,
+        "requested_enable_duration_s": 13.6,
+        "requested_hold_steps": 128,
+        "requested_hold_duration_s": 6.4,
+        "requested_enable_duty_fraction": 0.68,
+        "requested_bout_count": 4,
+        "requested_spans": [
+          [
+            41,
+            231
+          ],
+          [
+            251,
+            301
+          ],
+          [
+            331,
+            337
+          ],
+          [
+            341,
+            367
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+        "gate": "confidence",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 170,
+        "events_issued_strictly_before_horizon": 54,
+        "events_issued_at_or_before_horizon": 54
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 6.8999999999999995,
+        "requested_rest_enable_fraction": 0.5847457627118645,
+        "requested_imagery_enable_duration_s": 6.700000000000002,
+        "requested_imagery_missed_duration_s": 1.5000000000000009,
+        "requested_imagery_missed_fraction": 0.18292682926829273,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "0820ce3c15253bdb3979052fddaca6b94f0535a3edaa65f7bbe64002970ae7a8",
+        "seed": 2,
+        "first_acquisition_step": 84,
+        "first_acquisition_time_s": 4.2,
+        "latch_step": 84,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09470076335202182,
+        "max_rise_m": 0.09926018670468228,
+        "executed_policy_steps": 44,
+        "executed_policy_duration_s": 2.2,
+        "executed_hold_steps": 40,
+        "executed_hold_duration_s": 2.0,
+        "post_acquisition_latch_steps": 316,
+        "post_acquisition_latch_duration_s": 15.8,
+        "post_latch_overridden_enable_steps": 228,
+        "post_latch_overridden_hold_steps": 88,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.2,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.36093467777210664,
+          "pre_latch_rest_eef_path_length_m": 0.3608569102763876,
+          "post_latch_rest_eef_path_length_m": 7.776749571887253e-05,
+          "total_rest_moving_duration_s": 2.8000000000000003,
+          "pre_latch_rest_moving_duration_s": 2.8000000000000003
+        }
+      },
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s001r12_heldout_2026-11-05/confidence_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 236,
+        "requested_enable_duration_s": 11.8,
+        "requested_hold_steps": 164,
+        "requested_hold_duration_s": 8.2,
+        "requested_enable_duty_fraction": 0.59,
+        "requested_bout_count": 3,
+        "requested_spans": [
+          [
+            51,
+            231
+          ],
+          [
+            261,
+            301
+          ],
+          [
+            351,
+            367
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+        "gate": "temporal",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 128,
+        "events_issued_strictly_before_horizon": 47,
+        "events_issued_at_or_before_horizon": 47
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 5.7,
+        "requested_rest_enable_fraction": 0.4830508474576273,
+        "requested_imagery_enable_duration_s": 6.1000000000000005,
+        "requested_imagery_missed_duration_s": 2.1000000000000023,
+        "requested_imagery_missed_fraction": 0.25609756097560993,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.25,
+        "requested_onset_delays_s": [
+          0.0,
+          0.5
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "6019d3f737f1c2106f06459768bf1e456bd1d1aa5110e13b5c2e7c0cc31eee91",
+        "seed": 0,
+        "first_acquisition_step": 100,
+        "first_acquisition_time_s": 5.0,
+        "latch_step": 100,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09475044984690995,
+        "max_rise_m": 0.09863118048524966,
+        "executed_policy_steps": 50,
+        "executed_policy_duration_s": 2.5,
+        "executed_hold_steps": 50,
+        "executed_hold_duration_s": 2.5,
+        "post_acquisition_latch_steps": 300,
+        "post_acquisition_latch_duration_s": 15.0,
+        "post_latch_overridden_enable_steps": 186,
+        "post_latch_overridden_hold_steps": 114,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.7000000000000002,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.2848962142387663,
+          "pre_latch_rest_eef_path_length_m": 0.28479637131627245,
+          "post_latch_rest_eef_path_length_m": 9.984292249386882e-05,
+          "total_rest_moving_duration_s": 2.3000000000000003,
+          "pre_latch_rest_moving_duration_s": 2.3000000000000003
+        }
+      },
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s001r12_heldout_2026-11-05/temporal_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 236,
+        "requested_enable_duration_s": 11.8,
+        "requested_hold_steps": 164,
+        "requested_hold_duration_s": 8.2,
+        "requested_enable_duty_fraction": 0.59,
+        "requested_bout_count": 3,
+        "requested_spans": [
+          [
+            51,
+            231
+          ],
+          [
+            261,
+            301
+          ],
+          [
+            351,
+            367
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+        "gate": "temporal",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 128,
+        "events_issued_strictly_before_horizon": 47,
+        "events_issued_at_or_before_horizon": 47
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 5.7,
+        "requested_rest_enable_fraction": 0.4830508474576273,
+        "requested_imagery_enable_duration_s": 6.1000000000000005,
+        "requested_imagery_missed_duration_s": 2.1000000000000023,
+        "requested_imagery_missed_fraction": 0.25609756097560993,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.25,
+        "requested_onset_delays_s": [
+          0.0,
+          0.5
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "13f24d078dec7bf0c1e763d598df01bde6f07754162b63f19d9bfe82775bae9d",
+        "seed": 1,
+        "first_acquisition_step": 92,
+        "first_acquisition_time_s": 4.6000000000000005,
+        "latch_step": 92,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09875269791343566,
+        "max_rise_m": 0.10138477109684796,
+        "executed_policy_steps": 42,
+        "executed_policy_duration_s": 2.1,
+        "executed_hold_steps": 50,
+        "executed_hold_duration_s": 2.5,
+        "post_acquisition_latch_steps": 308,
+        "post_acquisition_latch_duration_s": 15.4,
+        "post_latch_overridden_enable_steps": 194,
+        "post_latch_overridden_hold_steps": 114,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.7000000000000002,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.28396427644881994,
+          "pre_latch_rest_eef_path_length_m": 0.28390083254320986,
+          "post_latch_rest_eef_path_length_m": 6.344390561028322e-05,
+          "total_rest_moving_duration_s": 2.25,
+          "pre_latch_rest_moving_duration_s": 2.25
+        }
+      },
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s001r12_heldout_2026-11-05/temporal_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 236,
+        "requested_enable_duration_s": 11.8,
+        "requested_hold_steps": 164,
+        "requested_hold_duration_s": 8.2,
+        "requested_enable_duty_fraction": 0.59,
+        "requested_bout_count": 3,
+        "requested_spans": [
+          [
+            51,
+            231
+          ],
+          [
+            261,
+            301
+          ],
+          [
+            351,
+            367
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566",
+        "gate": "temporal",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 128,
+        "events_issued_strictly_before_horizon": 47,
+        "events_issued_at_or_before_horizon": 47
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 5.7,
+        "requested_rest_enable_fraction": 0.4830508474576273,
+        "requested_imagery_enable_duration_s": 6.1000000000000005,
+        "requested_imagery_missed_duration_s": 2.1000000000000023,
+        "requested_imagery_missed_fraction": 0.25609756097560993,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.25,
+        "requested_onset_delays_s": [
+          0.0,
+          0.5
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "44c06230bc04be93827238a07e456f17c683a9e84ff9d5dcd59e73374535fb07",
+        "seed": 2,
+        "first_acquisition_step": 94,
+        "first_acquisition_time_s": 4.7,
+        "latch_step": 94,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09470882809565273,
+        "max_rise_m": 0.09925457652244207,
+        "executed_policy_steps": 44,
+        "executed_policy_duration_s": 2.2,
+        "executed_hold_steps": 50,
+        "executed_hold_duration_s": 2.5,
+        "post_acquisition_latch_steps": 306,
+        "post_acquisition_latch_duration_s": 15.3,
+        "post_latch_overridden_enable_steps": 192,
+        "post_latch_overridden_hold_steps": 114,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.7000000000000002,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.26743694348780056,
+          "pre_latch_rest_eef_path_length_m": 0.267356606117023,
+          "post_latch_rest_eef_path_length_m": 8.033737077757175e-05,
+          "total_rest_moving_duration_s": 2.3000000000000003,
+          "pre_latch_rest_moving_duration_s": 2.3000000000000003
+        }
+      },
+      "subject": "S001",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s001r12_heldout_2026-11-05/temporal_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 110,
+        "requested_enable_duration_s": 5.5,
+        "requested_hold_steps": 290,
+        "requested_hold_duration_s": 14.5,
+        "requested_enable_duty_fraction": 0.275,
+        "requested_bout_count": 5,
+        "requested_spans": [
+          [
+            137,
+            157
+          ],
+          [
+            167,
+            187
+          ],
+          [
+            197,
+            201
+          ],
+          [
+            291,
+            321
+          ],
+          [
+            351,
+            387
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+        "gate": "raw",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 150,
+        "events_issued_strictly_before_horizon": 22,
+        "events_issued_at_or_before_horizon": 22
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 3.0,
+        "requested_rest_enable_fraction": 0.2542372881355932,
+        "requested_imagery_enable_duration_s": 2.5,
+        "requested_imagery_missed_duration_s": 5.6999999999999975,
+        "requested_imagery_missed_fraction": 0.6951219512195121,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 2.4499999999999997,
+        "requested_onset_delays_s": [
+          2.7,
+          2.1999999999999993
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "cf76fd656ff35667f313f2d671311ecf6c42fbedf5a4c1ddce668cb63d7843e5",
+        "seed": 0,
+        "first_acquisition_step": 298,
+        "first_acquisition_time_s": 14.9,
+        "latch_step": 298,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09605058727936389,
+        "max_rise_m": 0.09758734988938567,
+        "executed_policy_steps": 52,
+        "executed_policy_duration_s": 2.6,
+        "executed_hold_steps": 246,
+        "executed_hold_duration_s": 12.3,
+        "post_acquisition_latch_steps": 102,
+        "post_acquisition_latch_duration_s": 5.1000000000000005,
+        "post_latch_overridden_enable_steps": 58,
+        "post_latch_overridden_hold_steps": 44,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.1999999999999993,
+          "post_latch_override_during_rest_s": 3.6000000000000014,
+          "total_rest_eef_path_length_m": 0.17470066731564504,
+          "pre_latch_rest_eef_path_length_m": 0.1746607089463037,
+          "post_latch_rest_eef_path_length_m": 3.9958369341299385e-05,
+          "total_rest_moving_duration_s": 2.6999999999999997,
+          "pre_latch_rest_moving_duration_s": 2.6999999999999997
+        }
+      },
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_raw_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 110,
+        "requested_enable_duration_s": 5.5,
+        "requested_hold_steps": 290,
+        "requested_hold_duration_s": 14.5,
+        "requested_enable_duty_fraction": 0.275,
+        "requested_bout_count": 5,
+        "requested_spans": [
+          [
+            137,
+            157
+          ],
+          [
+            167,
+            187
+          ],
+          [
+            197,
+            201
+          ],
+          [
+            291,
+            321
+          ],
+          [
+            351,
+            387
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+        "gate": "raw",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 150,
+        "events_issued_strictly_before_horizon": 22,
+        "events_issued_at_or_before_horizon": 22
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 3.0,
+        "requested_rest_enable_fraction": 0.2542372881355932,
+        "requested_imagery_enable_duration_s": 2.5,
+        "requested_imagery_missed_duration_s": 5.6999999999999975,
+        "requested_imagery_missed_fraction": 0.6951219512195121,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 2.4499999999999997,
+        "requested_onset_delays_s": [
+          2.7,
+          2.1999999999999993
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "698967c819747f83cc3378f0c2e4c479c07c9213db25925d4ec6e765e7f4b139",
+        "seed": 1,
+        "first_acquisition_step": 201,
+        "first_acquisition_time_s": 10.05,
+        "latch_step": 201,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09619767450011096,
+        "max_rise_m": 0.09758512854892487,
+        "executed_policy_steps": 44,
+        "executed_policy_duration_s": 2.2,
+        "executed_hold_steps": 157,
+        "executed_hold_duration_s": 7.8500000000000005,
+        "post_acquisition_latch_steps": 199,
+        "post_acquisition_latch_duration_s": 9.950000000000001,
+        "post_latch_overridden_enable_steps": 66,
+        "post_latch_overridden_hold_steps": 133,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.1999999999999993,
+          "post_latch_override_during_rest_s": 5.85,
+          "total_rest_eef_path_length_m": 0.20299635568687843,
+          "pre_latch_rest_eef_path_length_m": 0.18547002056484924,
+          "post_latch_rest_eef_path_length_m": 0.017526335122029182,
+          "total_rest_moving_duration_s": 2.8,
+          "pre_latch_rest_moving_duration_s": 2.4000000000000012
+        }
+      },
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_raw_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 110,
+        "requested_enable_duration_s": 5.5,
+        "requested_hold_steps": 290,
+        "requested_hold_duration_s": 14.5,
+        "requested_enable_duty_fraction": 0.275,
+        "requested_bout_count": 5,
+        "requested_spans": [
+          [
+            137,
+            157
+          ],
+          [
+            167,
+            187
+          ],
+          [
+            197,
+            201
+          ],
+          [
+            291,
+            321
+          ],
+          [
+            351,
+            387
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+        "gate": "raw",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 150,
+        "events_issued_strictly_before_horizon": 22,
+        "events_issued_at_or_before_horizon": 22
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 3.0,
+        "requested_rest_enable_fraction": 0.2542372881355932,
+        "requested_imagery_enable_duration_s": 2.5,
+        "requested_imagery_missed_duration_s": 5.6999999999999975,
+        "requested_imagery_missed_fraction": 0.6951219512195121,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 2.4499999999999997,
+        "requested_onset_delays_s": [
+          2.7,
+          2.1999999999999993
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "7d4d25fe960311453cfde47b4773e4ac40cfc31364e5e99c4028ca71e75a6b0d",
+        "seed": 2,
+        "first_acquisition_step": 294,
+        "first_acquisition_time_s": 14.700000000000001,
+        "latch_step": 294,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.1016150897870155,
+        "max_rise_m": 0.10571392419259218,
+        "executed_policy_steps": 48,
+        "executed_policy_duration_s": 2.4000000000000004,
+        "executed_hold_steps": 246,
+        "executed_hold_duration_s": 12.3,
+        "post_acquisition_latch_steps": 106,
+        "post_acquisition_latch_duration_s": 5.300000000000001,
+        "post_latch_overridden_enable_steps": 62,
+        "post_latch_overridden_hold_steps": 44,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.1999999999999993,
+          "post_latch_override_during_rest_s": 3.6000000000000014,
+          "total_rest_eef_path_length_m": 0.19254483791329385,
+          "pre_latch_rest_eef_path_length_m": 0.1924773125009439,
+          "post_latch_rest_eef_path_length_m": 6.752541234991902e-05,
+          "total_rest_moving_duration_s": 3.150000000000001,
+          "pre_latch_rest_moving_duration_s": 3.150000000000001
+        }
+      },
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_raw_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 36,
+        "requested_enable_duration_s": 1.8,
+        "requested_hold_steps": 364,
+        "requested_hold_duration_s": 18.2,
+        "requested_enable_duty_fraction": 0.09,
+        "requested_bout_count": 3,
+        "requested_spans": [
+          [
+            147,
+            151
+          ],
+          [
+            301,
+            307
+          ],
+          [
+            351,
+            377
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+        "gate": "confidence",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 59,
+        "events_issued_strictly_before_horizon": 7,
+        "events_issued_at_or_before_horizon": 7
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 1.3000000000000007,
+        "requested_rest_enable_fraction": 0.11016949152542378,
+        "requested_imagery_enable_duration_s": 0.5000000000000009,
+        "requested_imagery_missed_duration_s": 7.699999999999997,
+        "requested_imagery_missed_fraction": 0.9390243902439023,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 2.9499999999999997,
+        "requested_onset_delays_s": [
+          3.2,
+          2.6999999999999993
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "bfda985a9ac8643a7124c980b22f912d1efe638af9068b7c597a932f532ba099",
+        "seed": 0,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.01021553759255256,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 36,
+        "executed_policy_duration_s": 1.8,
+        "executed_hold_steps": 364,
+        "executed_hold_duration_s": 18.2,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.3000000000000007,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.2236733563550207,
+          "pre_latch_rest_eef_path_length_m": 0.2236733563550207,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 2.7000000000000015,
+          "pre_latch_rest_moving_duration_s": 2.7000000000000015
+        }
+      },
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_confidence_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 36,
+        "requested_enable_duration_s": 1.8,
+        "requested_hold_steps": 364,
+        "requested_hold_duration_s": 18.2,
+        "requested_enable_duty_fraction": 0.09,
+        "requested_bout_count": 3,
+        "requested_spans": [
+          [
+            147,
+            151
+          ],
+          [
+            301,
+            307
+          ],
+          [
+            351,
+            377
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+        "gate": "confidence",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 59,
+        "events_issued_strictly_before_horizon": 7,
+        "events_issued_at_or_before_horizon": 7
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 1.3000000000000007,
+        "requested_rest_enable_fraction": 0.11016949152542378,
+        "requested_imagery_enable_duration_s": 0.5000000000000009,
+        "requested_imagery_missed_duration_s": 7.699999999999997,
+        "requested_imagery_missed_fraction": 0.9390243902439023,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 2.9499999999999997,
+        "requested_onset_delays_s": [
+          3.2,
+          2.6999999999999993
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "3a97758bdff5547054dd4b507e0d50d21c74471e07887f45fed4f4e641ba7f2b",
+        "seed": 1,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.003159996720779379,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 36,
+        "executed_policy_duration_s": 1.8,
+        "executed_hold_steps": 364,
+        "executed_hold_duration_s": 18.2,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.3000000000000007,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.1841220203100782,
+          "pre_latch_rest_eef_path_length_m": 0.1841220203100782,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 2.999999999999999,
+          "pre_latch_rest_moving_duration_s": 2.999999999999999
+        }
+      },
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_confidence_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 36,
+        "requested_enable_duration_s": 1.8,
+        "requested_hold_steps": 364,
+        "requested_hold_duration_s": 18.2,
+        "requested_enable_duty_fraction": 0.09,
+        "requested_bout_count": 3,
+        "requested_spans": [
+          [
+            147,
+            151
+          ],
+          [
+            301,
+            307
+          ],
+          [
+            351,
+            377
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+        "gate": "confidence",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 59,
+        "events_issued_strictly_before_horizon": 7,
+        "events_issued_at_or_before_horizon": 7
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 1.3000000000000007,
+        "requested_rest_enable_fraction": 0.11016949152542378,
+        "requested_imagery_enable_duration_s": 0.5000000000000009,
+        "requested_imagery_missed_duration_s": 7.699999999999997,
+        "requested_imagery_missed_fraction": 0.9390243902439023,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 2.9499999999999997,
+        "requested_onset_delays_s": [
+          3.2,
+          2.6999999999999993
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "438538ab30999b0607bcfbc4abbc11ccc2ab38fa3cd6bfd191010a29c8b869ce",
+        "seed": 2,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.008955483768775752,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 36,
+        "executed_policy_duration_s": 1.8,
+        "executed_hold_steps": 364,
+        "executed_hold_duration_s": 18.2,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.3000000000000007,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.19254170582731545,
+          "pre_latch_rest_eef_path_length_m": 0.19254170582731545,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 2.250000000000002,
+          "pre_latch_rest_moving_duration_s": 2.250000000000002
+        }
+      },
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_confidence_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 16,
+        "requested_enable_duration_s": 0.8,
+        "requested_hold_steps": 384,
+        "requested_hold_duration_s": 19.2,
+        "requested_enable_duty_fraction": 0.04,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            361,
+            377
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+        "gate": "temporal",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 35,
+        "events_issued_strictly_before_horizon": 3,
+        "events_issued_at_or_before_horizon": 3
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 0.8000000000000007,
+        "requested_rest_enable_fraction": 0.06779661016949158,
+        "requested_imagery_enable_duration_s": 0.0,
+        "requested_imagery_missed_duration_s": 8.199999999999998,
+        "requested_imagery_missed_fraction": 1.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 0,
+        "missed_imagery_bouts_in_horizon": 2,
+        "mean_requested_onset_delay_s": null,
+        "requested_onset_delays_s": []
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "b794f98ffb3afbec8d648239e8eb659a17ef4fba9b707d2806826c9568c4d66a",
+        "seed": 0,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.01021553759255256,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 16,
+        "executed_policy_duration_s": 0.8,
+        "executed_hold_steps": 384,
+        "executed_hold_duration_s": 19.200000000000003,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.8000000000000007,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.17885618556930674,
+          "pre_latch_rest_eef_path_length_m": 0.17885618556930674,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 2.2000000000000015,
+          "pre_latch_rest_moving_duration_s": 2.2000000000000015
+        }
+      },
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_temporal_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 16,
+        "requested_enable_duration_s": 0.8,
+        "requested_hold_steps": 384,
+        "requested_hold_duration_s": 19.2,
+        "requested_enable_duty_fraction": 0.04,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            361,
+            377
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+        "gate": "temporal",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 35,
+        "events_issued_strictly_before_horizon": 3,
+        "events_issued_at_or_before_horizon": 3
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 0.8000000000000007,
+        "requested_rest_enable_fraction": 0.06779661016949158,
+        "requested_imagery_enable_duration_s": 0.0,
+        "requested_imagery_missed_duration_s": 8.199999999999998,
+        "requested_imagery_missed_fraction": 1.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 0,
+        "missed_imagery_bouts_in_horizon": 2,
+        "mean_requested_onset_delay_s": null,
+        "requested_onset_delays_s": []
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "d2a00439f343cd628250c91e478e7eaef54bb888d950a1a4f7ba6ce8804a4468",
+        "seed": 1,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.010215539590044398,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 16,
+        "executed_policy_duration_s": 0.8,
+        "executed_hold_steps": 384,
+        "executed_hold_duration_s": 19.200000000000003,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.8000000000000007,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.1921940131032858,
+          "pre_latch_rest_eef_path_length_m": 0.1921940131032858,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 1.8,
+          "pre_latch_rest_moving_duration_s": 1.8
+        }
+      },
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_temporal_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 16,
+        "requested_enable_duration_s": 0.8,
+        "requested_hold_steps": 384,
+        "requested_hold_duration_s": 19.2,
+        "requested_enable_duty_fraction": 0.04,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            361,
+            377
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "a11d48a5ad0ae46f8d5757f3d7f1f84e9de48aef5f5627c3f865c17a21997fa8",
+        "gate": "temporal",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 35,
+        "events_issued_strictly_before_horizon": 3,
+        "events_issued_at_or_before_horizon": 3
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 0.8000000000000007,
+        "requested_rest_enable_fraction": 0.06779661016949158,
+        "requested_imagery_enable_duration_s": 0.0,
+        "requested_imagery_missed_duration_s": 8.199999999999998,
+        "requested_imagery_missed_fraction": 1.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 0,
+        "missed_imagery_bouts_in_horizon": 2,
+        "mean_requested_onset_delay_s": null,
+        "requested_onset_delays_s": []
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "5f9814d209fe7ce67874d78ea5ca9b04001a6e41fa894a7c157ac976a8732c76",
+        "seed": 2,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.0102155357961915,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 16,
+        "executed_policy_duration_s": 0.8,
+        "executed_hold_steps": 384,
+        "executed_hold_duration_s": 19.200000000000003,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.8000000000000007,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.17777769607369823,
+          "pre_latch_rest_eef_path_length_m": 0.17777769607369823,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 1.7999999999999994,
+          "pre_latch_rest_moving_duration_s": 1.7999999999999994
+        }
+      },
+      "subject": "S002",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_temporal_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 360,
+        "requested_enable_duration_s": 18.0,
+        "requested_hold_steps": 40,
+        "requested_hold_duration_s": 2.0,
+        "requested_enable_duty_fraction": 0.9,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            41,
+            401
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+        "gate": "raw",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 483,
+        "events_issued_strictly_before_horizon": 72,
+        "events_issued_at_or_before_horizon": 73
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 9.799999999999997,
+        "requested_rest_enable_fraction": 0.8305084745762712,
+        "requested_imagery_enable_duration_s": 8.200000000000003,
+        "requested_imagery_missed_duration_s": 0.0,
+        "requested_imagery_missed_fraction": 0.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "3a9dc18a62ae73bb0da6947853d416abd0dd040f4342cbba5291df5d50576232",
+        "seed": 0,
+        "first_acquisition_step": 90,
+        "first_acquisition_time_s": 4.5,
+        "latch_step": 90,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09474714020328268,
+        "max_rise_m": 0.0986362275080429,
+        "executed_policy_steps": 50,
+        "executed_policy_duration_s": 2.5,
+        "executed_hold_steps": 40,
+        "executed_hold_duration_s": 2.0,
+        "post_acquisition_latch_steps": 310,
+        "post_acquisition_latch_duration_s": 15.5,
+        "post_latch_overridden_enable_steps": 310,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.2,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.32217028887892113,
+          "pre_latch_rest_eef_path_length_m": 0.32207148745287617,
+          "post_latch_rest_eef_path_length_m": 9.880142604527773e-05,
+          "total_rest_moving_duration_s": 2.8000000000000003,
+          "pre_latch_rest_moving_duration_s": 2.8000000000000003
+        }
+      },
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S003_raw_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 360,
+        "requested_enable_duration_s": 18.0,
+        "requested_hold_steps": 40,
+        "requested_hold_duration_s": 2.0,
+        "requested_enable_duty_fraction": 0.9,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            41,
+            401
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+        "gate": "raw",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 483,
+        "events_issued_strictly_before_horizon": 72,
+        "events_issued_at_or_before_horizon": 73
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 9.799999999999997,
+        "requested_rest_enable_fraction": 0.8305084745762712,
+        "requested_imagery_enable_duration_s": 8.200000000000003,
+        "requested_imagery_missed_duration_s": 0.0,
+        "requested_imagery_missed_fraction": 0.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "5a15a051afb22b1fb5d5358c1b6208f58c185ee06ec7c384c79de2fa58c217e3",
+        "seed": 1,
+        "first_acquisition_step": 82,
+        "first_acquisition_time_s": 4.1000000000000005,
+        "latch_step": 82,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09873655983817409,
+        "max_rise_m": 0.10138306730170632,
+        "executed_policy_steps": 42,
+        "executed_policy_duration_s": 2.1,
+        "executed_hold_steps": 40,
+        "executed_hold_duration_s": 2.0,
+        "post_acquisition_latch_steps": 318,
+        "post_acquisition_latch_duration_s": 15.9,
+        "post_latch_overridden_enable_steps": 318,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.0999999999999996,
+          "post_latch_override_during_rest_s": 7.699999999999998,
+          "total_rest_eef_path_length_m": 0.388117083386817,
+          "pre_latch_rest_eef_path_length_m": 0.37640062909984956,
+          "post_latch_rest_eef_path_length_m": 0.01171645428696749,
+          "total_rest_moving_duration_s": 2.75,
+          "pre_latch_rest_moving_duration_s": 2.6499999999999995
+        }
+      },
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S003_raw_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 360,
+        "requested_enable_duration_s": 18.0,
+        "requested_hold_steps": 40,
+        "requested_hold_duration_s": 2.0,
+        "requested_enable_duty_fraction": 0.9,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            41,
+            401
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+        "gate": "raw",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 483,
+        "events_issued_strictly_before_horizon": 72,
+        "events_issued_at_or_before_horizon": 73
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 9.799999999999997,
+        "requested_rest_enable_fraction": 0.8305084745762712,
+        "requested_imagery_enable_duration_s": 8.200000000000003,
+        "requested_imagery_missed_duration_s": 0.0,
+        "requested_imagery_missed_fraction": 0.0,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.0,
+        "requested_onset_delays_s": [
+          0.0,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "9629655edd14b7af819dcb7db9109789baa34364f23c05b13cdc3fd0e87c9077",
+        "seed": 2,
+        "first_acquisition_step": 84,
+        "first_acquisition_time_s": 4.2,
+        "latch_step": 84,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09470076335202182,
+        "max_rise_m": 0.09926018670468228,
+        "executed_policy_steps": 44,
+        "executed_policy_duration_s": 2.2,
+        "executed_hold_steps": 40,
+        "executed_hold_duration_s": 2.0,
+        "post_acquisition_latch_steps": 316,
+        "post_acquisition_latch_duration_s": 15.8,
+        "post_latch_overridden_enable_steps": 316,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 2.2,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.36093467777210664,
+          "pre_latch_rest_eef_path_length_m": 0.3608569102763876,
+          "post_latch_rest_eef_path_length_m": 7.776749571887253e-05,
+          "total_rest_moving_duration_s": 2.8000000000000003,
+          "pre_latch_rest_moving_duration_s": 2.8000000000000003
+        }
+      },
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S003_raw_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 212,
+        "requested_enable_duration_s": 10.6,
+        "requested_hold_steps": 188,
+        "requested_hold_duration_s": 9.4,
+        "requested_enable_duty_fraction": 0.53,
+        "requested_bout_count": 11,
+        "requested_spans": [
+          [
+            41,
+            61
+          ],
+          [
+            87,
+            91
+          ],
+          [
+            97,
+            111
+          ],
+          [
+            117,
+            121
+          ],
+          [
+            147,
+            217
+          ],
+          [
+            221,
+            231
+          ],
+          [
+            247,
+            251
+          ],
+          [
+            277,
+            281
+          ],
+          [
+            291,
+            307
+          ],
+          [
+            311,
+            317
+          ],
+          [
+            321,
+            381
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+        "gate": "confidence",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 365,
+        "events_issued_strictly_before_horizon": 43,
+        "events_issued_at_or_before_horizon": 43
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 6.599999999999998,
+        "requested_rest_enable_fraction": 0.559322033898305,
+        "requested_imagery_enable_duration_s": 4.0000000000000036,
+        "requested_imagery_missed_duration_s": 4.199999999999999,
+        "requested_imagery_missed_fraction": 0.5121951219512193,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.7000000000000002,
+        "requested_onset_delays_s": [
+          0.09999999999999964,
+          1.3000000000000007
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "823afbd4361b5b120f34a8c99607fca41e36d19fc0eafd017561deeffcd1a5dd",
+        "seed": 0,
+        "first_acquisition_step": 155,
+        "first_acquisition_time_s": 7.75,
+        "latch_step": 155,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.10060519341170715,
+        "max_rise_m": 0.1024175277824092,
+        "executed_policy_steps": 51,
+        "executed_policy_duration_s": 2.5500000000000003,
+        "executed_hold_steps": 104,
+        "executed_hold_duration_s": 5.2,
+        "post_acquisition_latch_steps": 245,
+        "post_acquisition_latch_duration_s": 12.25,
+        "post_latch_overridden_enable_steps": 161,
+        "post_latch_overridden_hold_steps": 84,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.0,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.2099478466826552,
+          "pre_latch_rest_eef_path_length_m": 0.20702863262819332,
+          "post_latch_rest_eef_path_length_m": 0.0029192140544620384,
+          "total_rest_moving_duration_s": 2.5,
+          "pre_latch_rest_moving_duration_s": 2.25
+        }
+      },
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S003_confidence_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 212,
+        "requested_enable_duration_s": 10.6,
+        "requested_hold_steps": 188,
+        "requested_hold_duration_s": 9.4,
+        "requested_enable_duty_fraction": 0.53,
+        "requested_bout_count": 11,
+        "requested_spans": [
+          [
+            41,
+            61
+          ],
+          [
+            87,
+            91
+          ],
+          [
+            97,
+            111
+          ],
+          [
+            117,
+            121
+          ],
+          [
+            147,
+            217
+          ],
+          [
+            221,
+            231
+          ],
+          [
+            247,
+            251
+          ],
+          [
+            277,
+            281
+          ],
+          [
+            291,
+            307
+          ],
+          [
+            311,
+            317
+          ],
+          [
+            321,
+            381
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+        "gate": "confidence",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 365,
+        "events_issued_strictly_before_horizon": 43,
+        "events_issued_at_or_before_horizon": 43
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 6.599999999999998,
+        "requested_rest_enable_fraction": 0.559322033898305,
+        "requested_imagery_enable_duration_s": 4.0000000000000036,
+        "requested_imagery_missed_duration_s": 4.199999999999999,
+        "requested_imagery_missed_fraction": 0.5121951219512193,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.7000000000000002,
+        "requested_onset_delays_s": [
+          0.09999999999999964,
+          1.3000000000000007
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "078025bd5ed93752d53c4d4b69ed95ce6ed18bd8ab773be71556edb6ab7787c3",
+        "seed": 1,
+        "first_acquisition_step": 151,
+        "first_acquisition_time_s": 7.550000000000001,
+        "latch_step": 151,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09979145894917263,
+        "max_rise_m": 0.10287304696903943,
+        "executed_policy_steps": 47,
+        "executed_policy_duration_s": 2.35,
+        "executed_hold_steps": 104,
+        "executed_hold_duration_s": 5.2,
+        "post_acquisition_latch_steps": 249,
+        "post_acquisition_latch_duration_s": 12.450000000000001,
+        "post_latch_overridden_enable_steps": 165,
+        "post_latch_overridden_hold_steps": 84,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.0,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.23127786604050726,
+          "pre_latch_rest_eef_path_length_m": 0.23023619954714303,
+          "post_latch_rest_eef_path_length_m": 0.0010416664933641994,
+          "total_rest_moving_duration_s": 2.299999999999999,
+          "pre_latch_rest_moving_duration_s": 2.25
+        }
+      },
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S003_confidence_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 212,
+        "requested_enable_duration_s": 10.6,
+        "requested_hold_steps": 188,
+        "requested_hold_duration_s": 9.4,
+        "requested_enable_duty_fraction": 0.53,
+        "requested_bout_count": 11,
+        "requested_spans": [
+          [
+            41,
+            61
+          ],
+          [
+            87,
+            91
+          ],
+          [
+            97,
+            111
+          ],
+          [
+            117,
+            121
+          ],
+          [
+            147,
+            217
+          ],
+          [
+            221,
+            231
+          ],
+          [
+            247,
+            251
+          ],
+          [
+            277,
+            281
+          ],
+          [
+            291,
+            307
+          ],
+          [
+            311,
+            317
+          ],
+          [
+            321,
+            381
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+        "gate": "confidence",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 365,
+        "events_issued_strictly_before_horizon": 43,
+        "events_issued_at_or_before_horizon": 43
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 6.599999999999998,
+        "requested_rest_enable_fraction": 0.559322033898305,
+        "requested_imagery_enable_duration_s": 4.0000000000000036,
+        "requested_imagery_missed_duration_s": 4.199999999999999,
+        "requested_imagery_missed_fraction": 0.5121951219512193,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.7000000000000002,
+        "requested_onset_delays_s": [
+          0.09999999999999964,
+          1.3000000000000007
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "7b66db127dc3bb997219707ce5e67456bcaa4726057678f324d4b82da61e3f24",
+        "seed": 2,
+        "first_acquisition_step": 152,
+        "first_acquisition_time_s": 7.6000000000000005,
+        "latch_step": 152,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.10459103425932004,
+        "max_rise_m": 0.10965144756308187,
+        "executed_policy_steps": 48,
+        "executed_policy_duration_s": 2.4000000000000004,
+        "executed_hold_steps": 104,
+        "executed_hold_duration_s": 5.2,
+        "post_acquisition_latch_steps": 248,
+        "post_acquisition_latch_duration_s": 12.4,
+        "post_latch_overridden_enable_steps": 164,
+        "post_latch_overridden_hold_steps": 84,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.0,
+          "post_latch_override_during_rest_s": 7.599999999999998,
+          "total_rest_eef_path_length_m": 0.21910114750730877,
+          "pre_latch_rest_eef_path_length_m": 0.21664313754335288,
+          "post_latch_rest_eef_path_length_m": 0.002458009963955857,
+          "total_rest_moving_duration_s": 2.449999999999999,
+          "pre_latch_rest_moving_duration_s": 2.3000000000000003
+        }
+      },
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S003_confidence_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 130,
+        "requested_enable_duration_s": 6.5,
+        "requested_hold_steps": 270,
+        "requested_hold_duration_s": 13.5,
+        "requested_enable_duty_fraction": 0.325,
+        "requested_bout_count": 5,
+        "requested_spans": [
+          [
+            51,
+            61
+          ],
+          [
+            107,
+            111
+          ],
+          [
+            157,
+            217
+          ],
+          [
+            301,
+            307
+          ],
+          [
+            331,
+            381
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+        "gate": "temporal",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 308,
+        "events_issued_strictly_before_horizon": 26,
+        "events_issued_at_or_before_horizon": 26
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 5.399999999999999,
+        "requested_rest_enable_fraction": 0.4576271186440678,
+        "requested_imagery_enable_duration_s": 1.1000000000000032,
+        "requested_imagery_missed_duration_s": 7.1,
+        "requested_imagery_missed_fraction": 0.865853658536585,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 1.7999999999999998,
+        "requested_onset_delays_s": [
+          1.0999999999999996,
+          2.5
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "8eb3fe785490ddf826a5c26c2880e5ad7cba6cc941f0b674d668ba7ee4e15abc",
+        "seed": 0,
+        "first_acquisition_step": 191,
+        "first_acquisition_time_s": 9.55,
+        "latch_step": 191,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09949127964855387,
+        "max_rise_m": 0.1032883494624568,
+        "executed_policy_steps": 49,
+        "executed_policy_duration_s": 2.45,
+        "executed_hold_steps": 142,
+        "executed_hold_duration_s": 7.1000000000000005,
+        "post_acquisition_latch_steps": 209,
+        "post_acquisition_latch_duration_s": 10.450000000000001,
+        "post_latch_overridden_enable_steps": 81,
+        "post_latch_overridden_hold_steps": 128,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.75,
+          "post_latch_override_during_rest_s": 6.349999999999998,
+          "total_rest_eef_path_length_m": 0.339853902840495,
+          "pre_latch_rest_eef_path_length_m": 0.30739230204575496,
+          "post_latch_rest_eef_path_length_m": 0.03246160079473984,
+          "total_rest_moving_duration_s": 3.9999999999999996,
+          "pre_latch_rest_moving_duration_s": 3.15
+        }
+      },
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S003_temporal_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 130,
+        "requested_enable_duration_s": 6.5,
+        "requested_hold_steps": 270,
+        "requested_hold_duration_s": 13.5,
+        "requested_enable_duty_fraction": 0.325,
+        "requested_bout_count": 5,
+        "requested_spans": [
+          [
+            51,
+            61
+          ],
+          [
+            107,
+            111
+          ],
+          [
+            157,
+            217
+          ],
+          [
+            301,
+            307
+          ],
+          [
+            331,
+            381
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+        "gate": "temporal",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 308,
+        "events_issued_strictly_before_horizon": 26,
+        "events_issued_at_or_before_horizon": 26
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 5.399999999999999,
+        "requested_rest_enable_fraction": 0.4576271186440678,
+        "requested_imagery_enable_duration_s": 1.1000000000000032,
+        "requested_imagery_missed_duration_s": 7.1,
+        "requested_imagery_missed_fraction": 0.865853658536585,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 1.7999999999999998,
+        "requested_onset_delays_s": [
+          1.0999999999999996,
+          2.5
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "c3afeb25285359c54c792117ae8d3c7b8113e4a8c4e06716bd8f2c958cc1d778",
+        "seed": 1,
+        "first_acquisition_step": 186,
+        "first_acquisition_time_s": 9.3,
+        "latch_step": 186,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.10468458413935022,
+        "max_rise_m": 0.10837941258938077,
+        "executed_policy_steps": 44,
+        "executed_policy_duration_s": 2.2,
+        "executed_hold_steps": 142,
+        "executed_hold_duration_s": 7.1000000000000005,
+        "post_acquisition_latch_steps": 214,
+        "post_acquisition_latch_duration_s": 10.700000000000001,
+        "post_latch_overridden_enable_steps": 86,
+        "post_latch_overridden_hold_steps": 128,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.5,
+          "post_latch_override_during_rest_s": 6.599999999999998,
+          "total_rest_eef_path_length_m": 0.31240776882414073,
+          "pre_latch_rest_eef_path_length_m": 0.28523846853870005,
+          "post_latch_rest_eef_path_length_m": 0.027169300285440602,
+          "total_rest_moving_duration_s": 3.5999999999999988,
+          "pre_latch_rest_moving_duration_s": 2.8
+        }
+      },
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S003_temporal_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 130,
+        "requested_enable_duration_s": 6.5,
+        "requested_hold_steps": 270,
+        "requested_hold_duration_s": 13.5,
+        "requested_enable_duty_fraction": 0.325,
+        "requested_bout_count": 5,
+        "requested_spans": [
+          [
+            51,
+            61
+          ],
+          [
+            107,
+            111
+          ],
+          [
+            157,
+            217
+          ],
+          [
+            301,
+            307
+          ],
+          [
+            331,
+            381
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "0817b2c3cdf2ba3d336efdf2dd0b67c1baca9b22908f2c971c3844ad9703d0f2",
+        "gate": "temporal",
+        "trace_rows": 493,
+        "last_issued_s": 125.0,
+        "full_trace_enable_events": 308,
+        "events_issued_strictly_before_horizon": 26,
+        "events_issued_at_or_before_horizon": 26
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.799999999999997,
+        "horizon_imagery_duration_s": 8.200000000000003,
+        "requested_rest_enable_duration_s": 5.399999999999999,
+        "requested_rest_enable_fraction": 0.4576271186440678,
+        "requested_imagery_enable_duration_s": 1.1000000000000032,
+        "requested_imagery_missed_duration_s": 7.1,
+        "requested_imagery_missed_fraction": 0.865853658536585,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 1.7999999999999998,
+        "requested_onset_delays_s": [
+          1.0999999999999996,
+          2.5
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "d1d647d7f669627e21920b1e0cae61bf0b0944eef9f11074e1f8d74a8c8f0284",
+        "seed": 2,
+        "first_acquisition_step": 187,
+        "first_acquisition_time_s": 9.35,
+        "latch_step": 187,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09537375046443808,
+        "max_rise_m": 0.09995041700720753,
+        "executed_policy_steps": 45,
+        "executed_policy_duration_s": 2.25,
+        "executed_hold_steps": 142,
+        "executed_hold_duration_s": 7.1000000000000005,
+        "post_acquisition_latch_steps": 213,
+        "post_acquisition_latch_duration_s": 10.65,
+        "post_latch_overridden_enable_steps": 85,
+        "post_latch_overridden_hold_steps": 128,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 1.549999999999999,
+          "post_latch_override_during_rest_s": 6.549999999999999,
+          "total_rest_eef_path_length_m": 0.2994312041049788,
+          "pre_latch_rest_eef_path_length_m": 0.267684214343676,
+          "post_latch_rest_eef_path_length_m": 0.03174698976130241,
+          "total_rest_moving_duration_s": 3.699999999999999,
+          "pre_latch_rest_moving_duration_s": 2.849999999999999
+        }
+      },
+      "subject": "S003",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s002s003_2026-11-06/S003_temporal_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 218,
+        "requested_enable_duration_s": 10.9,
+        "requested_hold_steps": 182,
+        "requested_hold_duration_s": 9.1,
+        "requested_enable_duty_fraction": 0.545,
+        "requested_bout_count": 4,
+        "requested_spans": [
+          [
+            87,
+            197
+          ],
+          [
+            237,
+            301
+          ],
+          [
+            347,
+            351
+          ],
+          [
+            361,
+            401
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+        "gate": "raw",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 120,
+        "events_issued_strictly_before_horizon": 44,
+        "events_issued_at_or_before_horizon": 45
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 4.299999999999999,
+        "requested_rest_enable_fraction": 0.3644067796610168,
+        "requested_imagery_enable_duration_s": 6.599999999999999,
+        "requested_imagery_missed_duration_s": 1.5999999999999988,
+        "requested_imagery_missed_fraction": 0.1951219512195121,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.10000000000000009,
+        "requested_onset_delays_s": [
+          0.20000000000000018,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "57c352da6f9f2f153fd095c69f72dbed3c6f3724978e2cfb4cf915b64616f280",
+        "seed": 0,
+        "first_acquisition_step": 136,
+        "first_acquisition_time_s": 6.800000000000001,
+        "latch_step": 136,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09475482757229714,
+        "max_rise_m": 0.09860831443896112,
+        "executed_policy_steps": 50,
+        "executed_policy_duration_s": 2.5,
+        "executed_hold_steps": 86,
+        "executed_hold_duration_s": 4.3,
+        "post_acquisition_latch_steps": 264,
+        "post_acquisition_latch_duration_s": 13.200000000000001,
+        "post_latch_overridden_enable_steps": 168,
+        "post_latch_overridden_hold_steps": 96,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 7.700000000000001,
+          "total_rest_eef_path_length_m": 0.034732247009554004,
+          "pre_latch_rest_eef_path_length_m": 0.034559007530518555,
+          "post_latch_rest_eef_path_length_m": 0.00017323947903540284,
+          "total_rest_moving_duration_s": 0.6,
+          "pre_latch_rest_moving_duration_s": 0.6
+        }
+      },
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s006r12_2026-11-04/raw_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 218,
+        "requested_enable_duration_s": 10.9,
+        "requested_hold_steps": 182,
+        "requested_hold_duration_s": 9.1,
+        "requested_enable_duty_fraction": 0.545,
+        "requested_bout_count": 4,
+        "requested_spans": [
+          [
+            87,
+            197
+          ],
+          [
+            237,
+            301
+          ],
+          [
+            347,
+            351
+          ],
+          [
+            361,
+            401
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+        "gate": "raw",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 120,
+        "events_issued_strictly_before_horizon": 44,
+        "events_issued_at_or_before_horizon": 45
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 4.299999999999999,
+        "requested_rest_enable_fraction": 0.3644067796610168,
+        "requested_imagery_enable_duration_s": 6.599999999999999,
+        "requested_imagery_missed_duration_s": 1.5999999999999988,
+        "requested_imagery_missed_fraction": 0.1951219512195121,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.10000000000000009,
+        "requested_onset_delays_s": [
+          0.20000000000000018,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "3e5cdd254d513542a6ff108471b42c2fe729d4eb23c315ee8fb1c166a05d3485",
+        "seed": 1,
+        "first_acquisition_step": 128,
+        "first_acquisition_time_s": 6.4,
+        "latch_step": 128,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09881156605469765,
+        "max_rise_m": 0.10139295856406638,
+        "executed_policy_steps": 42,
+        "executed_policy_duration_s": 2.1,
+        "executed_hold_steps": 86,
+        "executed_hold_duration_s": 4.3,
+        "post_acquisition_latch_steps": 272,
+        "post_acquisition_latch_duration_s": 13.600000000000001,
+        "post_latch_overridden_enable_steps": 176,
+        "post_latch_overridden_hold_steps": 96,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 7.700000000000001,
+          "total_rest_eef_path_length_m": 0.02055500345107899,
+          "pre_latch_rest_eef_path_length_m": 0.02047672123800031,
+          "post_latch_rest_eef_path_length_m": 7.828221307866204e-05,
+          "total_rest_moving_duration_s": 0.55,
+          "pre_latch_rest_moving_duration_s": 0.55
+        }
+      },
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s006r12_2026-11-04/raw_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 218,
+        "requested_enable_duration_s": 10.9,
+        "requested_hold_steps": 182,
+        "requested_hold_duration_s": 9.1,
+        "requested_enable_duty_fraction": 0.545,
+        "requested_bout_count": 4,
+        "requested_spans": [
+          [
+            87,
+            197
+          ],
+          [
+            237,
+            301
+          ],
+          [
+            347,
+            351
+          ],
+          [
+            361,
+            401
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+        "gate": "raw",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 120,
+        "events_issued_strictly_before_horizon": 44,
+        "events_issued_at_or_before_horizon": 45
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 4.299999999999999,
+        "requested_rest_enable_fraction": 0.3644067796610168,
+        "requested_imagery_enable_duration_s": 6.599999999999999,
+        "requested_imagery_missed_duration_s": 1.5999999999999988,
+        "requested_imagery_missed_fraction": 0.1951219512195121,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 2,
+        "missed_imagery_bouts_in_horizon": 0,
+        "mean_requested_onset_delay_s": 0.10000000000000009,
+        "requested_onset_delays_s": [
+          0.20000000000000018,
+          0.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "865c24f2cfa44e0809cd84b9ab4a00ae5bd8f1a7091d2062cfbf53b8ff3dda22",
+        "seed": 2,
+        "first_acquisition_step": 130,
+        "first_acquisition_time_s": 6.5,
+        "latch_step": 130,
+        "terminal_retained": true,
+        "completion_state": "complete_retained",
+        "terminal_rise_m": 0.09474576155175707,
+        "max_rise_m": 0.09924241717780624,
+        "executed_policy_steps": 44,
+        "executed_policy_duration_s": 2.2,
+        "executed_hold_steps": 86,
+        "executed_hold_duration_s": 4.3,
+        "post_acquisition_latch_steps": 270,
+        "post_acquisition_latch_duration_s": 13.5,
+        "post_latch_overridden_enable_steps": 174,
+        "post_latch_overridden_hold_steps": 96,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 7.700000000000001,
+          "total_rest_eef_path_length_m": 0.03096453685618733,
+          "pre_latch_rest_eef_path_length_m": 0.030867500505848865,
+          "post_latch_rest_eef_path_length_m": 9.703635033844613e-05,
+          "total_rest_moving_duration_s": 0.6,
+          "pre_latch_rest_moving_duration_s": 0.6
+        }
+      },
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s006r12_2026-11-04/raw_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 24,
+        "requested_enable_duration_s": 1.2,
+        "requested_hold_steps": 376,
+        "requested_hold_duration_s": 18.8,
+        "requested_enable_duty_fraction": 0.06,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            257,
+            281
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+        "gate": "confidence",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 6,
+        "events_issued_strictly_before_horizon": 5,
+        "events_issued_at_or_before_horizon": 5
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 0.0,
+        "requested_rest_enable_fraction": 0.0,
+        "requested_imagery_enable_duration_s": 1.1999999999999993,
+        "requested_imagery_missed_duration_s": 6.999999999999998,
+        "requested_imagery_missed_fraction": 0.853658536585366,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 1,
+        "missed_imagery_bouts_in_horizon": 1,
+        "mean_requested_onset_delay_s": 0.5,
+        "requested_onset_delays_s": [
+          0.5
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "fee5acfbdfc77068ee07823dc5baac48f8e0d8498f0c562ef3069e0b1c4039af",
+        "seed": 0,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.01021553759255256,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 24,
+        "executed_policy_duration_s": 1.2000000000000002,
+        "executed_hold_steps": 376,
+        "executed_hold_duration_s": 18.8,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.03464189133170011,
+          "pre_latch_rest_eef_path_length_m": 0.03464189133170011,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 0.6,
+          "pre_latch_rest_moving_duration_s": 0.6
+        }
+      },
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s006r12_2026-11-04/confidence_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 24,
+        "requested_enable_duration_s": 1.2,
+        "requested_hold_steps": 376,
+        "requested_hold_duration_s": 18.8,
+        "requested_enable_duty_fraction": 0.06,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            257,
+            281
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+        "gate": "confidence",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 6,
+        "events_issued_strictly_before_horizon": 5,
+        "events_issued_at_or_before_horizon": 5
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 0.0,
+        "requested_rest_enable_fraction": 0.0,
+        "requested_imagery_enable_duration_s": 1.1999999999999993,
+        "requested_imagery_missed_duration_s": 6.999999999999998,
+        "requested_imagery_missed_fraction": 0.853658536585366,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 1,
+        "missed_imagery_bouts_in_horizon": 1,
+        "mean_requested_onset_delay_s": 0.5,
+        "requested_onset_delays_s": [
+          0.5
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "1b18956e86117c952d01d6005df1752c884e031881eab2cfa55faa0956a5f927",
+        "seed": 1,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.010215539590044398,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 24,
+        "executed_policy_duration_s": 1.2000000000000002,
+        "executed_hold_steps": 376,
+        "executed_hold_duration_s": 18.8,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.020558647536888294,
+          "pre_latch_rest_eef_path_length_m": 0.020558647536888294,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 0.55,
+          "pre_latch_rest_moving_duration_s": 0.55
+        }
+      },
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s006r12_2026-11-04/confidence_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 24,
+        "requested_enable_duration_s": 1.2,
+        "requested_hold_steps": 376,
+        "requested_hold_duration_s": 18.8,
+        "requested_enable_duty_fraction": 0.06,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            257,
+            281
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+        "gate": "confidence",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 6,
+        "events_issued_strictly_before_horizon": 5,
+        "events_issued_at_or_before_horizon": 5
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 0.0,
+        "requested_rest_enable_fraction": 0.0,
+        "requested_imagery_enable_duration_s": 1.1999999999999993,
+        "requested_imagery_missed_duration_s": 6.999999999999998,
+        "requested_imagery_missed_fraction": 0.853658536585366,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 1,
+        "missed_imagery_bouts_in_horizon": 1,
+        "mean_requested_onset_delay_s": 0.5,
+        "requested_onset_delays_s": [
+          0.5
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "0f91367cc61dd7789ace73ccdaca22e7808e82254f44844f36327b99951d653e",
+        "seed": 2,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.0102155357961915,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 24,
+        "executed_policy_duration_s": 1.2000000000000002,
+        "executed_hold_steps": 376,
+        "executed_hold_duration_s": 18.8,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.03093803481812287,
+          "pre_latch_rest_eef_path_length_m": 0.03093803481812287,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 0.6,
+          "pre_latch_rest_moving_duration_s": 0.6
+        }
+      },
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s006r12_2026-11-04/confidence_seed2"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 14,
+        "requested_enable_duration_s": 0.7,
+        "requested_hold_steps": 386,
+        "requested_hold_duration_s": 19.3,
+        "requested_enable_duty_fraction": 0.035,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            267,
+            281
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+        "gate": "temporal",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 3,
+        "events_issued_strictly_before_horizon": 3,
+        "events_issued_at_or_before_horizon": 3
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 0.0,
+        "requested_rest_enable_fraction": 0.0,
+        "requested_imagery_enable_duration_s": 0.6999999999999993,
+        "requested_imagery_missed_duration_s": 7.499999999999998,
+        "requested_imagery_missed_fraction": 0.9146341463414634,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 1,
+        "missed_imagery_bouts_in_horizon": 1,
+        "mean_requested_onset_delay_s": 1.0,
+        "requested_onset_delays_s": [
+          1.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "a55ae4c5ef145e5bd0eebfdc9dec34df4aec46a8423f13a6924546b76b1fb9aa",
+        "seed": 0,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.01021553759255256,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 14,
+        "executed_policy_duration_s": 0.7000000000000001,
+        "executed_hold_steps": 386,
+        "executed_hold_duration_s": 19.3,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.03463464157899906,
+          "pre_latch_rest_eef_path_length_m": 0.03463464157899906,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 0.6,
+          "pre_latch_rest_moving_duration_s": 0.6
+        }
+      },
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "seed": 0,
+      "run_dir": "results/robomimic_eeg_s006r12_2026-11-04/temporal_seed0"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 14,
+        "requested_enable_duration_s": 0.7,
+        "requested_hold_steps": 386,
+        "requested_hold_duration_s": 19.3,
+        "requested_enable_duty_fraction": 0.035,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            267,
+            281
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+        "gate": "temporal",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 3,
+        "events_issued_strictly_before_horizon": 3,
+        "events_issued_at_or_before_horizon": 3
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 0.0,
+        "requested_rest_enable_fraction": 0.0,
+        "requested_imagery_enable_duration_s": 0.6999999999999993,
+        "requested_imagery_missed_duration_s": 7.499999999999998,
+        "requested_imagery_missed_fraction": 0.9146341463414634,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 1,
+        "missed_imagery_bouts_in_horizon": 1,
+        "mean_requested_onset_delay_s": 1.0,
+        "requested_onset_delays_s": [
+          1.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "8c434c7d7d937fcc5c9012a0e426c88e08372d80327b87af8799300cb44f6c6e",
+        "seed": 1,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.010215539590044398,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 14,
+        "executed_policy_duration_s": 0.7000000000000001,
+        "executed_hold_steps": 386,
+        "executed_hold_duration_s": 19.3,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.020553659878327947,
+          "pre_latch_rest_eef_path_length_m": 0.020553659878327947,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 0.55,
+          "pre_latch_rest_moving_duration_s": 0.55
+        }
+      },
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "seed": 1,
+      "run_dir": "results/robomimic_eeg_s006r12_2026-11-04/temporal_seed1"
+    },
+    {
+      "harness_version": "robomimic-latch6-v2.0.0",
+      "condition": "eeg",
+      "horizon_steps": 400,
+      "control_freq_hz": 20.0,
+      "horizon_duration_s": 20.0,
+      "requested_on_horizon": {
+        "requested_enable_steps": 14,
+        "requested_enable_duration_s": 0.7,
+        "requested_hold_steps": 386,
+        "requested_hold_duration_s": 19.3,
+        "requested_enable_duty_fraction": 0.035,
+        "requested_bout_count": 1,
+        "requested_spans": [
+          [
+            267,
+            281
+          ]
+        ]
+      },
+      "trace_accounting": {
+        "decisions_sha256": "ca51e6abb5685911ceae33ac9e1806e4907c10faf2210d7d2315c408ddfbeb62",
+        "gate": "temporal",
+        "trace_rows": 485,
+        "last_issued_s": 123.0,
+        "full_trace_enable_events": 3,
+        "events_issued_strictly_before_horizon": 3,
+        "events_issued_at_or_before_horizon": 3
+      },
+      "annotation_alignment_20s": {
+        "horizon_rest_duration_s": 11.8,
+        "horizon_imagery_duration_s": 8.199999999999998,
+        "requested_rest_enable_duration_s": 0.0,
+        "requested_rest_enable_fraction": 0.0,
+        "requested_imagery_enable_duration_s": 0.6999999999999993,
+        "requested_imagery_missed_duration_s": 7.499999999999998,
+        "requested_imagery_missed_fraction": 0.9146341463414634,
+        "imagery_bouts_in_horizon": 2,
+        "detected_imagery_bouts_in_horizon": 1,
+        "missed_imagery_bouts_in_horizon": 1,
+        "mean_requested_onset_delay_s": 1.0,
+        "requested_onset_delays_s": [
+          1.0
+        ]
+      },
+      "robot_telemetry_alignment_20s": {
+        "telemetry_sha256": "0f7471e48d4da5259654046f270b8702fd6fa1801044f7324a5eee4060822dfa",
+        "seed": 2,
+        "first_acquisition_step": null,
+        "first_acquisition_time_s": null,
+        "latch_step": null,
+        "terminal_retained": false,
+        "completion_state": "complete_unretained",
+        "terminal_rise_m": -0.0102155357961915,
+        "max_rise_m": 0.0,
+        "executed_policy_steps": 14,
+        "executed_policy_duration_s": 0.7000000000000001,
+        "executed_hold_steps": 386,
+        "executed_hold_duration_s": 19.3,
+        "post_acquisition_latch_steps": 0,
+        "post_acquisition_latch_duration_s": 0.0,
+        "post_latch_overridden_enable_steps": 0,
+        "post_latch_overridden_hold_steps": 0,
+        "hold_invariants_pass": true,
+        "latch_invariants_pass": true,
+        "rest_motion_on_horizon": {
+          "pre_latch_executed_policy_during_rest_s": 0.0,
+          "post_latch_override_during_rest_s": 0.0,
+          "total_rest_eef_path_length_m": 0.03095659062143004,
+          "pre_latch_rest_eef_path_length_m": 0.03095659062143004,
+          "post_latch_rest_eef_path_length_m": 0.0,
+          "total_rest_moving_duration_s": 0.6,
+          "pre_latch_rest_moving_duration_s": 0.6
+        }
+      },
+      "subject": "S006",
+      "cohort": "csp_lda_replay",
+      "seed": 2,
+      "run_dir": "results/robomimic_eeg_s006r12_2026-11-04/temporal_seed2"
+    }
+  ],
+  "nov11_eegnet_20s_horizon_exposure": [
+    {
+      "subject": "S001",
+      "cohort": "dev_S001_S010",
+      "gate": "raw",
+      "full_trace_enable_events": 5,
+      "events_issued_before_20s": 1,
+      "requested_enable_steps_20s": 5,
+      "requested_enable_seconds_20s": 0.25,
+      "requested_bout_count_20s": 1,
+      "rest_requested_enable_rate_20s": 0.021186440677966108,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S001",
+      "cohort": "dev_S001_S010",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S001",
+      "cohort": "dev_S001_S010",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S001",
+      "cohort": "dev_S001_S010",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S002",
+      "cohort": "dev_S001_S010",
+      "gate": "raw",
+      "full_trace_enable_events": 265,
+      "events_issued_before_20s": 46,
+      "requested_enable_steps_20s": 230,
+      "requested_enable_seconds_20s": 11.5,
+      "requested_bout_count_20s": 16,
+      "rest_requested_enable_rate_20s": 0.516949152542373,
+      "imagery_requested_enable_rate_20s": 0.6585365853658537,
+      "imagery_missed_rate_20s": 0.3414634146341463,
+      "imagery_onset_delays_s": [
+        0.6500000000000004,
+        0.4499999999999993
+      ]
+    },
+    {
+      "subject": "S002",
+      "cohort": "dev_S001_S010",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S002",
+      "cohort": "dev_S001_S010",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S002",
+      "cohort": "dev_S001_S010",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S003",
+      "cohort": "dev_S001_S010",
+      "gate": "raw",
+      "full_trace_enable_events": 181,
+      "events_issued_before_20s": 27,
+      "requested_enable_steps_20s": 135,
+      "requested_enable_seconds_20s": 6.75,
+      "requested_bout_count_20s": 15,
+      "rest_requested_enable_rate_20s": 0.25000000000000006,
+      "imagery_requested_enable_rate_20s": 0.4634146341463413,
+      "imagery_missed_rate_20s": 0.5365853658536587,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subject": "S003",
+      "cohort": "dev_S001_S010",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S003",
+      "cohort": "dev_S001_S010",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S003",
+      "cohort": "dev_S001_S010",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S004",
+      "cohort": "dev_S001_S010",
+      "gate": "raw",
+      "full_trace_enable_events": 465,
+      "events_issued_before_20s": 72,
+      "requested_enable_steps_20s": 360,
+      "requested_enable_seconds_20s": 18.0,
+      "requested_bout_count_20s": 1,
+      "rest_requested_enable_rate_20s": 0.8305084745762712,
+      "imagery_requested_enable_rate_20s": 1.0,
+      "imagery_missed_rate_20s": 0.0,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subject": "S004",
+      "cohort": "dev_S001_S010",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S004",
+      "cohort": "dev_S001_S010",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S004",
+      "cohort": "dev_S001_S010",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S005",
+      "cohort": "dev_S001_S010",
+      "gate": "raw",
+      "full_trace_enable_events": 32,
+      "events_issued_before_20s": 4,
+      "requested_enable_steps_20s": 20,
+      "requested_enable_seconds_20s": 1.0,
+      "requested_bout_count_20s": 4,
+      "rest_requested_enable_rate_20s": 0.0423728813559322,
+      "imagery_requested_enable_rate_20s": 0.060975609756097615,
+      "imagery_missed_rate_20s": 0.9390243902439024,
+      "imagery_onset_delays_s": [
+        1.1500000000000004,
+        1.1999999999999993
+      ]
+    },
+    {
+      "subject": "S005",
+      "cohort": "dev_S001_S010",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S005",
+      "cohort": "dev_S001_S010",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S005",
+      "cohort": "dev_S001_S010",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S006",
+      "cohort": "dev_S001_S010",
+      "gate": "raw",
+      "full_trace_enable_events": 366,
+      "events_issued_before_20s": 67,
+      "requested_enable_steps_20s": 335,
+      "requested_enable_seconds_20s": 16.75,
+      "requested_bout_count_20s": 5,
+      "rest_requested_enable_rate_20s": 0.788135593220339,
+      "imagery_requested_enable_rate_20s": 0.9085365853658536,
+      "imagery_missed_rate_20s": 0.09146341463414637,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subject": "S006",
+      "cohort": "dev_S001_S010",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S006",
+      "cohort": "dev_S001_S010",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S006",
+      "cohort": "dev_S001_S010",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S007",
+      "cohort": "dev_S001_S010",
+      "gate": "raw",
+      "full_trace_enable_events": 319,
+      "events_issued_before_20s": 51,
+      "requested_enable_steps_20s": 255,
+      "requested_enable_seconds_20s": 12.75,
+      "requested_bout_count_20s": 7,
+      "rest_requested_enable_rate_20s": 0.6101694915254238,
+      "imagery_requested_enable_rate_20s": 0.6768292682926829,
+      "imagery_missed_rate_20s": 0.3231707317073172,
+      "imagery_onset_delays_s": [
+        0.2999999999999998,
+        1.5
+      ]
+    },
+    {
+      "subject": "S007",
+      "cohort": "dev_S001_S010",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S007",
+      "cohort": "dev_S001_S010",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S007",
+      "cohort": "dev_S001_S010",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S008",
+      "cohort": "dev_S001_S010",
+      "gate": "raw",
+      "full_trace_enable_events": 5,
+      "events_issued_before_20s": 1,
+      "requested_enable_steps_20s": 5,
+      "requested_enable_seconds_20s": 0.25,
+      "requested_bout_count_20s": 1,
+      "rest_requested_enable_rate_20s": 0.0211864406779661,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S008",
+      "cohort": "dev_S001_S010",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S008",
+      "cohort": "dev_S001_S010",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S008",
+      "cohort": "dev_S001_S010",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S009",
+      "cohort": "dev_S001_S010",
+      "gate": "raw",
+      "full_trace_enable_events": 341,
+      "events_issued_before_20s": 51,
+      "requested_enable_steps_20s": 255,
+      "requested_enable_seconds_20s": 12.75,
+      "requested_bout_count_20s": 14,
+      "rest_requested_enable_rate_20s": 0.5635593220338985,
+      "imagery_requested_enable_rate_20s": 0.7439024390243902,
+      "imagery_missed_rate_20s": 0.2560975609756098,
+      "imagery_onset_delays_s": [
+        0.15000000000000036,
+        0.1999999999999993
+      ]
+    },
+    {
+      "subject": "S009",
+      "cohort": "dev_S001_S010",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S009",
+      "cohort": "dev_S001_S010",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S009",
+      "cohort": "dev_S001_S010",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S010",
+      "cohort": "dev_S001_S010",
+      "gate": "raw",
+      "full_trace_enable_events": 166,
+      "events_issued_before_20s": 38,
+      "requested_enable_steps_20s": 190,
+      "requested_enable_seconds_20s": 9.5,
+      "requested_bout_count_20s": 11,
+      "rest_requested_enable_rate_20s": 0.39830508474576276,
+      "imagery_requested_enable_rate_20s": 0.5853658536585364,
+      "imagery_missed_rate_20s": 0.41463414634146356,
+      "imagery_onset_delays_s": [
+        0.15000000000000036,
+        0.0
+      ]
+    },
+    {
+      "subject": "S010",
+      "cohort": "dev_S001_S010",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S010",
+      "cohort": "dev_S001_S010",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S010",
+      "cohort": "dev_S001_S010",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S011",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "raw",
+      "full_trace_enable_events": 464,
+      "events_issued_before_20s": 68,
+      "requested_enable_steps_20s": 340,
+      "requested_enable_seconds_20s": 17.0,
+      "requested_bout_count_20s": 4,
+      "rest_requested_enable_rate_20s": 0.788135593220339,
+      "imagery_requested_enable_rate_20s": 0.9390243902439024,
+      "imagery_missed_rate_20s": 0.06097560975609758,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subject": "S011",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S011",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S011",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S012",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "raw",
+      "full_trace_enable_events": 360,
+      "events_issued_before_20s": 61,
+      "requested_enable_steps_20s": 305,
+      "requested_enable_seconds_20s": 15.25,
+      "requested_bout_count_20s": 6,
+      "rest_requested_enable_rate_20s": 0.6991525423728815,
+      "imagery_requested_enable_rate_20s": 0.853658536585366,
+      "imagery_missed_rate_20s": 0.1463414634146341,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.4499999999999993
+      ]
+    },
+    {
+      "subject": "S012",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S012",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S012",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S013",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "raw",
+      "full_trace_enable_events": 35,
+      "events_issued_before_20s": 21,
+      "requested_enable_steps_20s": 105,
+      "requested_enable_seconds_20s": 5.25,
+      "requested_bout_count_20s": 6,
+      "rest_requested_enable_rate_20s": 0.08898305084745768,
+      "imagery_requested_enable_rate_20s": 0.5121951219512195,
+      "imagery_missed_rate_20s": 0.4878048780487804,
+      "imagery_onset_delays_s": [
+        0.40000000000000036,
+        0.9499999999999993
+      ]
+    },
+    {
+      "subject": "S013",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S013",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S013",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S014",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "raw",
+      "full_trace_enable_events": 184,
+      "events_issued_before_20s": 23,
+      "requested_enable_steps_20s": 115,
+      "requested_enable_seconds_20s": 5.75,
+      "requested_bout_count_20s": 10,
+      "rest_requested_enable_rate_20s": 0.2033898305084746,
+      "imagery_requested_enable_rate_20s": 0.4085365853658536,
+      "imagery_missed_rate_20s": 0.5914634146341464,
+      "imagery_onset_delays_s": [
+        0.9000000000000004,
+        0.0
+      ]
+    },
+    {
+      "subject": "S014",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S014",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S014",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S015",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "raw",
+      "full_trace_enable_events": 464,
+      "events_issued_before_20s": 71,
+      "requested_enable_steps_20s": 355,
+      "requested_enable_seconds_20s": 17.75,
+      "requested_bout_count_20s": 2,
+      "rest_requested_enable_rate_20s": 0.8093220338983051,
+      "imagery_requested_enable_rate_20s": 1.0,
+      "imagery_missed_rate_20s": 0.0,
+      "imagery_onset_delays_s": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subject": "S015",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "confidence",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S015",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "temporal",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    },
+    {
+      "subject": "S015",
+      "cohort": "heldout_opened_2026_11_11_S011_S015",
+      "gate": "crc_hysteresis",
+      "full_trace_enable_events": 0,
+      "events_issued_before_20s": 0,
+      "requested_enable_steps_20s": 0,
+      "requested_enable_seconds_20s": 0.0,
+      "requested_bout_count_20s": 0,
+      "rest_requested_enable_rate_20s": 0.0,
+      "imagery_requested_enable_rate_20s": 0.0,
+      "imagery_missed_rate_20s": 1.0,
+      "imagery_onset_delays_s": []
+    }
+  ]
+}

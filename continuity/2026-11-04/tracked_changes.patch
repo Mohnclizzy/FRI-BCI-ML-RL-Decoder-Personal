@@ -1,0 +1,1063 @@
+diff --git a/README.md b/README.md
+index 9b4fae3..b12a7cb 100644
+--- a/README.md
++++ b/README.md
+@@ -1,188 +1,189 @@
+-# FRI-BCI-ML-RL-Decoder
+-
+-Public EEG motor-imagery decoding research for simulated robotic-hand control using machine learning and reinforcement learning.
+-
+-For the full project timeline and present limits, read [project history](docs/PROJECT_HISTORY.md).
+-For cross-account repository access and reproduction, read [sharing and reproduction](docs/SHARING_AND_REPRODUCTION.md).
+-
+-## Simulation scaffold
+-
+-The [Isaac Lab project scaffold](simulation/README.md) connects causal recorded
+-EEG replay, three command gates, a HOLD-preserving executor, a scripted Franka
+-lift skill, measured cube/contact telemetry, and a separate PPO evaluation.
+-The first matched five-person table-pickup pilot recorded 1/5 raw EEG
+-episodes lifted; confidence and temporal filtering each achieved 0/5 in the
+-24-second budget. Filtering did reduce annotated rest activation, while also
+-reducing command coverage. Subsequent audit found arm drift during HOLD and an
+-insufficient negative-control check, so the physical comparison requires a
+-corrected rerun. The recorded command scores are separate from physical motion.
+-Read the
+-[measured cohort results](docs/multi_person_replay_2026-11-02.md),
+-[PPO playback results](docs/ppo_lift_evaluation_2026-11-02.md), and
+-[Brev/TACC runbook](simulation/cloud/README.md).
+-
+-## EEG intent decoder
+-
+-First milestone: load real public EEG, train a rest-versus-hand-imagery decoder,
+-and explain its errors on a recording it has not seen. Everything runs on CPU.
+-
+-## Start on Windows
+-
+-Run these commands in this project folder. The explicit executable path avoids
+-PowerShell activation-policy problems.
+-
+-```powershell
+-python -m venv .venv
+-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+-.\.venv\Scripts\python.exe -m eeg_decoder run
+-```
+-
+-The run command downloads 15 EDF recordings: subjects 1-5, runs 4, 8, 12,
+-with up to three downloads at a time.
+-Data stays under `data/physionet/`. Re-running reuses cached recordings.
+-Dependencies and data downloads require internet access. Model training does not.
+-The tested environment is Python 3.14.3 on Windows; `requirements-lock.txt`
+-records its exact package versions. Install that file instead of `requirements.txt`
+-to reproduce this environment. Point VS Code's Python interpreter at
+-`.venv/Scripts/python.exe` for editing and debugging.
+-
+-You can also separate the stages:
+-
+-```powershell
+-.\.venv\Scripts\python.exe -m eeg_decoder prepare
+-.\.venv\Scripts\python.exe -m eeg_decoder train
+-.\.venv\Scripts\python.exe -m pytest -q
+-```
+-
+-## What the model sees
+-
+-For these runs, the experiment instructs a person to rest, imagine opening and
+-closing their left fist, or imagine opening and closing their right fist.
+-
+-| EDF annotation | Participant instruction | Our class |
+-|---|---|---|
+-| T0 | Rest within the task recording | REST (0) |
+-| T1 | Imagine opening/closing the left fist | HAND_IMAGERY (1) |
+-| T2 | Imagine opening/closing the right fist | HAND_IMAGERY (1) |
+-
+-The label is the experiment instruction, not proof of a person's exact thought.
+-We preserve original left/right annotations for later analysis. We do not label
+-these trials as wrist flexion, twist, or an isolated grasp: this dataset does not
+-provide those labels. Runs 6, 10, 14 include foot imagery and are excluded here.
+-Rest comes from the same task recordings, not separate eyes-closed recordings,
+-which could introduce an easy but misleading difference between conditions.
+-
+-Each training example is `[9 channels, 320 samples]`: 2 seconds at 160 Hz.
+-One window starts 1 second after each annotation onset. A window is skipped if
+-it would cross a state boundary or run end. This reduces cue-onset contamination,
+-but task cues can still influence results; it is a cue-based first benchmark.
+-
+-## Processing and training
+-
+-1. MNE reads EDF samples in volts and standardizes electrode names.
+-2. Select the fixed central channels in `configs/baseline.json`.
+-3. Subtract the mean of those selected channels at each sample.
+-4. Apply a causal, fourth-order Butterworth 8-30 Hz bandpass to each full run.
+-5. Extract labeled windows without crossing annotations.
+-6. Fit four CSP spatial features and shrinkage LDA on runs 4 and 8 only.
+-7. Evaluate once on held-out run 12, then compare with a majority-class model.
+-
+-CSP learns combinations of electrodes whose signal variance helps distinguish
+-the two classes. LDA uses those features to predict a class and probabilities.
+-There is no normalization fitted to the complete dataset, no random split of
+-overlapping windows, and no model fitting on the held-out run.
+-
+-This first experiment uses a pooled model and the SAME five people across train
+-and test, but different recordings. It does not test unseen-person performance.
+-For an additional subject holdout, copy the config to a new experiment config,
+-set `test_subjects` to `[5]`, choose a different `output_dir`, and run with
+-`--config path/to/your/config.json`. All runs from person 5 will be held out.
+-Keep each test partition fixed and tune only with validation inside training data.
+-
+-## Read your results
+-
+-Generated artifacts in `outputs/baseline/`:
+-
+-- `results.md`: summary and per-person scores.
+-- `diagnostics.png`: confusion matrix and C3 spectra by class.
+-- `metrics.json`: complete metrics, actual package versions, and split trial IDs.
+-- `data_audit.json`: class counts, source files, and skipped windows.
+-- `metadata.json`: trace each example back to its subject/run/annotation.
+-- `test_predictions.json`: model output for each held-out window.
+-- `model.joblib`: trained CSP/LDA and its preprocessing configuration.
+-- `windows.npz`: prepared arrays `X` and `y`.
+-
+-Balanced accuracy averages recall of rest and imagery; 0.50 is the binary
+-majority baseline when both classes are present. Macro-F1 considers missed
+-and incorrect predictions for both classes. In the confusion matrix, rows are
+-true classes and columns are predicted classes. `REST -> HAND_IMAGERY` is a
+-false activation: it matters when a robot could move during instructed rest.
+-This window fraction is not yet false commands per minute in continuous replay.
+-
+-The spectral plot describes class-average EEG; a visible difference is not proof
+-that the model detects intended movement or generalizes. There is no full artifact
+-rejection yet. Inspect data quality before scaling to more people.
+-
+-## Interface with your partner
+-
+-The initial vocabulary is REST and HAND_IMAGERY. Agree on a simulator behavior
+-mapping with your partner separately. For example, hand imagery might *select*
+-a grasp primitive; that would be a mapped command, not decoded grasp imagery.
+-
+-For later replay, a prediction message will contain the source subject/run,
+-window start/end times, intent, and probability per class. The current
+-`test_predictions.json` provides this structure for held-out windows, but it is
+-an offline export, not a real-time stream or accepted robot command. Probabilities
+-are uncalibrated; choosing a confidence cutoff needs validation.
+-
+-Replay must use the exact channel order, selected-channel reference, and filter.
+-Carry SOS filter state across chunks; reset at each new recording, not each window.
+-The timestamp when a prediction becomes available is at least its window end,
+-plus computation delay. Never give the model annotation labels as input.
+-
+-## Your next milestone
+-
+-Run the fixed development/confirmation protocol with the optional covariance
+-baseline installed:
+-
+-```powershell
+-python -m pip install -r requirements-riemannian.txt
+-python -m eeg_decoder.validate_decoder --output outputs/decoder_validation_001
+-```
+-
+-Use a new output directory for each independent run. Model family is selected
+-on subjects 1–5 (fit run 4, validate run 8), then frozen before subjects 6–10
+-are evaluated on run 12 after individual calibration on runs 4/8. Once inspected,
+-that confirmation cohort cannot be reused as fresh evidence after tuning.
+-The current result is recorded in [decoder findings](docs/decoder_comparison_2026-11-01.md).
+-
+-Compare pooled CSP/LDA with a separately calibrated model for each person using
+-the same held-out run and unchanged preprocessing:
+-
+-```powershell
+-python -m eeg_decoder prepare --config configs/baseline.json
+-python -m eeg_decoder.compare_subjects --config configs/baseline.json --output outputs/subject_comparison
+-```
+-
+-The output directory must be new. This exports per-person models compatible
+-with the replay adapter and metrics for both approaches on identical windows.
+-Use each model only with its calibration subject. This is an exploratory
+-diagnostic on the previously inspected test run, not independent confirmation
+-or proof of improvement. It does not select hyperparameters using test scores.
+-
+-Read `results.md` and identify which errors dominate. Inspect a few original
+-windows and annotations using their metadata. Then compare the same fixed
+-protocol with a Riemannian baseline, followed by a separate subject-holdout
+-experiment. Only after those checks add continuous replay and command filtering.
+-Synthetic tests verify software behavior; they do not establish EEG performance.
+-
+-## References
+-
+-The [literature reference summary](docs/literature_reference_summary.md) covers
+-all 18 sources cited in the literature review, with citation mappings, methods,
+-findings, limitations, verified links, and project relevance.
+-
+-- [PhysioNet EEG Motor Movement/Imagery Dataset](https://physionet.org/content/eegmmidb/1.0.0/)
+-- [MNE CSP motor-imagery example](https://mne.tools/stable/auto_examples/decoding/decoding_csp_eeg.html)
+-- [MNE EEGBCI loader](https://mne.tools/stable/generated/mne.datasets.eegbci.load_data.html)
+-- [SciPy causal SOS filtering](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.sosfilt.html)
++# FRI-BCI-ML-RL-Decoder
++
++Public EEG motor-imagery decoding research for simulated robotic-hand control using machine learning and reinforcement learning.
++
++For the earlier project timeline, read [project history](docs/PROJECT_HISTORY.md).
++For the latest cross-workstream status, read the [project check-in](docs/PROJECT_CHECK_IN_2026-11-02.md).
++For cross-account repository access and reproduction, read [sharing and reproduction](docs/SHARING_AND_REPRODUCTION.md).
++
++## Simulation scaffold
++
++The [Isaac Lab project scaffold](simulation/README.md) connects causal recorded
++EEG replay, three command gates, a HOLD-preserving executor, a scripted Franka
++lift skill, measured cube/contact telemetry, and a separate PPO evaluation.
++The first matched five-person table-pickup pilot recorded 1/5 raw EEG
++episodes lifted; confidence and temporal filtering each achieved 0/5 in the
++24-second budget. Filtering did reduce annotated rest activation, while also
++reducing command coverage. Subsequent audit found arm drift during HOLD and an
++insufficient negative-control check, so the physical comparison requires a
++corrected rerun. The recorded command scores are separate from physical motion.
++Read the
++[measured cohort results](docs/multi_person_replay_2026-11-02.md),
++[PPO playback results](docs/ppo_lift_evaluation_2026-11-02.md), and
++[Brev/TACC runbook](simulation/cloud/README.md).
++
++## EEG intent decoder
++
++First milestone: load real public EEG, train a rest-versus-hand-imagery decoder,
++and explain its errors on a recording it has not seen. Everything runs on CPU.
++
++## Start on Windows
++
++Run these commands in this project folder. The explicit executable path avoids
++PowerShell activation-policy problems.
++
++```powershell
++python -m venv .venv
++.\.venv\Scripts\python.exe -m pip install -r requirements.txt
++.\.venv\Scripts\python.exe -m eeg_decoder run
++```
++
++The run command downloads 15 EDF recordings: subjects 1-5, runs 4, 8, 12,
++with up to three downloads at a time.
++Data stays under `data/physionet/`. Re-running reuses cached recordings.
++Dependencies and data downloads require internet access. Model training does not.
++The tested environment is Python 3.14.3 on Windows; `requirements-lock.txt`
++records its exact package versions. Install that file instead of `requirements.txt`
++to reproduce this environment. Point VS Code's Python interpreter at
++`.venv/Scripts/python.exe` for editing and debugging.
++
++You can also separate the stages:
++
++```powershell
++.\.venv\Scripts\python.exe -m eeg_decoder prepare
++.\.venv\Scripts\python.exe -m eeg_decoder train
++.\.venv\Scripts\python.exe -m pytest -q
++```
++
++## What the model sees
++
++For these runs, the experiment instructs a person to rest, imagine opening and
++closing their left fist, or imagine opening and closing their right fist.
++
++| EDF annotation | Participant instruction | Our class |
++|---|---|---|
++| T0 | Rest within the task recording | REST (0) |
++| T1 | Imagine opening/closing the left fist | HAND_IMAGERY (1) |
++| T2 | Imagine opening/closing the right fist | HAND_IMAGERY (1) |
++
++The label is the experiment instruction, not proof of a person's exact thought.
++We preserve original left/right annotations for later analysis. We do not label
++these trials as wrist flexion, twist, or an isolated grasp: this dataset does not
++provide those labels. Runs 6, 10, 14 include foot imagery and are excluded here.
++Rest comes from the same task recordings, not separate eyes-closed recordings,
++which could introduce an easy but misleading difference between conditions.
++
++Each training example is `[9 channels, 320 samples]`: 2 seconds at 160 Hz.
++One window starts 1 second after each annotation onset. A window is skipped if
++it would cross a state boundary or run end. This reduces cue-onset contamination,
++but task cues can still influence results; it is a cue-based first benchmark.
++
++## Processing and training
++
++1. MNE reads EDF samples in volts and standardizes electrode names.
++2. Select the fixed central channels in `configs/baseline.json`.
++3. Subtract the mean of those selected channels at each sample.
++4. Apply a causal, fourth-order Butterworth 8-30 Hz bandpass to each full run.
++5. Extract labeled windows without crossing annotations.
++6. Fit four CSP spatial features and shrinkage LDA on runs 4 and 8 only.
++7. Evaluate once on held-out run 12, then compare with a majority-class model.
++
++CSP learns combinations of electrodes whose signal variance helps distinguish
++the two classes. LDA uses those features to predict a class and probabilities.
++There is no normalization fitted to the complete dataset, no random split of
++overlapping windows, and no model fitting on the held-out run.
++
++This first experiment uses a pooled model and the SAME five people across train
++and test, but different recordings. It does not test unseen-person performance.
++For an additional subject holdout, copy the config to a new experiment config,
++set `test_subjects` to `[5]`, choose a different `output_dir`, and run with
++`--config path/to/your/config.json`. All runs from person 5 will be held out.
++Keep each test partition fixed and tune only with validation inside training data.
++
++## Read your results
++
++Generated artifacts in `outputs/baseline/`:
++
++- `results.md`: summary and per-person scores.
++- `diagnostics.png`: confusion matrix and C3 spectra by class.
++- `metrics.json`: complete metrics, actual package versions, and split trial IDs.
++- `data_audit.json`: class counts, source files, and skipped windows.
++- `metadata.json`: trace each example back to its subject/run/annotation.
++- `test_predictions.json`: model output for each held-out window.
++- `model.joblib`: trained CSP/LDA and its preprocessing configuration.
++- `windows.npz`: prepared arrays `X` and `y`.
++
++Balanced accuracy averages recall of rest and imagery; 0.50 is the binary
++majority baseline when both classes are present. Macro-F1 considers missed
++and incorrect predictions for both classes. In the confusion matrix, rows are
++true classes and columns are predicted classes. `REST -> HAND_IMAGERY` is a
++false activation: it matters when a robot could move during instructed rest.
++This window fraction is not yet false commands per minute in continuous replay.
++
++The spectral plot describes class-average EEG; a visible difference is not proof
++that the model detects intended movement or generalizes. There is no full artifact
++rejection yet. Inspect data quality before scaling to more people.
++
++## Interface with your partner
++
++The initial vocabulary is REST and HAND_IMAGERY. Agree on a simulator behavior
++mapping with your partner separately. For example, hand imagery might *select*
++a grasp primitive; that would be a mapped command, not decoded grasp imagery.
++
++For later replay, a prediction message will contain the source subject/run,
++window start/end times, intent, and probability per class. The current
++`test_predictions.json` provides this structure for held-out windows, but it is
++an offline export, not a real-time stream or accepted robot command. Probabilities
++are uncalibrated; choosing a confidence cutoff needs validation.
++
++Replay must use the exact channel order, selected-channel reference, and filter.
++Carry SOS filter state across chunks; reset at each new recording, not each window.
++The timestamp when a prediction becomes available is at least its window end,
++plus computation delay. Never give the model annotation labels as input.
++
++## Your next milestone
++
++Run the fixed development/confirmation protocol with the optional covariance
++baseline installed:
++
++```powershell
++python -m pip install -r requirements-riemannian.txt
++python -m eeg_decoder.validate_decoder --output outputs/decoder_validation_001
++```
++
++Use a new output directory for each independent run. Model family is selected
++on subjects 1–5 (fit run 4, validate run 8), then frozen before subjects 6–10
++are evaluated on run 12 after individual calibration on runs 4/8. Once inspected,
++that confirmation cohort cannot be reused as fresh evidence after tuning.
++The current result is recorded in [decoder findings](docs/decoder_comparison_2026-11-01.md).
++
++Compare pooled CSP/LDA with a separately calibrated model for each person using
++the same held-out run and unchanged preprocessing:
++
++```powershell
++python -m eeg_decoder prepare --config configs/baseline.json
++python -m eeg_decoder.compare_subjects --config configs/baseline.json --output outputs/subject_comparison
++```
++
++The output directory must be new. This exports per-person models compatible
++with the replay adapter and metrics for both approaches on identical windows.
++Use each model only with its calibration subject. This is an exploratory
++diagnostic on the previously inspected test run, not independent confirmation
++or proof of improvement. It does not select hyperparameters using test scores.
++
++Read `results.md` and identify which errors dominate. Inspect a few original
++windows and annotations using their metadata. Then compare the same fixed
++protocol with a Riemannian baseline, followed by a separate subject-holdout
++experiment. Only after those checks add continuous replay and command filtering.
++Synthetic tests verify software behavior; they do not establish EEG performance.
++
++## References
++
++The [literature reference summary](docs/literature_reference_summary.md) covers
++all 18 sources cited in the literature review, with citation mappings, methods,
++findings, limitations, verified links, and project relevance.
++
++- [PhysioNet EEG Motor Movement/Imagery Dataset](https://physionet.org/content/eegmmidb/1.0.0/)
++- [MNE CSP motor-imagery example](https://mne.tools/stable/auto_examples/decoding/decoding_csp_eeg.html)
++- [MNE EEGBCI loader](https://mne.tools/stable/generated/mne.datasets.eegbci.load_data.html)
++- [SciPy causal SOS filtering](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.sosfilt.html)
+diff --git a/START_HERE.md b/START_HERE.md
+index 92cd684..ddef664 100644
+--- a/START_HERE.md
++++ b/START_HERE.md
+@@ -1,22 +1,24 @@
+ # Start here: current project state
+ 
+-Saved run artifacts and cached data are now available as a private GitHub release. See [artifact handoff](docs/ARTIFACT_HANDOFF.md) for the download, inventory, and restoration instructions.
++> **Current check-in:** [Project status as of 2026-11-02](docs/PROJECT_CHECK_IN_2026-11-02.md).
++> That report reconciles the older results and supersedes historical next steps.
+ 
+-This is a simulation-first EEG-to-robot project. The current goal is to compare
+-raw, confidence-filtered, and temporally filtered recorded EEG requests while
+-measuring physical lift completion, movement during REST, missed imagery bouts,
+-and delay. REST maps to HOLD; fist imagery maps to GRASP_LIFT. PhysioNet labels
+-fist imagery, not a specific grasp.
++An earlier snapshot of run artifacts and cached data is available as a private
++GitHub release. See [artifact handoff](docs/ARTIFACT_HANDOFF.md). Later PPO and
++pretrained-candidate runs are documented separately in the check-in.
++
++This is a simulation-first EEG-to-robot project. Two required workstreams are
++learning reliable table pickup and comparing raw, confidence-filtered, and
++temporally filtered recorded EEG requests. REST maps to HOLD; fist imagery maps
++to GRASP_LIFT. PhysioNet labels fist imagery, not a specific grasp.
+ 
+ ## Where to work and push
+ 
+ The independent private GitHub repository is
+ [`Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal`](https://github.com/Mohnclizzy/FRI-BCI-ML-RL-Decoder-Personal).
+-The active branch is `codex/isaaclab-project-scaffold` and is the repository's
+-default branch. In this local checkout, `origin` points to that independent
+-repository and all project branches track `origin`. `upstream` points to
+-Angel's original repository for reference only. Push ongoing project work to
+-`origin`; do not push to `upstream` unless explicitly asked to contribute back.
++The active design branch is `codex/robot-learning-design`. In this checkout,
++`origin` points to the independent repository. `upstream` points to Angel's
++original repository for reference only; do not modify it.
+ 
+ ## What is measured
+ 
+@@ -32,16 +34,19 @@ Angel's original repository for reference only. Push ongoing project work to
+ - The corrected five-person, three-gate matched batch was interrupted and is
+   unfinished. Earlier 1/5 raw and 0/5 filtered lifts are debugging history,
+   not valid evidence of a filter benefit.
+-- Table-start PPO has not established a successful lift. EEG has not
+-  successfully controlled a learned robot policy.
++- The bounded 100-update Approach PPO follow-up completed and yielded 0/5
++  measured table pickups. A separate NVIDIA pretrained candidate achieved
++  1/5 in five valid fresh-process table starts, with high forces and controller
++  corrections; it is not a qualified controller or a comparable condition.
++- EEG has not controlled a learned robot policy.
+ 
+ ## Immediate next step
+ 
+-Resume from `docs/stopping_point_2026-11-02.md` and follow
+-`docs/completion_protocol_2026-11-02.md` to finish the corrected matched batch.
+-Do not present partial results as the final comparison. The local `outputs/`
+-folder contains detailed artifacts and is ignored by Git source commits. The
+-private release linked above supplies the saved logs and checkpoints.
++Follow the [current check-in](docs/PROJECT_CHECK_IN_2026-11-02.md): first audit
++the pretrained port and saved traces, then choose a bounded learned table-pickup
++experiment. The corrected scripted EEG matched batch remains incomplete and is
++a separate reference experiment. Do not present its partial results as a final
++comparison. Detailed artifacts under `outputs/` are ignored by Git.
+ 
+-For the full history, see `docs/PROJECT_HISTORY.md`. For account sharing and
++For earlier history, see `docs/PROJECT_HISTORY.md`. For account sharing and
+ checkout instructions, see `docs/SHARING_AND_REPRODUCTION.md`.
+diff --git a/simulation/src/fri_bci_sim/curriculum.py b/simulation/src/fri_bci_sim/curriculum.py
+index a65de87..dc49f32 100644
+--- a/simulation/src/fri_bci_sim/curriculum.py
++++ b/simulation/src/fri_bci_sim/curriculum.py
+@@ -1,86 +1,89 @@
+-"""Plan or launch one explicit stage of the physical Franka lift curriculum.
+-
+-Run a bounded pre-grasp startup pilot, inspect physical trajectories and saved
+-configuration, then transfer its checkpoint to the table-only task.  This CLI
+-never advances stages based on training reward alone.
+-"""
+-
+-import argparse
+-from datetime import datetime, timezone
+-import json
+-from pathlib import Path
+-import subprocess
+-
+-from . import ISAACLAB_COMMIT, ISAACLAB_REF
+-from .launch import build_command, verify_runtime
+-
+-
+-STAGES = {
+-    "pregrasp": ("FRI-Franka-Lift-Pregrasp", "in_hand_pregrasp"),
+-    "table": ("FRI-Franka-Lift", "table_only"),
+-    "table-approach": ("FRI-Franka-Lift-Approach", "table_only_approach_shaped"),
+-}
+-
+-
+-def build_stage_plan(root: Path, stage: str, num_envs: int, seed: int,
+-                     iterations: int, checkpoint: Path | None) -> dict:
+-    """Return an auditable command and stage contract without simulator imports."""
+-    if stage not in STAGES:
+-        raise ValueError(f"Unknown curriculum stage: {stage}")
+-    if stage == "pregrasp" and checkpoint is not None:
+-        raise ValueError("Pregrasp must start without a checkpoint")
+-    if stage in ("table", "table-approach") and checkpoint is None:
+-        raise ValueError("Table transfer requires an explicit pregrasp checkpoint")
+-    task, reset_protocol = STAGES[stage]
+-    command = build_command(root.resolve(), "train", num_envs, seed, iterations, checkpoint, task=task)
+-    command.extend(["--viz", "none"])
+-    return {
+-        "argv": command,
+-        "task": task,
+-        "stage": stage,
+-        "reset_protocol": reset_protocol,
+-        "source_checkpoint": str(checkpoint.resolve()) if checkpoint else None,
+-        "isaaclab_ref": ISAACLAB_REF,
+-        "isaaclab_commit": ISAACLAB_COMMIT,
+-        "eeg_connected": False,
+-        "measured_table_pickup_evaluation": False,
+-        "reward_variant": "approach_contact_shaped_v1" if stage == "table-approach" else "upstream_baseline",
+-    }
+-
+-
+-def main(argv: list[str] | None = None):
+-    parser = argparse.ArgumentParser(description=__doc__)
+-    parser.add_argument("--isaaclab-root", required=True, type=Path)
+-    parser.add_argument("--stage", required=True, choices=tuple(STAGES))
+-    parser.add_argument("--num-envs", type=int, default=16)
+-    parser.add_argument("--seed", type=int, default=0)
+-    parser.add_argument("--iterations", type=int, default=2)
+-    parser.add_argument("--checkpoint", type=Path,
+-                        help="Absolute or relative pregrasp model_*.pt path, required for table stages")
+-    parser.add_argument("--run-dir", required=True, type=Path)
+-    parser.add_argument("--execute", action="store_true", help="Default is dry-run only")
+-    args = parser.parse_args(argv)
+-
+-    plan = build_stage_plan(args.isaaclab_root, args.stage, args.num_envs,
+-                            args.seed, args.iterations, args.checkpoint)
+-    plan["cwd"] = str(args.run_dir.resolve())
+-    plan["created_at"] = datetime.now(timezone.utc).isoformat()
+-    print(json.dumps(plan, indent=2))
+-    if not args.execute:
+-        return
+-
+-    verify_runtime(args.isaaclab_root.resolve(), plan["argv"])
+-    if args.checkpoint is not None and not args.checkpoint.is_file():
+-        raise ValueError("Transfer checkpoint file does not exist")
+-    args.run_dir.mkdir(parents=True, exist_ok=False)
+-    (args.run_dir / "launch.json").write_text(json.dumps(plan, indent=2) + "\n", encoding="utf-8")
+-    with (args.run_dir / "console.log").open("w", encoding="utf-8") as stream:
+-        result = subprocess.run(plan["argv"], cwd=args.run_dir, stdout=stream, stderr=subprocess.STDOUT)
+-    (args.run_dir / "exit.json").write_text(
+-        json.dumps({"exit_code": result.returncode}) + "\n", encoding="utf-8"
+-    )
+-    raise SystemExit(result.returncode)
+-
+-
+-if __name__ == "__main__":
+-    main()
++"""Plan or launch one explicit stage of the physical Franka lift curriculum.
++
++Near-table starts are an opt-in table-supported first rung that can start from
++scratch. This CLI never advances stages based on training reward alone.
++"""
++
++import argparse
++from datetime import datetime, timezone
++import json
++from pathlib import Path
++import subprocess
++
++from . import ISAACLAB_COMMIT, ISAACLAB_REF
++from .launch import build_command, verify_runtime
++
++
++STAGES = {
++    "pregrasp": ("FRI-Franka-Lift-Pregrasp", "in_hand_pregrasp"),
++    "table": ("FRI-Franka-Lift", "table_only"),
++    "table-approach": ("FRI-Franka-Lift-Approach", "table_only_approach_shaped"),
++    "near-table": ("FRI-Franka-Lift-NearTable", "table_near_grasp_open"),
++    "near-table-progress": ("FRI-Franka-Lift-NearTable-Progress", "table_near_grasp_open"),
++}
++
++
++def build_stage_plan(root: Path, stage: str, num_envs: int, seed: int,
++                     iterations: int, checkpoint: Path | None) -> dict:
++    """Return an auditable command and stage contract without simulator imports."""
++    if stage not in STAGES:
++        raise ValueError(f"Unknown curriculum stage: {stage}")
++    if stage == "pregrasp" and checkpoint is not None:
++        raise ValueError("Pregrasp must start without a checkpoint")
++    if stage in ("table", "table-approach") and checkpoint is None:
++        raise ValueError("Table transfer requires an explicit pregrasp checkpoint")
++    task, reset_protocol = STAGES[stage]
++    command = build_command(root.resolve(), "train", num_envs, seed, iterations, checkpoint, task=task)
++    command.extend(["--viz", "none"])
++    return {
++        "argv": command,
++        "task": task,
++        "stage": stage,
++        "reset_protocol": reset_protocol,
++        "source_checkpoint": str(checkpoint.resolve()) if checkpoint else None,
++        "isaaclab_ref": ISAACLAB_REF,
++        "isaaclab_commit": ISAACLAB_COMMIT,
++        "eeg_connected": False,
++        "measured_table_pickup_evaluation": False,
++        "reward_variant": ("near_table_progress_v2" if stage == "near-table-progress" else
++                           "approach_contact_shaped_v1" if stage in ("table-approach", "near-table") else
++                           "upstream_baseline"),
++    }
++
++
++def main(argv: list[str] | None = None):
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--isaaclab-root", required=True, type=Path)
++    parser.add_argument("--stage", required=True, choices=tuple(STAGES))
++    parser.add_argument("--num-envs", type=int, default=16)
++    parser.add_argument("--seed", type=int, default=0)
++    parser.add_argument("--iterations", type=int, default=2)
++    parser.add_argument("--checkpoint", type=Path,
++                        help="Source checkpoint: required for table/Approach transfer; optional for near-table")
++    parser.add_argument("--run-dir", required=True, type=Path)
++    parser.add_argument("--execute", action="store_true", help="Default is dry-run only")
++    args = parser.parse_args(argv)
++
++    plan = build_stage_plan(args.isaaclab_root, args.stage, args.num_envs,
++                            args.seed, args.iterations, args.checkpoint)
++    plan["cwd"] = str(args.run_dir.resolve())
++    plan["created_at"] = datetime.now(timezone.utc).isoformat()
++    print(json.dumps(plan, indent=2))
++    if not args.execute:
++        return
++
++    verify_runtime(args.isaaclab_root.resolve(), plan["argv"])
++    if args.checkpoint is not None and not args.checkpoint.is_file():
++        raise ValueError("Transfer checkpoint file does not exist")
++    args.run_dir.mkdir(parents=True, exist_ok=False)
++    (args.run_dir / "launch.json").write_text(json.dumps(plan, indent=2) + "\n", encoding="utf-8")
++    with (args.run_dir / "console.log").open("w", encoding="utf-8") as stream:
++        result = subprocess.run(plan["argv"], cwd=args.run_dir, stdout=stream, stderr=subprocess.STDOUT)
++    (args.run_dir / "exit.json").write_text(
++        json.dumps({"exit_code": result.returncode}) + "\n", encoding="utf-8"
++    )
++    raise SystemExit(result.returncode)
++
++
++if __name__ == "__main__":
++    main()
+diff --git a/simulation/src/fri_bci_sim/launch.py b/simulation/src/fri_bci_sim/launch.py
+index c431ff3..565fd3b 100644
+--- a/simulation/src/fri_bci_sim/launch.py
++++ b/simulation/src/fri_bci_sim/launch.py
+@@ -1,45 +1,46 @@
+-"""Construct auditable upstream CLI invocations without launching compute by default."""
+-
+-from pathlib import Path
+-import os
+-import subprocess
+-from . import ISAACLAB_COMMIT
+-
+-
+-def build_command(root: Path, mode: str, num_envs: int, seed: int, iterations: int,
+-                  checkpoint: Path | None = None, task: str = "FRI-Franka-Lift") -> list[str]:
+-    if mode not in ("train", "play") or num_envs < 1 or iterations < 1 or seed < 0:
+-        raise ValueError("Invalid launch configuration")
+-    if task not in ("FRI-Franka-Lift", "FRI-Franka-Lift-Pregrasp", "FRI-Franka-Lift-Approach"):
+-        raise ValueError("Unknown task")
+-    executable = root / ".venv" / ("Scripts/isaaclab.exe" if os.name == "nt" else "bin/isaaclab")
+-    cmd = [str(executable), mode, "--task", task, "--rl_library", "rsl_rl",
+-           "--num_envs", str(num_envs), "--seed", str(seed)]
+-    if mode == "train":
+-        cmd.extend(["--max_iterations", str(iterations)])
+-        if checkpoint is not None:
+-            cmd.extend(["--checkpoint", str(checkpoint.resolve())])
+-    else:
+-        if checkpoint is None:
+-            raise ValueError("Playback requires an explicit checkpoint")
+-        cmd.extend(["--checkpoint", str(checkpoint.resolve())])
+-    cmd.append("physics=newton_mjwarp")
+-    return cmd
+-
+-
+-def verify_runtime(root: Path, command: list[str]):
+-    commit = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
+-    if commit != ISAACLAB_COMMIT:
+-        raise RuntimeError(f"Isaac Lab source must be pinned to {ISAACLAB_COMMIT}; found {commit}")
+-    dirty = subprocess.check_output(["git", "-C", str(root), "diff", "--name-only", "HEAD"], text=True).strip()
+-    if dirty:
+-        raise RuntimeError("Isaac Lab has tracked modifications; use the pinned clean source")
+-    if not Path(command[0]).is_file():
+-        raise RuntimeError("Initialize Isaac Lab's .venv first; see simulation/README.md")
+-    python = root / ".venv" / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
+-    subprocess.run([str(python), "-c",
+-        "import sys, importlib.metadata as m; "
+-        "assert sys.version_info[:2] == (3,12), 'Isaac runtime must use Python 3.12'; "
+-        "assert any(e.value == 'fri_bci_sim.tasks' for e in m.entry_points(group='isaaclab.tasks')), "
+-        "'Install simulation/ into the Isaac runtime'; "
+-        "print({p:m.version(p) for p in ('fri-bci-sim','isaaclab','torch','warp-lang')})"], check=True)
++"""Construct auditable upstream CLI invocations without launching compute by default."""
++
++from pathlib import Path
++import os
++import subprocess
++from . import ISAACLAB_COMMIT
++
++
++def build_command(root: Path, mode: str, num_envs: int, seed: int, iterations: int,
++                  checkpoint: Path | None = None, task: str = "FRI-Franka-Lift") -> list[str]:
++    if mode not in ("train", "play") or num_envs < 1 or iterations < 1 or seed < 0:
++        raise ValueError("Invalid launch configuration")
++    if task not in ("FRI-Franka-Lift", "FRI-Franka-Lift-Pregrasp", "FRI-Franka-Lift-Approach",
++                    "FRI-Franka-Lift-NearTable", "FRI-Franka-Lift-NearTable-Progress"):
++        raise ValueError("Unknown task")
++    executable = root / ".venv" / ("Scripts/isaaclab.exe" if os.name == "nt" else "bin/isaaclab")
++    cmd = [str(executable), mode, "--task", task, "--rl_library", "rsl_rl",
++           "--num_envs", str(num_envs), "--seed", str(seed)]
++    if mode == "train":
++        cmd.extend(["--max_iterations", str(iterations)])
++        if checkpoint is not None:
++            cmd.extend(["--checkpoint", str(checkpoint.resolve())])
++    else:
++        if checkpoint is None:
++            raise ValueError("Playback requires an explicit checkpoint")
++        cmd.extend(["--checkpoint", str(checkpoint.resolve())])
++    cmd.append("physics=newton_mjwarp")
++    return cmd
++
++
++def verify_runtime(root: Path, command: list[str]):
++    commit = subprocess.check_output(["git", "-C", str(root), "rev-parse", "HEAD"], text=True).strip()
++    if commit != ISAACLAB_COMMIT:
++        raise RuntimeError(f"Isaac Lab source must be pinned to {ISAACLAB_COMMIT}; found {commit}")
++    dirty = subprocess.check_output(["git", "-C", str(root), "diff", "--name-only", "HEAD"], text=True).strip()
++    if dirty:
++        raise RuntimeError("Isaac Lab has tracked modifications; use the pinned clean source")
++    if not Path(command[0]).is_file():
++        raise RuntimeError("Initialize Isaac Lab's .venv first; see simulation/README.md")
++    python = root / ".venv" / ("Scripts/python.exe" if os.name == "nt" else "bin/python")
++    subprocess.run([str(python), "-c",
++        "import sys, importlib.metadata as m; "
++        "assert sys.version_info[:2] == (3,12), 'Isaac runtime must use Python 3.12'; "
++        "assert any(e.value == 'fri_bci_sim.tasks' for e in m.entry_points(group='isaaclab.tasks')), "
++        "'Install simulation/ into the Isaac runtime'; "
++        "print({p:m.version(p) for p in ('fri-bci-sim','isaaclab','torch','warp-lang')})"], check=True)
+diff --git a/simulation/src/fri_bci_sim/ppo_telemetry.py b/simulation/src/fri_bci_sim/ppo_telemetry.py
+index 9f5813e..ae3ec06 100644
+--- a/simulation/src/fri_bci_sim/ppo_telemetry.py
++++ b/simulation/src/fri_bci_sim/ppo_telemetry.py
+@@ -18,12 +18,14 @@ import torch
+ 
+ 
+ CONTACT_SENSORS = ("panda_leftfinger_object_s", "panda_rightfinger_object_s")
++FINGERTIP_BODIES = ("panda_leftfinger", "panda_rightfinger")
+ CONTACT_THRESHOLD_N = 0.1
+ LIFT_THRESHOLD_M = 0.08
+ SUSTAINED_CONTACT_S = 0.5
+ DROP_HEIGHT_M = 0.04
+ SUSTAINED_DROP_S = 0.25
+ MAX_SAMPLE_GAP_FACTOR = 1.5
++EARLY_ARM_FILTER = "joint1_joint3_first_two"
+ 
+ 
+ def _tensor(value):
+@@ -41,6 +43,30 @@ def _split_joint_targets(joint_names: list[str], target: list[float]):
+     return targets, arm, fingers
+ 
+ 
++def _fingertip_body_indices(robot):
++    """Resolve the two sensor-bearing links once, failing on an ambiguous match."""
++    indices = {}
++    for name in FINGERTIP_BODIES:
++        body_ids, body_names = robot.find_bodies(name)
++        if len(body_ids) != 1 or body_names != [name]:
++            raise RuntimeError(f"expected exactly one {name} body, got {body_names!r}")
++        indices[name] = body_ids[0]
++    if len(set(indices.values())) != len(FINGERTIP_BODIES):
++        raise RuntimeError("left and right fingertips resolve to the same body")
++    return indices
++
++
++def _early_arm_action(action: torch.Tensor, policy_step: int) -> torch.Tensor:
++    """Return an inference-only first-two-step ablation without mutating policy output."""
++    if action.ndim != 2 or action.shape[1] != 9:
++        raise ValueError("early arm filter requires a [num_envs,9] action tensor")
++    if policy_step not in (1, 2):
++        return action
++    applied = action.clone()
++    applied[:, (0, 2)] = 0.0
++    return applied
++
++
+ class EpisodeAccumulator:
+     """Score timestamped physical samples using elapsed simulation time."""
+ 
+@@ -214,6 +240,17 @@ class _TelemetryWrapper(gym.Wrapper):
+         self._original_scene_update = env.unwrapped.scene.update
+         self._original_apply_action = env.unwrapped.action_manager.apply_action
+         self._original_reset_idx = env.unwrapped._reset_idx
++        fingertip_option = os.environ.get("FRI_PPO_RECORD_FINGERTIP_BODY_POSES", "0")
++        if fingertip_option not in ("0", "1"):
++            raise ValueError("FRI_PPO_RECORD_FINGERTIP_BODY_POSES must be 0 or 1")
++        self.record_fingertip_body_poses = fingertip_option == "1"
++        self.early_arm_filter = os.environ.get("FRI_PPO_EARLY_ARM_FILTER", "")
++        if self.early_arm_filter not in ("", EARLY_ARM_FILTER):
++            raise ValueError(f"FRI_PPO_EARLY_ARM_FILTER must be empty or {EARLY_ARM_FILTER}")
++        self._fingertip_body_indices = (
++            _fingertip_body_indices(env.unwrapped.scene["robot"])
++            if self.record_fingertip_body_poses else {}
++        )
+         self._install_physics_step_sampling()
+         self._install_state_hooks()
+ 
+@@ -305,7 +342,7 @@ class _TelemetryWrapper(gym.Wrapper):
+                 processed = getattr(term, "processed_actions", None)
+                 if processed is not None:
+                     action_terms[name] = _tolist(processed[0])
+-        return {
++        state = {
+             "cube_pose_w": cube_pose,
+             "cube_height_m": float(cube_pose[2]),
+             "robot_joint_pos": joint_pos,
+@@ -320,6 +357,12 @@ class _TelemetryWrapper(gym.Wrapper):
+                 torch.as_tensor(cube_pose[:3]) - torch.as_tensor(hand_pose[:3])
+             ).item()),
+         }
++        if self.record_fingertip_body_poses:
++            state["fingertip_body_pose_w"] = {
++                name: _tolist(robot.data.body_pose_w[0, body_id])
++                for name, body_id in self._fingertip_body_indices.items()
++            }
++        return state
+ 
+     def _begin_episode(self, reason: str):
+         state = self._capture_state()
+@@ -360,6 +403,10 @@ class _TelemetryWrapper(gym.Wrapper):
+         self.episode_policy_steps += 1
+         self._physics_samples_this_policy_step = 0
+         raw_action = _tolist(action[0])
++        applied_action = (
++            _early_arm_action(action, self.episode_policy_steps)
++            if self.early_arm_filter else action
++        )
+         diagnostic = {}
+         if self.episode_policy_steps == 1 or self.episode_policy_steps % 30 == 0:
+             base = self.env.unwrapped
+@@ -375,11 +422,15 @@ class _TelemetryWrapper(gym.Wrapper):
+             "physics_time_s": self._physics_time_s(),
+             "episode_time_s": round(self.accumulator.elapsed_s, 6),
+             "policy_action": raw_action,
++            **({
++                "applied_action": _tolist(applied_action[0]),
++                "early_arm_filter": self.early_arm_filter,
++            } if self.early_arm_filter else {}),
+             **diagnostic,
+         })
+         self._stepping = True
+         try:
+-            result = self.env.step(action)
++            result = self.env.step(applied_action)
+         except Exception as exc:
+             self._error = f"{type(exc).__name__}: {exc}"
+             self._finish_incomplete("step_exception", self._error)
+@@ -449,8 +500,26 @@ class _TelemetryWrapper(gym.Wrapper):
+     def _finish_incomplete(self, reason: str, error: str | None = None):
+         if self.accumulator is None:
+             return
++        state = self._capture_state()
++        base = self.env.unwrapped
++        termination = {
++            "terminated": bool(torch.as_tensor(base.termination_manager.terminated).reshape(-1)[0].item()),
++            "time_out": bool(torch.as_tensor(base.termination_manager.time_outs).reshape(-1)[0].item()),
++        }
++        self._write({
++            "record_type": "episode_incomplete_end",
++            "episode": self.accumulator.episode,
++            "policy_step": self.episode_policy_steps,
++            "physics_step": self.physics_step_index,
++            "physics_time_s": self._physics_time_s(),
++            "episode_time_s": round(self.accumulator.elapsed_s, 6),
++            "end_reason": reason,
++            "termination": termination,
++            **state,
++        })
+         result = self.accumulator.finish(
+-            status="incomplete", reason=reason, error=error, policy_steps=self.episode_policy_steps
++            status="incomplete", reason=reason, error=error, policy_steps=self.episode_policy_steps,
++            termination=termination,
+         )
+         self.episode_results.append(result)
+         self.accumulator = None
+@@ -465,6 +534,8 @@ class _TelemetryWrapper(gym.Wrapper):
+             "physics_dt_s": self.physics_dt,
+             "policy_dt_s": self.step_dt,
+             "physics_sampling_mode": self.physics_sampling_mode,
++            "record_fingertip_body_poses": self.record_fingertip_body_poses,
++            "early_arm_filter": self.early_arm_filter or None,
+             "episodes_requested": episodes_requested,
+             "max_policy_steps_per_episode": max_steps_per_episode,
+             "episodes_started": self.episodes_started,
+diff --git a/simulation/src/fri_bci_sim/tasks/__init__.py b/simulation/src/fri_bci_sim/tasks/__init__.py
+index 271ffe4..926d862 100644
+--- a/simulation/src/fri_bci_sim/tasks/__init__.py
++++ b/simulation/src/fri_bci_sim/tasks/__init__.py
+@@ -1,35 +1,102 @@
+-"""Discovered by Isaac Lab's external task entry-point mechanism."""
+-
+-import gymnasium as gym
++"""Discovered by Isaac Lab's external task entry-point mechanism."""
++
++import gymnasium as gym
++
++gym.register(
++    id="FRI-Franka-Lift",
++    entry_point="isaaclab.envs:ManagerBasedRLEnv",
++    disable_env_checker=True,
++    kwargs={
++        "env_cfg_entry_point": "fri_bci_sim.tasks.lift:TableLiftEnvCfg",
++        "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.lift.config.franka.agents.rsl_rl_ppo_cfg:FrankaPPORunnerCfg",
++        "default_agent": "rsl_rl",
++    },
++)
++
++gym.register(
++    id="FRI-Franka-Lift-Pregrasp",
++    entry_point="isaaclab.envs:ManagerBasedRLEnv",
++    disable_env_checker=True,
++    kwargs={
++        "env_cfg_entry_point": "fri_bci_sim.tasks.pregrasp:PregraspLiftEnvCfg",
++        "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.lift.config.franka.agents.rsl_rl_ppo_cfg:FrankaPPORunnerCfg",
++        "default_agent": "rsl_rl",
++    },
++)
++
++gym.register(
++    id="FRI-Franka-Lift-Approach",
++    entry_point="isaaclab.envs:ManagerBasedRLEnv",
++    disable_env_checker=True,
++    kwargs={
++        "env_cfg_entry_point": "fri_bci_sim.tasks.approach:ApproachLiftEnvCfg",
++        "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.lift.config.franka.agents.rsl_rl_ppo_cfg:FrankaPPORunnerCfg",
++        "default_agent": "rsl_rl",
++    },
++)
++
++gym.register(
++    id="FRI-Franka-Lift-NearTable",
++    entry_point="isaaclab.envs:ManagerBasedRLEnv",
++    disable_env_checker=True,
++    kwargs={
++        "env_cfg_entry_point": "fri_bci_sim.tasks.near_table:NearTableLiftEnvCfg",
++        "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.lift.config.franka.agents.rsl_rl_ppo_cfg:FrankaPPORunnerCfg",
++        "default_agent": "rsl_rl",
++    },
++)
++
++gym.register(
++    id="FRI-Franka-Lift-NearTable-Progress",
++    entry_point="isaaclab.envs:ManagerBasedRLEnv",
++    disable_env_checker=True,
++    kwargs={
++        "env_cfg_entry_point": "fri_bci_sim.tasks.near_table_progress:NearTableLiftProgressEnvCfg",
++        "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.lift.config.franka.agents.rsl_rl_ppo_cfg:FrankaPPORunnerCfg",
++        "default_agent": "rsl_rl",
++    },
++)
++
++gym.register(
++    id="FRI-Franka-Lift-NearTable-Progress-FingerGuard",
++    entry_point="isaaclab.envs:ManagerBasedRLEnv",
++    disable_env_checker=True,
++    kwargs={
++        "env_cfg_entry_point": "fri_bci_sim.tasks.finger_guard:NearTableFingerGuardEnvCfg",
++        "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.lift.config.franka.agents.rsl_rl_ppo_cfg:FrankaPPORunnerCfg",
++        "default_agent": "rsl_rl",
++    },
++)
+ 
+ gym.register(
+-    id="FRI-Franka-Lift",
++    id="FRI-Franka-Lift-NearTable-AntiPush",
+     entry_point="isaaclab.envs:ManagerBasedRLEnv",
+     disable_env_checker=True,
+     kwargs={
+-        "env_cfg_entry_point": "fri_bci_sim.tasks.lift:TableLiftEnvCfg",
++        "env_cfg_entry_point": "fri_bci_sim.tasks.near_table_antipush:NearTableAntiPushEnvCfg",
+         "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.lift.config.franka.agents.rsl_rl_ppo_cfg:FrankaPPORunnerCfg",
+         "default_agent": "rsl_rl",
+     },
+ )
+ 
++
+ gym.register(
+-    id="FRI-Franka-Lift-Pregrasp",
++    id="FRI-Franka-Lift-NearTable-Unilateral",
+     entry_point="isaaclab.envs:ManagerBasedRLEnv",
+     disable_env_checker=True,
+     kwargs={
+-        "env_cfg_entry_point": "fri_bci_sim.tasks.pregrasp:PregraspLiftEnvCfg",
++        "env_cfg_entry_point": "fri_bci_sim.tasks.near_table_unilateral:NearTableUnilateralEnvCfg",
+         "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.lift.config.franka.agents.rsl_rl_ppo_cfg:FrankaPPORunnerCfg",
+         "default_agent": "rsl_rl",
+     },
+ )
+ 
+ gym.register(
+-    id="FRI-Franka-Lift-Approach",
++    id="FRI-Franka-Lift-NearTable-HalfArm",
+     entry_point="isaaclab.envs:ManagerBasedRLEnv",
+     disable_env_checker=True,
+     kwargs={
+-        "env_cfg_entry_point": "fri_bci_sim.tasks.approach:ApproachLiftEnvCfg",
++        "env_cfg_entry_point": "fri_bci_sim.tasks.near_table_halfarm:NearTableHalfArmEnvCfg",
+         "rsl_rl_cfg_entry_point": "isaaclab_tasks.core.lift.config.franka.agents.rsl_rl_ppo_cfg:FrankaPPORunnerCfg",
+         "default_agent": "rsl_rl",
+     },
+diff --git a/simulation/tests/test_ppo_telemetry.py b/simulation/tests/test_ppo_telemetry.py
+index 3f217c0..9c065f0 100644
+--- a/simulation/tests/test_ppo_telemetry.py
++++ b/simulation/tests/test_ppo_telemetry.py
+@@ -1,9 +1,25 @@
+ import unittest
+ 
+-from fri_bci_sim.ppo_telemetry import EpisodeAccumulator, _split_joint_targets
++import torch
++
++from fri_bci_sim.ppo_telemetry import (
++    EpisodeAccumulator, _early_arm_action, _fingertip_body_indices, _split_joint_targets,
++)
+ 
+ 
+ class EpisodeAccumulatorTests(unittest.TestCase):
++    def test_early_arm_filter_changes_only_first_two_applied_actions(self):
++        original = torch.arange(9, dtype=torch.float32).reshape(1, 9) + 1
++        expected = original.clone()
++        expected[:, (0, 2)] = 0
++        for step in (1, 2):
++            applied = _early_arm_action(original, step)
++            self.assertTrue(torch.equal(applied, expected))
++            self.assertTrue(torch.equal(original, torch.arange(9).reshape(1, 9) + 1))
++        self.assertIs(_early_arm_action(original, 3), original)
++        with self.assertRaisesRegex(ValueError, r"\[num_envs,9\]"):
++            _early_arm_action(torch.zeros(8), 1)
++
+     def _qualifying_samples(self, accumulator, count, *, start=0, z=0.36, contacts=(0.12, 0.11)):
+         for index in range(start, start + count):
+             accumulator.add_sample((index + 1) * 0.005, z, list(contacts))
+@@ -85,6 +101,34 @@ class EpisodeAccumulatorTests(unittest.TestCase):
+         self.assertEqual(len(fingers), 2)
+         self.assertEqual(fingers["panda_finger_joint2"], 8.0)
+ 
++    def test_fingertip_body_indices_require_distinct_exact_links(self):
++        class Robot:
++            def __init__(self, matches):
++                self.matches = matches
++
++            def find_bodies(self, name):
++                return self.matches[name]
++
++        valid = Robot({
++            "panda_leftfinger": ([8], ["panda_leftfinger"]),
++            "panda_rightfinger": ([9], ["panda_rightfinger"]),
++        })
++        self.assertEqual(_fingertip_body_indices(valid), {"panda_leftfinger": 8, "panda_rightfinger": 9})
++
++        duplicate = Robot({
++            "panda_leftfinger": ([8], ["panda_leftfinger"]),
++            "panda_rightfinger": ([8], ["panda_rightfinger"]),
++        })
++        with self.assertRaisesRegex(RuntimeError, "same body"):
++            _fingertip_body_indices(duplicate)
++
++        ambiguous = Robot({
++            "panda_leftfinger": ([8, 10], ["panda_leftfinger", "panda_leftfinger_collision"]),
++            "panda_rightfinger": ([9], ["panda_rightfinger"]),
++        })
++        with self.assertRaisesRegex(RuntimeError, "exactly one"):
++            _fingertip_body_indices(ambiguous)
++
+ 
+ if __name__ == "__main__":
+     unittest.main()

@@ -1,0 +1,69 @@
+ M README.md
+ M START_HERE.md
+ M simulation/src/fri_bci_sim/curriculum.py
+ M simulation/src/fri_bci_sim/launch.py
+ M simulation/src/fri_bci_sim/ppo_telemetry.py
+ M simulation/src/fri_bci_sim/tasks/__init__.py
+ M simulation/tests/test_ppo_telemetry.py
+?? analysis/
+?? continuity/
+?? docs/ANTIPUSH_PROTOCOL_2026-11-03.md
+?? docs/ANTIPUSH_RESULT_2026-11-03.md
+?? docs/APPROACH_TABLE_TRACE_REVIEW_2026-11-03.md
+?? docs/FINGERTIP_GEOMETRY_DIAGNOSTIC_2026-11-03.md
+?? docs/HALFARM_PROTOCOL_2026-11-03.md
+?? docs/HALFARM_RESULT_2026-11-03.md
+?? docs/NEAR_TABLE_ARM_ACTION_ABLATION_2026-11-03.md
+?? docs/NEAR_TABLE_EARLY_ARM_FILTER_2026-11-03.md
+?? docs/NVIDIA_CANDIDATE_INTEGRATION_2026-11-02.md
+?? docs/NVIDIA_CANDIDATE_RESET_DIAGNOSTIC_2026-11-02.md
+?? docs/PROJECT_CHECK_IN_2026-11-02.md
+?? docs/RETENTION_DIAGNOSTIC_PROTOCOL_2026-11-03.md
+?? docs/RETENTION_DIAGNOSTIC_RESULT_2026-11-03.md
+?? docs/UNILATERAL_PROTOCOL_2026-11-03.md
+?? docs/UNILATERAL_RESULT_2026-11-03.md
+?? docs/UNILATERAL_TRACE_REVIEW_2026-11-03.md
+?? results/antipush_2026-11-03/
+?? results/fingertip_geometry_progress_2026-11-03.json
+?? results/fixed_open_playback_20261103/
+?? results/halfarm_2026-11-03/
+?? results/near_table_arm_action_ablation_2026-11-03.json
+?? results/near_table_early_arm_filter_seed8_2026-11-03.json
+?? results/nvidia_candidate_2026-11-02/cpu_probe.json
+?? results/nvidia_candidate_2026-11-02/episodes.csv
+?? results/nvidia_candidate_2026-11-02/evaluation_manifest.json
+?? results/nvidia_candidate_2026-11-02/evaluation_summary.json
+?? results/nvidia_candidate_2026-11-02/preparation.json
+?? results/nvidia_candidate_2026-11-02/reset_audit.json
+?? results/nvidia_candidate_2026-11-02/reset_diagnostic.json
+?? results/nvidia_candidate_2026-11-02/serialized_rescore.json
+?? results/nvidia_candidate_2026-11-02/sha256.json
+?? results/nvidia_candidate_2026-11-02/startup_summary.json
+?? results/ppo_approach_trace_review_2026-11-03.json
+?? results/retention_diagnostic_2026-11-03/
+?? results/trace_comparison_2026-11-03.json
+?? results/unilateral_2026-11-03/
+?? simulation/candidates/nvidia_franka_cube/.gitignore
+?? simulation/candidates/nvidia_franka_cube/harness.py
+?? simulation/candidates/nvidia_franka_cube/prepare.py
+?? simulation/candidates/nvidia_franka_cube/verify_saved.py
+?? simulation/scripts/inspect_finger_guard.py
+?? simulation/scripts/inspect_near_table_reset.py
+?? simulation/scripts/run_antipush_evaluation.py
+?? simulation/scripts/run_antipush_training.py
+?? simulation/scripts/run_fingertip_geometry_diagnostic.py
+?? simulation/scripts/run_halfarm_evaluation.py
+?? simulation/scripts/run_near_table_arm_action_ablation.py
+?? simulation/scripts/run_near_table_early_arm_filter.py
+?? simulation/scripts/run_near_table_zero_action_geometry.py
+?? simulation/scripts/run_retention_diagnostic.py
+?? simulation/scripts/run_unilateral_evaluation.py
+?? simulation/scripts/run_unilateral_training.py
+?? simulation/src/fri_bci_sim/tasks/finger_guard.py
+?? simulation/src/fri_bci_sim/tasks/near_table.py
+?? simulation/src/fri_bci_sim/tasks/near_table_antipush.py
+?? simulation/src/fri_bci_sim/tasks/near_table_halfarm.py
+?? simulation/src/fri_bci_sim/tasks/near_table_progress.py
+?? simulation/src/fri_bci_sim/tasks/near_table_unilateral.py
+?? simulation/tests/test_arm_action_ablation.py
+?? tests/.ipynb_checkpoints/

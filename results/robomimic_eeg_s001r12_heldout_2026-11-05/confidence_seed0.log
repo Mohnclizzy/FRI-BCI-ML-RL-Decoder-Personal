@@ -1,0 +1,93 @@
+
+============= Initialized Observation Utils with Obs Spec =============
+
+using obs type: low_dim with modalities: ['robot0_gripper_qpos', 'robot0_eef_pos', 'robot0_eef_quat', 'object']
+using obs type: image with modalities: []
+Created environment with name Lift
+Action size is 7
+{
+  "seed": 0,
+  "condition": "eeg",
+  "gate": "confidence",
+  "pause_start": null,
+  "pause_steps": null,
+  "resume_state": "freeze",
+  "latch_z_offset_m": 0.015,
+  "steps": 400,
+  "horizon": 400,
+  "control_hz": 20.0,
+  "physics_dt_s": 0.002,
+  "tolerances": {
+    "rise_m": 0.08,
+    "contact_steps": 10,
+    "goal_pos_m": 1e-09,
+    "goal_ori_matrix": 1e-09,
+    "gripper_command": 1e-09,
+    "eef_drift_m": 0.035,
+    "cube_drift_m": 0.025
+  },
+  "initial_cube_pos": [
+    0.025535798297559663,
+    -0.025737836508126784,
+    0.8312055267521433
+  ],
+  "terminal_cube_pos": [
+    0.0022503862510446808,
+    -0.022425203978223965,
+    0.925952666955426
+  ],
+  "terminal_rise_m": 0.09474714020328268,
+  "max_rise_m": 0.0986362275080429,
+  "first_acquisition_step": 90,
+  "longest_bilateral_contact_steps": 322,
+  "contact_proxy_validated": true,
+  "post_acquisition_loss": false,
+  "terminal_contact": true,
+  "terminal_retained": true,
+  "native_success_any": true,
+  "latch_step": 90,
+  "latch_steps": 310,
+  "latch_goal_pos": [
+    0.0047546399131659575,
+    -0.02135064604828079,
+    0.9230440733641366
+  ],
+  "latch_goal_ori": [
+    [
+      -0.09035723417854494,
+      0.9888501959130718,
+      0.11836747980033796
+    ],
+    [
+      0.995897400019651,
+      0.09029958783452738,
+      0.005861149291239785
+    ],
+    [
+      -0.004892736014064043,
+      0.11841146261909907,
+      -0.992952560122941
+    ]
+  ],
+  "latch_policy_call_violations": 0,
+  "latch_rnn_counter_violations": 0,
+  "max_latch_goal_pos_error_m": 0.0,
+  "max_latch_goal_ori_error": 0.0,
+  "max_latch_gripper_close_error": 0.0,
+  "latch_invariants_pass": true,
+  "hold_steps": 40,
+  "hold_entries": 1,
+  "resumes": 1,
+  "policy_calls": 50,
+  "hold_policy_call_violations": 0,
+  "hold_rnn_counter_violations": 0,
+  "max_hold_goal_pos_error_m": 0.0,
+  "max_hold_goal_ori_error": 0.0,
+  "max_hold_gripper_command_error": 0.0,
+  "max_hold_eef_drift_m": 0.028865009339383046,
+  "max_hold_cube_drift_m": 0.012655967475688748,
+  "hold_invariants_pass": true,
+  "completion_state": "complete_retained",
+  "checkpoint_sha256": "3ee222cab41f78ba27afca7ef6f70f9f21bd3cc0a37bd79c0b2351dbede51605",
+  "decisions_sha256": "84bab7c63594bf91dbbeb2eb0b20d9beed6d80664457878fae21383569871566"
+}

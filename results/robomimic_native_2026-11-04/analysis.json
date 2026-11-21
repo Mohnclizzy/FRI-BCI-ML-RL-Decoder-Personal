@@ -1,0 +1,302 @@
+[
+  {
+    "run": "aligned_seed1",
+    "seed": 1,
+    "steps": 400,
+    "initial_cube_xyz_m": [
+      0.022687046183456724,
+      -0.02835674440812443,
+      0.8300002287496347
+    ],
+    "terminal_cube_xyz_m": [
+      -0.6587249227093959,
+      0.9499169042906167,
+      0.021332844579790265
+    ],
+    "max_cube_rise_m": 1.1372262563865667,
+    "native_success_any": true,
+    "native_success_first_step": 42,
+    "native_success_terminal": false,
+    "contact_proxy_matches_builtin": true,
+    "bilateral_contact_fraction": 0.8154613466334164,
+    "longest_bilateral_run_steps": 327,
+    "sustained_contact_0p5s": true,
+    "first_contact_and_8cm_step": 54,
+    "post_acquisition_drop": true,
+    "terminal_bilateral_contact": false,
+    "terminal_8cm_rise": false,
+    "terminal_retained": false,
+    "last_0p5s_contact": false,
+    "last_0p5s_8cm": false
+  },
+  {
+    "run": "aligned_seed2",
+    "seed": 2,
+    "steps": 400,
+    "initial_cube_xyz_m": [
+      0.0017485256566223406,
+      -0.021925203279303987,
+      0.8310993249557574
+    ],
+    "terminal_cube_xyz_m": [
+      0.07262638966939478,
+      -0.26865714574732946,
+      0.8208837891595913
+    ],
+    "max_cube_rise_m": 0.773353190794019,
+    "native_success_any": true,
+    "native_success_first_step": 41,
+    "native_success_terminal": false,
+    "contact_proxy_matches_builtin": true,
+    "bilateral_contact_fraction": 0.2793017456359102,
+    "longest_bilateral_run_steps": 107,
+    "sustained_contact_0p5s": true,
+    "first_contact_and_8cm_step": 47,
+    "post_acquisition_drop": true,
+    "terminal_bilateral_contact": false,
+    "terminal_8cm_rise": false,
+    "terminal_retained": false,
+    "last_0p5s_contact": false,
+    "last_0p5s_8cm": false
+  },
+  {
+    "run": "aligned_seed3",
+    "seed": 3,
+    "steps": 400,
+    "initial_cube_xyz_m": [
+      0.005451769044981049,
+      -0.028561087057370076,
+      0.8305818094778259
+    ],
+    "terminal_cube_xyz_m": [
+      0.15840621288638443,
+      -0.24863717007704852,
+      0.8212007891595922
+    ],
+    "max_cube_rise_m": 0.8851391244262625,
+    "native_success_any": true,
+    "native_success_first_step": 49,
+    "native_success_terminal": false,
+    "contact_proxy_matches_builtin": true,
+    "bilateral_contact_fraction": 0.3915211970074813,
+    "longest_bilateral_run_steps": 150,
+    "sustained_contact_0p5s": true,
+    "first_contact_and_8cm_step": 57,
+    "post_acquisition_drop": true,
+    "terminal_bilateral_contact": false,
+    "terminal_8cm_rise": false,
+    "terminal_retained": false,
+    "last_0p5s_contact": false,
+    "last_0p5s_8cm": false
+  },
+  {
+    "run": "aligned_seed4",
+    "seed": 4,
+    "steps": 400,
+    "initial_cube_xyz_m": [
+      0.027399178062854156,
+      -0.003831201187212141,
+      0.8319453687199299
+    ],
+    "terminal_cube_xyz_m": [
+      0.08892714429451724,
+      -0.002267163683057836,
+      0.8217185891595926
+    ],
+    "max_cube_rise_m": 0.8759602340652137,
+    "native_success_any": true,
+    "native_success_first_step": 40,
+    "native_success_terminal": false,
+    "contact_proxy_matches_builtin": true,
+    "bilateral_contact_fraction": 0.30423940149625933,
+    "longest_bilateral_run_steps": 122,
+    "sustained_contact_0p5s": true,
+    "first_contact_and_8cm_step": 47,
+    "post_acquisition_drop": true,
+    "terminal_bilateral_contact": false,
+    "terminal_8cm_rise": false,
+    "terminal_retained": false,
+    "last_0p5s_contact": false,
+    "last_0p5s_8cm": false
+  },
+  {
+    "run": "seed0b",
+    "seed": 0,
+    "steps": 400,
+    "initial_cube_xyz_m": [
+      0.026680135022975032,
+      0.0013108993050043038,
+      0.8315563135018997
+    ],
+    "terminal_cube_xyz_m": [
+      0.5083386235159908,
+      0.14602016591206027,
+      0.019932644579791364
+    ],
+    "max_cube_rise_m": 1.0979883661808283,
+    "native_success_any": true,
+    "native_success_first_step": 46,
+    "native_success_terminal": false,
+    "contact_proxy_matches_builtin": true,
+    "bilateral_contact_fraction": 0.7007481296758105,
+    "longest_bilateral_run_steps": 281,
+    "sustained_contact_0p5s": true,
+    "first_contact_and_8cm_step": 54,
+    "post_acquisition_drop": true,
+    "terminal_bilateral_contact": false,
+    "terminal_8cm_rise": false,
+    "terminal_retained": false,
+    "last_0p5s_contact": false,
+    "last_0p5s_8cm": false
+  },
+  {
+    "run": "seed0c",
+    "seed": 0,
+    "steps": 400,
+    "initial_cube_xyz_m": [
+      0.025535798297559663,
+      -0.025737836508126784,
+      0.8312055267521433
+    ],
+    "terminal_cube_xyz_m": [
+      0.08200627777885974,
+      -0.02905811933474659,
+      0.821214889159593
+    ],
+    "max_cube_rise_m": 0.48008318799061744,
+    "native_success_any": true,
+    "native_success_first_step": 50,
+    "native_success_terminal": false,
+    "contact_proxy_matches_builtin": true,
+    "bilateral_contact_fraction": 0.1571072319201995,
+    "longest_bilateral_run_steps": 63,
+    "sustained_contact_0p5s": true,
+    "first_contact_and_8cm_step": 58,
+    "post_acquisition_drop": true,
+    "terminal_bilateral_contact": false,
+    "terminal_8cm_rise": false,
+    "terminal_retained": false,
+    "last_0p5s_contact": false,
+    "last_0p5s_8cm": false
+  },
+  {
+    "run": "seed1",
+    "seed": 1,
+    "steps": 400,
+    "initial_cube_xyz_m": [
+      0.0019899170983810263,
+      0.011512626837028403,
+      0.8302807738771906
+    ],
+    "terminal_cube_xyz_m": [
+      -0.09983325816858714,
+      0.7948500266887302,
+      0.021003052098575656
+    ],
+    "max_cube_rise_m": 1.2289929861314648,
+    "native_success_any": true,
+    "native_success_first_step": 43,
+    "native_success_terminal": false,
+    "contact_proxy_matches_builtin": true,
+    "bilateral_contact_fraction": 0.8553615960099751,
+    "longest_bilateral_run_steps": 343,
+    "sustained_contact_0p5s": true,
+    "first_contact_and_8cm_step": 50,
+    "post_acquisition_drop": true,
+    "terminal_bilateral_contact": false,
+    "terminal_8cm_rise": false,
+    "terminal_retained": false,
+    "last_0p5s_contact": false,
+    "last_0p5s_8cm": false
+  },
+  {
+    "run": "seed2",
+    "seed": 2,
+    "steps": 400,
+    "initial_cube_xyz_m": [
+      -0.024208145060363246,
+      -0.022370401697923353,
+      0.831707950585279
+    ],
+    "terminal_cube_xyz_m": [
+      0.03212921208846583,
+      0.03401297811431258,
+      0.8201533891595933
+    ],
+    "max_cube_rise_m": 0.5914885494284511,
+    "native_success_any": true,
+    "native_success_first_step": 37,
+    "native_success_terminal": false,
+    "contact_proxy_matches_builtin": true,
+    "bilateral_contact_fraction": 0.2169576059850374,
+    "longest_bilateral_run_steps": 87,
+    "sustained_contact_0p5s": true,
+    "first_contact_and_8cm_step": 44,
+    "post_acquisition_drop": true,
+    "terminal_bilateral_contact": false,
+    "terminal_8cm_rise": false,
+    "terminal_retained": false,
+    "last_0p5s_contact": false,
+    "last_0p5s_8cm": false
+  },
+  {
+    "run": "seed3",
+    "seed": 3,
+    "steps": 400,
+    "initial_cube_xyz_m": [
+      -0.016682526964069112,
+      -0.006721724546661072,
+      0.8305670501635427
+    ],
+    "terminal_cube_xyz_m": [
+      0.28252108534103537,
+      0.3545095722458016,
+      0.8206146891595912
+    ],
+    "max_cube_rise_m": 1.0395008868104012,
+    "native_success_any": true,
+    "native_success_first_step": 45,
+    "native_success_terminal": false,
+    "contact_proxy_matches_builtin": true,
+    "bilateral_contact_fraction": 0.5311720698254364,
+    "longest_bilateral_run_steps": 161,
+    "sustained_contact_0p5s": true,
+    "first_contact_and_8cm_step": 51,
+    "post_acquisition_drop": true,
+    "terminal_bilateral_contact": false,
+    "terminal_8cm_rise": false,
+    "terminal_retained": false,
+    "last_0p5s_contact": false,
+    "last_0p5s_8cm": false
+  },
+  {
+    "run": "seed4",
+    "seed": 4,
+    "steps": 400,
+    "initial_cube_xyz_m": [
+      0.026254295037056515,
+      0.0013017673466974786,
+      0.8303463308429919
+    ],
+    "terminal_cube_xyz_m": [
+      -0.6084872692980633,
+      0.9486513534234066,
+      1.2821932721168194
+    ],
+    "max_cube_rise_m": 1.1263416036205034,
+    "native_success_any": true,
+    "native_success_first_step": 42,
+    "native_success_terminal": true,
+    "contact_proxy_matches_builtin": true,
+    "bilateral_contact_fraction": 0.912718204488778,
+    "longest_bilateral_run_steps": 366,
+    "sustained_contact_0p5s": true,
+    "first_contact_and_8cm_step": 49,
+    "post_acquisition_drop": false,
+    "terminal_bilateral_contact": true,
+    "terminal_8cm_rise": true,
+    "terminal_retained": true,
+    "last_0p5s_contact": true,
+    "last_0p5s_8cm": true
+  }
+]

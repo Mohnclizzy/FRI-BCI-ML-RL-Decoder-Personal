@@ -1,0 +1,317 @@
+{
+  "evaluation": "held_out_run_same_subjects",
+  "config": {
+    "subjects": [
+      2
+    ],
+    "runs": [
+      4,
+      8,
+      12
+    ],
+    "test_run": 12,
+    "test_subjects": [],
+    "channels": [
+      "C3",
+      "Cz",
+      "C4",
+      "C1",
+      "C2",
+      "FC1",
+      "FC2",
+      "CP1",
+      "CP2"
+    ],
+    "sample_rate_hz": 160,
+    "bandpass_hz": [
+      8.0,
+      30.0
+    ],
+    "filter_order": 4,
+    "window_seconds": 2.0,
+    "offset_seconds": 1.0,
+    "csp_components": 4,
+    "csp_regularization": 0.1,
+    "data_dir": "data/physionet",
+    "output_dir": "results/robomimic_eeg_s002s003_2026-11-06/S002_prepared"
+  },
+  "model_family": "csp",
+  "prepared_windows_sha256": "83a4ed04031348ae9f07005331ea9682f2dda56d4314cffad74013d3a24124b1",
+  "versions": {
+    "numpy": "2.5.4",
+    "mne": "1.13.2",
+    "scikit-learn": "1.9.1"
+  },
+  "pooled": {
+    "n_windows": 30,
+    "balanced_accuracy": 0.7333333333333334,
+    "macro_f1": 0.7222222222222222,
+    "confusion_matrix_true_rows_predicted_columns": [
+      [
+        14,
+        1
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "rest_false_activation_fraction": 0.06666666666666667,
+    "report": {
+      "REST": {
+        "precision": 0.6666666666666666,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.7777777777777778,
+        "support": 15.0
+      },
+      "HAND_IMAGERY": {
+        "precision": 0.8888888888888888,
+        "recall": 0.5333333333333333,
+        "f1-score": 0.6666666666666666,
+        "support": 15.0
+      },
+      "accuracy": 0.7333333333333333,
+      "macro avg": {
+        "precision": 0.7777777777777777,
+        "recall": 0.7333333333333334,
+        "f1-score": 0.7222222222222222,
+        "support": 30.0
+      },
+      "weighted avg": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7333333333333333,
+        "f1-score": 0.7222222222222221,
+        "support": 30.0
+      }
+    }
+  },
+  "individual": {
+    "n_windows": 30,
+    "balanced_accuracy": 0.7333333333333334,
+    "macro_f1": 0.7222222222222222,
+    "confusion_matrix_true_rows_predicted_columns": [
+      [
+        14,
+        1
+      ],
+      [
+        7,
+        8
+      ]
+    ],
+    "rest_false_activation_fraction": 0.06666666666666667,
+    "report": {
+      "REST": {
+        "precision": 0.6666666666666666,
+        "recall": 0.9333333333333333,
+        "f1-score": 0.7777777777777778,
+        "support": 15.0
+      },
+      "HAND_IMAGERY": {
+        "precision": 0.8888888888888888,
+        "recall": 0.5333333333333333,
+        "f1-score": 0.6666666666666666,
+        "support": 15.0
+      },
+      "accuracy": 0.7333333333333333,
+      "macro avg": {
+        "precision": 0.7777777777777777,
+        "recall": 0.7333333333333334,
+        "f1-score": 0.7222222222222222,
+        "support": 30.0
+      },
+      "weighted avg": {
+        "precision": 0.7777777777777778,
+        "recall": 0.7333333333333333,
+        "f1-score": 0.7222222222222221,
+        "support": 30.0
+      }
+    }
+  },
+  "per_subject": {
+    "2": {
+      "pooled": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.7333333333333334,
+        "macro_f1": 0.7222222222222222,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            14,
+            1
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "rest_false_activation_fraction": 0.06666666666666667,
+        "report": {
+          "REST": {
+            "precision": 0.6666666666666666,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.7777777777777778,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.8888888888888888,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "accuracy": 0.7333333333333333,
+          "macro avg": {
+            "precision": 0.7777777777777777,
+            "recall": 0.7333333333333334,
+            "f1-score": 0.7222222222222222,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.7777777777777778,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.7222222222222221,
+            "support": 30.0
+          }
+        }
+      },
+      "individual": {
+        "n_windows": 30,
+        "balanced_accuracy": 0.7333333333333334,
+        "macro_f1": 0.7222222222222222,
+        "confusion_matrix_true_rows_predicted_columns": [
+          [
+            14,
+            1
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "rest_false_activation_fraction": 0.06666666666666667,
+        "report": {
+          "REST": {
+            "precision": 0.6666666666666666,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.7777777777777778,
+            "support": 15.0
+          },
+          "HAND_IMAGERY": {
+            "precision": 0.8888888888888888,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "accuracy": 0.7333333333333333,
+          "macro avg": {
+            "precision": 0.7777777777777777,
+            "recall": 0.7333333333333334,
+            "f1-score": 0.7222222222222222,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.7777777777777778,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.7222222222222221,
+            "support": 30.0
+          }
+        }
+      },
+      "training_trial_ids": [
+        "S002R04:0",
+        "S002R04:1",
+        "S002R04:2",
+        "S002R04:3",
+        "S002R04:4",
+        "S002R04:5",
+        "S002R04:6",
+        "S002R04:7",
+        "S002R04:8",
+        "S002R04:9",
+        "S002R04:10",
+        "S002R04:11",
+        "S002R04:12",
+        "S002R04:13",
+        "S002R04:14",
+        "S002R04:15",
+        "S002R04:16",
+        "S002R04:17",
+        "S002R04:18",
+        "S002R04:19",
+        "S002R04:20",
+        "S002R04:21",
+        "S002R04:22",
+        "S002R04:23",
+        "S002R04:24",
+        "S002R04:25",
+        "S002R04:26",
+        "S002R04:27",
+        "S002R04:28",
+        "S002R04:29",
+        "S002R08:0",
+        "S002R08:1",
+        "S002R08:2",
+        "S002R08:3",
+        "S002R08:4",
+        "S002R08:5",
+        "S002R08:6",
+        "S002R08:7",
+        "S002R08:8",
+        "S002R08:9",
+        "S002R08:10",
+        "S002R08:11",
+        "S002R08:12",
+        "S002R08:13",
+        "S002R08:14",
+        "S002R08:15",
+        "S002R08:16",
+        "S002R08:17",
+        "S002R08:18",
+        "S002R08:19",
+        "S002R08:20",
+        "S002R08:21",
+        "S002R08:22",
+        "S002R08:23",
+        "S002R08:24",
+        "S002R08:25",
+        "S002R08:26",
+        "S002R08:27",
+        "S002R08:28",
+        "S002R08:29"
+      ],
+      "test_trial_ids": [
+        "S002R12:0",
+        "S002R12:1",
+        "S002R12:2",
+        "S002R12:3",
+        "S002R12:4",
+        "S002R12:5",
+        "S002R12:6",
+        "S002R12:7",
+        "S002R12:8",
+        "S002R12:9",
+        "S002R12:10",
+        "S002R12:11",
+        "S002R12:12",
+        "S002R12:13",
+        "S002R12:14",
+        "S002R12:15",
+        "S002R12:16",
+        "S002R12:17",
+        "S002R12:18",
+        "S002R12:19",
+        "S002R12:20",
+        "S002R12:21",
+        "S002R12:22",
+        "S002R12:23",
+        "S002R12:24",
+        "S002R12:25",
+        "S002R12:26",
+        "S002R12:27",
+        "S002R12:28",
+        "S002R12:29"
+      ]
+    }
+  },
+  "probabilities_are_calibrated": false,
+  "limitation": "Previously inspected test run; exploratory diagnostic, not independent confirmation. Individual models require calibration from that same person."
+}

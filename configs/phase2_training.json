@@ -1,0 +1,93 @@
+{
+  "schema_version": "phase2-training-protocol-v1",
+  "split_config": "configs/phase2_stieger_split.json",
+  "figshare_manifest": "results/phase2_stieger_audit_2026-11-19/stieger_figshare_manifest.json",
+  "preprocessing": {
+    "channels": ["C3", "Cz", "C4", "C1", "C2", "FC1", "FC2", "CP1", "CP2"],
+    "raw_srate_hz": 1000,
+    "shard_srate_hz": 100,
+    "shard_lowpass_hz": 40.0,
+    "bandpass_hz": [8.0, 30.0],
+    "filter_order": 4,
+    "causal_filter": "sosfilt_step_zi",
+    "step_s": 0.25,
+    "primary_window_s": 2.0,
+    "window_s_candidates": [2.0, 1.0],
+    "alignment": "euclidean_per_session_train_only"
+  },
+  "source_pretraining": {
+    "task_type": "3class_smr_vs_relax_vs_idle",
+    "classes": {
+      "0": "clean_intertrial_idle (state_id==0, times_ms >= -1000.0)",
+      "1": "feedback_deliberate_relax (state_id==4, targetnumber==4)",
+      "2": "feedback_active_mi (state_id==3, targetnumber in {1,2,3})"
+    },
+    "excluded_from_source_loss": [
+      "overlapped_intertrial_first_1s (times_ms < -1000.0)",
+      "cue_active_mi (state_id==1)",
+      "cue_deliberate_relax (state_id==2)",
+      "post_trial_outcome (state_id==5)",
+      "unlabeled_or_artifact (state_id==6)"
+    ],
+    "architecture": {
+      "backbone": "EEGNet8",
+      "f1": 8,
+      "depth": 2,
+      "f2": 16,
+      "dropout": 0.25,
+      "n_classes": 3
+    },
+    "scales": ["scale_10pct", "scale_30pct", "scale_100pct"],
+    "seeds": [0, 1, 2],
+    "matched_update_budget": 20000,
+    "checkpoint_every_updates": 500,
+    "eval_every_updates": 500,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "class_weighting": "inverse_sqrt_freq",
+    "default_batch_size_by_gpu": {
+      "H100": 512,
+      "A100": 512,
+      "L4": 256,
+      "T4": 128,
+      "CPU": 64
+    }
+  },
+  "compared_methods": [
+    "classical_riemannian_lda_accum",
+    "scratch_causal_eegnet",
+    "pretrained_causal_eegnet"
+  ],
+  "target_calibration_and_evaluation": {
+    "calibration_allowance": "earliest_eligible_session_per_target",
+    "controller_calibration_budget": {
+      "max_false_starts_per_rest_min": 3.0,
+      "oof_folds": 5,
+      "guard_s": 2.0
+    },
+    "minimum_worthwhile_gain": {
+      "abs_episode_detection_gain_pp": 5.0,
+      "or_relative_detected_gain_pct": 15.0,
+      "or_mean_onset_delay_reduction_s": 0.25
+    },
+    "max_allowable_regressions": {
+      "max_rest_fs_per_min_increase": 0.25,
+      "max_transition_requests_increase_pct": 10.0
+    },
+    "robot_replay_gate": {
+      "advance_only_if_meets_criteria_vs_classical": true,
+      "harness": "robomimic-latch6-v2.0.0"
+    },
+    "evaluation_endpoints": {
+      "cross_day_smr_transfer": "Stieger test_subjects later sessions (trial-based SMR vs clean_idle vs deliberate_relax; disjoint from pretraining)",
+      "continuous_asynchronous_request_timing": "Separate untouched continuous irregular-timing corpus required before WP4 robot replay",
+      "historical_dev_reference": "BCICIV-1 human cohort (ds1a, ds1b, ds1f, ds1g) reserved for dev/historical comparison only",
+      "untouched_continuous_candidate_shortlist": [
+        "Lee2019_OpenBMI",
+        "Kaya2018_ContinuousMI",
+        "Ofner2017_UpperLimb",
+        "BCICIII_IVc"
+      ]
+    }
+  }
+}

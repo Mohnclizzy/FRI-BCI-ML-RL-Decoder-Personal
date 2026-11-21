@@ -1,0 +1,9 @@
+{
+  "schema_version": "phase2-stieger-audit-sha256-v1",
+  "files": {
+    "stieger_figshare_manifest.json": "21e93caf4a70046fc2b6a48505729bf9be0f6c1d0a02d9be75b869da60ba14b6",
+    "audit_metrics.json": "63f777e12815de09094a46f6b0ba1e6d05af9d29f2818f1287c17baf357ee341",
+    "summary.md": "ee9507d307039caafd32e079fca8aa9ec37fdd9461ccb40cdac0e69bff9acc64",
+    "cpu_smoke_test.json": "48ad348eea0afcc57aff61f5d56ab2d888b6a91c423d330f767ca5cfc68618c0"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "job_id": "cpu_smoke_dev_s1_to_s2_w1s",
+  "status": "completed",
+  "step": 20,
+  "max_updates": 20,
+  "examples_seen": 1280,
+  "drive_verified": true,
+  "ckpt_latest_sha256": "04b5913e3d4eebd45c8a9b085524255b5f72ef44bf4a3e7cd6d6c55d1d69655f",
+  "ckpt_best_sha256": "cb5ff80080ecce9703612dc5eff184075f4ff99adfd553bef3aabce4d24f012f",
+  "data_meta": {
+    "n_train_shards": 2,
+    "n_val_shards": 1,
+    "train_windows": 15629,
+    "val_windows": 8253,
+    "train_class_counts": [
+      3600,
+      2423,
+      9606
+    ],
+    "val_class_counts": [
+      1700,
+      1974,
+      4579
+    ],
+    "window_samples": 100,
+    "channels": 9
+  },
+  "runtime": {
+    "device_name": "CPU",
+    "vram_gib": 0.0,
+    "amp_mode": "fp32",
+    "batch_size": 64,
+    "data_load_s": 0.58,
+    "windows_per_sec": 747.2,
+    "updates_per_sec": 11.68,
+    "peak_vram_mb": 0.0,
+    "estimated_full_run_min": 0.03
+  },
+  "val_metrics": {
+    "val_loss": 1.10102,
+    "val_bal_acc_3class": 0.3342,
+    "val_auc_mi_vs_clean_idle": 0.6882,
+    "val_auc_mi_vs_deliberate_relax": 0.4801,
+    "val_auc_relax_vs_clean_idle": 0.5548,
+    "val_auc_macro_mi": 0.5842,
+    "step": 20,
+    "train_loss": 1.08112,
+    "lr": 0.0
+  },
+  "history": [
+    {
+      "val_loss": 1.10502,
+      "val_bal_acc_3class": 0.3333,
+      "val_auc_mi_vs_clean_idle": 0.6184,
+      "val_auc_mi_vs_deliberate_relax": 0.4837,
+      "val_auc_relax_vs_clean_idle": 0.4768,
+      "val_auc_macro_mi": 0.5511,
+      "step": 5,
+      "train_loss": 1.10353,
+      "lr": 0.0008536
+    },
+    {
+      "val_loss": 1.10332,
+      "val_bal_acc_3class": 0.3333,
+      "val_auc_mi_vs_clean_idle": 0.6652,
+      "val_auc_mi_vs_deliberate_relax": 0.4807,
+      "val_auc_relax_vs_clean_idle": 0.5153,
+      "val_auc_macro_mi": 0.573,
+      "step": 10,
+      "train_loss": 1.07035,
+      "lr": 0.0005
+    },
+    {
+      "val_loss": 1.10202,
+      "val_bal_acc_3class": 0.3333,
+      "val_auc_mi_vs_clean_idle": 0.6853,
+      "val_auc_mi_vs_deliberate_relax": 0.4796,
+      "val_auc_relax_vs_clean_idle": 0.5416,
+      "val_auc_macro_mi": 0.5825,
+      "step": 15,
+      "train_loss": 1.0618,
+      "lr": 0.0001464
+    },
+    {
+      "val_loss": 1.10102,
+      "val_bal_acc_3class": 0.3342,
+      "val_auc_mi_vs_clean_idle": 0.6882,
+      "val_auc_mi_vs_deliberate_relax": 0.4801,
+      "val_auc_relax_vs_clean_idle": 0.5548,
+      "val_auc_macro_mi": 0.5842,
+      "step": 20,
+      "train_loss": 1.08112,
+      "lr": 0.0
+    }
+  ]
+}
